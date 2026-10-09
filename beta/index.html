@@ -1,4 +1,4 @@
-<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 3.7</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
+<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 3.8</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
 header{background:#78533c;color:#fff0d0;border-bottom:4px solid #b98a51;text-shadow:1px 2px #553e31}
 #bottom{background:#78573e;border-top:4px solid #b98a51}
 button{background:#b28a5a;color:#fff7e7;border:2px solid #e2b879;box-shadow:inset 0 2px #f5d39b,0 3px #5b4134;font-weight:700}
@@ -11,7 +11,7 @@ button:active{transform:translateY(2px);box-shadow:inset 0 1px #f5d39b}
 .slot,.inventory-section,.character-card,.gearcell,.bestiary-entry{background:#d8b887;color:#4b3528;border:2px solid #9b714e;box-shadow:inset 0 2px #f1d4a7}
 .slot small{color:#684b36}.rarity{border-color:#8760a9}#notice{color:#386f46}
 #msg{background:#6c503bdc;color:#fff4d7;border:2px solid #c49c65}
- .loot-uncommon{border-color:#71a76c!important}.loot-rare{border-color:#629bc8!important}.loot-epic{border-color:#aa72c7!important;box-shadow:inset 0 2px #f1d4a7,0 0 9px #b784c477!important}.slot svg{flex-shrink:0}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Beta Preview 3.7 · Guided Adventure</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="fieldAttack()">⚔ Attack</button><button onclick="fieldDodge()">💨 Dodge</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
+ .loot-uncommon{border-color:#71a76c!important}.loot-rare{border-color:#629bc8!important}.loot-epic{border-color:#aa72c7!important;box-shadow:inset 0 2px #f1d4a7,0 0 9px #b784c477!important}.slot svg{flex-shrink:0}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Beta Preview 3.8 · Guided Adventure</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="fieldAttack()">⚔ Attack</button><button onclick="fieldDodge()">💨 Dodge</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
 window.addEventListener('error',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='JS ERROR: '+String(e.message).slice(0,90);});
 window.addEventListener('unhandledrejection',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='PROMISE ERROR: '+String(e.reason).slice(0,70);});
 document.getElementById('moveStatus').textContent='JS STARTED';
@@ -204,6 +204,21 @@ function atlasStamp(kind,p,frame){
  }
  return true;
 }
+// Original pixel action frames. Kept independent from the idle/walk atlas.
+const ACTION_FRAMES={
+ slash:[[-13,-18,5,5],[-15,-23,7,5],[-9,-28,8,5],[5,-26,9,5],[12,-18,7,5],[9,-8,6,5]],
+ hurt:[[-10,-17,20,4],[-12,-13,24,4],[-10,-9,20,4]],
+ cast:[[-3,-31,6,6],[8,-28,7,7],[13,-22,5,5]]
+};
+function drawActionPose(kind,p,action,progress){
+ if(!action)return;
+ const frames=ACTION_FRAMES[action];if(!frames)return;
+ const count=action==='slash'?6:3,idx=Math.min(count-1,Math.floor(Math.max(0,Math.min(.999,progress))*count));
+ const color=action==='hurt'?'#f5a99a':action==='cast'?'#d7b6ff':'#f4d69d';
+ const [x,y,w,h]=frames[idx];p(x,y,w,h,color);
+ if(action==='slash'){p(x+2,y-3,3,3,'#fff6d5');p(9,-9,2,18,'#d8e5eb')}
+ if(action==='cast'){p(x+2,y-3,4,4,'#fff5df')}
+}
 function spriteActor(kind,x,y,opts={}){
  const pal=kind==='hero'?HERO_STYLES[Math.max(0,Math.min(2,S.heroStyle||0))].palette:(SPRITE_PALETTES[kind]||SPRITE_PALETTES.hero);
  const moving=!!opts.moving,animation=actorAnimation(kind,moving,opts.walk||0),frame=animation.frame;
@@ -273,6 +288,7 @@ function spriteActor(kind,x,y,opts={}){
  spriteDetail(kind,p,frame,moving,back);
  // Pixel atlas overlay gives stable frame-authored texture on top of equipment layers.
  if(!back&&kind!=='hero')atlasStamp(kind,p,frame);
+ if(opts.action)drawActionPose(kind,p,opts.action,opts.actionProgress||0);
  ctx.restore();
 }
 // Reusable deterministic tile stamps, original to Runeforge.
@@ -430,7 +446,7 @@ spriteActor('scout',915,440,{moving:true,walk:t*.4});
 text('Goblin',915,369,17);
 function hero(x,y){
 const dir=Math.abs(faceX)>Math.abs(faceY)*.75?(faceX<0?'left':'right'):(faceY<0?'up':'down');
-spriteActor('hero',x,y,{moving:walkMoving,walk:walkTime,dir,armor:S.heroArmor,sword:S.heroSword&&S.weaponType!=='staff',staff:S.staffOwned&&S.weaponType==='staff'});
+spriteActor('hero',x,y,{moving:walkMoving,walk:walkTime,dir,armor:S.heroArmor,sword:S.heroSword&&S.weaponType!=='staff',staff:S.staffOwned&&S.weaponType==='staff',action:heroAction,actionProgress:1-heroActionTime/.3});
 }
 // Directional world interaction halo and player ground shadow.
 oval(S.x,S.y+20,25,9,'#192f2b75');
@@ -444,7 +460,7 @@ ctx.restore();
 const vignette=ctx.createRadialGradient(ww/2,hh/2,Math.min(ww,hh)*.28,ww/2,hh/2,Math.max(ww,hh)*.77);vignette.addColorStop(0,'#00000000');vignette.addColorStop(1,'#0c1d2045');ctx.fillStyle=vignette;ctx.fillRect(0,0,ww,hh);
 document.getElementById('stats').textContent='🪙 '+Math.floor(S.gold)+' · ⛏ '+Math.floor(S.ore)+' · ⚔ '+S.swords;
 }
-const defaults={wood:0,ingots:0,runes:0,potions:1,level:1,heroSword:false,heroArmor:false,heroShield:false,quest:0,forestWins:0,combat:null,autoForge:false,autoSell:false,woodLevel:1,lastSaved:Date.now(),totalGold:0,scene:'village',dungeonX:150,dungeonY:380,dungeonKills:0,contractsDone:0,contractTarget:3,contractReward:100,expeditionEnds:0,expeditionTier:1,expeditionsDone:0,forgeMastery:0,merchantRep:0,saveVersion:2,oreGathered:0,swordsCrafted:0,tutorialSeen:false,insideX:500,insideY:575,forestX:500,forestY:78,forestWood:0,forestVisits:0,forestChest:false,forestWolfWins:0,forestWolfDefeated:false,heroStyle:0,weaponType:'sword',staffOwned:false,staffMastery:0,lootItems:[],equippedCharm:null,lootKills:0,armorTier:0,weaponTier:0,helmetOwned:false,bootsOwned:false,visualTime:'day',fish:0,fisheryLevel:1,fisheryManager:false,fishSold:0,fishCaughtAtPond:0,fisheryContracts:0,fishSpecies:{},fishBites:0,fishMisses:0,fishSalesGold:0,fishContractDone:0,resourceContractDone:0,marketCycle:0,marketDemand:1,marketDeliveries:0,villageMilestones:[],npcQuestAccepted:{},npcQuestCompleted:{},npcQuestClaimed:{},heroRenown:0,renownRewards:[],dungeonClears:0,dungeonChestClaimed:false,dungeonRewardPending:false,merchantDialogueSeen:false,guardDialogueSeen:false,combatWins:0};
+const defaults={wood:0,ingots:0,runes:0,potions:1,level:1,heroSword:false,heroArmor:false,heroShield:false,quest:0,forestWins:0,combat:null,autoForge:false,autoSell:false,woodLevel:1,lastSaved:Date.now(),totalGold:0,scene:'village',dungeonX:150,dungeonY:380,dungeonKills:0,contractsDone:0,contractTarget:3,contractReward:100,expeditionEnds:0,expeditionTier:1,expeditionsDone:0,forgeMastery:0,merchantRep:0,saveVersion:2,oreGathered:0,swordsCrafted:0,tutorialSeen:false,insideX:500,insideY:575,forestX:500,forestY:78,forestWood:0,forestVisits:0,forestChest:false,forestWolfWins:0,forestWolfDefeated:false,heroStyle:0,weaponType:'sword',staffOwned:false,staffMastery:0,lootItems:[],equippedCharm:null,lootKills:0,armorTier:0,weaponTier:0,helmetOwned:false,bootsOwned:false,visualTime:'day',fish:0,fisheryLevel:1,fisheryManager:false,fishSold:0,fishCaughtAtPond:0,fisheryContracts:0,fishSpecies:{},fishBites:0,fishMisses:0,fishSalesGold:0,fishContractDone:0,resourceContractDone:0,marketCycle:0,marketDemand:1,marketDeliveries:0,villageMilestones:[],npcQuestAccepted:{},npcQuestCompleted:{},npcQuestClaimed:{},heroRenown:0,renownRewards:[],renownHallBuilt:false,dungeonClears:0,dungeonChestClaimed:false,dungeonRewardPending:false,merchantDialogueSeen:false,guardDialogueSeen:false,combatWins:0};
 for(const k in defaults)if(S[k]===undefined)S[k]=defaults[k];
 if(S.manager&&S.gold<0)S.gold=0;
 let autosaveClock=0,productionClock=0;let movementErrorShown=false;let dungeonTime=0;
@@ -472,7 +488,7 @@ function changeZone(scene,spawnX,spawnY,message){
  transitionLock=.85;persist();note(message);
 }
 // Active on-map combat: telegraphed attacks, cooldown, dodge and contact feedback.
-let fieldAttackCooldown=0,fieldDodgeCooldown=0,fieldInvuln=0,fieldFlash=0,fieldSwing=0;let dodgeTrail=[];const combatParticles=[];
+let fieldAttackCooldown=0,fieldDodgeCooldown=0,fieldInvuln=0,fieldFlash=0,fieldSwing=0,heroAction=null,heroActionTime=0;let dodgeTrail=[];const combatParticles=[];
 const fieldEnemies=[
  {scene:'forest',x:635,y:320,hp:24,max:24,kind:'wolf',attackClock:0},
  {scene:'dungeon',x:440,y:260,hp:18,max:18,kind:'scout',attackClock:0},
@@ -549,7 +565,7 @@ function equipCharm(id){
 }
 function damageFieldEnemy(e,i,damage,magic=false){
  if(e.hp<=0||!activeFieldEnemy(e,i))return;
- e.hp=Math.max(0,e.hp-damage);if(charmEffect()==='lifesteal')S.hp=Math.min(20+(S.level-1)*4,S.hp+1);e.hitFlash=.22;e.stagger=.17;
+ e.hp=Math.max(0,e.hp-damage);if(charmEffect()==='lifesteal')S.hp=Math.min(20+(S.level-1)*4,S.hp+1);e.hitFlash=.22;e.stagger=.17;e.hurtPose=.28;
  spawnCombatParticles(e.x,e.y-26,7,magic?'#d7b5fa':'#f6d18b');
  if(e.hp===0){
   const reward=e.kind==='wolf'?38:15+i*8;
@@ -563,7 +579,7 @@ function damageFieldEnemy(e,i,damage,magic=false){
 function fieldAttack(){
  if(panel||fieldAttackCooldown>0||!['forest','dungeon'].includes(S.scene))return;
  const magic=S.weaponType==='staff'&&S.staffOwned;
- fieldAttackCooldown=magic?(charmEffect()==='arcane'?.55:.75):.42;fieldFlash=.2;fieldSwing=magic?0:.23;
+ fieldAttackCooldown=magic?(charmEffect()==='arcane'?.55:.75):.42;fieldFlash=.2;fieldSwing=magic?0:.23;heroAction=magic?'cast':'slash';heroActionTime=.3;
  const pos=currentPosition(),length=Math.hypot(faceX,faceY)||1;
  if(magic){
   magicProjectiles.push({x:pos.x,y:pos.y-22,vx:faceX/length*370,vy:faceY/length*370,life:.7,scene:S.scene,damage:7+S.level+Math.floor(S.staffMastery/5)+charmBonus()+(S.weaponTier||0)*2+renownBonus()});
@@ -592,7 +608,7 @@ function fieldDodge(){
  note('Dodge!');return true;
 }
 function updateFieldCombat(dt){
- fieldAttackCooldown=Math.max(0,fieldAttackCooldown-dt);fieldDodgeCooldown=Math.max(0,fieldDodgeCooldown-dt);fieldSwing=Math.max(0,fieldSwing-dt);
+ fieldAttackCooldown=Math.max(0,fieldAttackCooldown-dt);fieldDodgeCooldown=Math.max(0,fieldDodgeCooldown-dt);heroActionTime=Math.max(0,heroActionTime-dt);if(heroActionTime===0)heroAction=null;fieldSwing=Math.max(0,fieldSwing-dt);
  fieldInvuln=Math.max(0,fieldInvuln-dt);fieldFlash=Math.max(0,fieldFlash-dt);
 for(let i=dodgeTrail.length-1;i>=0;i--){dodgeTrail[i].life-=dt;if(dodgeTrail[i].life<=0)dodgeTrail.splice(i,1)}
  for(let i=magicProjectiles.length-1;i>=0;i--){
@@ -617,7 +633,7 @@ for(let i=combatParticles.length-1;i>=0;i--){const p=combatParticles[i];p.life-=
  const pos=currentPosition();
  for(let i=0;i<fieldEnemies.length;i++){
   const e=fieldEnemies[i];if(e.scene!==S.scene||!activeFieldEnemy(e,i))continue;
-  e.hitFlash=Math.max(0,(e.hitFlash||0)-dt);e.stagger=Math.max(0,(e.stagger||0)-dt);const dist=Math.hypot(pos.x-e.x,pos.y-e.y);
+  e.hitFlash=Math.max(0,(e.hitFlash||0)-dt);e.hurtPose=Math.max(0,(e.hurtPose||0)-dt);e.stagger=Math.max(0,(e.stagger||0)-dt);const dist=Math.hypot(pos.x-e.x,pos.y-e.y);
   if(e.stagger>0)continue;
   if(dist<215&&dist>52){e.x+=(pos.x-e.x)/dist*dt*22;e.y+=(pos.y-e.y)/dist*dt*22}
   e.attackClock=Math.max(0,e.attackClock-dt);
@@ -719,7 +735,7 @@ for(const [x,y] of [[240,300],[755,270],[200,650],[800,650]]){rect(x-15,y-12,30,
 rect(425,0,150,75,'#506f61');rect(442,0,116,55,'#9cbba2');label('↑ EMBERFALL',500,105);
 if(!S.forestChest){rect(770,160,65,45,'#725034');rect(777,150,51,22,'#c39a56');rect(798,154,9,46,'#f1d37b');label('SUPPLIES',802,135)}
 for(const [x,y] of [[280,460],[700,520],[750,380]]){rect(x-8,y-20,16,27,'#a17b4f');rect(x-21,y-28,42,19,'#5d9a5a');label('WOOD',x,y-42)}
-if(!S.forestWolfDefeated){const wx=fieldEnemies[0].x,wy=fieldEnemies[0].y;spriteActor('wolf',wx,wy,{moving:true,walk:performance.now()/1000});rect(wx-25,wy-83,50,6,'#513e3b');rect(wx-25,wy-83,50*fieldEnemies[0].hp/fieldEnemies[0].max,6,'#c46d5e');label('Duskwolf',wx,wy-92)}
+if(!S.forestWolfDefeated){const wx=fieldEnemies[0].x,wy=fieldEnemies[0].y;spriteActor('wolf',wx,wy,{moving:true,walk:performance.now()/1000,action:fieldEnemies[0].hurtPose>0?'hurt':null,actionProgress:1-(fieldEnemies[0].hurtPose||0)/.28});rect(wx-25,wy-83,50,6,'#513e3b');rect(wx-25,wy-83,50*fieldEnemies[0].hp/fieldEnemies[0].max,6,'#c46d5e');label('Duskwolf',wx,wy-92)}
 spriteActor('hero',S.forestX,S.forestY,{moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword&&S.weaponType!=='staff',staff:S.staffOwned&&S.weaponType==='staff'});
 ctx.restore();
 }
@@ -863,7 +879,7 @@ for(let y=0;y<870;y+=40){R(0,y,35,37,'#55616b');R(965,y,35,37,'#55616b')}
 for(const [x,y] of [[150,180],[480,480],[770,240],[860,670]]){R(x-12,y-4,24,10,'#50392e');R(x-7,y-23,14,22,'#aa5b32');R(x-4,y-19,8,16,'#ffcc70');const g=ctx.createRadialGradient(x,y-12,3,x,y-12,68);g.addColorStop(0,'#ffbd5270');g.addColorStop(1,'#ffbd5200');ctx.fillStyle=g;ctx.fillRect(x-68,y-80,136,136)}
 if(S.dungeonKills===3&&!S.dungeonChestClaimed){R(822,730,68,45,'#543826');R(829,720,54,26,'#c79a4a');R(851,721,9,45,'#f4d279');txt('CHEST',856,707,16)}
 R(60,355,80,85,'#466b72');R(71,365,58,65,'#78abb0');txt('← EXIT',100,342,17);
-for(const [i] of [[0],[1],[2]]){if(S.dungeonKills>i)continue;const enemy=fieldEnemies[i+1],x=enemy.x,y=enemy.y;spriteActor(i===0?'scout':i===1?'brute':'shaman',x,y,{moving:true,walk:performance.now()/1600+i});R(x-24,y-91,48,5,'#402e35');R(x-24,y-91,48*enemy.hp/enemy.max,5,'#c85e57');if(enemy.attackClock>.85){R(x-31,y-5,62,3,'#ffb15b88')}txt(ENEMIES[i].name,x,y-100,15)}
+for(const [i] of [[0],[1],[2]]){if(S.dungeonKills>i)continue;const enemy=fieldEnemies[i+1],x=enemy.x,y=enemy.y;spriteActor(i===0?'scout':i===1?'brute':'shaman',x,y,{moving:true,walk:performance.now()/1600+i,action:enemy.hurtPose>0?'hurt':null,actionProgress:1-(enemy.hurtPose||0)/.28});R(x-24,y-91,48,5,'#402e35');R(x-24,y-91,48*enemy.hp/enemy.max,5,'#c85e57');if(enemy.attackClock>.85){R(x-31,y-5,62,3,'#ffb15b88')}txt(ENEMIES[i].name,x,y-100,15)}
 const x=S.dungeonX,y=S.dungeonY,bob=walkMoving?Math.abs(Math.sin(walkTime*11))*3:0;
 spriteActor('hero',x,y,{moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword&&S.weaponType!=='staff',staff:S.staffOwned&&S.weaponType==='staff'});txt('YOU',x,y-45,14);
 ctx.restore();
@@ -1054,7 +1070,7 @@ h='<h2>'+names[type]+'</h2><div class="inventory-section"><p>'+(type==='forge'?'
 }else{
 h='<h2>⚙ Inställningar</h2>'+btn('Virtuell joystick','joystick')+btn('Dra på kartan','drag')+
 btn('Långsam rörelse','slow')+btn('Normal rörelse','normal')+btn('Snabb rörelse','fast')+
-'<p>Beta Preview 3.7 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
+'<p>Beta Preview 3.8 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
 }
 document.getElementById('content').innerHTML=h;
 document.getElementById('notice').textContent='';
