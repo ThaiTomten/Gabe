@@ -1071,7 +1071,7 @@ function npcDialogue(role){
  }
  return 'Välkommen till Emberfall!';
 }
-function warehouseUsed(){return (S.steelStock||0)+(S.runeGoods||0)}
+function warehouseUsed(){return (S.steelStock||0)+(S.runeGoods||0)+(S.wardSeals||0)}
 function warehouseSpace(){return Math.max(0,(S.warehouseCapacity||40)-warehouseUsed())}
 function upgradeWarehouse(){
  const cost=100*(S.warehouseLevel||1);
@@ -1147,7 +1147,7 @@ function recordProductionCost(type,basis){
  S.productionCostTotal+=type==='steel'?basis:Math.max(0,basis-(S.materialValuation.ore*3+S.materialValuation.wood));
 }
 function productionProfit(){return S.productionRevenueTotal-S.productionRealizedCost-S.tradeCosts}
-function warehouseCategoryStats(){return {steel:S.steelStock||0,rune:S.runeGoods||0,free:warehouseSpace(),capacity:S.warehouseCapacity}}
+function warehouseCategoryStats(){return {steel:S.steelStock||0,rune:S.runeGoods||0,ward:S.wardSeals||0,free:warehouseSpace(),capacity:S.warehouseCapacity}}
 function reconcileCostBasis(){
  for(const [key,queue,cost] of [['steelStock','steelCostBasis',productionUnitCost('steel')],['runeGoods','runeCostBasis',productionUnitCost('rune')]]){
   if(!Array.isArray(S[queue]))S[queue]=[];
@@ -1187,7 +1187,6 @@ function sellProduction(type){
 }
 function craftWardSeal(){
  if(!S.arcaneWorkshopBuilt||S.runeGoods<1||S.monsterEssence<3){note('Kräver Runverkstad, 1 runvara och 3 monsteressenser');return false}
- if(warehouseSpace()<1){note('Lagret är fullt');return false}
  reconcileCostBasis();
  const basis=(S.runeCostBasis.shift()||productionUnitCost('rune'))+3*12;
  S.runeGoods--;S.monsterEssence-=3;S.wardSeals++;S.wardCostBasis.push(basis);
