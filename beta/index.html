@@ -258,23 +258,48 @@ buildings.forEach(house);
 for(const [x,y] of [[412,350],[586,350],[412,486],[586,486]])pixelLantern(x,y,S.visualTime);
 // Visible doorways and interaction markers.
 for(const b of buildings){const x=b.x+b.w/2,y=b.y+b.h+12;oval(x,y,28,9,'#d7bc8670');box(x-16,y-6,32,5,'#cdb181');}
+function villageSchedule(time){
+ const phase=(time/24)%1;
+ return phase<.25?'morning':phase<.68?'work':'evening';
+}
+function npcLocation(role,time){
+ const phase=villageSchedule(time);
+ const locations={
+ merchant:{morning:[350,545],work:[380,565],evening:[340,615]},
+ guard:{morning:[620,565],work:[618,565],evening:[700,510]},
+ smith:{morning:[280,365],work:[350,312],evening:[410,540]},
+ miner:{morning:[610,370],work:[651,326],evening:[590,500]},
+ fisher:{morning:[145,560],work:[150,600],evening:[360,520]}
+ };
+ return (locations[role]||locations.merchant)[phase];
+}
+function drawFisheryDock(time){
+ const p=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(x,y,w,h)};
+ p(157,578,44,12,'#654b38');p(160,573,38,7,'#b98d59');
+ for(let i=0;i<3;i++){p(162+i*13,577,3,22,'#70523c');p(163+i*13,580,2,14,'#d1a76e')}
+ p(177,550,3,26,'#715339');p(175,547,7,5,'#c8ad7c');
+ const bob=Math.sin(time*2)*3;p(125,602+bob,11,4,'#f2d48b');p(128,600+bob,4,3,'#e5f4df');
+}
 function worker(x,y,coat,phase){
 const walk=Math.sin(t*1.2+phase),bob=Math.abs(Math.sin(t*6+phase))*2;
 oval(x,y+13,13,5,'#38533d');
 box(x-7,y-5+bob,14,20,coat);box(x-6,y-20+bob,12,14,'#e3b88e');
 box(x-8,y-25+bob,16,7,'#a98a54');box(x-6+walk*2,y+12,5,9,'#433c3b');box(x+2-walk*2,y+12,5,9,'#433c3b');
 }
-if(S.manager){worker(651+Math.sin(t*.8)*23,326,'#8a6950',1);text('Miner',650,284,13)}
-if(S.autoForge){worker(350+Math.sin(t*.7)*18,312,'#596f84',2);text('Smith',350,270,13)}
+if(S.manager){const [mx,my]=npcLocation('miner',t);worker(mx+Math.sin(t*.8)*12,my,'#8a6950',1);text('Miner',mx,my-43,13)}
+if(S.autoForge){const [sx,sy]=npcLocation('smith',t);worker(sx+Math.sin(t*.7)*12,sy,'#596f84',2);text('Smith',sx,sy-43,13)}
 if(S.autoSell){worker(338+Math.sin(t*.6)*25,743,'#7c5e89',3);text('Trader',338,700,13)}
 if(S.expeditionEnds){oval(505,535,20,8,'#465740');box(496,500,18,34,'#526a8a');box(496,484,18,17,'#e6c29a');text('Expedition',505,472,13)}
 
 function lamp(x,y){oval(x,y+9,18,7,'#354f3c');box(x-4,y-39,8,48,'#5d463b');box(x-13,y-46,26,9,'#513b33');box(x-10,y-39,20,24,'#b96c38');box(x-6,y-35,12,16,'#ffcf71');lit(x,y-29,47,'#ffd16a65')}
 [[395,331],[607,331],[395,503],[607,503]].forEach(p=>lamp(...p));
 for(let i=0;i<4;i++){const x=357+i*12,y=615;box(x,y,10,7,'#a3a1a0');box(x+2,y-3,6,3,'#d4c7b4')}
-spriteActor('merchant',380,565,{moving:true,walk:t*.24});
-spriteActor('guard',618,565,{moving:true,walk:t*.15});
-text('Elric',380,507,15);text('Mira',618,507,15);
+const [ex,ey]=npcLocation('merchant',t),[gx,gy]=npcLocation('guard',t);
+spriteActor('merchant',ex,ey,{moving:true,walk:t*.24});
+spriteActor('guard',gx,gy,{moving:true,walk:t*.15});
+text('Elric',ex,ey-58,15);text('Mira',gx,gy-58,15);
+drawFisheryDock(t);
+if(S.fisheryManager){const [fx,fy]=npcLocation('fisher',t);worker(fx,fy,'#497b8b',4);text('Fisher',fx,fy-43,13)}
 spriteActor('scout',915,440,{moving:true,walk:t*.4});
 text('Goblin',915,369,17);
 function hero(x,y){
@@ -902,7 +927,7 @@ else if(a==='fast'){speed=250;note('Snabb')}
 if(panel)show(panel);
 persist();
 }
-function interact(){if(S.scene==='forest'){if(nearPond()){castFishingRod();return}forestInteract();return}if(S.scene==='interior'){if(S.insideY>660&&Math.abs(S.insideX-500)<140){S.scene='village';S.x=500;S.y=550;note('Du lämnade byggnaden');persist();return}show('house');return}if(S.scene==='dungeon'){dungeonInteract();return}if(nearPond()){castFishingRod();return}if(S.y>760&&Math.abs(S.x-500)<160){S.scene='forest';S.forestX=500;S.forestY=78;S.forestVisits++;note('Du upptäckte Whisperwood Forest!');persist();return}if(Math.hypot(S.x-915,S.y-425)<135){S.scene='dungeon';S.dungeonX=150;S.dungeonY=380;S.dungeonKills=0;S.dungeonChestClaimed=false;S.dungeonRewardPending=false;note('Goblingrottan: besegra tre gobliner och hitta skattkistan!');persist();return}if(Math.hypot(S.x-380,S.y-565)<95){show('merchant');return}if(Math.hypot(S.x-618,S.y-565)<95){show('guard');return}let b=buildings.find(b=>Math.hypot(S.x-(b.x+b.w/2),S.y-(b.y+b.h/2))<165);if(b){S.houseType=b.n==='Smedja'?'forge':b.n==='Gruva'?'mine':b.n==='Marknad'?'market':'guild';S.scene='interior';S.insideX=500;S.insideY=575;note('Du gick in i '+b.n+'. Tryck A för tjänster, gå söderut till EXIT.');persist()}else if(Math.hypot(S.x-910,S.y-425)<110)show('hero');else note('Gå närmare en byggnad')}
+function interact(){if(S.scene==='forest'){if(nearPond()){castFishingRod();return}forestInteract();return}if(S.scene==='interior'){if(S.insideY>660&&Math.abs(S.insideX-500)<140){S.scene='village';S.x=500;S.y=550;note('Du lämnade byggnaden');persist();return}show('house');return}if(S.scene==='dungeon'){dungeonInteract();return}if(nearPond()){castFishingRod();return}if(S.y>760&&Math.abs(S.x-500)<160){S.scene='forest';S.forestX=500;S.forestY=78;S.forestVisits++;note('Du upptäckte Whisperwood Forest!');persist();return}if(Math.hypot(S.x-915,S.y-425)<135){S.scene='dungeon';S.dungeonX=150;S.dungeonY=380;S.dungeonKills=0;S.dungeonChestClaimed=false;S.dungeonRewardPending=false;note('Goblingrottan: besegra tre gobliner och hitta skattkistan!');persist();return}const [ex,ey]=npcLocation('merchant',performance.now()/1000),[gx,gy]=npcLocation('guard',performance.now()/1000);if(Math.hypot(S.x-ex,S.y-ey)<95){show('merchant');return}if(Math.hypot(S.x-gx,S.y-gy)<95){show('guard');return}let b=buildings.find(b=>Math.hypot(S.x-(b.x+b.w/2),S.y-(b.y+b.h/2))<165);if(b){S.houseType=b.n==='Smedja'?'forge':b.n==='Gruva'?'mine':b.n==='Marknad'?'market':'guild';S.scene='interior';S.insideX=500;S.insideY=575;note('Du gick in i '+b.n+'. Tryck A för tjänster, gå söderut till EXIT.');persist()}else if(Math.hypot(S.x-910,S.y-425)<110)show('hero');else note('Gå närmare en byggnad')}
 let joy=document.getElementById('joy'),nub=document.getElementById('nub'),pointer=null;function stick(e){let r=joy.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),m=Math.hypot(dx,dy),f=Math.min(1,m/(r.width*.3));vx=m?dx/m*f:0;vy=m?dy/m*f:0;nub.style.transform='translate('+(vx*r.width*.3)+'px,'+(vy*r.width*.3)+'px)'}joy.addEventListener('pointerdown',e=>{e.preventDefault();pointer=e.pointerId;joy.setPointerCapture(pointer);stick(e)});joy.addEventListener('pointermove',e=>{if(e.pointerId===pointer){e.preventDefault();stick(e)}});function stop(e){if(e.pointerId===pointer){pointer=null;vx=vy=0;nub.style.transform=''}}joy.addEventListener('pointerup',stop);joy.addEventListener('pointercancel',stop);joy.addEventListener('lostpointercapture',()=>{pointer=null;vx=vy=0;nub.style.transform='' });let mapPointer=null;canvas.addEventListener('pointerdown',e=>{if(mode==='drag'){mapPointer=e.pointerId;canvas.setPointerCapture(mapPointer);drag(e)}});canvas.addEventListener('pointermove',e=>{if(e.pointerId===mapPointer)drag(e)});function drag(e){let r=canvas.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),m=Math.hypot(dx,dy);vx=m?dx/m:0;vy=m?dy/m:0}canvas.addEventListener('pointerup',e=>{if(e.pointerId===mapPointer){mapPointer=null;vx=vy=0}});canvas.addEventListener('pointercancel',()=>{mapPointer=null;vx=vy=0});addEventListener('pagehide',()=>{try{localStorage.setItem('runeforge_beta_preview_01',JSON.stringify(S))}catch(e){}});
 
 // iOS Safari: block document scrolling, allow scrolling only inside the open menu.
