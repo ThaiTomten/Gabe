@@ -1084,7 +1084,7 @@ function toggleAutoTrade(type){
  const flag=type==='steel'?'autoTradeSteel':'autoTradeRune';
  const cost=type==='steel'?120:200;
  if(!S[flag]&&S.gold<cost){note('Kräver '+cost+' guld');return false}
- if(!S[flag])S.gold-=cost;
+ if(!S[flag]){S.gold-=cost;S.tradeCosts+=cost;}
  S[flag]=!S[flag];persist();note('Automatisk försäljning '+(S[flag]?'på':'av'));return true;
 }
 function tradeCycle(){
