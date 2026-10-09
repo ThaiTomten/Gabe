@@ -17,7 +17,7 @@ window.addEventListener('unhandledrejection',function(e){var el=document.getElem
 document.getElementById('moveStatus').textContent='JS STARTED';
 const canvas=document.getElementById('game'),ctx=canvas.getContext('2d');let S={x:500,y:400,gold:100,ore:0,swords:0,mine:1,forge:1,manager:false,hp:20,xp:0},vx=0,vy=0,speed=170,mode='joystick',panel='',last=performance.now(),acc=0;try{Object.assign(S,JSON.parse(localStorage.getItem('runeforge_beta_preview_01')||'{}'))}catch(e){}const buildings=[{x:180,y:170,w:150,h:110,n:'Smedja',t:'empire',c:'#ac6544'},{x:690,y:170,w:150,h:110,n:'Gruva',t:'empire',c:'#74848a'},{x:170,y:600,w:150,h:110,n:'Marknad',t:'empire',c:'#b18c44'},{x:690,y:600,w:150,h:110,n:'Gille',t:'hero',c:'#7870a3'}];let ww=1,hh=1;let walkTime=0,walkMoving=false,faceX=0,faceY=1;function resize(){ww=canvas.clientWidth;hh=canvas.clientHeight;let d=Math.min(window.devicePixelRatio||1,2);canvas.width=ww*d;canvas.height=hh*d;ctx.setTransform(d,0,0,d,0,0)}addEventListener('resize',resize);resize();function solid(x,y){return x<20||y<20||x>980||y>850||buildings.some(b=>x>b.x-14&&x<b.x+b.w+14&&y>b.y-14&&y<b.y+b.h+14)}
 function safePosition(){
- if(!Number.isFinite(S.x)||!Number.isFinite(S.y)||solid(S.x,S.y)){S.x=500;S.y=550;return true}
+ if(!Number.isFinite(S.x)||!Number.isFinite(S.y)||solid(S.x,S.y)){S.x=500;S.y=550;return true}if(waterCollision('village',S.x,S.y)){[S.x,S.y]=safeWaterPosition('village',S.x,S.y);return true}
  return false;
 }
 function unstuck(){
@@ -844,7 +844,7 @@ function fieldDodge(){
  const ax=moving?vx:faceX,ay=moving?vy:faceY,length=Math.hypot(ax,ay)||1;
  const dx=ax/length,dy=ay/length;
  const distance=S.bootsOwned?115:92;const nx=pos.x+dx*distance,ny=pos.y+dy*distance;
- if(S.scene==='forest'){S.forestX=Math.max(35,Math.min(965,nx));S.forestY=Math.max(45,Math.min(820,ny))}
+ if(S.scene==='forest'){const tx=Math.max(35,Math.min(965,nx)),ty=Math.max(45,Math.min(820,ny));if(!waterCollision('forest',tx,ty)){S.forestX=tx;S.forestY=ty}else note('Du kan inte hoppa ut i vattnet')}
  else{S.dungeonX=Math.max(35,Math.min(965,nx));S.dungeonY=Math.max(60,Math.min(810,ny))}
  fieldDodgeCooldown=S.bootsOwned?.9:1.25;fieldInvuln=.38;
  dodgeTrail.push({x:pos.x,y:pos.y,life:.3,scene:S.scene});
@@ -934,7 +934,7 @@ function autoZoneTransition(dt){
 function tick(t){
 try{
 const dt=Math.min((t-last)/1000,.05);last=t;
-if(!panel){walkMoving=Math.hypot(vx,vy)>.08;if(walkMoving){walkTime+=dt*Math.max(.6,Math.hypot(vx,vy));faceX=vx;faceY=vy}if(S.scene==='forest'){S.forestX=Math.max(30,Math.min(970,S.forestX+vx*speed*dt));S.forestY=Math.max(30,Math.min(840,S.forestY+vy*speed*dt));}else if(S.scene==='interior'){S.insideX=Math.max(110,Math.min(880,S.insideX+vx*speed*dt));S.insideY=Math.max(120,Math.min(765,S.insideY+vy*speed*dt));}else if(S.scene==='dungeon'){S.dungeonX=Math.max(35,Math.min(965,S.dungeonX+vx*speed*dt));S.dungeonY=Math.max(60,Math.min(810,S.dungeonY+vy*speed*dt));}else{let nx=S.x+vx*speed*dt,ny=S.y+vy*speed*dt;if(solid(S.x,S.y)){safePosition();nx=S.x+vx*speed*dt;ny=S.y+vy*speed*dt}if(!solid(nx,S.y))S.x=nx;if(!solid(S.x,ny))S.y=ny}}
+if(!panel){walkMoving=Math.hypot(vx,vy)>.08;if(walkMoving){walkTime+=dt*Math.max(.6,Math.hypot(vx,vy));faceX=vx;faceY=vy}if(S.scene==='forest'){const nx=Math.max(30,Math.min(970,S.forestX+vx*speed*dt)),ny=Math.max(30,Math.min(840,S.forestY+vy*speed*dt));if(!waterCollision('forest',nx,S.forestY))S.forestX=nx;if(!waterCollision('forest',S.forestX,ny))S.forestY=ny;}else if(S.scene==='interior'){S.insideX=Math.max(110,Math.min(880,S.insideX+vx*speed*dt));S.insideY=Math.max(120,Math.min(765,S.insideY+vy*speed*dt));}else if(S.scene==='dungeon'){S.dungeonX=Math.max(35,Math.min(965,S.dungeonX+vx*speed*dt));S.dungeonY=Math.max(60,Math.min(810,S.dungeonY+vy*speed*dt));}else{let nx=S.x+vx*speed*dt,ny=S.y+vy*speed*dt;if(solid(S.x,S.y)){safePosition();nx=S.x+vx*speed*dt;ny=S.y+vy*speed*dt}if(!solid(nx,S.y)&&!waterCollision('village',nx,S.y))S.x=nx;if(!solid(S.x,ny)&&!waterCollision('village',S.x,ny))S.y=ny}}
 if(panel)walkMoving=false;
 autoZoneTransition(dt);updateFieldCombat(dt);
 fishingCooldown=Math.max(0,fishingCooldown-dt);updateFishing(dt);productionClock+=dt;autosaveClock+=dt;
@@ -1020,10 +1020,37 @@ function interiorDecor(type,time){
  const resident=type==='market'?'merchant':type==='guild'?'guard':type==='mine'?'brute':'merchant';
  spriteActor(resident,680+Math.sin(time*.7)*17,605,{moving:true,walk:time*.25,dir:'left'});
 }
+const FISHING_PONDS={
+ village:[[62,560,100,92],[820,565,116,86]],
+ forest:[[75,510,130,105],[795,570,125,115]]
+};
+function waterCollision(scene,x,y,radius=12){
+ return (FISHING_PONDS[scene]||[]).some(([px,py,w,h])=>x+radius>px+4&&x-radius<px+w-4&&y+radius>py+4&&y-radius<py+h-4);
+}
+function shoreFishingSpot(scene,x,y){
+ const ponds=FISHING_PONDS[scene]||[];
+ return ponds.some(([px,py,w,h])=>{
+  const closestX=Math.max(px,Math.min(x,px+w)),closestY=Math.max(py,Math.min(y,py+h));
+  const d=Math.hypot(x-closestX,y-closestY);
+  return d>=8&&d<=68&&!waterCollision(scene,x,y);
+ });
+}
+function safeWaterPosition(scene,x,y){
+ if(!waterCollision(scene,x,y))return [x,y];
+ const ponds=FISHING_PONDS[scene]||[];
+ for(const [px,py,w,h] of ponds){
+  if(x>=px-20&&x<=px+w+20&&y>=py-20&&y<=py+h+20){
+   const choices=[[px-15,y],[px+w+15,y],[x,py-15],[x,py+h+15]].filter(p=>!waterCollision(scene,p[0],p[1]));
+   choices.sort((a,b)=>Math.hypot(a[0]-x,a[1]-y)-Math.hypot(b[0]-x,b[1]-y));
+   if(choices.length)return choices[0];
+  }
+ }
+ return [x,y];
+}
 function nearPond(){
- if(S.scene==='village')return [[62,560,100,92],[820,565,116,86]].some(([x,y,w,h])=>S.x>=x-65&&S.x<=x+w+65&&S.y>=y-65&&S.y<=y+h+65);
- if(S.scene==='forest')return [[75,510,130,105],[795,570,125,115]].some(([x,y,w,h])=>S.forestX>=x-65&&S.forestX<=x+w+65&&S.forestY>=y-65&&S.forestY<=y+h+65);
- return false;
+ if(S.scene!=='village'&&S.scene!=='forest')return false;
+ const x=S.scene==='village'?S.x:S.forestX,y=S.scene==='village'?S.y:S.forestY;
+ return shoreFishingSpot(S.scene,x,y);
 }
 const FISH_SPECIES=[
 {id:'sunperch',name:'Sunperch',rarity:'Vanlig',value:12,icon:'🐟',color:'#e8b967',weight:55},
@@ -1491,7 +1518,7 @@ else{
 }
 }else if(p==='fishery'){
 h='<h2>🎣 Emberfall Fiskeri</h2><p>Fiska vid byns dammar. Sälj fångsten och anställ en fiskare som arbetar var femte sekund.</p>'+
-'<p>Fisk: '+S.fish+' · Nivå '+S.fisheryLevel+' · Sålda totalt: '+S.fishSold+' · Fångade vid damm: '+S.fishCaughtAtPond+'</p>'+fishInventoryHTML()+
+'<p><strong>Så fiskar du:</strong> Gå till kanten av en blå damm i Emberfall eller Whisperwood. Tryck på interaktionsknappen för att kasta. I minispelet trycker du Hugg när markören är i det gröna området. Upprepa tills fångstmätaren når 100 %.</p><p>Du måste stå på land nära vattnet.</p>'+'<p>Fisk: '+S.fish+' · Nivå '+S.fisheryLevel+' · Sålda totalt: '+S.fishSold+' · Fångade vid damm: '+S.fishCaughtAtPond+'</p>'+fishInventoryHTML()+
 btn('🎣 Fiska vid dammen','castfish')+btn('🏭 Fiskeriproduktion +'+S.fisheryLevel,'fish')+btn('🏪 Sälj fångsten (artspecifika priser)','sellfish')+
 btn('⬆ Fiskeri nivå '+(S.fisheryLevel+1)+' ('+(65*S.fisheryLevel)+' guld)','upfishery')+
 btn(S.fisheryManager?'✓ Fiskare anställd':'Anställ fiskare (180 guld)','hirefisher');
