@@ -79,7 +79,7 @@ test('movement recovers from blocked save without deleting gold',()=>{
 });
 test('gameplay actions and UI still work',()=>{
  const g=boot();
- g.sandbox.action('mine');g.sandbox.action('wood');g.sandbox.action('wood');g.sandbox.action('forge');
+ g.sandbox.action('mine');g.sandbox.action('mine');g.sandbox.action('wood');g.sandbox.action('wood');g.sandbox.action('forge');
  assert.equal(g.state().swords,1);
  g.sandbox.show('empire');
  assert.match(g.element('content').innerHTML,/Imperiet/);
