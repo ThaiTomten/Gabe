@@ -189,6 +189,28 @@ function pathBorder(x,y,w,h){
  ctx.fillStyle='#c3a377';
  for(let n=0;n<Math.floor(w*h/900);n++){const px=x+((n*97+23)%w),py=y+((n*131+17)%h);ctx.fillRect(px,py,5,2)}
 }
+function villageSchedule(time){
+ const phase=(time/24)%1;
+ return phase<.25?'morning':phase<.68?'work':'evening';
+}
+function npcLocation(role,time){
+ const phase=villageSchedule(time);
+ const locations={
+ merchant:{morning:[350,545],work:[380,565],evening:[340,615]},
+ guard:{morning:[620,565],work:[618,565],evening:[700,510]},
+ smith:{morning:[280,365],work:[350,312],evening:[410,540]},
+ miner:{morning:[610,370],work:[651,326],evening:[590,500]},
+ fisher:{morning:[145,560],work:[150,600],evening:[360,520]}
+ };
+ return (locations[role]||locations.merchant)[phase];
+}
+function drawFisheryDock(time){
+ const p=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(x,y,w,h)};
+ p(157,578,44,12,'#654b38');p(160,573,38,7,'#b98d59');
+ for(let i=0;i<3;i++){p(162+i*13,577,3,22,'#70523c');p(163+i*13,580,2,14,'#d1a76e')}
+ p(177,550,3,26,'#715339');p(175,547,7,5,'#c8ad7c');
+ const bob=Math.sin(time*2)*3;p(125,602+bob,11,4,'#f2d48b');p(128,600+bob,4,3,'#e5f4df');
+}
 function draw(){
 const t=performance.now()/1000,sc=Math.max(.6,Math.min(ww/550,hh/470));
 ctx.clearRect(0,0,ww,hh);ctx.fillStyle='#182a29';ctx.fillRect(0,0,ww,hh);
@@ -258,28 +280,6 @@ buildings.forEach(house);
 for(const [x,y] of [[412,350],[586,350],[412,486],[586,486]])pixelLantern(x,y,S.visualTime);
 // Visible doorways and interaction markers.
 for(const b of buildings){const x=b.x+b.w/2,y=b.y+b.h+12;oval(x,y,28,9,'#d7bc8670');box(x-16,y-6,32,5,'#cdb181');}
-function villageSchedule(time){
- const phase=(time/24)%1;
- return phase<.25?'morning':phase<.68?'work':'evening';
-}
-function npcLocation(role,time){
- const phase=villageSchedule(time);
- const locations={
- merchant:{morning:[350,545],work:[380,565],evening:[340,615]},
- guard:{morning:[620,565],work:[618,565],evening:[700,510]},
- smith:{morning:[280,365],work:[350,312],evening:[410,540]},
- miner:{morning:[610,370],work:[651,326],evening:[590,500]},
- fisher:{morning:[145,560],work:[150,600],evening:[360,520]}
- };
- return (locations[role]||locations.merchant)[phase];
-}
-function drawFisheryDock(time){
- const p=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(x,y,w,h)};
- p(157,578,44,12,'#654b38');p(160,573,38,7,'#b98d59');
- for(let i=0;i<3;i++){p(162+i*13,577,3,22,'#70523c');p(163+i*13,580,2,14,'#d1a76e')}
- p(177,550,3,26,'#715339');p(175,547,7,5,'#c8ad7c');
- const bob=Math.sin(time*2)*3;p(125,602+bob,11,4,'#f2d48b');p(128,600+bob,4,3,'#e5f4df');
-}
 function worker(x,y,coat,phase){
 const walk=Math.sin(t*1.2+phase),bob=Math.abs(Math.sin(t*6+phase))*2;
 oval(x,y+13,13,5,'#38533d');
