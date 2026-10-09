@@ -808,6 +808,7 @@ function interactionTarget(){
 }
 function contextualActionLabel(){return interactionTarget()?.label||'Action'}
 function updateActionButton(){
+ const cast=document.getElementById('castFishButton');if(cast)cast.disabled=!nearPond()||fishingCooldown>0;
  const b=document.getElementById('actionButton');if(!b)return;
  const target=interactionTarget(),label=target?.label||'Action';
  if(b.textContent!==label)b.textContent=label;
@@ -1379,7 +1380,7 @@ function foodInventoryHTML(){
  const meals=mealInventory();
  return '<div class="inventory-section"><h3>Mat i ryggsäcken</h3>'+[...COOKING_RECIPES,{id:'legacy',name:'Tidigare lagad måltid',heal:12}].filter(r=>meals[r.id]>0).map(r=>'<p>'+r.name+' · '+meals[r.id]+' st</p>'+btn('Ät · +'+r.heal+' HP','eat-'+r.id)).join('')+(S.cookedMeals?'':'<p>Inga måltider ännu. Laga din fångst i Handelsbodens kök.</p>')+'</div>';
 }
-function recipeButton(label,action,ready){return '<button type="button" '+(ready?'':'disabled')+' onclick="window.action(\''+action+'\')">'+label+'</button>'}
+function recipeButton(label,action,ready){return '<button type="button" '+(action==='castfish'?'id="castFishButton" ':'')+(ready?'':'disabled')+' onclick="window.action(\''+action+'\')">'+label+'</button>'}
 function cookingMenu(){
  const inKitchen=S.scene==='interior'&&S.houseType==='market';
  return '<h2>Kök & matlagning</h2><p class="game-hint">'+(inKitchen?'Välj ett recept. Maten hamnar i ryggsäcken och kan ätas inför nästa strid.':'Köket finns i Handelsboden, sydväst i Emberfall. Gå in och välj Kök.')+'</p>'+COOKING_RECIPES.map(r=>'<div class="inventory-section"><h3>'+r.name+'</h3><p>Fisk '+S.fish+'/'+r.count+(r.wood?' · Trä '+S.wood+'/'+r.wood:'')+'</p><p>Ger 1 '+r.name.toLowerCase()+' · +'+r.heal+' HP</p>'+recipeButton('Laga '+r.name,'cook-'+r.id,inKitchen&&S.fish>=r.count&&S.wood>=(r.wood||0))+'</div>').join('')+foodInventoryHTML()+btn('Till ryggsäcken','openbag');
