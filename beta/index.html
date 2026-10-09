@@ -190,7 +190,7 @@ function pathBorder(x,y,w,h){
  for(let n=0;n<Math.floor(w*h/900);n++){const px=x+((n*97+23)%w),py=y+((n*131+17)%h);ctx.fillRect(px,py,5,2)}
 }
 function villageSchedule(time){
- const phase=(time/24)%1;
+ const phase=((time%600)+600)%600/600;
  return phase<.25?'morning':phase<.68?'work':'evening';
 }
 function npcLocation(role,time){
