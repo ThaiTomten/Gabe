@@ -98,3 +98,27 @@ test('Safari scroll guard is present',()=>{
  assert.match(script,/passive:false/);
  assert.match(script,/preventDefault/);
 });
+
+test('beta: expedition starts, can be completed, and cannot be double-collected',()=>{
+ const g=boot();
+ g.sandbox.action('expedition');
+ assert.ok(g.state().expeditionEnds>Date.now());
+ g.state().expeditionEnds=Date.now()-1000;
+ assert.equal(g.sandbox.finishExpedition(),true);
+ const ore=g.state().ore;
+ assert.equal(g.sandbox.finishExpedition(),false);
+ assert.equal(g.state().ore,ore);
+});
+test('beta: bulk mine upgrade requires sufficient gold',()=>{
+ const g=boot({gold:1000,mine:1});
+ g.sandbox.action('upmine10');
+ assert.equal(g.state().mine,11);
+ assert.ok(g.state().gold<1000);
+});
+test('beta: crafting mastery rewards milestone without removing other resources',()=>{
+ const g=boot({ore:25,wood:12,forge:1,forgeMastery:0,gold:0});
+ for(let i=0;i<10;i++)g.sandbox.action('forge');
+ assert.equal(g.state().forgeMastery,10);
+ assert.equal(g.state().swords,10);
+ assert.equal(g.state().gold,20);
+});
