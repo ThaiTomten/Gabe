@@ -51,7 +51,7 @@ function boot(saved=null){
    frame=null;now+=16;callback(now);
   }
  }
- return {sandbox,elements,listeners,advance,storage,element};
+ return {sandbox,elements,listeners,advance,storage,element,state:()=>vm.runInContext('S',sandbox)};
 }
 test('game initializes and animation loop stays alive',()=>{
  const g=boot();g.advance(30);
@@ -75,12 +75,12 @@ test('movement recovers from blocked save without deleting gold',()=>{
  const g=boot({x:200,y:200,gold:900,scene:'village'});
  g.advance(2);
  assert.match(g.element('moveStatus').textContent,/500,550/);
- assert.equal(g.sandbox.S.gold,900);
+ assert.equal(g.state().gold,900);
 });
 test('gameplay actions and UI still work',()=>{
  const g=boot();
  g.sandbox.action('mine');g.sandbox.action('wood');g.sandbox.action('wood');g.sandbox.action('forge');
- assert.equal(g.sandbox.S.swords,1);
+ assert.equal(g.state().swords,1);
  g.sandbox.show('empire');
  assert.match(g.element('content').innerHTML,/Imperiet/);
  g.sandbox.hide();g.advance(3);
@@ -88,10 +88,10 @@ test('gameplay actions and UI still work',()=>{
 test('dungeon can be entered and exited',()=>{
  const g=boot({x:915,y:425,scene:'village'});
  g.sandbox.interact();
- assert.equal(g.sandbox.S.scene,'dungeon');
- g.sandbox.S.dungeonX=100;g.sandbox.S.dungeonY=395;
+ assert.equal(g.state().scene,'dungeon');
+ g.state().dungeonX=100;g.state().dungeonY=395;
  g.sandbox.interact();
- assert.equal(g.sandbox.S.scene,'village');
+ assert.equal(g.state().scene,'village');
 });
 test('Safari scroll guard is present',()=>{
  assert.match(html,/overscroll-behavior:none/);
