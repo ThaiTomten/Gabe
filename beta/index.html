@@ -272,7 +272,7 @@ function spriteActor(kind,x,y,opts={}){
  }
  spriteDetail(kind,p,frame,moving,back);
  // Pixel atlas overlay gives stable frame-authored texture on top of equipment layers.
- if(!back)atlasStamp(kind,p,frame);
+ if(!back&&kind!=='hero')atlasStamp(kind,p,frame);
  ctx.restore();
 }
 // Reusable deterministic tile stamps, original to Runeforge.
