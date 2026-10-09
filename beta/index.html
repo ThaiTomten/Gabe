@@ -342,7 +342,58 @@ function drawActorEquipment(kind,p,opts,frame){
  else if(kind==='scout'){p(9,-10,3,20,'#7a5b3f');p(7,-13,7,5,'#c5ad7c')}
  else if(kind==='wolf'){p(-21,-9+(frame%2),8,5,'#6c8580');p(-12,-31,6,9,'#a6b3a4');p(6,-31,6,9,'#a6b3a4')}
 }
+// Beta 4.7: native 20x28 original monster sprite sheets.
+// Each frame is a separately generated pixel array, not overdrawn rectangles.
+const MONSTER_SHEETS={};
+function createMonsterSheet(kind){
+ const colors={
+ scout:{o:'#354c3b',body:'#69945b',light:'#a9c987',face:'#9db57c',eye:'#f4d984'},
+ brute:{o:'#493c37',body:'#8e674e',light:'#c49a6c',face:'#b38a65',eye:'#f4c978'},
+ shaman:{o:'#3e3755',body:'#775a9e',light:'#c2a0e5',face:'#a987bb',eye:'#f5dbff'},
+ wolf:{o:'#334f50',body:'#617e7b',light:'#a1b8ac',face:'#819b93',eye:'#f5d48c'}
+ }[kind];if(!colors)return null;
+ const frames=[];
+ for(let f=0;f<6;f++){
+  const pixels=Array.from({length:28},()=>Array(20).fill(''));
+  const fill=(x,y,w,h,c)=>{for(let yy=Math.max(0,y);yy<Math.min(28,y+h);yy++)for(let xx=Math.max(0,x);xx<Math.min(20,x+w);xx++)pixels[yy][xx]=c};
+  const stride=[0,1,2,1,0,-1][f],swing=[0,1,2,1,0,-1][f];
+  if(kind==='wolf'){
+   fill(2,12,16,9,colors.o);fill(3,10,13,10,colors.body);
+   fill(12,7,7,10,colors.body);fill(13,4,3,6,colors.o);fill(17,5,2,5,colors.o);
+   fill(4,18+stride,4,7,colors.o);fill(12,18-stride,4,7,colors.o);
+   fill(1,12+swing,5,3,colors.light);fill(13,11,5,4,colors.face);
+   fill(16,11,2,2,colors.eye);fill(18,15,2,2,colors.o);
+   fill(4,11,7,3,colors.light);
+  }else{
+   const wide=kind==='brute'?2:0;
+   fill(6-wide,17,4+wide,8+stride,colors.o);fill(11,17,4+wide,8-stride,colors.o);
+   fill(4-wide,9,12+wide*2,12,colors.o);fill(5-wide,10,10+wide*2,10,colors.body);
+   fill(2-wide,11+swing,4,10,colors.body);fill(14+wide,11-swing,4,10,colors.body);
+   fill(6,3,8,9,colors.face);fill(5,2,10,5,colors.o);
+   fill(7,8,2,2,colors.eye);fill(12,8,2,2,colors.eye);
+   fill(7,14,6,3,colors.light);fill(9,18,3,3,colors.light);
+   if(kind==='scout'){fill(3,4,4,5,colors.light);fill(14,4,4,5,colors.light);fill(17,10,2,13,'#886b45')}
+   if(kind==='brute'){fill(3,5,4,7,'#d4c09a');fill(14,5,4,7,'#d4c09a');fill(16,13,3,13,'#5b5149')}
+   if(kind==='shaman'){fill(3,3,14,4,colors.light);fill(17,5,2,20,'#bba4d9');fill(15,2,5,5,'#e8d5f8')}
+  }
+  frames.push(pixels);
+ }
+ return {frames,colors};
+}
+function monsterSpriteSheet(kind,x,y,opts={}){
+ if(!MONSTER_SHEETS[kind])MONSTER_SHEETS[kind]=createMonsterSheet(kind);
+ const sheet=MONSTER_SHEETS[kind];if(!sheet)return false;
+ const f=opts.moving?Math.floor((opts.walk||0)*(kind==='brute'?5:9))%6:0;
+ const rows=sheet.frames[(f+6)%6];
+ ctx.save();ctx.translate(Math.round(x),Math.round(y));if(opts.dir==='left')ctx.scale(-1,1);
+ ctx.scale(kind==='brute'?3.2:kind==='wolf'?3:2.8,kind==='brute'?3.2:kind==='wolf'?3:2.8);
+ ctx.imageSmoothingEnabled=false;
+ for(let yy=0;yy<28;yy++)for(let xx=0;xx<20;xx++){const c=rows[yy][xx];if(c){ctx.fillStyle=c;ctx.fillRect(xx-10,yy-25,1,1)}}
+ if(opts.action==='hurt'){ctx.fillStyle='#fff1da99';ctx.fillRect(-11,-24,22,27)}
+ ctx.restore();return true;
+}
 function spriteActor(kind,x,y,opts={}){
+ if(['scout','brute','shaman','wolf'].includes(kind)&&monsterSpriteSheet(kind,x,y,opts))return;
  const pal=kind==='hero'?HERO_STYLES[Math.max(0,Math.min(2,S.heroStyle||0))].palette:(SPRITE_PALETTES[kind]||SPRITE_PALETTES.hero);
  const moving=!!opts.moving,animation=actorAnimation(kind,moving,opts.walk||0),frame=animation.frame;
  const step=animation.stride,bob=animation.bob;
