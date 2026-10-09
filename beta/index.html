@@ -84,6 +84,15 @@ function pixelWater(x,y,w,h,time=0){
  }
  p(x+5,y+5,w-10,3,'#9ad6ce55');p(x+5,y+h-9,w-10,3,'#2b697b');
 }
+function pixelSign(x,y,type){
+ const p=(a,b,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(a,b,w,h)};
+ p(x-20,y-18,40,28,'#654631');p(x-17,y-15,34,22,'#e6c996');
+ p(x-14,y-12,28,3,'#f5e1ba');p(x-15,y+7,30,3,'#9d7750');
+ if(type==='forge'){p(x-9,y-7,18,4,'#667e87');p(x-4,y-11,8,15,'#667e87');p(x-12,y-2,24,4,'#a0aeb0')}
+ if(type==='mine'){p(x-10,y-8,20,4,'#778d91');p(x-2,y-12,4,18,'#71563e');p(x+5,y-10,5,9,'#a8b3b1')}
+ if(type==='market'){p(x-10,y-9,20,14,'#bb8051');p(x-7,y-6,14,8,'#e3b966');p(x-4,y-4,8,4,'#7b9b6b')}
+ if(type==='guild'){p(x-8,y-11,16,18,'#6d7997');p(x-5,y-8,10,11,'#c5c9cf');p(x-2,y-7,4,9,'#d7b973')}
+}
 function pixelRoofDetails(x,y,w,roofColor,level){
  const p=(a,b,ww,hh,c)=>{ctx.fillStyle=c;ctx.fillRect(a,b,ww,hh)};
  for(let row=0;row<3;row++)for(let col=0;col<Math.floor(w/18);col++){
@@ -307,7 +316,7 @@ if(lvl>=5){box(x+w/2-5,y-64,10,18,'#f2cf7d');poly([[x+w/2,y-84],[x+w/2-14,y-63],
 pixelRoofDetails(x,y,w,roof,lvl);
 if(idx===0){const flicker=5+Math.sin(t*8)*3;oval(x+w-4,y-75,10+flicker,6+flicker/2,'#ffbd4c55')}
 if(lvl>=10){box(x-23,y-16,12,38,'#d4b66e');box(x+w+11,y-16,12,38,'#d4b66e');box(x-26,y-23,18,8,'#e8d395');box(x+w+8,y-23,18,8,'#e8d395')}
-text(b.n+' Lv.'+lvl,x+w/2,y-78,20);text('▼',x+w/2,y+h+32,16,'#ffe6a4');
+pixelSign(x+w/2,y-96,['forge','mine','market','guild'][idx]);text(b.n+' Lv.'+lvl,x+w/2,y-121,17);text('▼',x+w/2,y+h+32,16,'#ffe6a4');
 }
 buildings.forEach(house);
 for(const [x,y] of [[412,350],[586,350],[412,486],[586,486]])pixelLantern(x,y,S.visualTime);
