@@ -244,7 +244,7 @@ spriteActor('hero',S.forestX,S.forestY,{moving:walkMoving,walk:walkTime,dir:Math
 ctx.restore();
 }
 function forestInteract(){
-if(!S.forestWolfDefeated&&Math.hypot(S.forestX-635,S.forestY-320)<110){S.combat={hp:32,max:32,guard:false,message:'En Duskwolf vaktar skogens runor!',enemyIndex:3,training:false,turn:0,skillReady:true};show('combat');return}
+if(!S.forestWolfDefeated&&Math.hypot(S.forestX-635,S.forestY-320)<110){S.combat={hp:24,max:24,guard:false,message:'En Duskwolf vaktar skogens runor!',enemyIndex:3,training:false,turn:0,skillReady:true};show('combat');return}
 if(S.forestY>710&&Math.abs(S.forestX-500)<115){S.scene='village';S.x=500;S.y=545;persist();note('Tillbaka i Emberfall');return}
 if(!S.forestChest&&Math.hypot(S.forestX-802,S.forestY-180)<110){S.forestChest=true;S.gold+=40;S.totalGold+=40;S.wood+=10;S.runes+=1;persist();note('Skogsförråd: +40 guld, +10 trä, +1 runfragment');return}
 for(const [x,y] of [[280,460],[700,520],[750,380]])if(Math.hypot(S.forestX-x,S.forestY-y)<95){S.wood+=3;S.forestWood+=3;persist();note('Du samlade +3 trä');return}
@@ -294,7 +294,7 @@ const ENEMIES=[
 {name:'Goblin Scout',hp:18,attack:4,defense:0,gold:16,xp:8,color:'#86ac63'},
 {name:'Goblin Brute',hp:29,attack:7,defense:1,gold:30,xp:12,color:'#a87955'},
 {name:'Rune Shaman',hp:24,attack:9,defense:0,gold:45,xp:18,color:'#8a6ab2'},
-{name:'Duskwolf',hp:32,attack:6,defense:1,gold:38,xp:16,color:'#7b9995'}
+{name:'Duskwolf',hp:24,attack:4,defense:1,gold:38,xp:16,color:'#7b9995'}
 ];
 function newCombat(index,training=false){
  const enemy=ENEMIES[index]||ENEMIES[0];
