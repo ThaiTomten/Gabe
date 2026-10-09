@@ -110,10 +110,10 @@ test('beta: expedition starts, can be completed, and cannot be double-collected'
  assert.equal(g.state().ore,ore);
 });
 test('beta: bulk mine upgrade requires sufficient gold',()=>{
- const g=boot({gold:1000,mine:1});
+ const g=boot({gold:5000,mine:1});
  g.sandbox.action('upmine10');
  assert.equal(g.state().mine,11);
- assert.ok(g.state().gold<1000);
+ assert.ok(g.state().gold<5000);
 });
 test('beta: crafting mastery rewards milestone without removing other resources',()=>{
  const g=boot({ore:25,wood:12,forge:1,forgeMastery:0,gold:0});
