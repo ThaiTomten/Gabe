@@ -237,6 +237,20 @@ function poseOverlay(kind,p,frame,moving){
  for(let x=0;x<row.length;x++)if(row[x]!=='.')p(x-4,-30-(moving?frame%2:0),1,2,ink);
 }
 // Original layered equipment and creature accents, built at native pixel resolution.
+function facialPixels(kind,p,frame,back){
+ if(back)return;
+ const skin=kind==='wolf'?'#c4c4a8':kind==='brute'?'#b8a27e':'#e9c29d';
+ const eye=kind==='wolf'?'#e8ce83':kind==='shaman'?'#dfb5fa':'#394447';
+ p(-5,-20,2,2,eye);p(3,-20,2,2,eye);
+ if(kind==='hero'||kind==='merchant'||kind==='guard'){
+  p(-2,-15,4,1,'#a16d60');
+  if(frame%3===0)p(-6,-23,3,2,skin);
+ }
+ if(kind==='scout'){p(-7,-26,4,4,'#88a66d');p(3,-26,4,4,'#88a66d')}
+ if(kind==='brute'){p(-8,-24,5,3,'#e5cfaa');p(3,-24,5,3,'#e5cfaa')}
+ if(kind==='shaman'){p(-4,-28,8,3,'#c9a8df');p(-2,-25,4,2,'#f2e5ff')}
+ if(kind==='wolf'){p(-12,-23,5,4,eye);p(7,-23,5,4,eye);p(-3,-13,6,4,'#343d3c')}
+}
 function drawActorEquipment(kind,p,opts,frame){
  if(kind==='hero'){
   const metal=S.weaponTier>=3?'#e9d5a0':'#c1cbd0';
@@ -321,6 +335,7 @@ function spriteActor(kind,x,y,opts={}){
  spriteDetail(kind,p,frame,moving,back);
  poseOverlay(kind,p,frame,moving);
  drawActorEquipment(kind,p,opts,frame);
+ facialPixels(kind,p,frame,back);
  // Pixel atlas overlay gives stable frame-authored texture on top of equipment layers.
  if(!back&&kind!=='hero')atlasStamp(kind,p,frame);
  if(opts.action)drawActionPose(kind,p,opts.action,opts.actionProgress||0);
