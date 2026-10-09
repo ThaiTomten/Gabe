@@ -250,7 +250,6 @@ if(S.heroArmor){box(S.x-15,S.y-19,5,20,'#e4c680');box(S.x+10,S.y-19,5,20,'#e4c68
 text('YOU',S.x,S.y-44,14,'#d9f8e3');
 text('↓ Whisperwood Forest',500,817,18,'#fff0b3');text('→ Goblingrottan',922,465,15,'#ffe3a5');
 ctx.restore();
-if(S.visualTime==='dusk'&&(S.scene==='village'||S.scene==='forest')){ctx.fillStyle='#28375a40';ctx.fillRect(0,0,ww,hh)}
 // Screen-space cinematic vignette, without blocking touch controls.
 const vignette=ctx.createRadialGradient(ww/2,hh/2,Math.min(ww,hh)*.28,ww/2,hh/2,Math.max(ww,hh)*.77);vignette.addColorStop(0,'#00000000');vignette.addColorStop(1,'#0c1d2045');ctx.fillStyle=vignette;ctx.fillRect(0,0,ww,hh);
 document.getElementById('stats').textContent='🪙 '+Math.floor(S.gold)+' · ⛏ '+Math.floor(S.ore)+' · ⚔ '+S.swords;
@@ -496,7 +495,8 @@ if(S.autoForge&&S.ore>=2&&S.wood>=1){S.ore-=2;S.wood--;S.swords+=S.forge}
 if(S.autoSell&&S.swords>0){S.swords--;S.gold+=35;S.totalGold+=35}
 }
 if(S.expeditionEnds&&Date.now()>=S.expeditionEnds){finishExpedition();persist()}if(autosaveClock>=12){autosaveClock=0;persist()}
-draw();if(S.scene==='dungeon')drawDungeon();else if(S.scene==='interior')drawInterior();else if(S.scene==='forest')drawForest();if(S.scene==='forest'||S.scene==='dungeon')drawCombatEffects(S.scene);if(S.scene==='forest'||S.scene==='dungeon'){
+draw();if(S.scene==='dungeon')drawDungeon();else if(S.scene==='interior')drawInterior();else if(S.scene==='forest')drawForest();if(S.scene==='forest'||S.scene==='dungeon')drawCombatEffects(S.scene);
+if(S.visualTime==='dusk'&&(S.scene==='village'||S.scene==='forest')){ctx.fillStyle='#28375a40';ctx.fillRect(0,0,ww,hh)}if(S.scene==='forest'||S.scene==='dungeon'){
 ctx.save();ctx.fillStyle='#49352bd9';ctx.fillRect(8,8,Math.min(ww-16,190),43);
 ctx.fillStyle='#2b2927';ctx.fillRect(17,18,132,12);ctx.fillStyle='#c96b60';ctx.fillRect(17,18,132*Math.max(0,S.hp)/(20+(S.level-1)*4),12);
 ctx.font='bold 12px system-ui';ctx.fillStyle='#fff1d5';ctx.fillText('HP '+S.hp+' / '+(20+(S.level-1)*4),21,40);
