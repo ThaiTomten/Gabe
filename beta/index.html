@@ -1,4 +1,4 @@
-<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 5.6 · Speltest</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
+<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 5.7 · Speltest</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
 header{background:#78533c;color:#fff0d0;border-bottom:4px solid #b98a51;text-shadow:1px 2px #553e31}
 #bottom{background:#78573e;border-top:4px solid #b98a51}
 button{background:#b28a5a;color:#fff7e7;border:2px solid #e2b879;box-shadow:inset 0 2px #f5d39b,0 3px #5b4134;font-weight:700}
@@ -17,7 +17,13 @@ html,body{touch-action:manipulation}#map,.actions{touch-action:none}
 body{display:flex;flex-direction:column;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}header{flex:0 0 56px;gap:8px}header b{font-size:14px}#stats{font-size:12px;text-align:right}#map{flex:1;min-height:80px;height:auto}#bottom{flex:0 0 207px;height:207px;padding:8px}button{min-height:44px}button:disabled{opacity:.48;filter:none}.pad{padding:8px 4px;gap:14px}.actions{grid-template-columns:repeat(2,minmax(0,1fr));flex:1;max-width:240px}.actions button{font-size:13px;min-height:48px;padding:8px 4px}#joy{flex-shrink:0}#modal{inset:calc(62px + env(safe-area-inset-top)) 10px calc(215px + env(safe-area-inset-bottom));padding:12px;scrollbar-gutter:stable}#close{position:sticky;top:0;float:right;z-index:2}#interactionHint{position:absolute;bottom:9px;left:10px;right:10px;text-align:center;background:#18332ce8;color:#fff0c4;padding:7px 10px;border-radius:8px;font-size:12px;pointer-events:none}#moveStatus{display:none}#msg{max-width:calc(100% - 16px);font-size:12px;pointer-events:none}.fish-meter{position:relative;height:46px;margin:20px 4px 8px;background:#4d4240;overflow:hidden;border-radius:7px}#fishZone{position:absolute;height:100%;background:#64936c;border-left:3px solid #d9ecb1;border-right:3px solid #d9ecb1}#fishPerfect{position:absolute;height:100%;background:#bdd29488}#fishMarker{position:absolute;width:5px;height:100%;background:#fff6de;transform:translateX(-50%);box-shadow:0 0 0 2px #203c38}.fish-legend{font-size:12px;color:#d4dbbb}.fish-progress{height:14px;background:#3c4a46;border-radius:7px;overflow:hidden}#fishProgress{height:100%;background:#d7b470}.fish-summary{display:flex;justify-content:space-between}.fishing-actions{position:sticky;bottom:0;background:#1d3234;padding:8px 0}.fishing-actions button{min-height:56px}#fishFeedback{min-height:42px}.inventory-section h3{margin-top:4px}@media(max-height:560px){header{flex-basis:40px;height:40px}#bottom{flex-basis:162px;height:162px}#joy{width:84px;height:84px}#nub{left:18px;top:18px}.pad{padding:4px}.actions button{min-height:40px}#modal{inset:45px 8px 8px}#interactionHint{font-size:11px}}
 
 #moveStatus{display:none}
-</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="interactionHint"></div><div id="msg">Beta Preview 5.6 · Speltest · Emberfall · Original Art</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()" id="actionButton" aria-label="Utför handling">✦ Action</button><button onclick="fieldAttack()">⚔ Attack</button><button onclick="fieldDodge()">💨 Dodge</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
+/* 5.7: status stays on its control; combat messages sit below health. */
+#attackButton,#dodgeButton{display:flex;flex-direction:column;justify-content:center;gap:2px}
+.actions small{font-size:11px;font-weight:600;line-height:1.1}
+#attackButton:disabled,#dodgeButton:disabled{opacity:.75;background:#715741;color:#f5e6cd;box-shadow:none}
+#map[data-combat="true"] #msg{top:58px}
+#msg{transition:opacity .2s;line-height:1.35}
+</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="interactionHint"></div><div id="msg">Beta Preview 5.7 · Speltest · Emberfall · Original Art</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()" id="actionButton" aria-label="Utför handling">✦ Action</button><button id="attackButton" type="button"><span>⚔ Attack</span><small id="attackState">Redo</small></button><button id="dodgeButton" type="button"><span>↗ Undvik</span><small id="dodgeState">Redo</small></button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
 const PLAYTEST55=!!(window.location&&/(?:[?&])speltest=1(?:&|$)/.test(window.location.search||''));
 const SAVE_KEY=PLAYTEST55?'runeforge_playtest_55':'runeforge_beta_preview_01';
 const BACKUP_KEY=PLAYTEST55?'runeforge_playtest_55_backup':'runeforge_beta_preview_backup_52';
@@ -330,7 +336,7 @@ function monsterSprite55(kind,x,y,opts={}){
 }
 function enemyVisual55(enemy){
  const p=currentPosition();
- return {dir:p.x>=enemy.x?'right':'left',moving:!!enemy.moving,walkDistance:enemy.walkDistance||0,
+ return {dir:enemy.windup>0&&enemy.attack?enemy.attack.dir:(p.x>=enemy.x?'right':'left'),moving:!!enemy.moving,walkDistance:enemy.walkDistance||0,
  action:enemy.hurtPose>0?'hurt':enemy.windup>0?'anticipation':null,
  actionProgress:1-(enemy.hurtPose||0)/.28};
 }
@@ -521,10 +527,10 @@ function offline(){
 // Walk-through portals: directional edge crossing, no interaction button required.
 let transitionLock=0;
 function changeZone(scene,spawnX,spawnY,message){
- S.scene=scene;vx=vy=0;walkMoving=false;const nub=document.getElementById('nub');if(nub)nub.style.transform='';
+ resetFieldCombat57();S.scene=scene;vx=vy=0;walkMoving=false;const nub=document.getElementById('nub');if(nub)nub.style.transform='';
  if(scene==='village'){S.x=spawnX;S.y=spawnY}
  else if(scene==='forest'){S.forestX=spawnX;S.forestY=spawnY;S.forestVisits++}
- else if(scene==='dungeon'){S.dungeonX=spawnX;S.dungeonY=spawnY;S.dungeonKills=0;S.dungeonChestClaimed=false;S.dungeonRewardPending=false;for(let i=1;i<4;i++){fieldEnemies[i].hp=fieldEnemies[i].max;fieldEnemies[i].x=[0,440,740,530][i];fieldEnemies[i].y=[0,260,470,680][i]}}
+ else if(scene==='dungeon'){S.dungeonX=spawnX;S.dungeonY=spawnY;S.dungeonKills=0;S.dungeonDefeated57=[];S.dungeonChestClaimed=false;S.dungeonRewardPending=false;for(let i=1;i<4;i++){fieldEnemies[i].hp=fieldEnemies[i].max;fieldEnemies[i].x=[0,440,740,530][i];fieldEnemies[i].y=[0,260,470,680][i]}}
  else if(scene==='interior'){S.insideX=spawnX;S.insideY=spawnY}
  transitionLock=.85;persist();note(message);
 }
@@ -536,9 +542,56 @@ const fieldEnemies=[
  {scene:'dungeon',x:740,y:470,hp:29,max:29,kind:'brute',attackClock:0},
  {scene:'dungeon',x:530,y:680,hp:24,max:24,kind:'shaman',attackClock:0}
 ];
-function activeFieldEnemy(e,i){return e.hp>0&&!(e.scene==='forest'&&S.forestWolfDefeated)&&!(e.scene==='dungeon'&&S.dungeonKills>i-1)}
+// Older saves stored a count and treated the first N enemies as defeated.
+const DUNGEON_IDS57=['scout','brute','shaman'];
+S.dungeonDefeated57=Array.isArray(S.dungeonDefeated57)?[...new Set(S.dungeonDefeated57.filter(id=>DUNGEON_IDS57.includes(id)))]:DUNGEON_IDS57.slice(0,Math.max(0,Math.min(3,S.dungeonKills||0)));
+S.dungeonKills=S.dungeonDefeated57.length;
+function recordDungeonDefeat57(kind){
+ if(!DUNGEON_IDS57.includes(kind)||S.dungeonDefeated57.includes(kind))return;
+ S.dungeonDefeated57.push(kind);S.dungeonKills=S.dungeonDefeated57.length;
+ if(S.dungeonKills===3)S.dungeonRewardPending=true;
+}
+function activeFieldEnemy(e,i){return e.hp>0&&!(e.scene==='forest'&&S.forestWolfDefeated)&&!(e.scene==='dungeon'&&S.dungeonDefeated57.includes(e.kind))}
 function currentPosition(){return S.scene==='forest'?{x:S.forestX,y:S.forestY}:S.scene==='dungeon'?{x:S.dungeonX,y:S.dungeonY}:{x:S.x,y:S.y}}
 const magicProjectiles=[];
+const FIELD_ATTACK57=Object.freeze({radius:90,windup:.65,recovery:.9});
+const combatLabels57=[];
+let noteTime57=6;
+function resetFieldCombat57(){
+ for(const e of fieldEnemies){e.windup=0;e.attack=null;e.impact=null;e.attackClock=0;e.hitFlash=0;e.hurtPose=0;e.stagger=0;e.moving=false}
+ magicProjectiles.length=0;combatParticles.length=0;combatLabels57.length=0;dodgeTrail.length=0;
+ fieldSwing=0;fieldFlash=0;heroAction=null;heroActionTime=0;fieldInvuln=Math.max(fieldInvuln,.4);
+}
+function combatLabel57(x,y,text,color='#fff0c7'){
+ combatLabels57.push({x,y,text,color,life:.85,scene:S.scene});
+ if(combatLabels57.length>16)combatLabels57.shift();
+}
+function enemyAttackContains57(attack,pos){return !!attack&&Math.hypot(pos.x-attack.x,pos.y-attack.y)<=attack.radius}
+function beginEnemyAttack57(e){
+ e.windup=FIELD_ATTACK57.windup;e.moving=false;
+ e.attack={x:e.x,y:e.y,radius:FIELD_ATTACK57.radius,duration:FIELD_ATTACK57.windup,dir:currentPosition().x>=e.x?'right':'left'};
+}
+function updateCombatUI57(dt=0){
+ const combat=['forest','dungeon'].includes(S.scene),available=combat&&!panel&&!document.hidden;
+ document.getElementById('map').setAttribute('data-combat',String(combat));
+ for(const [id,cooldown,label] of [['attack',fieldAttackCooldown,'Attack'],['dodge',fieldDodgeCooldown,'Undvik']]){
+  const b=document.getElementById(id+'Button'),status=document.getElementById(id+'State');
+  const text=panel?'Paus':!combat?'I strid':cooldown>0?(Math.ceil(cooldown*10)/10).toFixed(1).replace('.',',')+' s':'Redo';
+  if(status.textContent!==text)status.textContent=text;
+  b.disabled=!available||cooldown>0;
+  b.setAttribute('aria-label',label+' · '+text);
+ }
+ if(!panel&&!document.hidden)noteTime57=Math.max(0,noteTime57-dt);
+ document.getElementById('msg').style.opacity=noteTime57>0?'1':'0';
+}
+function drawCombatHUD57(){
+ if(!['forest','dungeon'].includes(S.scene))return;
+ const max=20+(S.level-1)*4;
+ ctx.save();ctx.fillStyle='#23312bee';ctx.fillRect(8,8,176,42);ctx.strokeStyle='#c9ab74';ctx.lineWidth=1;ctx.strokeRect(8.5,8.5,175,41);
+ ctx.font='bold 12px system-ui';ctx.fillStyle='#fff2d5';ctx.textAlign='left';ctx.fillText('HP '+S.hp+' / '+max,18,25);
+ if(S.hp<=max*.3){ctx.textAlign='right';ctx.fillStyle='#ffd2b6';ctx.fillText('! Lågt HP',174,25)}
+ ctx.fillStyle='#493f36';ctx.fillRect(18,33,156,7);ctx.fillStyle='#e1a781';ctx.fillRect(18,33,156*Math.max(0,Math.min(1,S.hp/max)),7);ctx.restore();
+}
 const LOOT_CATALOG={
  'wolf-fang':{name:'Duskwolf Fang',icon:'🦷',rarity:'uncommon',bonus:1,effect:'lifesteal',description:'En ovanlig trofé: +1 attack och läker 1 HP vid träff.'},
  'iron-sigil':{name:'Iron Sigil',icon:'🔰',rarity:'rare',bonus:2,effect:'guard',description:'En runristad symbol: +2 attack och 1 mindre skada från monster.'},
@@ -611,26 +664,26 @@ function essenceDrop(kind){
 }
 function damageFieldEnemy(e,i,damage,magic=false){
  if(e.hp<=0||!activeFieldEnemy(e,i))return;
- e.hp=Math.max(0,e.hp-damage);if(charmEffect()==='lifesteal')S.hp=Math.min(20+(S.level-1)*4,S.hp+1);e.hitFlash=.22;e.stagger=.17;e.hurtPose=.28;
+ const actualDamage=Math.min(e.hp,damage);e.hp=Math.max(0,e.hp-damage);combatLabel57(e.x+62,e.y-50,'−'+actualDamage,magic?'#e8ceff':'#fff0c7');if(charmEffect()==='lifesteal')S.hp=Math.min(20+(S.level-1)*4,S.hp+1);e.hitFlash=.22;e.stagger=.17;e.hurtPose=.28;
  spawnCombatParticles(e.x,e.y-26,7,magic?'#d7b5fa':'#f6d18b');
  if(e.hp===0){
   const reward=e.kind==='wolf'?38:15+i*8;
   economyTransaction('adventure',reward,0,'combat');awardXP(e.kind==='wolf'?16:8+i*3);
   rollMonsterLoot(e.kind);const essence=essenceDrop(e.kind);
   if(e.kind==='wolf'){S.forestWolfDefeated=true;S.forestWolfWins++;S.wood+=6;S.runes+=2}
-  else{S.forestWins++;S.combatWins++;S.dungeonKills=Math.min(3,S.dungeonKills+1);if(S.dungeonKills===3)S.dungeonRewardPending=true}
+  else{S.forestWins++;S.combatWins++;recordDungeonDefeat57(e.kind)}
   persist();note('Fiende besegrad! +'+reward+' guld · +'+essence+' essens');
- }else note('Träff! '+damage+' skada');
+ }
 }
 function fieldAttack(){
- if(panel||fieldAttackCooldown>0||!['forest','dungeon'].includes(S.scene))return;
+ if(panel||document.hidden||fieldAttackCooldown>0||!['forest','dungeon'].includes(S.scene))return;
  const magic=S.weaponType==='staff'&&S.staffOwned;
  fieldAttackCooldown=magic?(charmEffect()==='arcane'?.55:.75):.42;fieldFlash=.2;fieldSwing=magic?0:.23;heroAction=magic?'cast':'slash';heroActionTime=.3;
  const pos=currentPosition(),length=Math.hypot(faceX,faceY)||1;
  if(magic){
   magicProjectiles.push({x:pos.x,y:pos.y-22,vx:faceX/length*370,vy:faceY/length*370,life:.7,scene:S.scene,damage:7+S.level+Math.floor(S.staffMastery/5)+charmBonus()+(S.weaponTier||0)*2+renownBonus()});
   spawnCombatParticles(pos.x,pos.y-25,5,'#d7b5fa');
-  note('Runprojektil avfyrad!');return;
+  updateCombatUI57();return;
  }
  let hit=false;
  for(let i=0;i<fieldEnemies.length;i++){
@@ -639,10 +692,10 @@ function fieldAttack(){
   const aim=(dx*faceX+dy*faceY)/(Math.max(1,dist)*length);
   if(dist<100&&(aim>.1||dist<40)){damageFieldEnemy(e,i,5+S.level+(S.heroSword?5:0)+charmBonus()+(S.weaponTier||0)*2+renownBonus());hit=true}
  }
- if(!hit)note('Attack! Gå närmare och rikta dig mot fienden');
+ if(!hit)combatLabel57(pos.x,pos.y-82,'Närmare fienden');updateCombatUI57();
 }
 function fieldDodge(){
- if(panel||fieldDodgeCooldown>0||!['forest','dungeon'].includes(S.scene))return false;
+ if(panel||document.hidden||fieldDodgeCooldown>0||!['forest','dungeon'].includes(S.scene))return false;
  const pos=currentPosition(),moving=Math.hypot(vx,vy)>.12;
  const ax=moving?vx:faceX,ay=moving?vy:faceY,length=Math.hypot(ax,ay)||1;
  const dx=ax/length,dy=ay/length;
@@ -650,10 +703,11 @@ function fieldDodge(){
  if(S.scene==='forest'){const tx=Math.max(35,Math.min(965,nx)),ty=Math.max(45,Math.min(820,ny));let x=pos.x,y=pos.y;const steps=Math.ceil(Math.hypot(tx-x,ty-y)/4);for(let i=1;i<=steps;i++){const ax=pos.x+(tx-pos.x)*i/steps,ay=pos.y+(ty-pos.y)*i/steps;if(waterCollision('forest',ax,ay))break;x=ax;y=ay}S.forestX=x;S.forestY=y}
  else{S.dungeonX=Math.max(35,Math.min(965,nx));S.dungeonY=Math.max(60,Math.min(810,ny))}
  fieldDodgeCooldown=S.bootsOwned?.9:1.25;fieldInvuln=.38;
- dodgeTrail.push({x:pos.x,y:pos.y,life:.3,scene:S.scene});
- note('Dodge!');return true;
+ dodgeTrail.push({x:pos.x,y:pos.y,toX:currentPosition().x,toY:currentPosition().y,life:.3,scene:S.scene});
+ updateCombatUI57();return true;
 }
 function updateFieldCombat(dt){
+ if(panel||document.hidden)return;
  fieldAttackCooldown=Math.max(0,fieldAttackCooldown-dt);fieldDodgeCooldown=Math.max(0,fieldDodgeCooldown-dt);heroActionTime=Math.max(0,heroActionTime-dt);if(heroActionTime===0)heroAction=null;fieldSwing=Math.max(0,fieldSwing-dt);
  fieldInvuln=Math.max(0,fieldInvuln-dt);fieldFlash=Math.max(0,fieldFlash-dt);
 for(let i=dodgeTrail.length-1;i>=0;i--){dodgeTrail[i].life-=dt;if(dodgeTrail[i].life<=0)dodgeTrail.splice(i,1)}
@@ -675,44 +729,77 @@ for(let i=dodgeTrail.length-1;i>=0;i--){dodgeTrail[i].life-=dt;if(dodgeTrail[i].
  if(struck)magicProjectiles.splice(i,1);
 }
 for(let i=combatParticles.length-1;i>=0;i--){const p=combatParticles[i];p.life-=dt;p.x+=p.vx*dt;p.y+=p.vy*dt;if(p.life<=0)combatParticles.splice(i,1)}
- if(panel||!['forest','dungeon'].includes(S.scene))return;
+ for(let i=combatLabels57.length-1;i>=0;i--){const p=combatLabels57[i];p.life-=dt;p.y-=dt*22;if(p.life<=0||p.scene!==S.scene)combatLabels57.splice(i,1)}
+ if(!['forest','dungeon'].includes(S.scene))return;
  const pos=currentPosition();
  for(let i=0;i<fieldEnemies.length;i++){
   const e=fieldEnemies[i];if(e.scene!==S.scene||!activeFieldEnemy(e,i))continue;
-  e.hitFlash=Math.max(0,(e.hitFlash||0)-dt);e.hurtPose=Math.max(0,(e.hurtPose||0)-dt);e.stagger=Math.max(0,(e.stagger||0)-dt);const dist=Math.hypot(pos.x-e.x,pos.y-e.y);
-  e.moving=false;if(e.stagger>0)continue;
-  if(dist<215&&dist>52){const step=dt*22;e.x+=(pos.x-e.x)/dist*step;e.y+=(pos.y-e.y)/dist*step;e.walkDistance=(e.walkDistance||0)+step;e.moving=true}
+  e.hitFlash=Math.max(0,(e.hitFlash||0)-dt);e.hurtPose=Math.max(0,(e.hurtPose||0)-dt);e.stagger=Math.max(0,(e.stagger||0)-dt);
+  if(e.impact){e.impact.life-=dt;if(e.impact.life<=0)e.impact=null}
+  e.moving=false;
+  if(e.stagger>0)continue;
+  if(e.windup>0&&e.attack){
+   e.windup=Math.max(0,e.windup-dt);
+   if(e.windup>0)continue;
+   const attack=e.attack;e.attack=null;e.attackClock=FIELD_ATTACK57.recovery;e.impact={...attack,life:.2};
+   if(!enemyAttackContains57(attack,pos)){combatLabel57(e.x+62,e.y-50,'Miss');continue}
+   if(fieldInvuln>0){combatLabel57(pos.x,pos.y-82,'Undvek!','#c8eeef');continue}
+   const damage=Math.max(1,(e.kind==='brute'?5:3)-(S.heroArmor?2:0)-(S.armorTier||0)-(S.helmetOwned?1:0)-(charmEffect()==='guard'?1:0));
+   S.hp=Math.max(0,S.hp-damage);fieldInvuln=.65;heroAction='hurt';heroActionTime=.3;
+   spawnCombatParticles(pos.x,pos.y-25,5,'#f4a98c');combatLabel57(pos.x,pos.y-82,'−'+damage+' HP','#ffd2b6');
+   if(S.hp===0){S.hp=Math.max(8,Math.floor((20+(S.level-1)*4)/2));changeZone('village',500,550,'Du återhämtar dig i Emberfall');return}
+   continue;
+  }
   e.attackClock=Math.max(0,e.attackClock-dt);
-  if(dist<68&&e.attackClock<=0){e.attackClock=1.55;e.windup=.55}
-  if(e.windup>0){e.windup-=dt;if(e.windup>0)continue;e.windup=0;
-   if(dist>90)continue;
-   if(fieldInvuln<=0){
-    const damage=Math.max(1,(e.kind==='brute'?5:3)-(S.heroArmor?2:0)-(S.armorTier||0)-(S.helmetOwned?1:0)-(charmEffect()==='guard'?1:0));
-    S.hp=Math.max(0,S.hp-damage);fieldInvuln=.65;heroAction='hurt';heroActionTime=.3;
-    spawnCombatParticles(pos.x,pos.y-25,5,'#f4a98c');note('Du träffades! -'+damage+' HP');
-    if(S.hp===0){S.hp=Math.max(8,Math.floor((20+(S.level-1)*4)/2));S.scene='village';S.x=500;S.y=550;persist();note('Du återhämtar dig i Emberfall')}
-   }
+  const dist=Math.hypot(pos.x-e.x,pos.y-e.y);
+  if(e.attackClock>0)continue;
+  if(dist<68){beginEnemyAttack57(e);continue}
+  if(dist<215&&dist>52){
+   const step=Math.min(dt*22,dist-52),x=e.x+(pos.x-e.x)/dist*step,y=e.y+(pos.y-e.y)/dist*step;
+   if(!waterCollision(e.scene,x,y)){e.x=x;e.y=y;e.walkDistance=(e.walkDistance||0)+step;e.moving=true}
   }
  }
 }
 function spawnCombatParticles(x,y,count,color){for(let i=0;i<count;i++){const a=Math.PI*2*i/count;combatParticles.push({x,y,vx:Math.cos(a)*80,vy:Math.sin(a)*65-30,life:.34,color})}}
-function drawCombatEffects(scene){
-const sc=Math.max(.6,Math.min(ww/550,hh/470)),pos=currentPosition();
-ctx.save();ctx.translate(ww/2-pos.x*sc,hh/2-pos.y*sc);ctx.scale(sc,sc);
-for(const e of fieldEnemies){if(e.scene!==scene||e.hp<=0)continue;
-if(e.windup>0){ctx.strokeStyle='#efaa5e';ctx.lineWidth=4;ctx.beginPath();ctx.arc(e.x,e.y,48,0,Math.PI*2);ctx.stroke()}
-if(e.hitFlash>0){ctx.fillStyle='#fff0a066';ctx.fillRect(e.x-23,e.y-65,46,66)}
+// Called in world space before actors, so warning areas stay on the floor.
+function drawCombatGround57(scene){
+ ctx.save();
+ for(let i=0;i<fieldEnemies.length;i++){
+  const e=fieldEnemies[i];if(e.scene!==scene||!activeFieldEnemy(e,i))continue;
+  const a=e.windup>0?e.attack:e.impact;if(!a)continue;
+  ctx.fillStyle=e.windup>0?'#e5a04d28':'#fff0c72b';ctx.beginPath();ctx.arc(a.x,a.y,a.radius,0,Math.PI*2);ctx.fill();
+  ctx.strokeStyle='#302b27';ctx.lineWidth=6;ctx.stroke();ctx.strokeStyle='#ffedc9';ctx.lineWidth=2;ctx.setLineDash([7,6]);ctx.stroke();ctx.setLineDash([]);
+  if(e.windup>0){ctx.strokeStyle='#f8b454';ctx.lineWidth=5;ctx.beginPath();ctx.arc(a.x,a.y,a.radius,-Math.PI/2,-Math.PI/2+Math.PI*2*(1-e.windup/a.duration));ctx.stroke()}
+ }
+ ctx.restore();
 }
-if(fieldSwing>0){const a=Math.atan2(faceY,faceX),progress=1-fieldSwing/.23;ctx.strokeStyle=S.weaponType==='staff'?'#caa6f3':'#f8e5b6';ctx.lineWidth=9;ctx.beginPath();ctx.arc(pos.x,pos.y-17,65,a-.95+progress*.8,a+.3+progress*.8);ctx.stroke();ctx.strokeStyle='#fffdf0';ctx.lineWidth=3;ctx.stroke()}
-for(const p of dodgeTrail){if(p.scene!==scene)continue;ctx.globalAlpha=Math.max(0,p.life/.3)*.5;ctx.fillStyle='#c5f3e2';ctx.fillRect(p.x-16,p.y-52,32,66)}ctx.globalAlpha=1;
-for(const p of magicProjectiles){if(p.scene!==scene)continue;ctx.fillStyle='#6c4b9d';ctx.beginPath();ctx.arc(p.x,p.y,11,0,Math.PI*2);ctx.fill();ctx.fillStyle='#dfc6ff';ctx.beginPath();ctx.arc(p.x,p.y,7,0,Math.PI*2);ctx.fill();ctx.fillStyle='#fff5d8';ctx.fillRect(p.x-2,p.y-2,4,4)}
-for(const p of combatParticles){ctx.fillStyle=p.color;ctx.fillRect(p.x,p.y,6,6)}
-if(fieldInvuln>0){ctx.strokeStyle='#cce8ff99';ctx.lineWidth=2;ctx.beginPath();ctx.arc(pos.x,pos.y-20,32,0,Math.PI*2);ctx.stroke()}
-ctx.restore();
+function drawCombatEffects(scene){
+ const sc=Math.max(.6,Math.min(ww/550,hh/470)),pos=currentPosition();
+ ctx.save();ctx.translate(ww/2-pos.x*sc,hh/2-pos.y*sc);ctx.scale(sc,sc);
+ if(fieldSwing>0){const a=Math.atan2(faceY,faceX),progress=1-fieldSwing/.23;ctx.strokeStyle='#f8e5b6';ctx.lineWidth=9;ctx.beginPath();ctx.arc(pos.x,pos.y-17,65,a-.95+progress*.8,a+.3+progress*.8);ctx.stroke();ctx.strokeStyle='#fffdf0';ctx.lineWidth=3;ctx.stroke()}
+ for(const p of dodgeTrail){if(p.scene!==scene)continue;ctx.globalAlpha=Math.max(0,p.life/.3)*.65;ctx.strokeStyle='#dcf3e6';ctx.lineWidth=4;for(const side of [-1,1]){ctx.beginPath();ctx.moveTo(p.x+side*10,p.y-9);ctx.lineTo(p.toX+side*10,p.toY-9);ctx.stroke()}}ctx.globalAlpha=1;
+ for(const p of magicProjectiles){if(p.scene!==scene)continue;ctx.fillStyle='#6c4b9d';ctx.beginPath();ctx.arc(p.x,p.y,11,0,Math.PI*2);ctx.fill();ctx.fillStyle='#dfc6ff';ctx.beginPath();ctx.arc(p.x,p.y,7,0,Math.PI*2);ctx.fill();ctx.fillStyle='#fff5d8';ctx.fillRect(p.x-2,p.y-2,4,4)}
+ for(const p of combatParticles){ctx.fillStyle=p.color;ctx.fillRect(p.x,p.y,6,6)}
+ if(fieldInvuln>0){ctx.strokeStyle='#cce8ff99';ctx.lineWidth=2;ctx.beginPath();ctx.ellipse(pos.x,pos.y-3,20,8,0,0,Math.PI*2);ctx.stroke()}
+ ctx.restore();
+ // Screen-space type stays readable at every camera scale, above scenery.
+ ctx.save();ctx.textAlign='center';ctx.font='bold 12px system-ui';
+ for(let i=0;i<fieldEnemies.length;i++){
+  const e=fieldEnemies[i];if(e.scene!==scene||!activeFieldEnemy(e,i))continue;
+  const x=ww/2+(e.x-pos.x)*sc,y=hh/2+(e.y-pos.y)*sc,head=y-({wolf:66,scout:76,brute:92,shaman:80}[e.kind])*sc;
+  if(x<-30||x>ww+30||y<0||head>hh)continue;
+  const warning=e.windup>0&&e.attack;
+  const name=warning?'! Slag om '+(Math.ceil(e.windup*10)/10).toFixed(1).replace('.',',')+' s':({wolf:'Duskwolf',scout:'Spejare',brute:'Best',shaman:'Schaman'})[e.kind];
+  const w=ctx.measureText(name).width+14,top=Math.max(x-w/2<192?54:8,head-35);
+  ctx.fillStyle='#23312bef';ctx.fillRect(x-w/2,top,w,20);ctx.fillStyle=warning?'#ffe0a0':'#fff0ce';ctx.fillText(name,x,top+14);
+  ctx.fillStyle='#332b29';ctx.fillRect(x-28,top+23,56,6);ctx.fillStyle='#e1a781';ctx.fillRect(x-27,top+24,54*e.hp/e.max,4);
+ }
+ for(const p of combatLabels57){if(p.scene!==scene)continue;ctx.globalAlpha=Math.min(1,p.life/.2);const x=ww/2+(p.x-pos.x)*sc,y=hh/2+(p.y-pos.y)*sc;ctx.font='bold 14px system-ui';ctx.lineWidth=4;ctx.strokeStyle='#24302c';ctx.strokeText(p.text,x,y);ctx.fillStyle=p.color;ctx.fillText(p.text,x,y)}
+ ctx.restore();
 }
 function autoZoneTransition(dt){
  transitionLock=Math.max(0,transitionLock-dt);
- if(transitionLock>0||panel)return;
+ if(transitionLock>0||panel||document.hidden)return;
  if(S.scene==='village'){
   if(S.y>=826&&S.x>=422&&S.x<=578&&vy>0){changeZone('forest',500,78,'Whisperwood Forest');return}
   if(S.x>=952&&S.y>=360&&S.y<=485&&vx>0){changeZone('dungeon',170,390,'Goblingrottan');return}
@@ -736,29 +823,23 @@ function autoZoneTransition(dt){
 function tick(t){
 try{
 const dt=Math.min((t-last)/1000,.05);last=t;
-if(!panel){walkMoving=Math.hypot(vx,vy)>.08;if(walkMoving){walkTime+=dt*Math.max(.6,Math.hypot(vx,vy));faceX=vx;faceY=vy}if(S.scene==='forest'){const nx=Math.max(30,Math.min(970,S.forestX+vx*speed*dt)),ny=Math.max(30,Math.min(840,S.forestY+vy*speed*dt));if(!waterCollision('forest',nx,S.forestY))S.forestX=nx;if(!waterCollision('forest',S.forestX,ny))S.forestY=ny;}else if(S.scene==='interior'){moveInside(vx*speed*dt,vy*speed*dt);}else if(S.scene==='dungeon'){S.dungeonX=Math.max(35,Math.min(965,S.dungeonX+vx*speed*dt));S.dungeonY=Math.max(60,Math.min(810,S.dungeonY+vy*speed*dt));}else{let nx=S.x+vx*speed*dt,ny=S.y+vy*speed*dt;if(solid(S.x,S.y)){safePosition();nx=S.x+vx*speed*dt;ny=S.y+vy*speed*dt}if(!solid(nx,S.y)&&!waterCollision('village',nx,S.y))S.x=nx;if(!solid(S.x,ny)&&!waterCollision('village',S.x,ny))S.y=ny}}
-if(panel)walkMoving=false;
-autoZoneTransition(dt);updateFieldCombat(dt);updateActionButton();
+if(!panel&&!document.hidden){walkMoving=Math.hypot(vx,vy)>.08;if(walkMoving){walkTime+=dt*Math.max(.6,Math.hypot(vx,vy));faceX=vx;faceY=vy}if(S.scene==='forest'){const nx=Math.max(30,Math.min(970,S.forestX+vx*speed*dt)),ny=Math.max(30,Math.min(840,S.forestY+vy*speed*dt));if(!waterCollision('forest',nx,S.forestY))S.forestX=nx;if(!waterCollision('forest',S.forestX,ny))S.forestY=ny;}else if(S.scene==='interior'){moveInside(vx*speed*dt,vy*speed*dt);}else if(S.scene==='dungeon'){S.dungeonX=Math.max(35,Math.min(965,S.dungeonX+vx*speed*dt));S.dungeonY=Math.max(60,Math.min(810,S.dungeonY+vy*speed*dt));}else{let nx=S.x+vx*speed*dt,ny=S.y+vy*speed*dt;if(solid(S.x,S.y)){safePosition();nx=S.x+vx*speed*dt;ny=S.y+vy*speed*dt}if(!solid(nx,S.y)&&!waterCollision('village',nx,S.y))S.x=nx;if(!solid(S.x,ny)&&!waterCollision('village',S.x,ny))S.y=ny}}
+if(panel||document.hidden)walkMoving=false;
+autoZoneTransition(dt);updateFieldCombat(dt);updateActionButton();updateCombatUI57(dt);
 fishingCooldown=Math.max(0,fishingCooldown-dt);updateFishing(dt);productionClock+=dt;autosaveClock+=dt;
 if(productionClock>=5){productionClock-=5;businessCycle()}
 
 if(S.expeditionEnds&&Date.now()>=S.expeditionEnds){finishExpedition();persist()}if(autosaveClock>=12){autosaveClock=0;persist()}
 if(S.scene==='dungeon')drawDungeon();else if(S.scene==='interior')drawInterior();else if(S.scene==='forest')drawForest();else draw();updateHUD56();if(S.scene==='forest'||S.scene==='dungeon')drawCombatEffects(S.scene);
 drawInteractionTarget();
-if(S.visualTime==='dusk'&&(S.scene==='village'||S.scene==='forest')){ctx.fillStyle='#28375a40';ctx.fillRect(0,0,ww,hh)}if(S.scene==='forest'||S.scene==='dungeon'){
-ctx.save();ctx.fillStyle='#49352bd9';ctx.fillRect(8,8,Math.min(ww-16,190),43);
-ctx.fillStyle='#2b2927';ctx.fillRect(17,18,132,12);ctx.fillStyle='#c96b60';ctx.fillRect(17,18,132*Math.max(0,S.hp)/(20+(S.level-1)*4),12);
-ctx.font='bold 12px system-ui';ctx.fillStyle='#fff1d5';ctx.fillText('HP '+S.hp+' / '+(20+(S.level-1)*4),21,40);
-ctx.fillText('⚔ '+(fieldAttackCooldown?fieldAttackCooldown.toFixed(1)+'s':'redo')+'  💨 '+(fieldDodgeCooldown?fieldDodgeCooldown.toFixed(1)+'s':'redo'),17,64);
-ctx.restore();
-}
+if(S.visualTime==='dusk'&&(S.scene==='village'||S.scene==='forest')){ctx.fillStyle='#28375a40';ctx.fillRect(0,0,ww,hh)}drawCombatHUD57();
 
-}catch(err){if(!movementErrorShown){movementErrorShown=true;document.getElementById('msg').textContent='Spelfel: '+err.message;}console.error(err)}
+}catch(err){if(!movementErrorShown){movementErrorShown=true;note('Spelfel: '+err.message);}console.error(err)}
 requestAnimationFrame(tick)
 }
 requestAnimationFrame(tick);
 
-function note(x){if(batchSimulation)return;document.getElementById('msg').textContent=x;document.getElementById('notice').textContent=x}
+function note(x){if(batchSimulation)return;noteTime57=6;document.getElementById('msg').style.opacity='1';document.getElementById('msg').textContent=x;document.getElementById('notice').textContent=x}
 function save(){persist();note('Sparat!')}
 
 function drawForest(){
@@ -776,7 +857,8 @@ for(const [x,y] of [[240,300],[755,270],[200,650],[800,650]]){rect(x-15,y-12,30,
 rect(425,0,150,75,'#506f61');rect(442,0,116,55,'#9cbba2');label('↑ EMBERFALL',500,105);
 if(!S.forestChest){rect(770,160,65,45,'#725034');rect(777,150,51,22,'#c39a56');rect(798,154,9,46,'#f1d37b');label('SUPPLIES',802,135)}
 // Resource trees share the environment atlas; Action highlights the selected trunk.
-if(!S.forestWolfDefeated){const wx=fieldEnemies[0].x,wy=fieldEnemies[0].y;depthItems.push({y:wy,draw:()=>{spriteActor('wolf',wx,wy,enemyVisual55(fieldEnemies[0]));rect(wx-25,wy-83,50,6,'#513e3b');rect(wx-25,wy-83,50*fieldEnemies[0].hp/fieldEnemies[0].max,6,'#c46d5e');label('Duskwolf',wx,wy-92)}})}
+drawCombatGround57('forest');
+if(activeFieldEnemy(fieldEnemies[0],0)){const e=fieldEnemies[0];depthItems.push({y:e.y,draw:()=>spriteActor('wolf',e.x,e.y,enemyVisual55(e))})}
 depthItems.push({y:S.forestY,draw:()=>spriteActor('hero',S.forestX,S.forestY,{action:heroAction,actionProgress:1-heroActionTime/.3,moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword&&S.weaponType!=='staff',staff:S.staffOwned&&S.weaponType==='staff'})});
 orderedWorld(depthItems);ctx.restore();
 }
@@ -861,7 +943,9 @@ function updateActionButton(){
  if(b.textContent!==label)b.textContent=label;
  b.disabled=!target;b.setAttribute('aria-label',target?label:'Gå närmare en person, dörr eller strand');
  const hint=document.getElementById('interactionHint');
- if(hint)hint.textContent=target?label+(target.kind==='fish'?' · stå kvar på stranden':''):'Närma dig en person, dörr eller resurs';
+ const combat=['forest','dungeon'].includes(S.scene),warning=fieldEnemies.some((e,i)=>e.scene===S.scene&&activeFieldEnemy(e,i)&&e.windup>0);
+ const message=panel?'':warning?'! Slag på väg · lämna ringen eller tryck Undvik':target?label+(target.kind==='fish'?' · stå kvar på stranden':''):combat?'Rikta dig mot fienden · Attack slår · Undvik flyttar dig':'Närma dig en person, dörr eller resurs';
+ if(hint&&hint.textContent!==message)hint.textContent=message;
 }
 function leaveHouse(){
  const names={forge:'Smedja',mine:'Gruva',market:'Marknad',guild:'Gille'};
@@ -979,7 +1063,8 @@ for(let y=0;y<870;y+=40){R(0,y,35,37,'#55616b');R(965,y,35,37,'#55616b')}
 for(const [x,y] of [[150,180],[480,480],[770,240],[860,670]]){R(x-12,y-4,24,10,'#50392e');R(x-7,y-23,14,22,'#aa5b32');R(x-4,y-19,8,16,'#ffcc70');const g=ctx.createRadialGradient(x,y-12,3,x,y-12,68);g.addColorStop(0,'#ffbd5270');g.addColorStop(1,'#ffbd5200');ctx.fillStyle=g;ctx.fillRect(x-68,y-80,136,136)}
 if(S.dungeonKills===3&&!S.dungeonChestClaimed){R(822,730,68,45,'#543826');R(829,720,54,26,'#c79a4a');R(851,721,9,45,'#f4d279');txt('CHEST',856,707,16)}
 R(60,355,80,85,'#466b72');R(71,365,58,65,'#78abb0');txt('← EXIT',100,342,17);
-const depthItems=[];for(const [i] of [[0],[1],[2]]){if(S.dungeonKills>i)continue;const enemy=fieldEnemies[i+1],x=enemy.x,y=enemy.y;depthItems.push({y,draw:()=>{spriteActor(i===0?'scout':i===1?'brute':'shaman',x,y,enemyVisual55(enemy));R(x-24,y-91,48,5,'#402e35');R(x-24,y-91,48*enemy.hp/enemy.max,5,'#c85e57');if(enemy.attackClock>.85){R(x-31,y-5,62,3,'#ffb15b88')}txt(ENEMIES[i].name,x,y-100,15)}})}
+drawCombatGround57('dungeon');
+const depthItems=[];for(let i=1;i<4;i++){const e=fieldEnemies[i];if(activeFieldEnemy(e,i))depthItems.push({y:e.y,draw:()=>spriteActor(e.kind,e.x,e.y,enemyVisual55(e))})}
 const x=S.dungeonX,y=S.dungeonY;
 depthItems.push({y,draw:()=>spriteActor('hero',x,y,{action:heroAction,actionProgress:1-heroActionTime/.3,moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword&&S.weaponType!=='staff',staff:S.staffOwned&&S.weaponType==='staff'})});orderedWorld(depthItems);
 ctx.restore();
@@ -1003,7 +1088,7 @@ function dungeonInteract(){
 if(S.dungeonKills===3&&!S.dungeonChestClaimed&&Math.hypot(S.dungeonX-856,S.dungeonY-760)<120){S.dungeonChestClaimed=true;S.dungeonRewardPending=false;S.dungeonClears++;economyTransaction('adventure',75,0,'dungeon-chest');S.runes+=3;S.ore+=5;awardXP(20);persist();note('Skattkista! +75 guld, +3 runfragment, +5 malm, +20 XP');return}
 if(S.dungeonX<170&&Math.abs(S.dungeonY-395)<105){S.scene='village';S.x=895;S.y=510;note('Tillbaka i Emberfall');persist();return}
 const enemies=[[440,260],[740,470],[530,680]];
-for(let i=0;i<3;i++){if(S.dungeonKills>i)continue;let [x,y]=enemies[i];if(Math.hypot(S.dungeonX-x,S.dungeonY-y)<115){note('Tryck ⚔ Attack för att slåss!');return}}
+for(let i=0;i<3;i++){if(!activeFieldEnemy(fieldEnemies[i+1],i+1))continue;let {x,y}=fieldEnemies[i+1];if(Math.hypot(S.dungeonX-x,S.dungeonY-y)<115){note('Tryck ⚔ Attack för att slåss!');return}}
 note('Utforska grottan, hitta gobliner eller återvänd till EXIT');
 }
 function levelThreshold(){return S.level*20}
@@ -1286,7 +1371,10 @@ function playtestTravel55(place){
  if(!PLAYTEST55)return false;
  hide();fieldInvuln=2;fieldAttackCooldown=0;S.hp=Math.max(S.hp,12);S.heroSword=true;
  if(place==='village')changeZone('village',350,540,'Speltest: titta på fötter, husgrunder och gånganimationer.');
- else if(place==='forest')changeZone('forest',440,370,'Speltest: prova hjälten och Duskwolf. Attack slår, Dodge gör en undanmanöver.');
+ else if(place==='forest'){
+  S.forestWolfDefeated=false;Object.assign(fieldEnemies[0],{hp:fieldEnemies[0].max,x:635,y:320});
+  changeZone('forest',440,370,'Speltest: prova hjälten och Duskwolf. Attack slår. Lämna varningsringen eller tryck Undvik före slaget.');
+ }
  else if(place==='dungeon')changeZone('dungeon',170,390,'Speltest: spejare, best och schaman. Se attackvarningen före slaget.');
  else if(place==='fishing')changeZone('village',110,540,'Speltest: stanna vid stranden och tryck Fiska.');
  else if(place==='kitchen'){
@@ -1296,17 +1384,17 @@ function playtestTravel55(place){
  persist();return true;
 }
 function show(p){
-if(fishingGame&&p!=='fishing'){fishingGame=null;fishingCooldown=.5}panel=p;vx=vy=0;const nub=document.getElementById('nub');if(nub)nub.style.transform='';updateActionButton();document.getElementById('modal').style.display='block';
+if(fishingGame&&p!=='fishing'){fishingGame=null;fishingCooldown=.5}panel=p;updateCombatUI57();vx=vy=0;const nub=document.getElementById('nub');if(nub)nub.style.transform='';updateActionButton();document.getElementById('modal').style.display='block';
 let h='';
 if(p==='playtest'&&PLAYTEST55){
- h='<h2>Speltest 5.6</h2><p>Testa den nya hjälten, monstren och markkontakten. Detta läge har en egen testsparning.</p>'+
+ h='<h2>Speltest 5.7</h2><p>Testa tydligare strider, träffar och undanmanövrer. Detta läge har en egen testsparning.</p>'+
  '<button onclick="playtestTravel55(\'village\')">Byn · hus och NPC:er</button>'+
  '<button onclick="playtestTravel55(\'forest\')">Skogen · hjälten och Duskwolf</button>'+
  '<button onclick="playtestTravel55(\'dungeon\')">Grottan · tre monstertyper</button>'+
  '<button onclick="playtestTravel55(\'fishing\')">Stranden · prova fisket</button>'+
  '<button onclick="playtestTravel55(\'kitchen\')">Köket · prova matlagning</button>'+
  '<p>Återvänd till testplatserna via ⚙ → Speltest. Använd joysticken för att gå, Action för att använda saker och Attack för att slåss.</p>'+
- '<p>Titta särskilt på om fötterna möter marken, om NPC:erna går jämnt och om husen känns förankrade.</p>';
+ '<p>I strid: vänta på ! Slag om, lämna ringen och prova Undvik. Öppna ryggsäcken mitt i uppladdningen: striden ska stå still tills du stänger menyn. I grottan kan du besegra fienderna i valfri ordning.</p>';
 }else if(p==='empire'){
 h='<h2>🏰 Imperiet</h2><p>🪙 '+S.gold+' guld · ⛏ '+S.ore+' malm · 🌲 '+S.wood+' trä · ⚔ '+S.swords+' svärd</p><h3>Produktion</h3>'+
 btn('⛏ Bryt +'+S.mine+' malm','mine')+btn('🌲 Hugg +'+S.woodLevel+' trä','wood')+
@@ -1322,7 +1410,7 @@ h='<h2>🛡 Äventyrare</h2><div class="inventory-section"><p>Nivå '+S.level+' 
 '<div class="character-card"><strong>'+HERO_STYLES[S.heroStyle||0].name+'</strong><div class="character-portrait">'+heroPortraitSVG()+'</div><small>'+HERO_STYLES[S.heroStyle||0].desc+'</small></div>'+btn('🎨 Anpassa utseende','appearance')+btn('🌤 Ljus & grafik','visual')+btn('🎣 Fiskeri','openfishery')+btn('📖 Bestiarium','bestiary')+btn('⚔ Vapen & stridsstil','weapons')+btn('⚒ Förbättra utrustning','upgrades')+btn('🪖 Hjälm & stövlar','gearcraft')+btn('👤 Karaktärsöversikt','character')+'<p>⚔ Svärd: '+(S.heroSword?'Utrustat':'Saknas')+' · 🛡 Rustning: '+(S.heroArmor?'Utrustad':'Saknas')+'</p>'+
 btn(S.heroSword?'✓ Svärd utrustat':'Utrusta ett smitt svärd','equip')+
 btn(S.heroArmor?'✓ Rustning utrustad':'Tillverka rustning (5 malm + 3 trä)','armor')+
-btn('🧪 Drick potion ('+S.potions+')','potion')+btn('⚔ Träningsstrid','startfight')+btn('🧭 Expeditionsgille','expeditions')+'<p>Gå till goblinen öster om byn och tryck A för att utforska grottan.</p>';
+btn('🧪 Drick potion ('+S.potions+')','potion')+btn('⚔ Träningsstrid','startfight')+btn('🧭 Expeditionsgille','expeditions')+'<p>Gå till grottingången öster om byn. Använd Till grottan eller gå genom porten.</p>';
 }else if(p==='loot'){
 const owned=Array.isArray(S.lootItems)?S.lootItems:[];
 h='<h2>💎 Loot & reliker</h2><p>Fiender kan lämna magiska reliker. Utrusta en relik för att förstärka både svärd och runstav.</p>'+
@@ -1400,13 +1488,13 @@ h='<h2>'+names[type]+'</h2><div class="inventory-section"><p>'+(type==='forge'?'
 }else{
 h='<h2>⚙ Inställningar</h2>'+btn('Virtuell joystick','joystick')+btn('Dra på kartan','drag')+
 btn('Långsam rörelse','slow')+btn('Normal rörelse','normal')+btn('Snabb rörelse','fast')+
-'<p>Beta Preview 5.6 · Speltest · Separat sparning.</p>'+(PLAYTEST55?'<button onclick="show(\'playtest\')">Speltest · välj testplats</button>':'')+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
+'<p>Beta Preview 5.7 · Speltest · Separat sparning.</p>'+(PLAYTEST55?'<button onclick="show(\'playtest\')">Speltest · välj testplats</button>':'')+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
 }
 document.getElementById('content').innerHTML=h;
 document.getElementById('notice').textContent='';
 if(p==='fishing'){const strike=document.getElementById('fishStrike');if(strike){strike.addEventListener('pointerdown',e=>{e.preventDefault();fishingTap()});strike.addEventListener('click',e=>{if(e.detail===0)fishingTap()})}renderFishing()}
 }
-function hide(){if(fishingGame){fishingGame=null;fishingCooldown=.5}panel='';updateActionButton();document.getElementById('modal').style.display='none';S.combat=null}
+function hide(){if(fishingGame){fishingGame=null;fishingCooldown=.5}panel='';updateActionButton();updateCombatUI57();document.getElementById('modal').style.display='none';S.combat=null}
 function pay(n){if(S.gold<n){note('Du behöver '+n+' guld');return false}S.gold-=n;return true}
 const COOKING_RECIPES=[
  {id:'grilledfish',name:'Grillad fisk',needs:'2 fiskar',count:2,heal:8},
@@ -1541,7 +1629,7 @@ c.hp-=damage;c.skillReady=false;c.message='Rune Strike! '+damage+' magisk skada.
 }else{c.guard=true;c.message='Du blockerar nästa attack.'}
 if(c.hp<=0){
 S.forestWins++;S.combatWins++;if(S.scene==='forest'&&c.enemyIndex===3){S.forestWolfDefeated=true;S.forestWolfWins++;S.wood+=6;S.runes+=2;}
-if(S.scene==='dungeon'&&!c.training){S.dungeonKills=Math.min(3,S.dungeonKills+1);if(S.dungeonKills===3)S.dungeonRewardPending=true}
+if(S.scene==='dungeon'&&!c.training){recordDungeonDefeat57(DUNGEON_IDS57[c.enemyIndex])}
 const loot=enemy.gold+S.level*3;
 economyTransaction('adventure',loot,0,'combat');
 if(Math.random()<.4)S.runes++;
@@ -1592,6 +1680,11 @@ function interact(){
  }
  updateActionButton();
 }
+for(const [id,perform] of [['attackButton',fieldAttack],['dodgeButton',fieldDodge]]){
+ const button=document.getElementById(id);
+ button.addEventListener('pointerdown',e=>{if(e.button&&e.button!==0)return;e.preventDefault();perform()});
+ button.addEventListener('click',e=>{if(e.detail===0)perform()});
+}
 let joy=document.getElementById('joy'),nub=document.getElementById('nub'),pointer=null;function stick(e){let r=joy.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),m=Math.hypot(dx,dy),f=Math.min(1,m/(r.width*.3));vx=m?dx/m*f:0;vy=m?dy/m*f:0;nub.style.transform='translate('+(vx*r.width*.3)+'px,'+(vy*r.width*.3)+'px)'}joy.addEventListener('pointerdown',e=>{e.preventDefault();if(pointer!==null)return;pointer=e.pointerId;joy.setPointerCapture(pointer);stick(e)});joy.addEventListener('pointermove',e=>{if(e.pointerId===pointer){e.preventDefault();stick(e)}});function stop(e){if(e.pointerId===pointer){pointer=null;vx=vy=0;nub.style.transform=''}}joy.addEventListener('pointerup',stop);joy.addEventListener('pointercancel',stop);joy.addEventListener('lostpointercapture',()=>{pointer=null;vx=vy=0;nub.style.transform='' });let mapPointer=null;canvas.addEventListener('pointerdown',e=>{if(mode==='drag'){mapPointer=e.pointerId;canvas.setPointerCapture(mapPointer);drag(e)}});canvas.addEventListener('pointermove',e=>{if(e.pointerId===mapPointer)drag(e)});function drag(e){let r=canvas.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),m=Math.hypot(dx,dy);vx=m?dx/m:0;vy=m?dy/m:0}canvas.addEventListener('pointerup',e=>{if(e.pointerId===mapPointer){mapPointer=null;vx=vy=0}});canvas.addEventListener('pointercancel',()=>{mapPointer=null;vx=vy=0});addEventListener('pagehide',()=>{vx=vy=0;persist()});
 addEventListener('blur',()=>{vx=vy=0;pointer=null;mapPointer=null;nub.style.transform='' });
 
@@ -1624,7 +1717,7 @@ try{const previous=localStorage.getItem(SAVE_KEY);if(previous&&!localStorage.get
 mealInventory();swordBasis();reconcileCostBasis();S.saveVersion=Math.max(3,S.saveVersion||0);offline();safePosition();persist();
 if(!S.tutorialSeen){S.tutorialSeen=true;persist();show('guide')}
 if(PLAYTEST55)show('playtest');
-window.scrollTo(0,0);document.getElementById('moveStatus').textContent='CONTROLS READY';
+updateCombatUI57();window.scrollTo(0,0);document.getElementById('moveStatus').textContent='CONTROLS READY';
 </script></html>
 
 
