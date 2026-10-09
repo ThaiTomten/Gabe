@@ -1,4 +1,4 @@
-<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 5.2</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
+<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 5.3</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
 header{background:#78533c;color:#fff0d0;border-bottom:4px solid #b98a51;text-shadow:1px 2px #553e31}
 #bottom{background:#78573e;border-top:4px solid #b98a51}
 button{background:#b28a5a;color:#fff7e7;border:2px solid #e2b879;box-shadow:inset 0 2px #f5d39b,0 3px #5b4134;font-weight:700}
@@ -11,14 +11,37 @@ button:active{transform:translateY(2px);box-shadow:inset 0 1px #f5d39b}
 .slot,.inventory-section,.character-card,.gearcell,.bestiary-entry{background:#d8b887;color:#4b3528;border:2px solid #9b714e;box-shadow:inset 0 2px #f1d4a7}
 .slot small{color:#684b36}.rarity{border-color:#8760a9}#notice{color:#386f46}
 #msg{background:#6c503bdc;color:#fff4d7;border:2px solid #c49c65}
- .loot-uncommon{border-color:#71a76c!important}.loot-rare{border-color:#629bc8!important}.loot-epic{border-color:#aa72c7!important;box-shadow:inset 0 2px #f1d4a7,0 0 9px #b784c477!important}.slot svg{flex-shrink:0}.game-hint{padding:12px 14px;border-left:4px solid #9bc4a0;background:#233f3c;border-radius:8px;line-height:1.55}#actionButton{background:linear-gradient(160deg,#588578,#315d5d);border-color:#d4bf82;font-weight:750;letter-spacing:.2px}.fishing-actions{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:8px;margin-top:16px}.fishing-actions button:first-child{background:linear-gradient(160deg,#9e8350,#6b633e);border-color:#f2d99b;font-size:18px;min-height:58px}.fishing-actions button{margin:0!important;touch-action:manipulation}#modal button{min-height:42px}#modal button:focus-visible,.actions button:focus-visible{outline:3px solid #e8d08b;outline-offset:2px}@media(max-width:390px){.actions{grid-template-columns:repeat(2,minmax(0,1fr))}.actions button{font-size:12px;padding:8px 3px}}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Beta Preview 5.2 · Guided Adventure</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()" id="actionButton" aria-label="Utför handling">✦ Action</button><button onclick="fieldAttack()">⚔ Attack</button><button onclick="fieldDodge()">💨 Dodge</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
+ .loot-uncommon{border-color:#71a76c!important}.loot-rare{border-color:#629bc8!important}.loot-epic{border-color:#aa72c7!important;box-shadow:inset 0 2px #f1d4a7,0 0 9px #b784c477!important}.slot svg{flex-shrink:0}.game-hint{padding:12px 14px;border-left:4px solid #9bc4a0;background:#233f3c;border-radius:8px;line-height:1.55}#actionButton{background:linear-gradient(160deg,#588578,#315d5d);border-color:#d4bf82;font-weight:750;letter-spacing:.2px}.fishing-actions{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:8px;margin-top:16px}.fishing-actions button:first-child{background:linear-gradient(160deg,#9e8350,#6b633e);border-color:#f2d99b;font-size:18px;min-height:58px}.fishing-actions button{margin:0!important;touch-action:manipulation}#modal button{min-height:42px}#modal button:focus-visible,.actions button:focus-visible{outline:3px solid #e8d08b;outline-offset:2px}@media(max-width:390px){.actions{grid-template-columns:repeat(2,minmax(0,1fr))}.actions button{font-size:12px;padding:8px 3px}}
+/* Beta 5.3: one compact mobile layout, safe areas and stable fishing controls. */
+html,body{touch-action:manipulation}#map,.actions{touch-action:none}
+body{display:flex;flex-direction:column;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}header{flex:0 0 56px;gap:8px}header b{font-size:14px}#stats{font-size:12px;text-align:right}#map{flex:1;min-height:80px;height:auto}#bottom{flex:0 0 207px;height:207px;padding:8px}button{min-height:44px}button:disabled{opacity:.48;filter:none}.pad{padding:8px 4px;gap:14px}.actions{grid-template-columns:repeat(2,minmax(0,1fr));flex:1;max-width:240px}.actions button{font-size:13px;min-height:48px;padding:8px 4px}#joy{flex-shrink:0}#modal{inset:calc(62px + env(safe-area-inset-top)) 10px calc(215px + env(safe-area-inset-bottom));padding:12px;scrollbar-gutter:stable}#close{position:sticky;top:0;float:right;z-index:2}#interactionHint{position:absolute;bottom:9px;left:10px;right:10px;text-align:center;background:#18332ce8;color:#fff0c4;padding:7px 10px;border-radius:8px;font-size:12px;pointer-events:none}#moveStatus{display:none}#msg{max-width:calc(100% - 16px);font-size:12px;pointer-events:none}.fish-meter{position:relative;height:46px;margin:20px 4px 8px;background:#4d4240;overflow:hidden;border-radius:7px}#fishZone{position:absolute;height:100%;background:#64936c;border-left:3px solid #d9ecb1;border-right:3px solid #d9ecb1}#fishPerfect{position:absolute;height:100%;background:#bdd29488}#fishMarker{position:absolute;width:5px;height:100%;background:#fff6de;transform:translateX(-50%);box-shadow:0 0 0 2px #203c38}.fish-legend{font-size:12px;color:#d4dbbb}.fish-progress{height:14px;background:#3c4a46;border-radius:7px;overflow:hidden}#fishProgress{height:100%;background:#d7b470}.fish-summary{display:flex;justify-content:space-between}.fishing-actions{position:sticky;bottom:0;background:#1d3234;padding:8px 0}.fishing-actions button{min-height:56px}#fishFeedback{min-height:42px}.inventory-section h3{margin-top:4px}@media(max-height:560px){header{flex-basis:40px;height:40px}#bottom{flex-basis:162px;height:162px}#joy{width:84px;height:84px}#nub{left:18px;top:18px}.pad{padding:4px}.actions button{min-height:40px}#modal{inset:45px 8px 8px}#interactionHint{font-size:11px}}
+</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="interactionHint"></div><div id="msg">Beta Preview 5.3 · Strand, smide & skördar</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()" id="actionButton" aria-label="Utför handling">✦ Action</button><button onclick="fieldAttack()">⚔ Attack</button><button onclick="fieldDodge()">💨 Dodge</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
+/* Beta 5.3 review contract: only beta/index.html changes. Save key retained;
+   runeforge_beta_preview_backup_52 holds the first pre-migration save when storage permits.
+   Regression coverage: shoreline and swept dodge; save repair; fishing boundaries,
+   stable control nodes/cooldown/cancel; target labels; exits; recipe inventories;
+   FIFO/warehouse/reporting; online/offline equivalence; pointer cancellation; rendering.
+   Tree artwork: original imagegen atlas for Runeforge Empire, oak + conifer, 2026-10-09.
+   Prompt: warm fantasy 3/4 top-down pixel art, transparent, moss/teal shadows,
+   olive/gold upper-left light, organic crowns and visible roots, no copied game assets.
+   UI/mobile browser and physical iPhone acceptance remain separate from Canvas checks.
+*/
+
 window.addEventListener('error',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='JS ERROR: '+String(e.message).slice(0,90);});
 window.addEventListener('unhandledrejection',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='PROMISE ERROR: '+String(e.reason).slice(0,70);});
 document.getElementById('moveStatus').textContent='JS STARTED';
 const canvas=document.getElementById('game'),ctx=canvas.getContext('2d');let S={x:500,y:400,gold:100,ore:0,swords:0,mine:1,forge:1,manager:false,hp:20,xp:0},vx=0,vy=0,speed=170,mode='joystick',panel='',last=performance.now(),acc=0;try{Object.assign(S,JSON.parse(localStorage.getItem('runeforge_beta_preview_01')||'{}'))}catch(e){}const buildings=[{x:180,y:170,w:150,h:110,n:'Smedja',t:'empire',c:'#ac6544'},{x:690,y:170,w:150,h:110,n:'Gruva',t:'empire',c:'#74848a'},{x:170,y:600,w:150,h:110,n:'Marknad',t:'empire',c:'#b18c44'},{x:690,y:600,w:150,h:110,n:'Gille',t:'hero',c:'#7870a3'}];let ww=1,hh=1;let walkTime=0,walkMoving=false,faceX=0,faceY=1;function resize(){ww=canvas.clientWidth;hh=canvas.clientHeight;let d=Math.min(window.devicePixelRatio||1,2);canvas.width=ww*d;canvas.height=hh*d;ctx.setTransform(d,0,0,d,0,0)}addEventListener('resize',resize);resize();function solid(x,y){return x<20||y<20||x>980||y>850||buildings.some(b=>x>b.x-14&&x<b.x+b.w+14&&y>b.y-14&&y<b.y+b.h+14)}
 function safePosition(){
- if(!Number.isFinite(S.x)||!Number.isFinite(S.y)||solid(S.x,S.y)){S.x=500;S.y=550;return true}if(waterCollision('village',S.x,S.y)){[S.x,S.y]=safeWaterPosition('village',S.x,S.y);return true}
- return false;
+ let changed=false;
+ for(const [scene,kx,ky,sx,sy] of [['village','x','y',500,550],['forest','forestX','forestY',500,78],['dungeon','dungeonX','dungeonY',170,390],['interior','insideX','insideY',500,585]]){
+  let x=S[kx],y=S[ky];
+  const invalid=!Number.isFinite(x)||!Number.isFinite(y)||x<20||x>980||y<20||y>850||(scene==='village'&&solid(x,y));
+  if(invalid){x=sx;y=sy}
+  [x,y]=safeWaterPosition(scene,x,y);
+  if(scene==='village'&&solid(x,y)){x=sx;y=sy}
+  if(x!==S[kx]||y!==S[ky]){S[kx]=x;S[ky]=y;changed=true}
+ }
+ return changed;
 }
 function unstuck(){
  S.scene='village';S.x=500;S.y=550;S.dungeonX=150;S.dungeonY=380;
@@ -58,31 +81,18 @@ function heroPortraitSVG(){
  return '<svg viewBox="0 0 34 40" width="116" height="136" style="image-rendering:pixelated;filter:drop-shadow(3px 4px 1px #3d322d55)" role="img" aria-label="Karaktärens utrustning">'+cells.join('')+'</svg>';
 }
 // Shared original pixel environment assets. Drawn in logical pixels to preserve a cohesive scale.
+// Original Runeforge tree atlas, generated for this game; embedded to keep a single-file beta.
+const TREE_ATLAS=new Image();TREE_ATLAS.src='data:image/png;base64,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';
 function pixelTree(x,y,variant=0){
- const p=(a,b,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(Math.round(a),Math.round(b),w,h)};
- const v=((variant%3)+3)%3;
- const palettes=[
- ['#284d3f','#3a6b4b','#568858','#75a467','#9bc183'],
- ['#2b5146','#416e55','#5e8f64','#80aa77','#acd095'],
- ['#365344','#54734b','#77905a','#9caf71','#c6c88b']
- ];
- const [outline,shade,mid,light,sun]=palettes[v];
- ctx.save();ctx.translate(Math.round(x),Math.round(y));
- // Ground contact and trunk silhouette.
- p(-23,5,46,7,'#294f3c66');p(-6,-32,12,43,'#563e31');p(-3,-32,6,40,'#8f6946');
- p(-12,-15,7,6,'#76523a');p(5,-23,9,6,'#76523a');
- // Deliberate tiered canopy: dark outer edge, broad volume, offset clusters.
- const crowns=[[-18,-70,36,17],[-29,-56,58,21],[-34,-41,68,22],[-29,-25,58,15],[-17,-81,34,17]];
- for(const [xx,yy,w,h] of crowns)p(xx,yy,w,h,outline);
- for(const [xx,yy,w,h] of [[-15,-73,30,14],[-25,-55,50,17],[-29,-40,58,16],[-24,-27,48,10]])p(xx,yy,w,h,shade);
- for(const [xx,yy,w,h] of [[-10,-75,23,10],[-21,-57,36,11],[-26,-43,45,11],[-16,-31,32,7],[13,-47,13,12]])p(xx,yy,w,h,mid);
- for(const [xx,yy,w,h] of [[-9,-75,17,5],[-21,-56,20,5],[3,-60,15,5],[-26,-42,17,5],[-10,-46,16,4],[12,-39,12,4]])p(xx,yy,w,h,light);
- for(const [xx,yy,w,h] of [[-6,-76,9,3],[-18,-56,9,3],[5,-59,7,3],[-24,-42,8,3]])p(xx,yy,w,h,sun);
- // Negative-space notches prevent rectangular tree silhouettes.
- p(-34,-44,5,7,outline);p(29,-34,5,7,outline);
- if(v===2){for(const [xx,yy] of [[-15,-47],[9,-53],[15,-35]]){p(xx,yy,4,4,'#d3a866');p(xx+1,yy,2,2,'#f2d68c')}}
- ctx.restore();
+ if(!TREE_ATLAS.complete||!TREE_ATLAS.naturalWidth)return;
+ const pine=variant%2===1,w=pine?98:134,h=pine?172:152;
+ ctx.save();ctx.imageSmoothingEnabled=false;
+ ctx.fillStyle='#183d3455';ctx.beginPath();ctx.ellipse(x,y+2,w*.26,8,0,0,Math.PI*2);ctx.fill();
+ ctx.drawImage(TREE_ATLAS,pine?216:0,0,pine?146:216,272,Math.round(x-w/2),Math.round(y-h+6),w,h);ctx.restore();
 }
+function environmentTrees(scene){return scene==='forest'?[[110,150,1],[230,235,0],[820,170,1],[920,405,1],[100,735,0],[760,790,1],[345,180,0],[675,125,1],[40,380,1],[65,460,0],[925,735,1],[290,750,0],[680,350,1]]:[[72,145,1],[110,730,0],[900,126,1],[930,750,1],[80,315,0],[920,305,1],[360,130,0],[630,745,0]]}
+function drawTrees(scene,foreground){const y=scene==='forest'?S.forestY:S.y;for(const t of environmentTrees(scene).sort((a,b)=>a[1]-b[1]))if((t[1]>y)===foreground)pixelTree(...t)}
+
 function pixelWater(x,y,w,h,time=0){
  const p=(a,b,ww,hh,c)=>{ctx.fillStyle=c;ctx.fillRect(a,b,ww,hh)};
  p(x-6,y-6,w+12,h+12,'#527a61');p(x-3,y-3,w+6,h+6,'#d1c18d');
@@ -134,223 +144,7 @@ function pixelLantern(x,y,time){
  ctx.restore();
 }
 // Pixel detail overlay for hero/NPCs/creatures, designed at the same logical scale.
-function spriteDetail(kind,p,frame,moving,back){
- if(kind==='hero'){
-  p(-8,-24,3,8,'#694936');p(5,-24,3,7,'#694936');
-  if(!back){p(-4,-16,2,2,'#b98275');p(3,-16,2,2,'#b98275')}
-  p(-5,-12,10,2,'#e7c889');p(-5,-3,10,3,'#7c5a42');
-  if(moving){p(-11,1+frame%2,3,3,'#c6a57d');p(8,1+(frame+1)%2,3,3,'#c6a57d')}
- }else if(kind==='merchant'){
-  p(-8,-9,16,5,'#c8a56b');p(-6,-5,12,3,'#edcf91');
-  p(-4,-16,8,2,'#7e503b');p(10,-5,5,10,'#aa7747');p(11,-2,3,4,'#e1b66c');
- }else if(kind==='guard'){
-  p(-9,-15,18,4,'#e2c986');p(-6,-7,12,8,'#7796a5');p(-2,-5,4,4,'#f2e5ba');
-  p(-9,-27,18,3,'#d7d9d4');
- }else if(kind==='scout'){
-  p(-12,-22,5,4,'#c4a975');p(7,-22,5,4,'#c4a975');
-  p(-3,-14,6,3,'#7e5b3f');p(-7,-9,14,4,'#9f7c4d');
- }else if(kind==='brute'){
-  p(-14,-13,5,10,'#8f684a');p(9,-13,5,10,'#8f684a');
-  p(-8,-11,16,5,'#b6936b');p(-5,-19,4,2,'#eacb87');p(2,-19,4,2,'#eacb87');
- }else if(kind==='shaman'){
-  p(-6,-11,12,5,'#d0b1e6');p(-3,-9,6,3,'#f1d5ff');
-  p(-9,-33,18,4,'#8b6aaf');p(11,-28,3,4,'#e7d0ff');
- }else if(kind==='wolf'){
-  p(-15,-7,30,4,'#7d9391');p(-7,-12,14,4,'#d3d3bb');
-  p(-11,-25,5,7,'#536e6e');p(6,-25,5,7,'#536e6e');
-  if(moving)p(-17,-3+frame%2,5,4,'#718a86');
- }
-}
-function actorAnimation(kind,moving,walk){
- const rate=kind==='brute'?5:kind==='wolf'?12:kind==='scout'?11:kind==='shaman'?6:9;
- const frame=moving?Math.floor(walk*rate)%6:0;
- const stride=[0,1,3,1,0,-2][frame];
- const bob=moving?[0,1,2,1,0,1][frame]:Math.sin(performance.now()/750)*.3;
- return {frame,stride,bob};
-}
-function spriteSilhouette(kind,p,stride,back){
- if(kind==='brute'){
-  p(-13,-16,26,14,'#70503d');p(-15,-10,7,14,'#a37a5b');p(8,-10,7,14,'#a37a5b');
-  p(-12,-26,7,8,'#c4ad8a');p(5,-26,7,8,'#c4ad8a');
- }else if(kind==='wolf'){
-  p(-19,-13,38,16,'#536e6a');p(-18,-5,7,16,'#4a6260');p(11,-5,7,16,'#4a6260');
-  p(-20,-12+stride,8,5,'#708c83');p(-12,-29,8,10,'#819b92');p(4,-29,8,10,'#819b92');
- }else if(kind==='shaman'){
-  p(-11,-14,22,20,'#684d87');p(-14,1,28,6,'#4f3c70');p(-7,-30,14,8,'#8e6aad');
- }else if(kind==='scout'){
-  p(-10,-12,20,13,'#547c50');p(-13,-24,7,8,'#93b879');p(6,-24,7,8,'#93b879');
- }else if(kind==='guard'){
-  p(-10,-14,20,14,'#536c81');p(-12,-13,6,11,'#a9b9c0');p(6,-13,6,11,'#a9b9c0');
- }else if(kind==='merchant'){
-  p(-9,-13,18,20,'#927149');p(-12,-7,5,15,'#d2b47e');p(7,-7,5,15,'#d2b47e');
- }else if(kind==='hero'){
-  p(-8,-14,16,18,back?'#4a6b84':'#547c9a');
-  p(-9,-11,4,13,'#d1b17d');p(5,-11,4,13,'#d1b17d');
- }
-}
-// Embedded original 12x16 pixel animation atlas, authored as frame maps.
-// Frame glyphs: . transparent, A outline, B cloth, C highlight, D skin, E metal.
-const PIXEL_ATLAS={
- hero:[
- ["....AAAA....","...ABBBBA...","...ADDDDA...","...ADDDDA...","....ABBA....","...ABBBBA...","..AEBBBEA...","..AEBBBEA...","...ABBBBA...","...ABBBBA...","....ABBA....","...AA..AA...","...AA..AA...","...AA..AA...","...AA..AA...","............"],
- ["....AAAA....","...ABBBBA...","...ADDDDA...","...ADDDDA...","....ABBA....","...ABBBBA...","..AEBBBEA...","..AEBBBEA...","...ABBBBA...","...ABBBBA...","....ABBA....","..AA....AA..","..AA....AA..","...AA..AA...","...AA..AA...","............"]
- ],
- scout:[
- ["...A....A...","..ABAAAA BA.","..ABBBB BBA.","...ADDDDA...","...ADDDDA...","....ABBA....","..AABBBBAA..","..AABBBBAA..","...ABBBBA...","...ABBBBA...","....ABBA....","...AA..AA...","...AA..AA...","...AA..AA...","............","............"]
- ],
- wolf:[
- ["..AA....AA..",".ABBA..ABBA.","AABBBBBBBBAA","ABBDDBBDDBBA","ABBBBBBBBBBA","..ABBBBBBA..","AABBBBBBBBAA","ABBBBBBBBBBA","AA.BBBBBB.AA","AA.BBBBBB.AA","...AA..AA...","...AA..AA...","............","............","............","............"]
- ]
-};
-const ATLAS_COLORS={A:'#3e4b43',B:'#638e78',C:'#e9d38f',D:'#dcb18d',E:'#bdcbd0'};
-function atlasStamp(kind,p,frame){
- const sheets=PIXEL_ATLAS[kind];if(!sheets)return false;
- const rows=sheets[frame%sheets.length],palette=kind==='hero'?HERO_STYLES[Math.max(0,Math.min(2,S.heroStyle||0))].palette:null;
- for(let y=0;y<rows.length;y++)for(let x=0;x<rows[y].length;x++){
-  const ch=rows[y][x];if(ch==='.'||ch===' ')continue;
-  const c=ch==='B'&&palette?palette[2]:ch==='C'&&palette?palette[3]:ATLAS_COLORS[ch];
-  if(c)p(x-6,y-25,1,1,c);
- }
- return true;
-}
-// Original pixel action frames. Kept independent from the idle/walk atlas.
-const ACTION_FRAMES={
- slash:[[-13,-18,5,5],[-15,-23,7,5],[-9,-28,8,5],[5,-26,9,5],[12,-18,7,5],[9,-8,6,5]],
- hurt:[[-10,-17,20,4],[-12,-13,24,4],[-10,-9,20,4]],
- cast:[[-3,-31,6,6],[8,-28,7,7],[13,-22,5,5]]
-};
-function drawActionPose(kind,p,action,progress){
- if(!action)return;
- const frames=ACTION_FRAMES[action];if(!frames)return;
- const count=action==='slash'?6:3,idx=Math.min(count-1,Math.floor(Math.max(0,Math.min(.999,progress))*count));
- const color=action==='hurt'?'#f5a99a':action==='cast'?'#d7b6ff':'#f4d69d';
- const [x,y,w,h]=frames[idx];p(x,y,w,h,color);
- if(action==='slash'){p(x+2,y-3,3,3,'#fff6d5');p(9,-9,2,18,'#d8e5eb')}
- if(action==='cast'){p(x+2,y-3,4,4,'#fff5df')}
-}
-// Runeforge original micro-sprite sheets: six authored poses per actor class.
-// Each frame adds silhouette-specific accents without overwriting equipped gear.
-const POSE_ATLAS={
- hero:['..H..H..','..H.HH..','.HHHHH..','HHHHHH..','.HHHHH..','..HHHH..'],
- merchant:['..M.MM..','..MMMM..','.MMMMM..','MMMMMM..','.MMMMM..','..MMMM..'],
- guard:['..G.GG..','..GGGG..','.GGGGG.','GGGGGG..','.GGGGG.','..GGGG..'],
- scout:['..S.SS..','.SSSSS..','SSSSSS..','.SSSSS..','..SSSS..','..SS.SS.'],
- brute:['BBBBBBBB','BBBBBBBB','.BBBBBB.','BBBBBBBB','BBBBBBBB','.BBBBBB.'],
- shaman:['..R.RR..','.RRRRR..','RRRRRR..','.RRRRR..','..RRRR..','..R.RR.'],
- wolf:['WW....WW','WWW..WWW','.WWWWWW.','WWWWWWWW','.WWWWWW.','WW....WW']
-};
-function poseOverlay(kind,p,frame,moving){
- const rows=POSE_ATLAS[kind];if(!rows)return;
- const ink={hero:'#e4c07c',merchant:'#e0b57a',guard:'#d4dce1',scout:'#a5c779',brute:'#c3a080',shaman:'#d6b5ef',wolf:'#b1c5bb'}[kind];
- const row=rows[frame%rows.length];
- for(let x=0;x<row.length;x++)if(row[x]!=='.')p(x-4,-30-(moving?frame%2:0),1,2,ink);
-}
-// Original layered equipment and creature accents, built at native pixel resolution.
-function pixelCharacterLighting(kind,p,frame,moving,back){
- const shift=moving?frame%2:0;
- if(kind==='hero'){
-  p(-6,-31,12,3,'#4d3b36');p(-4,-26,8,3,back?'#82684e':'#f0c99c');
-  if(S.heroArmor){p(-6,-12,12,3,'#e5d6b0');p(-4,-7,8,3,'#8ca9b5')}
-  if(S.weaponTier>=3){p(11,-25+shift,3,5,'#d8eef0')}
- }else if(kind==='merchant'){p(-7,-28,14,3,'#e6c58b');p(-5,-15,10,3,'#a9764f')}
- else if(kind==='guard'){p(-8,-30,16,3,'#e6d6b7');p(-7,-15,14,3,'#b3cbd0')}
- else if(kind==='scout'){p(-9,-29,18,3,'#a5c787');p(-8,-12,16,3,'#6d9568')}
- else if(kind==='brute'){p(-11,-30,22,4,'#d0b18a');p(-12,-13,24,3,'#a47e5d')}
- else if(kind==='shaman'){p(-10,-34,20,3,'#cdb1e9');p(-8,-16,16,3,'#8669a7')}
- else if(kind==='wolf'){p(-16,-25,32,4,'#a8bcb1');p(-14,-15,28,3,'#7b9a8c')}
-}
-function pixelMotionHighlights(kind,p,frame,moving){
- if(!moving)return;
- const stride=[0,1,2,1,0,-1][frame%6];
- if(kind==='hero'){p(-8,8+stride,6,3,'#6a584b');p(2,8-stride,6,3,'#6a584b')}
- else if(kind==='wolf'){p(-18,5+stride,7,4,'#5e8074');p(11,5-stride,7,4,'#5e8074')}
- else if(kind==='brute'){p(-12,8+stride,9,4,'#69513f');p(3,8-stride,9,4,'#69513f')}
- else if(kind==='scout'||kind==='shaman'){p(-8,7+stride,6,3,'#5e6755');p(2,7-stride,6,3,'#5e6755')}
- else {p(-7,7+stride,5,3,'#6c5846');p(2,7-stride,5,3,'#6c5846')}
-}
-function originalPixelHighlights(kind,p,frame,moving){
- const phase=moving?frame%3:0;
- if(kind==='hero'){
-  p(-6,-29,12,3,'#594b43');p(-4,-25,8,2,'#e8c59a');
-  p(-7,-10,3,7,'#e4bd88');p(4,-10,3,7,'#e4bd88');
-  if(S.heroArmor){p(-6,-13,12,4,'#d0d8d7');p(-3,-9,6,4,'#e9ce92')}
-  if(S.helmetOwned)p(-8,-35,16,4,'#b8c7c9');
-  if(moving){p(-8,5+phase,4,3,'#665447');p(4,5+(2-phase),4,3,'#665447')}
- }else if(kind==='merchant'){
-  p(-10,-16,20,3,'#d8b678');p(-6,-12,12,5,'#9a734c');
-  p(9,-5+phase,5,9,'#c5a070');
- }else if(kind==='guard'){
-  p(-11,-17,22,5,'#b6c7cb');p(-6,-12,12,8,'#6e8a9b');
-  p(-2,-10,4,5,'#f2d99e');
- }else if(kind==='scout'){
-  p(-11,-28,7,6,'#8dad70');p(4,-28,7,6,'#8dad70');
-  p(-7,-11,14,5,'#6f935f');
- }else if(kind==='brute'){
-  p(-15,-20,7,9,'#b49269');p(8,-20,7,9,'#b49269');
-  p(-10,-11,20,5,'#8b6b50');
- }else if(kind==='shaman'){
-  p(-9,-33,18,6,'#a080c5');p(-6,-25,12,5,'#d5b6ef');
-  p(12,-37+phase,4,5,'#e9d1ff');
- }else if(kind==='wolf'){
-  p(-18,-18,36,5,'#8ba59b');p(-15,-9,30,4,'#607c73');
-  p(-19,-6+phase,8,5,'#9aada2');
- }
-}
-function spriteAnimationAccents(kind,p,frame,moving){
- const pulse=moving?frame%3:0;
- if(kind==='hero'){
-  p(-9,-30,3,5,'#5d4d44');p(6,-30,3,5,'#5d4d44');
-  p(-10,-1+pulse,3,5,'#e0bb8a');p(7,-1+(2-pulse),3,5,'#e0bb8a');
-  if(S.heroArmor)p(-7,-13,14,3,'#e2c58b');
- }else if(kind==='merchant'){
-  p(-9,-32,18,3,'#c7a36f');p(-5,-29,10,3,'#e8c68c');
-  p(-12,-5+pulse,5,9,'#a57c50');
- }else if(kind==='guard'){
-  p(-9,-33,18,5,'#a9bdc6');p(-5,-35,10,3,'#e6d6b4');
-  p(10,-17+pulse,3,23,'#b8c6cb');
- }else if(kind==='brute'){
-  p(-16,-18,8,8,'#9e7755');p(8,-18,8,8,'#9e7755');
-  p(-9,-33,7,7,'#b39b78');p(2,-33,7,7,'#b39b78');
- }else if(kind==='scout'){
-  p(-12,-29,6,9,'#7d9f66');p(6,-29,6,9,'#7d9f66');
-  p(-11,-2+pulse,5,8,'#688457');
- }else if(kind==='shaman'){
-  p(-12,-34,24,5,'#6c578d');p(-7,-37,14,5,'#b494d0');
-  p(11,-38+pulse,5,5,'#d9b7f4');
- }else if(kind==='wolf'){
-  p(-20,-16,40,6,'#6f8984');p(-17,-8,7,13,'#58716c');p(10,-8,7,13,'#58716c');
-  p(-20,-9+pulse,7,5,'#8ea59a');
- }
-}
-function facialPixels(kind,p,frame,back){
- if(back)return;
- const skin=kind==='wolf'?'#c4c4a8':kind==='brute'?'#b8a27e':'#e9c29d';
- const eye=kind==='wolf'?'#e8ce83':kind==='shaman'?'#dfb5fa':'#394447';
- p(-5,-20,2,2,eye);p(3,-20,2,2,eye);
- if(kind==='hero'||kind==='merchant'||kind==='guard'){
-  p(-2,-15,4,1,'#a16d60');
-  if(frame%3===0)p(-6,-23,3,2,skin);
- }
- if(kind==='scout'){p(-7,-26,4,4,'#88a66d');p(3,-26,4,4,'#88a66d')}
- if(kind==='brute'){p(-8,-24,5,3,'#e5cfaa');p(3,-24,5,3,'#e5cfaa')}
- if(kind==='shaman'){p(-4,-28,8,3,'#c9a8df');p(-2,-25,4,2,'#f2e5ff')}
- if(kind==='wolf'){p(-12,-23,5,4,eye);p(7,-23,5,4,eye);p(-3,-13,6,4,'#343d3c')}
-}
-function drawActorEquipment(kind,p,opts,frame){
- if(kind==='hero'){
-  const metal=S.weaponTier>=3?'#e9d5a0':'#c1cbd0';
-  if(S.helmetOwned){p(-8,-33,16,5,metal);p(-6,-37,12,5,'#819ba8');p(-2,-40,4,4,'#e7c98b')}
-  if(S.heroArmor){p(-7,-12,14,11,'#718f9c');p(-5,-10,10,7,metal);p(-2,-8,4,4,'#e6c77d')}
-  if(S.bootsOwned){p(-7,6,6,5,'#a07c50');p(1,6,6,5,'#a07c50')}
-  if(opts.staff){p(11,-30,3,36,'#74573d');p(8,-34,9,9,'#b89bdd');p(11,-32,3,4,'#fff0c9')}
-  else if(opts.sword){p(11,-21,3,27,metal);p(8,0,9,3,'#d7b26d');if(S.weaponTier>=3)p(11,-25,3,4,'#b2e1f2')}
- }else if(kind==='guard'){p(-11,-15,5,12,'#d5c8a6');p(8,-16,4,26,'#b3c4c9')}
- else if(kind==='merchant'){p(9,-6,7,11,'#a77946');p(11,-3,3,5,'#e6c478')}
- else if(kind==='brute'){p(-17,-13,7,17,'#a17c5c');p(12,-16,5,27,'#63534b')}
- else if(kind==='shaman'){p(12,-34,4,40,'#6d5488');p(10,-38,8,8,'#cfb1f1')}
- else if(kind==='scout'){p(9,-10,3,20,'#7a5b3f');p(7,-13,7,5,'#c5ad7c')}
- else if(kind==='wolf'){p(-21,-9+(frame%2),8,5,'#6c8580');p(-12,-31,6,9,'#a6b3a4');p(6,-31,6,9,'#a6b3a4')}
-}
+
 // Beta 4.7: native 20x28 original monster sprite sheets.
 // Each frame is a separately generated pixel array, not overdrawn rectangles.
 const MONSTER_SHEETS={};
@@ -403,10 +197,12 @@ function monsterSpriteSheet(kind,x,y,opts={}){
 }
 // Original 24x32 character frames, shared across four facing directions.
 const CHARACTER_FRAME_CACHE={};
+const CHARACTER_IMAGE_CACHE={};
 function characterFrame(kind,dir,phase,action='walk'){
  const key=kind+':'+dir+':'+phase+':'+action+':'+(kind==='hero'?S.heroStyle:0);
  if(CHARACTER_FRAME_CACHE[key])return CHARACTER_FRAME_CACHE[key];
- const c=kind==='hero'?{coat:'#537d9d',trim:'#e1c57d',hair:'#5d4435',skin:'#eac29a'}:kind==='merchant'?{coat:'#a07b50',trim:'#e4c487',hair:'#725039',skin:'#e7bc91'}:{coat:'#647f8e',trim:'#d6c59a',hair:'#55606a',skin:'#d8b48e'};
+ const heroPalette=HERO_STYLES[Math.max(0,Math.min(2,S.heroStyle||0))].palette;
+ const c=kind==='hero'?{coat:heroPalette[2],trim:heroPalette[3],hair:heroPalette[0],skin:heroPalette[1]}:kind==='merchant'?{coat:'#a07b50',trim:'#e4c487',hair:'#725039',skin:'#e7bc91'}:{coat:'#647f8e',trim:'#d6c59a',hair:'#55606a',skin:'#d8b48e'};
  const px=Array.from({length:32},()=>Array(24).fill(null));
  const fill=(x,y,w,h,col)=>{for(let j=Math.max(0,y);j<Math.min(32,y+h);j++)for(let i=Math.max(0,x);i<Math.min(24,x+w);i++)px[j][i]=col};
  const step=action==='walk'?[0,1,2,1,0,-1][phase%6]:0;
@@ -415,12 +211,12 @@ function characterFrame(kind,dir,phase,action='walk'){
  fill(6,12,12,12,c.coat);fill(5,13+step,3,10,c.skin);fill(16,13-step,3,10,c.skin);
  fill(8,3,8,11,c.skin);fill(7,2,10,5,c.hair);
  if(back){fill(8,5,8,9,c.hair);fill(7,13,10,3,c.trim)}
- else if(side){fill(dir==='left'?8:14,9,2,2,'#37474a')}
+ else if(side){fill(14,9,2,2,'#37474a')}
  else{fill(9,9,2,2,'#37474a');fill(14,9,2,2,'#37474a');fill(11,13,3,1,'#a96f65')}
  fill(8,16,8,3,c.trim);fill(10,20,4,3,'#6b584a');
- if(action==='attack'){const reach=phase%4;fill(dir==='left'?2:17,9-reach*2,4+reach,6,c.trim);fill(dir==='up'?8:14,5+reach*3,4,5,'#f1ddab')}
+ if(action==='attack'){const reach=phase%4;fill(17,9-reach*2,4+reach,6,c.trim);fill(dir==='up'?8:14,5+reach*3,4,5,'#f1ddab')}
  if(action==='hurt'){fill(6+phase,10,12,4,'#f4aa98');fill(7+phase,17,10,3,'#b65d5a')}
- if(action==='idle'){fill(7,12+(phase%2),10,2,c.trim)}
+ if(action==='idle'){fill(7,12+[0,1,2,1][phase%4],10,2,c.trim)}
  if(action==='work'){fill(16,10+phase,5,5,'#f2c66c')}
  if(kind==='guard'){fill(6,13,12,4,'#b9c8ca');fill(7,1,10,4,'#b0c1c9')}
  if(kind==='merchant'){fill(6,1,12,3,'#d2b07b');fill(5,17,3,7,'#bb8a58')}
@@ -430,16 +226,18 @@ const CHARACTER_ANIMATIONS={idle:{frames:4,fps:3},walk:{frames:6,fps:9},attack:{
 function characterAnimationState(opts={}){
  const action=opts.action==='slash'||opts.action==='cast'?'attack':opts.action==='hurt'?'hurt':opts.working?'work':opts.moving?'walk':'idle';
  const info=CHARACTER_ANIMATIONS[action];
- const frame=(action==='attack'||action==='hurt')?Math.min(info.frames-1,Math.floor((opts.actionProgress||0)*info.frames)):Math.floor((opts.walk||performance.now()/1000)*info.fps)%info.frames;
+ const frame=(action==='attack'||action==='hurt')?Math.min(info.frames-1,Math.floor((opts.actionProgress||0)*info.frames)):Math.floor((action==='idle'?performance.now()/1000:(opts.walk||0))*info.fps)%info.frames;
  return {action,frame,frames:info.frames};
 }
 function characterSpriteSheet(kind,x,y,opts={}){
  if(!['hero','merchant','guard'].includes(kind))return false;
- const dir=opts.dir||'down',anim=characterAnimationState(opts),phase=anim.action==='walk'?anim.frame:anim.action==='idle'?0:anim.frame;
- const pixels=characterFrame(kind,dir,phase,anim.action);
+ const dir=opts.dir||'down',anim=characterAnimationState(opts),phase=anim.frame;
+ const pixels=characterFrame(kind,dir,phase,anim.action),key=kind+':'+dir+':'+phase+':'+anim.action+':'+(kind==='hero'?S.heroStyle:0);
+ let frame=CHARACTER_IMAGE_CACHE[key];
+ if(!frame){frame=document.createElement('canvas');frame.width=24;frame.height=32;const paint=frame.getContext('2d');for(let j=0;j<32;j++)for(let i=0;i<24;i++)if(pixels[j][i]){paint.fillStyle=pixels[j][i];paint.fillRect(i,j,1,1)}CHARACTER_IMAGE_CACHE[key]=frame}
  ctx.save();ctx.translate(Math.round(x),Math.round(y));if(dir==='left')ctx.scale(-1,1);
  ctx.scale(2.65,2.65);ctx.imageSmoothingEnabled=false;
- for(let j=0;j<32;j++)for(let i=0;i<24;i++){const c=pixels[j][i];if(c){ctx.fillStyle=c;ctx.fillRect(i-12,j-29,1,1)}}
+ ctx.drawImage(frame,-12,-29);
  if(kind==='hero'){
   const rect=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(x,y,w,h)};
   if(S.heroArmor){rect(-6,-15,12,11,'#8fa8b6');rect(-4,-12,8,5,'#d9c38d')}
@@ -456,91 +254,11 @@ function characterSpriteSheet(kind,x,y,opts={}){
 }
 function spriteActor(kind,x,y,opts={}){
  if(characterSpriteSheet(kind,x,y,opts))return;
- if(['scout','brute','shaman','wolf'].includes(kind)&&monsterSpriteSheet(kind,x,y,opts))return;
- const pal=kind==='hero'?HERO_STYLES[Math.max(0,Math.min(2,S.heroStyle||0))].palette:(SPRITE_PALETTES[kind]||SPRITE_PALETTES.hero);
- const moving=!!opts.moving,animation=actorAnimation(kind,moving,opts.walk||0),frame=animation.frame;
- const step=animation.stride,bob=animation.bob;
- const armSwing=moving?step*.9:0,blink=(Math.floor(performance.now()/1900+(kind==='hero'?0:1))%7===0);
- const dir=opts.dir||'down',back=dir==='up',side=dir==='left'||dir==='right';
- const p=(xx,yy,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(xx,yy,w,h)};
- ctx.save();ctx.translate(Math.round(x),Math.round(y+bob));
- if(dir==='left')ctx.scale(-1,1);
- const actorScale=kind==='brute'?2.9:kind==='scout'?2.3:kind==='wolf'?2.7:kind==='shaman'?2.6:2.5;ctx.scale(actorScale,actorScale);ctx.imageSmoothingEnabled=false;
- p(-9,7,18,3,'#172d2a77');
- spriteSilhouette(kind,p,step,back);
- p(-5+step,2,4,7,pal[4]);p(1-step,2,4,7,pal[4]);
- p(-6+step,7,5,2,'#292c32');p(1-step,7,5,2,'#292c32');
- p(-8,-12,16,17,pal[5]);p(-6,-13,12,16,pal[2]);
- p(-9,-11+armSwing,4,12,pal[1]);p(5,-11-armSwing,4,12,pal[1]);
- p(-9,-12+armSwing,4,4,pal[3]);p(5,-12-armSwing,4,4,pal[3]);
- p(-7,-25,14,13,pal[1]);
- if(back){p(-8,-26,16,7,pal[0]);p(-6,-20,12,6,pal[0])}
- else if(side){p(-8,-26,16,5,pal[0]);p(3,-19,2,2,'#2a302e')}
- else{p(-8,-26,16,5,pal[0]);p(-8,-22,3,8,pal[0]);p(-4,-19,2,blink?1:2,'#2a302e');p(3,-19,2,blink?1:2,'#2a302e')}
- p(-7,-27,14,2,pal[3]);
- if(kind==='hero'){
-  if(moving){p(-11,5,3,2,pal[3]);p(8,5,3,2,pal[3])}
-  p(-8,-14,16,3,pal[3]);p(-2,-1,4,4,pal[3]);
-  if(opts.armor){p(-7,-12,4,11,'#b9c8ce');p(3,-12,4,11,'#b9c8ce');p(-4,-10,8,7,'#e1c58d');if(S.armorTier>0){p(-4,-11,8,3,'#e7c475');p(-9,-14,4,4,'#e7c475');p(5,-14,4,4,'#e7c475')}}
-  if(opts.staff){if(S.weaponTier>0){p(9,-29,5,5,'#f4d48d')}p(10,-20,3,29,'#866348');p(8,-25,7,7,'#c3a0ee');p(10,-23,3,3,'#fff0d7')}else if(opts.sword){if(S.weaponTier>0)p(9,-16,4,6,'#d7b7fa');p(10,-11,2,19,'#c3d8e2');p(7,4,8,2,'#e5c77d')}
- }
- if(kind==='guard'){p(9,-12,3,19,'#c3c8c9');p(7,5,7,2,'#e2c17a')}
- if(kind==='shaman'){p(9,-17,3,24,'#b2a0cf');p(7,-19,7,5,'#d2b6f5')}
- if(kind==='brute'){p(-10,-11,4,15,pal[2]);p(6,-11,4,15,pal[2])}
- // Distinctive original silhouettes and layered pixel details.
- if(kind==='hero'){
-  
-  
-  p(-7,-29,14,3,'#c8d3d7');p(-5,-31,10,3,'#7f9da6');p(-9,-13,3,12,'#a8b9c1');p(6,-13,3,12,'#a8b9c1');
-  p(-4,-8,8,5,'#648fa5');p(-2,-5,4,3,'#e4c36e');p(-6,9,4,2,'#b69b71');p(2,9,4,2,'#b69b71');
-  p(-10,-3,3,10,'#843f4e');p(7,-3,3,10,'#843f4e');if(S.bootsOwned){p(-7,6,6,5,'#987047');p(1,6,6,5,'#987047');p(-7,10,6,2,'#dfbf7a');p(1,10,6,2,'#dfbf7a')};if(S.helmetOwned){p(-9,-30,18,6,'#c8b887');p(-7,-34,14,5,'#869eaa');p(-2,-36,4,4,'#e4c57b')};if(S.heroArmor&&S.armorTier>=3){p(-8,-15,4,7,'#e5c37b');p(4,-15,4,7,'#e5c37b')}
- }
- if(kind==='merchant'){
-  if(moving)p(-7,-36+step,14,3,'#c89c60');p(-10,-11,20,5,'#d3ad6f');p(-9,-28,18,4,'#8c5e35');p(-5,-33,10,6,'#aa7b45');p(-5,-5,10,7,'#d7b17d');
-  p(-3,-20,6,2,'#694a38');p(-2,-16,4,2,'#795443');p(8,-4,5,9,'#9b7544');p(9,-2,3,5,'#e4bb70');
- }
- if(kind==='guard'){
-  if(moving)p(10,-16+step,3,20,'#d6d0ad');p(-9,-30,18,6,'#adbcc3');p(-6,-34,12,6,'#6b8998');p(-7,-14,14,4,'#d1d6d1');
-  p(-5,-10,10,9,'#8da8b3');p(-1,-9,2,7,'#d6c27d');p(-9,-4,4,10,'#b0b8b9');
- }
- if(kind==='scout'){
-  p(-11,-25,5,7,'#8eaf71');p(6,-25,5,7,'#8eaf71');p(-5,-18,3,2,'#f1e5a0');p(3,-18,3,2,'#f1e5a0');
-  p(-2,-13,4,3,'#49603e');p(8,-4,3,13,'#80623f');p(7,-6,5,3,'#c2a274');
- }
- if(kind==='brute'){
-  if(moving)p(-15,-11+step,4,12,'#775440');p(-13,-15,26,8,'#6a4a38');p(-11,-14,22,5,'#765342');p(-12,-8,5,12,'#a17857');p(7,-8,5,12,'#a17857');
-  p(-11,-27,5,8,'#d2c3a1');p(6,-27,5,8,'#d2c3a1');p(-5,-18,3,2,'#e8ce86');p(3,-18,3,2,'#e8ce86');
-  p(11,-12,5,20,'#5d4b41');p(9,-14,9,6,'#aaa69a');
- }
- if(kind==='shaman'){
-  if(moving)p(9,-28+step,4,5,'#e8c5ff');p(-12,-30,24,9,'#483c66');p(-9,-30,18,7,'#6e4c8e');p(-6,-34,12,6,'#ae8ac7');p(-10,-12,3,19,'#b18bd1');
-  p(7,-12,3,19,'#b18bd1');p(-5,-18,3,2,'#f0d1f8');p(3,-18,3,2,'#f0d1f8');
-  p(7,-23,8,5,'#c6a3ec');p(10,-27,3,5,'#e9d3fa');
- }
- if(kind==='wolf'){
-  p(-18,-8+step,7,5,'#4b6660');p(-15,-12,30,17,'#485e5c');p(-12,-28,6,10,'#71858b');p(6,-28,6,10,'#71858b');p(-10,-23,20,14,'#778a8a');
-  p(-8,-19,4,3,'#e5d28a');p(4,-19,4,3,'#e5d28a');p(-4,-12,8,6,'#c3c6b3');
-  p(-13,-8,26,13,'#596e6c');p(-14,-3,5,12,'#4c6262');p(9,-3,5,12,'#4c6262');
- }
- spriteDetail(kind,p,frame,moving,back);
- poseOverlay(kind,p,frame,moving);
- drawActorEquipment(kind,p,opts,frame);
- facialPixels(kind,p,frame,back);
- spriteAnimationAccents(kind,p,frame,moving);
- originalPixelHighlights(kind,p,frame,moving);
- pixelMotionHighlights(kind,p,frame,moving);
- pixelCharacterLighting(kind,p,frame,moving,back);
- // Pixel atlas overlay gives stable frame-authored texture on top of equipment layers.
- if(!back&&kind!=='hero')atlasStamp(kind,p,frame);
- if(opts.action)drawActionPose(kind,p,opts.action,opts.actionProgress||0);
- ctx.restore();
+ if(['scout','brute','shaman','wolf'].includes(kind)){monsterSpriteSheet(kind,x,y,opts);return}
+ characterSpriteSheet('merchant',x,y,opts);
 }
-// Reusable deterministic tile stamps, original to Runeforge.
-const WORLD_TILES={
- grass:['#709e5b','#7fa968','#659454','#88b274'],
- forest:['#58865a','#639369','#4e7c50','#709f70'],
- path:['#d6b98b','#e2c69a','#c8a777','#ebd0a4']
-};
+
+const WORLD_TILES={grass:['#72995c','#759b5f','#70975a','#739a5d'],forest:['#5c8257','#5e8459','#5a8055','#5d8358'],path:['#d6b98b','#e2c69a','#c8a777','#ebd0a4']};
 function tileStamp(x,y,size,kind,seed){
  const palette=WORLD_TILES[kind],v=Math.abs((seed*1664525+1013904223)|0)%4;
  ctx.fillStyle=palette[v];ctx.fillRect(x,y,size,size);
@@ -548,8 +266,13 @@ function tileStamp(x,y,size,kind,seed){
  if(seed%5===0){ctx.fillRect(x+size*.2,y+size*.6,Math.max(2,size*.17),2);ctx.fillRect(x+size*.7,y+size*.25,3,2)}
  if(kind!=='path'&&seed%11===0){ctx.fillStyle='#e9dca0';ctx.fillRect(x+size*.45,y+size*.35,3,3)}
 }
+const TERRAIN_CACHE={};
 function tileField(w,h,size,kind){
- for(let y=0;y<h;y+=size)for(let x=0;x<w;x+=size)tileStamp(x,y,size,kind,(x/size)*37+(y/size)*113+7);
+ const key=[w,h,size,kind].join(':');let layer=TERRAIN_CACHE[key];
+ if(!layer){layer=document.createElement('canvas');layer.width=w;layer.height=h;const paint=layer.getContext('2d'),palette=WORLD_TILES[kind];
+ for(let y=0;y<h;y+=size)for(let x=0;x<w;x+=size){const seed=(x/size)*37+(y/size)*113+7,v=Math.abs((seed*1664525+1013904223)|0)%4;paint.fillStyle=palette[v];paint.fillRect(x,y,size,size);if(seed%5===0){paint.fillStyle=kind==='forest'?'#527b51':'#678e53';paint.fillRect(x+7,y+17,5,2)}if(seed%29===0){paint.fillStyle='#9da966';paint.fillRect(x+15,y+8,2,2)}}
+ TERRAIN_CACHE[key]=layer}
+ ctx.imageSmoothingEnabled=false;ctx.drawImage(layer,0,0);
 }
 function pathBorder(x,y,w,h){
  ctx.fillStyle='#8b805f';ctx.fillRect(x-5,y-5,w+10,h+10);
@@ -588,6 +311,7 @@ function npcSchedule(role,time){
  const ease=u*u*(3-2*u),p=legs[i],q=legs[i+1];
  return {x:p[0]+(q[0]-p[0])*ease,y:p[1]+(q[1]-p[1])*ease,activity:['Morgon','Arbete','Rast','Kväll'][phase],moving:fraction>.12&&fraction<.88};
 }
+function npcFacing(role,time){const a=npcSchedule(role,time),b=npcSchedule(role,time+.05),dx=b.x-a.x,dy=b.y-a.y;return Math.abs(dx)>Math.abs(dy)?(dx<0?'left':'right'):(dy<0?'up':'down')}
 function npcLocation(role,time){const n=npcSchedule(role,time);return [n.x,n.y]}
 function drawFisheryDock(time){
  const p=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(x,y,w,h)};
@@ -611,18 +335,16 @@ tileField(1000,870,28,'grass');
 const cloudShift=Math.sin(t*.15)*36;
 for(let k=0;k<5;k++){const x=80+k*205+cloudShift,y=115+(k%3)*235;oval(x,y,115,31,'#243b3520')}
 
-for(let y=0;y<870;y+=28)for(let x=0;x<1000;x+=28){let n=rng(x*2+y*7);box(x,y,28,28,n>.72?'#7aa967':n<.18?'#5e8c50':'#709e5b');if(n>.82){box(x+7,y+10,4,3,'#9bb96c');box(x+19,y+21,3,4,'#e8c57b')}if(n<.09)box(x+17,y+8,4,2,'#326544')}
 // Hand-authored prop distribution with no random flicker.
-for(const [x,y,v] of [[72,135,0],[110,730,1],[876,126,0],[920,730,1],[80,300,1],[900,305,0],[350,120,1],[650,720,0]])pixelTree(x,y,v);
-pixelWater(62,560,100,92,t);pixelWater(820,565,116,86,t);
+
+for(const pond of fishingPonds('village'))pixelWater(...pond,t);
 for(const [x,y,v] of [[335,300,0],[360,505,1],[620,560,2],[590,120,0],[800,515,1],[170,540,2],[380,790,0],[730,80,1]])pixelFlower(x,y,v);
 for(const [x,y,v] of [[55,210,0],[780,220,1],[200,785,2],[750,765,0]])pixelMeadowPatch(x,y,v);
 pathBorder(429,0,142,870);pathBorder(0,350,1000,133);
 for(let i=0;i<180;i++){let x=rng(i+12)*995,y=rng(i+135)*865;if((x>427&&x<572)||(y>347&&y<483))continue;box(x,y,4,3,i%3?'#79a368':'#d7be78')}
 for(let y=3;y<870;y+=24)for(let x=432;x<570;x+=36){box(x+(y%3)*5,y,31,19,(x+y)%5?'#d9bd8d':'#e3c99e');box(x+5,y+3,20,2,'#d6c5a0')}
 for(let x=4;x<1000;x+=36)for(let y=356;y<482;y+=24){box(x+(y%3)*4,y,31,19,(x+y)%7?'#d9bd8d':'#e3c99e');box(x+4,y+4,19,2,'#d8c59c')}
-function pine(x,y,size){oval(x+5,y+6,size*.65,size*.25,'#294c38');box(x-5,y-size*.45,10,size*.7,'#6a4c35');poly([[x,y-size*1.45],[x-size*.62,y-size*.6],[x+size*.62,y-size*.6]],'#244e3e');poly([[x,y-size*1.75],[x-size*.55,y-size*.91],[x+size*.55,y-size*.91]],'#376c4a');poly([[x,y-size*1.98],[x-size*.42,y-size*1.3],[x+size*.42,y-size*1.3]],'#4c8a55');box(x-6,y-size*1.44,7,4,'#83a66b')}
-for(let i=0;i<105;i++){let x=25+rng(i*3+1)*950,y=55+rng(i*7+2)*770;if((x>118&&x<865&&y>105&&y<755)||(x>400&&x<600)||(y>325&&y<500))continue;pine(x,y,18+rng(i+6)*17)}
+
 function flowers(x,y){for(let i=0;i<9;i++){let fx=x+rng(i+x)*72,fy=y+rng(i+y)*64;box(fx,fy,4,4,i%3===0?'#f7c879':i%3===1?'#f6a6ae':'#e3d4fa');box(fx+1,fy+5,2,3,'#397347')}}
 flowers(335,95);flowers(575,520);flowers(330,675);
 // Decorative world props and ground texture, fixed positions for stable performance.
@@ -634,7 +356,8 @@ for(const [x,y] of [[350,110],[640,130],[95,270],[905,750]]){
 oval(x,y+5,17,6,'#355442');box(x-10,y-7,20,13,'#677577');box(x-4,y-14,11,9,'#a0aaa0');
 }
 
-oval(78,803,91,57,'#314f4c');oval(78,799,82,49,'#43889c');oval(78,799,69,37,'#5babb6');for(let i=0;i<7;i++){let x=28+i*19;box(x,786+i%3*10,13,3,'#b0d6c3')}
+
+drawTrees('village',false);
 function house(b,idx){
 const x=b.x,y=b.y,w=b.w,h=b.h;
 oval(x+w/2,y+h+15,w*.66,24,'#304c3d');
@@ -660,7 +383,7 @@ if(lvl>=5){box(x+w/2-5,y-64,10,18,'#f2cf7d');poly([[x+w/2,y-84],[x+w/2-14,y-63],
 pixelRoofDetails(x,y,w,roof,lvl);
 if(idx===0){const flicker=5+Math.sin(t*8)*3;oval(x+w-4,y-75,10+flicker,6+flicker/2,'#ffbd4c55')}
 if(lvl>=10){box(x-23,y-16,12,38,'#d4b66e');box(x+w+11,y-16,12,38,'#d4b66e');box(x-26,y-23,18,8,'#e8d395');box(x+w+8,y-23,18,8,'#e8d395')}
-pixelSign(x+w/2,y-96,['forge','mine','market','guild'][idx]);text(b.n+' Lv.'+lvl,x+w/2,y-121,17);text('▼',x+w/2,y+h+32,16,'#ffe6a4');
+text(b.n,x+w/2,y+h-61,13);text('▼',x+w/2,y+h+32,16,'#ffe6a4');
 }
 buildings.forEach(house);
 if(S.caravanOfficeBuilt){ctx.fillStyle='#a97955';ctx.fillRect(185,135,115,65);ctx.fillStyle='#e5c18e';ctx.fillRect(195,149,95,51);text('Karavan',243,118,14)}
@@ -684,9 +407,9 @@ function lamp(x,y){oval(x,y+9,18,7,'#354f3c');box(x-4,y-39,8,48,'#5d463b');box(x
 [[395,331],[607,331],[395,503],[607,503]].forEach(p=>lamp(...p));
 for(let i=0;i<4;i++){const x=357+i*12,y=615;box(x,y,10,7,'#a3a1a0');box(x+2,y-3,6,3,'#d4c7b4')}
 const [ex,ey]=npcLocation('merchant',t),[gx,gy]=npcLocation('guard',t);
-spriteActor('merchant',ex,ey,{moving:npcSchedule('merchant',t).moving,working:npcSchedule('merchant',t).activity==='Arbete',walk:t*.24});
-spriteActor('guard',gx,gy,{moving:npcSchedule('guard',t).moving,working:npcSchedule('guard',t).activity==='Arbete',walk:t*.15});
-text('Elric · '+npcSchedule('merchant',t).activity,ex,ey-58,14);text('Mira · '+npcSchedule('guard',t).activity,gx,gy-58,14);
+spriteActor('merchant',ex,ey,{moving:npcSchedule('merchant',t).moving,working:npcSchedule('merchant',t).activity==='Arbete',dir:npcFacing('merchant',t),walk:t});
+spriteActor('guard',gx,gy,{moving:npcSchedule('guard',t).moving,working:npcSchedule('guard',t).activity==='Arbete',dir:npcFacing('guard',t),walk:t});
+if(Math.hypot(S.x-ex,S.y-ey)<120)text('Elric',ex,ey-88,13);if(Math.hypot(S.x-gx,S.y-gy)<120)text('Mira',gx,gy-88,13);
 drawFisheryDock(t);
 if(S.fisheryManager){const [fx,fy]=npcLocation('fisher',t);worker(fx,fy,'#497b8b',4);text('Fisher · '+npcSchedule('fisher',t).activity,fx,fy-43,12)}
 spriteActor('scout',915,440,{moving:true,walk:t*.4});
@@ -698,9 +421,9 @@ spriteActor('hero',x,y,{moving:walkMoving,walk:walkTime,dir,armor:S.heroArmor,sw
 // Directional world interaction halo and player ground shadow.
 oval(S.x,S.y+20,25,9,'#192f2b75');
 hero(S.x,S.y);
-if(S.heroSword&&S.weaponType!=='staff'){box(S.x+25,S.y-5,4,29,'#c7dce1');box(S.x+20,S.y+18,14,5,'#dfc57a')}
-if(S.heroArmor){box(S.x-15,S.y-19,5,20,'#e4c680');box(S.x+10,S.y-19,5,20,'#e4c680')}
-text('YOU',S.x,S.y-44,14,'#d9f8e3');
+
+
+drawTrees('village',true);
 text('↓ Whisperwood Forest',500,817,18,'#fff0b3');text('→ Goblingrottan',922,465,15,'#ffe3a5');
 ctx.restore();
 // Screen-space cinematic vignette, without blocking touch controls.
@@ -710,24 +433,33 @@ document.getElementById('stats').textContent='🪙 '+Math.floor(S.gold)+' · ⛏
 const defaults={wood:0,ingots:0,runes:0,potions:1,level:1,heroSword:false,heroArmor:false,heroShield:false,quest:0,forestWins:0,combat:null,autoForge:false,autoSell:false,woodLevel:1,lastSaved:Date.now(),totalGold:0,scene:'village',dungeonX:150,dungeonY:380,dungeonKills:0,contractsDone:0,contractTarget:3,contractReward:100,expeditionEnds:0,expeditionTier:1,expeditionsDone:0,forgeMastery:0,merchantRep:0,saveVersion:2,oreGathered:0,swordsCrafted:0,tutorialSeen:false,insideX:500,insideY:575,forestX:500,forestY:78,forestWood:0,forestVisits:0,forestChest:false,forestWolfWins:0,forestWolfDefeated:false,heroStyle:0,weaponType:'sword',staffOwned:false,staffMastery:0,lootItems:[],equippedCharm:null,lootKills:0,armorTier:0,weaponTier:0,helmetOwned:false,bootsOwned:false,visualTime:'day',fish:0,fisheryLevel:1,fisheryManager:false,fishSold:0,fishCaughtAtPond:0,fisheryContracts:0,fishSpecies:{},fishBites:0,fishMisses:0,fishSalesGold:0,fishContractDone:0,resourceContractDone:0,marketCycle:0,marketDemand:1,marketDeliveries:0,villageMilestones:[],npcQuestAccepted:{},npcQuestCompleted:{},npcQuestClaimed:{},heroRenown:0,renownRewards:[],renownHallBuilt:false,arcaneWorkshopBuilt:false,caravanOfficeBuilt:false,arcaneOrdersDone:0,caravanOrdersDone:0,steelStock:0,runeGoods:0,productionOrdersDone:0,autoSteel:false,autoRune:false,warehouseCapacity:40,warehouseLevel:1,autoTradeSteel:false,autoTradeRune:false,tradeReserveSteel:2,tradeReserveRune:1,tradeRevenue:0,tradeCosts:0,productionPriority:'balanced',inventoryCategory:'all',productionCostTotal:0,productionRevenueTotal:0,materialValuation:{ore:6,wood:4,runes:18},steelCostBasis:[],runeCostBasis:[],productionRealizedCost:0,productionGrossProfit:0,productionQuestDone:0,questRevenue:0,questExpenses:0,economyLedger:[],economyTransactionId:0,monsterEssence:0,wardSeals:0,wardDeliveries:0,wardCostBasis:[],dungeonClears:0,dungeonChestClaimed:false,dungeonRewardPending:false,merchantDialogueSeen:false,guardDialogueSeen:false,combatWins:0,cookedMeals:0,mealIngredientsUsed:0,mealsCookedTotal:0};
 for(const k in defaults)if(S[k]===undefined)S[k]=defaults[k];
 if(S.manager&&S.gold<0)S.gold=0;
-let autosaveClock=0,productionClock=0;let movementErrorShown=false;let dungeonTime=0;
-function persist(){S.lastSaved=Date.now();try{localStorage.setItem('runeforge_beta_preview_01',JSON.stringify(S))}catch(e){}}
+let autosaveClock=0,productionClock=Math.max(0,Math.min(4.999,Number(S.productionRemainder)||0));let movementErrorShown=false;let dungeonTime=0;
+let batchSimulation=false;
+function persist(){if(batchSimulation)return;S.productionRemainder=productionClock;S.lastSaved=Date.now();try{localStorage.setItem('runeforge_beta_preview_01',JSON.stringify(S))}catch(e){}}
 function finishExpedition(){if(!S.expeditionEnds||Date.now()<S.expeditionEnds)return false;S.expeditionEnds=0;S.expeditionsDone++;const reward=12+S.expeditionTier*8;S.ore+=reward;S.runes+=S.expeditionTier>1?2:1;S.totalGold+=0;note('Expedition klar! +'+reward+' malm, +runfragment');return true}
-function offline(){
-let elapsed=Math.max(0,Math.min(8*3600,(Date.now()-Number(S.lastSaved||Date.now()))/1000));
-if(elapsed<5)return;
-const cycles=Math.floor(elapsed/5);
-if(S.manager)S.ore+=cycles*S.mine;
-if(S.autoForge){let crafts=Math.min(cycles,Math.floor(S.ore/2),Math.floor(S.wood));S.ore-=crafts*2;S.wood-=crafts;S.swords+=crafts*S.forge}
-if(S.autoSell){let sold=Math.min(S.swords,cycles);S.swords-=sold;S.gold+=sold*35;S.totalGold+=sold*35}
-S.lastSaved=Date.now();finishExpedition();persist();
-document.getElementById('msg').textContent='Välkommen tillbaka! '+Math.floor(elapsed/60)+' min offline-produktion';
+function businessCycle(){
+ if(S.renownHallBuilt)economyTransaction('passive',15,0,'hall');
+ if(S.caravanOfficeBuilt)economyTransaction('passive',22,0,'caravan');
+ if(S.arcaneWorkshopBuilt)S.runes++;
+ if(S.manager)S.ore+=S.mine;
+ if(S.fisheryManager)catchFish(FISH_SPECIES[0],S.fisheryLevel);
+ if(S.productionPriority==='rune'){if(S.autoRune)craftProduction('rune');if(S.autoSteel)craftProduction('steel')}
+ else{if(S.autoSteel)craftProduction('steel');if(S.autoRune)craftProduction('rune')}
+ tradeCycle();if(S.autoForge)makeSwords();
+ if(S.autoSell&&S.swords>0)economyTransaction('swords',35,consumeSwords(1),'auto-sale');
 }
-offline();if(safePosition())persist();
+function offline(){
+ const elapsed=Math.max(0,Math.min(8*3600,(Date.now()-Number(S.lastSaved||Date.now()))/1000)),total=elapsed+productionClock,cycles=Math.floor(total/5);
+ productionClock=total-cycles*5;
+ if(!cycles)return;
+ batchSimulation=true;try{for(let i=0;i<cycles;i++)businessCycle()}finally{batchSimulation=false}
+ S.lastSaved=Date.now();finishExpedition();persist();note('Välkommen tillbaka! '+Math.floor(elapsed/60)+' min produktion beräknad.');
+}
+
 // Walk-through portals: directional edge crossing, no interaction button required.
 let transitionLock=0;
 function changeZone(scene,spawnX,spawnY,message){
- S.scene=scene;
+ S.scene=scene;vx=vy=0;walkMoving=false;const nub=document.getElementById('nub');if(nub)nub.style.transform='';
  if(scene==='village'){S.x=spawnX;S.y=spawnY}
  else if(scene==='forest'){S.forestX=spawnX;S.forestY=spawnY;S.forestVisits++}
  else if(scene==='dungeon'){S.dungeonX=spawnX;S.dungeonY=spawnY;S.dungeonKills=0;S.dungeonChestClaimed=false;S.dungeonRewardPending=false;for(let i=1;i<4;i++){fieldEnemies[i].hp=fieldEnemies[i].max;fieldEnemies[i].x=[0,440,740,530][i];fieldEnemies[i].y=[0,260,470,680][i]}}
@@ -821,7 +553,7 @@ function damageFieldEnemy(e,i,damage,magic=false){
  spawnCombatParticles(e.x,e.y-26,7,magic?'#d7b5fa':'#f6d18b');
  if(e.hp===0){
   const reward=e.kind==='wolf'?38:15+i*8;
-  S.gold+=reward;S.totalGold+=reward;awardXP(e.kind==='wolf'?16:8+i*3);
+  economyTransaction('adventure',reward,0,'combat');awardXP(e.kind==='wolf'?16:8+i*3);
   rollMonsterLoot(e.kind);const essence=essenceDrop(e.kind);
   if(e.kind==='wolf'){S.forestWolfDefeated=true;S.forestWolfWins++;S.wood+=6;S.runes+=2}
   else{S.forestWins++;S.combatWins++;S.dungeonKills=Math.min(3,S.dungeonKills+1);if(S.dungeonKills===3)S.dungeonRewardPending=true}
@@ -853,7 +585,7 @@ function fieldDodge(){
  const ax=moving?vx:faceX,ay=moving?vy:faceY,length=Math.hypot(ax,ay)||1;
  const dx=ax/length,dy=ay/length;
  const distance=S.bootsOwned?115:92;const nx=pos.x+dx*distance,ny=pos.y+dy*distance;
- if(S.scene==='forest'){const tx=Math.max(35,Math.min(965,nx)),ty=Math.max(45,Math.min(820,ny));if(!waterCollision('forest',tx,ty)){S.forestX=tx;S.forestY=ty}else note('Du kan inte hoppa ut i vattnet')}
+ if(S.scene==='forest'){const tx=Math.max(35,Math.min(965,nx)),ty=Math.max(45,Math.min(820,ny));let x=pos.x,y=pos.y;const steps=Math.ceil(Math.hypot(tx-x,ty-y)/4);for(let i=1;i<=steps;i++){const ax=pos.x+(tx-pos.x)*i/steps,ay=pos.y+(ty-pos.y)*i/steps;if(waterCollision('forest',ax,ay))break;x=ax;y=ay}S.forestX=x;S.forestY=y}
  else{S.dungeonX=Math.max(35,Math.min(965,nx));S.dungeonY=Math.max(60,Math.min(810,ny))}
  fieldDodgeCooldown=S.bootsOwned?.9:1.25;fieldInvuln=.38;
  dodgeTrail.push({x:pos.x,y:pos.y,life:.3,scene:S.scene});
@@ -894,7 +626,7 @@ for(let i=combatParticles.length-1;i>=0;i--){const p=combatParticles[i];p.life-=
    if(dist>90)continue;
    if(fieldInvuln<=0){
     const damage=Math.max(1,(e.kind==='brute'?5:3)-(S.heroArmor?2:0)-(S.armorTier||0)-(S.helmetOwned?1:0)-(charmEffect()==='guard'?1:0));
-    S.hp=Math.max(0,S.hp-damage);fieldInvuln=.65;
+    S.hp=Math.max(0,S.hp-damage);fieldInvuln=.65;heroAction='hurt';heroActionTime=.3;
     spawnCombatParticles(pos.x,pos.y-25,5,'#f4a98c');note('Du träffades! -'+damage+' HP');
     if(S.hp===0){S.hp=Math.max(8,Math.floor((20+(S.level-1)*4)/2));S.scene='village';S.x=500;S.y=550;persist();note('Du återhämtar dig i Emberfall')}
    }
@@ -935,8 +667,7 @@ function autoZoneTransition(dt){
   if(S.dungeonX<=88&&Math.abs(S.dungeonY-395)<105&&vx<0)changeZone('village',885,425,'Tillbaka i Emberfall');
  }else if(S.scene==='interior'){
   if(S.insideY>=743&&Math.abs(S.insideX-500)<125&&vy>0){
-   const b=buildings.find(v=>(S.houseType==='forge'&&v.n==='Smedja')||(S.houseType==='mine'&&v.n==='Gruva')||(S.houseType==='market'&&v.n==='Marknad')||(S.houseType==='guild'&&v.n==='Gille'));
-   changeZone('village',b?b.x+b.w/2:500,b?b.y+b.h+50:550,'Du lämnade byggnaden');
+   leaveHouse();
   }
  }
 }
@@ -947,15 +678,11 @@ if(!panel){walkMoving=Math.hypot(vx,vy)>.08;if(walkMoving){walkTime+=dt*Math.max
 if(panel)walkMoving=false;
 autoZoneTransition(dt);updateFieldCombat(dt);updateActionButton();
 fishingCooldown=Math.max(0,fishingCooldown-dt);updateFishing(dt);productionClock+=dt;autosaveClock+=dt;
-if(productionClock>=5){productionClock-=5;
-if(S.renownHallBuilt){S.gold+=15;S.totalGold+=15}if(S.caravanOfficeBuilt){S.gold+=22;S.totalGold+=22}if(S.arcaneWorkshopBuilt){S.runes+=1}if(S.manager)S.ore+=S.mine;if(S.fisheryManager)catchFish(FISH_SPECIES[0],S.fisheryLevel);
-if(S.productionPriority==='rune'){if(S.autoRune)craftProduction('rune');if(S.autoSteel)craftProduction('steel')}
-else{if(S.autoSteel)craftProduction('steel');if(S.autoRune)craftProduction('rune')}tradeCycle();
-if(S.autoForge&&S.ore>=2&&S.wood>=1){S.ore-=2;S.wood--;S.swords+=S.forge}
-if(S.autoSell&&S.swords>0){S.swords--;S.gold+=35;S.totalGold+=35}
-}
+if(productionClock>=5){productionClock-=5;businessCycle()}
+
 if(S.expeditionEnds&&Date.now()>=S.expeditionEnds){finishExpedition();persist()}if(autosaveClock>=12){autosaveClock=0;persist()}
 draw();if(S.scene==='dungeon')drawDungeon();else if(S.scene==='interior')drawInterior();else if(S.scene==='forest')drawForest();if(S.scene==='forest'||S.scene==='dungeon')drawCombatEffects(S.scene);
+drawInteractionTarget();
 if(S.visualTime==='dusk'&&(S.scene==='village'||S.scene==='forest')){ctx.fillStyle='#28375a40';ctx.fillRect(0,0,ww,hh)}if(S.scene==='forest'||S.scene==='dungeon'){
 ctx.save();ctx.fillStyle='#49352bd9';ctx.fillRect(8,8,Math.min(ww-16,190),43);
 ctx.fillStyle='#2b2927';ctx.fillRect(17,18,132,12);ctx.fillStyle='#c96b60';ctx.fillRect(17,18,132*Math.max(0,S.hp)/(20+(S.level-1)*4),12);
@@ -968,8 +695,8 @@ const status=document.getElementById('moveStatus');if(status)status.textContent=
 requestAnimationFrame(tick)
 }
 requestAnimationFrame(tick);
-if(!S.tutorialSeen){S.tutorialSeen=true;persist();show('guide')}
-function note(x){document.getElementById('msg').textContent=x;document.getElementById('notice').textContent=x}
+
+function note(x){if(batchSimulation)return;document.getElementById('msg').textContent=x;document.getElementById('notice').textContent=x}
 function save(){persist();note('Sparat!')}
 
 function drawForest(){
@@ -979,24 +706,22 @@ ctx.translate(ww/2-S.forestX*sc,hh/2-S.forestY*sc);ctx.scale(sc,sc);
 const rect=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(x,y,w,h)};
 const label=(str,x,y)=>{ctx.textAlign='center';ctx.font='bold 18px system-ui';ctx.lineWidth=4;ctx.strokeStyle='#142e25';ctx.strokeText(str,x,y);ctx.fillStyle='#f5dcaa';ctx.fillText(str,x,y)};
 tileField(1000,870,34,'forest');
-for(let y=0;y<870;y+=34)for(let x=0;x<1000;x+=34){let n=Math.sin(x*17+y*13)*43.7;n=n-Math.floor(n);rect(x,y,33,33,n>.5?'#679868':'#538354')}
-for(const [x,y,v] of [[110,150,0],[210,240,1],[820,170,0],[860,450,1],[135,730,0],[790,720,1],[330,160,1],[685,100,0]])pixelTree(x,y,v);
-pixelWater(75,510,130,105,performance.now()/1000);pixelWater(795,570,125,115,performance.now()/1000);
+for(const pond of fishingPonds('forest'))pixelWater(...pond,performance.now()/1000);
 for(const [x,y,v] of [[400,250,0],[590,410,1],[390,620,2],[605,760,0],[130,390,1]])pixelFlower(x,y,v);
 pathBorder(435,0,130,870);
-for(let i=0;i<90;i++){let x=(i*173+63)%960,y=(i*269+77)%830;if(x>395&&x<610)continue;rect(x-4,y-5,9,23,'#5d4735');ctx.beginPath();ctx.arc(x,y-23,20+i%3*5,0,Math.PI*2);ctx.fillStyle=i%3?'#244c3a':'#2e6145';ctx.fill();rect(x-9,y-40,12,6,'#467c51')}
+drawTrees('forest',false);
 for(const [x,y] of [[240,300],[755,270],[200,650],[800,650]]){rect(x-15,y-12,30,22,'#8e795f');rect(x-9,y-18,19,9,'#b7a68b')}
 rect(425,0,150,75,'#506f61');rect(442,0,116,55,'#9cbba2');label('↑ EMBERFALL',500,105);
 if(!S.forestChest){rect(770,160,65,45,'#725034');rect(777,150,51,22,'#c39a56');rect(798,154,9,46,'#f1d37b');label('SUPPLIES',802,135)}
 for(const [x,y] of [[280,460],[700,520],[750,380]]){rect(x-8,y-20,16,27,'#a17b4f');rect(x-21,y-28,42,19,'#5d9a5a');label('WOOD',x,y-42)}
 if(!S.forestWolfDefeated){const wx=fieldEnemies[0].x,wy=fieldEnemies[0].y;spriteActor('wolf',wx,wy,{moving:true,walk:performance.now()/1000,action:fieldEnemies[0].hurtPose>0?'hurt':null,actionProgress:1-(fieldEnemies[0].hurtPose||0)/.28});rect(wx-25,wy-83,50,6,'#513e3b');rect(wx-25,wy-83,50*fieldEnemies[0].hp/fieldEnemies[0].max,6,'#c46d5e');label('Duskwolf',wx,wy-92)}
-spriteActor('hero',S.forestX,S.forestY,{moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword&&S.weaponType!=='staff',staff:S.staffOwned&&S.weaponType==='staff'});
-ctx.restore();
+spriteActor('hero',S.forestX,S.forestY,{action:heroAction,actionProgress:1-heroActionTime/.3,moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword&&S.weaponType!=='staff',staff:S.staffOwned&&S.weaponType==='staff'});
+drawTrees('forest',true);ctx.restore();
 }
 function forestInteract(){
 if(!S.forestWolfDefeated&&Math.hypot(S.forestX-fieldEnemies[0].x,S.forestY-fieldEnemies[0].y)<110){note('Tryck ⚔ Attack för att slåss mot Duskwolf!');return}
 if(S.forestY<85&&Math.abs(S.forestX-500)<115){S.scene='village';S.x=500;S.y=765;persist();note('Tillbaka i Emberfall');return}
-if(!S.forestChest&&Math.hypot(S.forestX-802,S.forestY-180)<110){S.forestChest=true;S.gold+=40;S.totalGold+=40;S.wood+=10;S.runes+=1;persist();note('Skogsförråd: +40 guld, +10 trä, +1 runfragment');return}
+if(!S.forestChest&&Math.hypot(S.forestX-802,S.forestY-180)<110){S.forestChest=true;economyTransaction('adventure',40,0,'forest-chest');S.wood+=10;S.runes+=1;persist();note('Skogsförråd: +40 guld, +10 trä, +1 runfragment');return}
 for(const [x,y] of [[280,460],[700,520],[750,380]])if(Math.hypot(S.forestX-x,S.forestY-y)<95){S.wood+=3;S.forestWood+=3;persist();note('Du samlade +3 trä');return}
 note('Utforska skogen, samla trä eller hitta förrådet');
 }
@@ -1029,7 +754,7 @@ function interiorDecor(type,time){
  const resident=type==='market'?'merchant':type==='guild'?'guard':type==='mine'?'brute':'merchant';
  spriteActor(resident,680+Math.sin(time*.7)*17,605,{moving:true,walk:time*.25,dir:'left'});
 }
-function fishingPonds(scene){return scene==='village'?[[62,560,100,92],[820,565,116,86]]:scene==='forest'?[[75,510,130,105],[795,570,125,115]]:[]}
+function fishingPonds(scene){return scene==='village'?[[62,560,100,92],[820,565,116,86],[25,760,100,80]]:scene==='forest'?[[75,510,130,105],[795,570,125,115]]:[]}
 function waterCollision(scene,x,y,radius=12){
  return fishingPonds(scene).some(([px,py,w,h])=>x+radius>px+4&&x-radius<px+w-4&&y+radius>py+4&&y-radius<py+h-4);
 }
@@ -1053,16 +778,53 @@ function safeWaterPosition(scene,x,y){
  }
  return [x,y];
 }
-function contextualActionLabel(){
- if(panel==='fishing')return '🎣 Hugg!';
- if(S.scene==='interior')return '✦ Action · Använd';
- if(nearPond())return '🎣 Action · Fiska';
- if(S.scene==='forest'||S.scene==='dungeon')return '✦ Action · Undersök';
- return '✦ Action · Prata / Använd';
+function interactionTarget(){
+ if(panel==='fishing')return {label:'Hugg!',kind:'fishing'};
+ if(panel)return null;
+ const p=S.scene==='interior'?{x:S.insideX,y:S.insideY}:currentPosition();
+ const targets=[];
+ const add=(x,y,range,label,kind,data)=>{const distance=Math.hypot(p.x-x,p.y-y);if(distance<=range)targets.push({x,y,label,kind,data,distance})};
+ if(S.scene==='interior'){
+  add(500,748,105,'Lämna','leave');
+  return targets[0]||{label:({forge:'Smid',mine:'Bryt malm',market:'Handla',guild:'Använd gillet'}[S.houseType]||'Använd'),kind:'house'};
+ }
+ if(nearPond())for(const [x,y,w,h] of fishingPonds(S.scene)){
+  const px=Math.max(x,Math.min(p.x,x+w)),py=Math.max(y,Math.min(p.y,y+h));add(px,py,68,'Fiska','fish');
+ }
+ if(S.scene==='village'){
+  const t=performance.now()/1000;
+  for(const role of ['merchant','guard']){const [x,y]=npcLocation(role,t);add(x,y,85,'Prata','npc',role)}
+  for(const b of buildings)add(b.x+b.w/2,b.y+b.h+18,76,'Öppna '+b.n,'building',b);
+  add(500,826,90,'Till skogen','forest');add(952,425,92,'Till grottan','dungeon');
+ }else if(S.scene==='forest'){
+  add(500,40,75,'Till Emberfall','village');
+  if(!S.forestChest)add(802,180,100,'Öppna förråd','forestChest');
+  for(const [x,y] of [[280,460],[700,520],[750,380]])add(x,y,85,'Samla trä','wood');
+ }else if(S.scene==='dungeon'){
+  add(88,395,100,'Till Emberfall','village');
+  if(S.dungeonKills===3&&!S.dungeonChestClaimed)add(856,760,120,'Öppna kista','dungeonChest');
+ }
+ targets.sort((a,b)=>a.distance-b.distance);return targets[0]||null;
 }
+function contextualActionLabel(){return interactionTarget()?.label||'Action'}
 function updateActionButton(){
  const b=document.getElementById('actionButton');if(!b)return;
- const label=contextualActionLabel();if(b.textContent!==label)b.textContent=label;
+ const target=interactionTarget(),label=target?.label||'Action';
+ if(b.textContent!==label)b.textContent=label;
+ b.disabled=!target;b.setAttribute('aria-label',target?label:'Gå närmare en person, dörr eller strand');
+ const hint=document.getElementById('interactionHint');
+ if(hint)hint.textContent=target?label+(target.kind==='fish'?' · stå kvar på stranden':''):'Närma dig en person, dörr eller resurs';
+}
+function leaveHouse(){
+ const names={forge:'Smedja',mine:'Gruva',market:'Marknad',guild:'Gille'};
+ const b=buildings.find(b=>b.n===names[S.houseType]);
+ hide();changeZone('village',b?b.x+b.w/2:500,b?b.y+b.h+50:550,'Tillbaka utanför '+(b?.n||'huset'));
+}
+function drawInteractionTarget(){
+ if(panel)return;const t=interactionTarget();if(!t||!Number.isFinite(t.x))return;
+ const p=currentPosition(),sc=Math.max(.6,Math.min(ww/550,hh/470));
+ ctx.save();ctx.translate(ww/2-p.x*sc,hh/2-p.y*sc);ctx.scale(sc,sc);
+ ctx.strokeStyle='#f8dc94';ctx.lineWidth=3;ctx.beginPath();ctx.ellipse(t.x,t.y,19,9,0,0,Math.PI*2);ctx.stroke();ctx.restore();
 }
 function nearPond(){
  if(S.scene!=='village'&&S.scene!=='forest')return false;
@@ -1097,35 +859,49 @@ function sellFishStocks(){
  for(const f of FISH_SPECIES){const n=Math.max(0,Math.floor(stocks[f.id]||0));total+=n*f.value;count+=n;stocks[f.id]=0}
  const legacy=Math.max(0,Math.floor(S.fish-count));total+=legacy*12;count+=legacy;
  if(!count){note('Ingen fisk att sälja');return false}
- S.fish=0;S.gold+=total;S.totalGold+=total;S.fishSold+=count;S.fishSalesGold+=total;persist();note('Sålde '+count+' fisk för '+total+' guld');return true;
+ S.fish=0;economyTransaction('fish',total,0,'sale');S.fishSold+=count;S.fishSalesGold+=total;persist();note('Sålde '+count+' fisk för '+total+' guld');return true;
 }
 let fishingCooldown=0;
-let fishingGame=null,fishingUiClock=0;
+let fishingGame=null;
+const FISHING_RULES={good:.14,perfect:.055,strikeDelay:.45};
 function castFishingRod(){
- if((panel&&panel!=='fishery')||!nearPond()){note('Gå närmare en damm för att fiska');return false}
- if(fishingGame){note('Avsluta fisket först');return false}
- if(fishingCooldown>0){note('Vänta tills nästa kast');return false}
- fishingGame={target:chooseFish(Math.random()),progress:0,elapsed:0,limit:9,zone:.35,position:.5,feedback:'Vänta på rätt ögonblick'};
- show('fishing');return true;
+ if((panel&&panel!=='fishery'&&panel!=='fishingintro')||!nearPond()){note('Stå på land vid en damm. Knappen visar Fiska när du är nära.');return false}
+ if(fishingGame||fishingCooldown>0)return false;
+ if(!S.fishingGuideSeen){show('fishingintro');return true}
+ fishingGame={target:chooseFish(),progress:0,elapsed:0,limit:14,zone:.5,position:.5,lastStrike:-1,feedback:'Tryck Hugg när markören är i målområdet.'};
+ show('fishing');renderFishing();return true;
 }
 function fishingTap(){
  if(!fishingGame)return false;
- const g=fishingGame,accuracy=Math.abs(g.position-g.zone);
- if(accuracy<.08){g.progress=Math.min(100,g.progress+35);g.feedback='PERFEKT! +35%'}
- else if(accuracy<.17){g.progress=Math.min(100,g.progress+23);g.feedback='Bra tajming! +23%'}
- else{g.progress=Math.max(0,g.progress-10);g.feedback='Miss! -10%'}
+ const g=fishingGame;if(g.elapsed-g.lastStrike<FISHING_RULES.strikeDelay)return false;
+ g.lastStrike=g.elapsed;
+ const accuracy=Math.abs(g.position-g.zone);
+ if(accuracy<=FISHING_RULES.perfect){g.progress=Math.min(100,g.progress+35);g.feedback='Perfekt! +35 %'}
+ else if(accuracy<=FISHING_RULES.good){g.progress=Math.min(100,g.progress+25);g.feedback='Träff! +25 %'}
+ else{g.progress=Math.max(0,g.progress-10);g.feedback='Utanför målområdet. Vänta på nästa passage.'}
  if(g.progress>=100){
-  catchFish(g.target,S.fisheryLevel);S.fishCaughtAtPond++;S.fishBites++;
-  note('Perfekt fångst! '+g.target.name+'!');fishingGame=null;fishingCooldown=1.2;persist();show('fishery');return true;
+  const name=g.target.name;catchFish(g.target,S.fisheryLevel);S.fishCaughtAtPond++;S.fishBites++;
+  fishingGame=null;fishingCooldown=1.2;persist();show('fishery');note('Fångat: '+name+'! Sälj fisken eller laga mat i Handelsbodens kök.');return true;
  }
- show('fishing');return false;
+ renderFishing();return false;
 }
 function cancelFishing(){fishingGame=null;fishingCooldown=.5;show('fishery')}
+function renderFishing(){
+ if(!fishingGame||panel!=='fishing')return;
+ const g=fishingGame,set=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value};
+ const marker=document.getElementById('fishMarker'),zone=document.getElementById('fishZone'),perfect=document.getElementById('fishPerfect'),fill=document.getElementById('fishProgress');
+ if(marker)marker.style.left=(g.position*100)+'%';
+ if(zone){zone.style.left=((g.zone-FISHING_RULES.good)*100)+'%';zone.style.width=FISHING_RULES.good*200+'%'}
+ if(perfect){perfect.style.left=((g.zone-FISHING_RULES.perfect)*100)+'%';perfect.style.width=FISHING_RULES.perfect*200+'%'}
+ if(fill){fill.style.width=g.progress+'%';fill.parentElement.setAttribute('aria-valuenow',g.progress)}
+ set('fishFeedback',g.feedback);set('fishTime',Math.max(0,Math.ceil(g.limit-g.elapsed))+' s');set('fishPercent',g.progress+' %');
+ const button=document.getElementById('fishStrike');if(button)button.disabled=g.elapsed-g.lastStrike<FISHING_RULES.strikeDelay;
+}
 function updateFishing(dt){
  if(!fishingGame)return;
- fishingGame.elapsed+=dt;fishingUiClock+=dt;if(fishingUiClock>.14&&panel==='fishing'){fishingUiClock=0;show('fishing')}fishingGame.position=.5+.44*Math.sin(fishingGame.elapsed*3.2);
- fishingGame.zone=.5+.3*Math.sin(fishingGame.elapsed*1.1+1.2);
- if(fishingGame.elapsed>=fishingGame.limit){S.fishMisses++;S.fishBites++;fishingGame=null;fishingCooldown=1.2;note('Fisken kom undan');persist();show('fishery')}
+ const g=fishingGame;g.elapsed+=dt;g.position=.5+.44*Math.sin(g.elapsed*2.4);g.zone=.5+.26*Math.sin(g.elapsed*.7);
+ if(g.elapsed>=g.limit){S.fishMisses++;S.fishBites++;fishingGame=null;fishingCooldown=1.2;persist();show('fishery');note('Fisken kom undan. Försök igen — inga resurser förbrukades.');return}
+ renderFishing();
 }
 function fishInventoryHTML(){
  const stocks=fishStocks();
@@ -1170,7 +946,7 @@ if(S.dungeonKills===3&&!S.dungeonChestClaimed){R(822,730,68,45,'#543826');R(829,
 R(60,355,80,85,'#466b72');R(71,365,58,65,'#78abb0');txt('← EXIT',100,342,17);
 for(const [i] of [[0],[1],[2]]){if(S.dungeonKills>i)continue;const enemy=fieldEnemies[i+1],x=enemy.x,y=enemy.y;spriteActor(i===0?'scout':i===1?'brute':'shaman',x,y,{moving:true,walk:performance.now()/1600+i,action:enemy.hurtPose>0?'hurt':null,actionProgress:1-(enemy.hurtPose||0)/.28});R(x-24,y-91,48,5,'#402e35');R(x-24,y-91,48*enemy.hp/enemy.max,5,'#c85e57');if(enemy.attackClock>.85){R(x-31,y-5,62,3,'#ffb15b88')}txt(ENEMIES[i].name,x,y-100,15)}
 const x=S.dungeonX,y=S.dungeonY,bob=walkMoving?Math.abs(Math.sin(walkTime*11))*3:0;
-spriteActor('hero',x,y,{moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword&&S.weaponType!=='staff',staff:S.staffOwned&&S.weaponType==='staff'});txt('YOU',x,y-45,14);
+spriteActor('hero',x,y,{action:heroAction,actionProgress:1-heroActionTime/.3,moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword&&S.weaponType!=='staff',staff:S.staffOwned&&S.weaponType==='staff'});txt('YOU',x,y-45,14);
 ctx.restore();
 }
 const ENEMIES=[
@@ -1189,7 +965,7 @@ function healthBar(current,max,color){
  return '<div style="height:12px;border:1px solid #9a8d70;border-radius:8px;background:#302d32;overflow:hidden"><div style="height:100%;width:'+p+'%;background:'+color+'"></div></div>';
 }
 function dungeonInteract(){
-if(S.dungeonKills===3&&!S.dungeonChestClaimed&&Math.hypot(S.dungeonX-856,S.dungeonY-760)<120){S.dungeonChestClaimed=true;S.dungeonRewardPending=false;S.dungeonClears++;S.gold+=75;S.totalGold+=75;S.runes+=3;S.ore+=5;awardXP(20);persist();note('Skattkista! +75 guld, +3 runfragment, +5 malm, +20 XP');return}
+if(S.dungeonKills===3&&!S.dungeonChestClaimed&&Math.hypot(S.dungeonX-856,S.dungeonY-760)<120){S.dungeonChestClaimed=true;S.dungeonRewardPending=false;S.dungeonClears++;economyTransaction('adventure',75,0,'dungeon-chest');S.runes+=3;S.ore+=5;awardXP(20);persist();note('Skattkista! +75 guld, +3 runfragment, +5 malm, +20 XP');return}
 if(S.dungeonX<170&&Math.abs(S.dungeonY-395)<105){S.scene='village';S.x=895;S.y=510;note('Tillbaka i Emberfall');persist();return}
 const enemies=[[440,260],[740,470],[530,680]];
 for(let i=0;i<3;i++){if(S.dungeonKills>i)continue;let [x,y]=enemies[i];if(Math.hypot(S.dungeonX-x,S.dungeonY-y)<115){note('Tryck ⚔ Attack för att slåss!');return}}
@@ -1267,17 +1043,21 @@ function toggleAutoTrade(type){
 }
 // One centralized transaction path for production sales and contract deliveries.
 function economyTransaction(category,amount,cost=0,meta=''){
- const revenue=Math.max(0,Math.round(amount)),expense=Math.max(0,Math.round(cost));
+ if(!Number.isFinite(amount)||!Number.isFinite(cost)||amount<0||cost<0)throw new Error('Ogiltig transaktion');
+ const revenue=Math.max(0,Math.round(amount)),expense=Math.max(0,cost);
  S.gold+=revenue;S.totalGold+=revenue;
  if(category==='production'||category==='ward'){
   S.productionRevenueTotal+=revenue;
   S.productionRealizedCost+=expense;
   S.productionGrossProfit+=revenue-expense;
  }
- if(category==='ward'||category==='quest'){S.questRevenue+=revenue;S.questExpenses+=expense}
+ if(category==='quest'){S.questRevenue+=revenue;S.questExpenses+=expense}
+ if(!S.businessBooks53)S.businessBooks53={};
+ const business=({ward:'manufacturing',production:'manufacturing',swords:'forge',fish:'fishery',quest:'guild',resources:'resources',passive:'services',adventure:'adventure'})[category]||category;
+ const book=S.businessBooks53[business]||(S.businessBooks53[business]={revenue:0,cost:0});book.revenue+=revenue;book.cost+=expense;
  if(!Array.isArray(S.economyLedger))S.economyLedger=[];
  S.economyTransactionId=(S.economyTransactionId||0)+1;
- S.economyLedger.push({id:S.economyTransactionId,category,revenue,cost:expense,meta:String(meta).slice(0,60)});
+ S.economyLedger.push({id:S.economyTransactionId,category,business,revenue,cost:expense,meta:String(meta).slice(0,60)});
  if(S.economyLedger.length>100)S.economyLedger.shift();
  return revenue;
 }
@@ -1297,7 +1077,7 @@ function tradeCycle(){
 }
 function productionOverview(){
  const capacity=Math.max(1,S.warehouseCapacity),used=warehouseUsed(),pct=Math.min(100,Math.round(100*used/capacity));
- return '<div class="inventory-section"><h3>📊 Produktionsöversikt</h3><p>Lager: '+used+' / '+capacity+' ('+pct+'%)</p>'+
+ return '<div class="inventory-section"><h3>📊 Produktion & äldre totalsummor</h3><p>Lager: '+used+' / '+capacity+' ('+pct+'%)</p>'+
  '<div style="height:14px;background:#947650;border-radius:7px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+(pct>85?'#b96859':'#79a977')+'"></div></div>'+
  '<p>Stål: '+(S.autoSteel?'Automatiskt':'Manuellt')+' · Runor: '+(S.autoRune?'Automatiskt':'Manuellt')+'</p>'+
  '<p>Försäljning: '+(S.autoTradeSteel?'Stål aktivt':'Stål av')+' / '+(S.autoTradeRune?'Runor aktivt':'Runor av')+'</p>'+
@@ -1318,29 +1098,35 @@ function recordProductionCost(type,basis){
 }
 function inventoryAssetValue(){
  reconcileCostBasis();
- return S.steelCostBasis.reduce((a,b)=>a+b,0)+S.runeCostBasis.reduce((a,b)=>a+b,0)+(S.wardCostBasis||[]).reduce((a,b)=>a+b,0);
+ return S.steelCostBasis.reduce((a,b)=>a+b,0)+S.runeCostBasis.reduce((a,b)=>a+b,0)+(S.wardCostBasis||[]).reduce((a,b)=>a+b,0)+swordBasis().reduce((a,b)=>a+b,0);
 }
-function enterpriseReports(){return {manufacturing:{revenue:S.productionRevenueTotal||0,cost:S.productionRealizedCost||0},guild:{revenue:S.questRevenue||0,cost:S.questExpenses||0},assets:inventoryAssetValue()}}
+function enterpriseReports(){return {businesses:JSON.parse(JSON.stringify(S.businessBooks53||{})),assets:inventoryAssetValue()}}
+function businessReportHTML(){const names={manufacturing:'Förädlade varor',forge:'Svärd',fishery:'Fiskeri',guild:'Uppdragsbelöningar',resources:'Råvaror',services:'Verksamhetsintäkter',adventure:'Äventyr'};return '<div class="inventory-section"><h3>Intäkter per verksamhet · sedan 5.3</h3>'+Object.entries(S.businessBooks53||{}).map(([key,b])=>'<p><strong>'+(names[key]||key)+'</strong><br>Intäkt '+Math.round(b.revenue)+' · varukostnad '+Math.round(b.cost)+' · bruttovinst '+Math.round(b.revenue-b.cost)+'</p>').join('')+'<p>Varje försäljning ingår i en verksamhet. Äldre historik nedan är inte omräknad. Materialvärden är schabloner; investeringar redovisas separat.</p></div>'}
 function industryFinancialReport(){
  const revenue=S.productionRevenueTotal||0,cogs=S.productionRealizedCost||0;
  return {revenue,cogs,gross:revenue-cogs,inventory:inventoryAssetValue(),investments:S.tradeCosts||0,net:revenue-cogs-(S.tradeCosts||0)};
 }
 function productionProfit(){return S.productionRevenueTotal-S.productionRealizedCost-S.tradeCosts}
 function warehouseCategoryStats(){return {steel:S.steelStock||0,rune:S.runeGoods||0,ward:S.wardSeals||0,free:warehouseSpace(),capacity:S.warehouseCapacity}}
+function swordBasis(){
+ if(!Array.isArray(S.swordCostBasis))S.swordCostBasis=[];
+ while(S.swordCostBasis.length<S.swords)S.swordCostBasis.push(16);
+ if(S.swordCostBasis.length>S.swords)S.swordCostBasis.length=S.swords;
+ return S.swordCostBasis;
+}
+function makeSwords(){
+ if(S.ore<2||S.wood<1)return false;
+ const queue=swordBasis(),cost=2*S.materialValuation.ore+S.materialValuation.wood;
+ S.ore-=2;S.wood--;S.swords+=S.forge;for(let i=0;i<S.forge;i++)queue.push(cost/S.forge);
+ S.swordsCrafted+=S.forge;return true;
+}
+function consumeSwords(count){if(S.swords<count)return null;const q=swordBasis(),cost=q.splice(0,count).reduce((a,b)=>a+b,0);S.swords-=count;return cost}
 function reconcileCostBasis(){
- for(const [key,queue,cost] of [['steelStock','steelCostBasis',productionUnitCost('steel')],['runeGoods','runeCostBasis',productionUnitCost('rune')]]){
+ for(const [key,queue,cost] of [['steelStock','steelCostBasis',productionUnitCost('steel')],['runeGoods','runeCostBasis',productionUnitCost('rune')],['wardSeals','wardCostBasis',productionUnitCost('rune')+36]]){
   if(!Array.isArray(S[queue]))S[queue]=[];
   while(S[queue].length<(S[key]||0))S[queue].push(cost);
   if(S[queue].length>(S[key]||0))S[queue].length=S[key]||0;
  }
-}
-function recordProductSale(type,reward){
- reconcileCostBasis();
- const key=type==='steel'?'steelCostBasis':'runeCostBasis';
- const basis=S[key].shift()||productionUnitCost(type);
- S.productionRealizedCost+=basis;
- S.productionGrossProfit+=reward-basis;
- S.productionRevenueTotal+=reward;
 }
 const PRODUCTION_RECIPES={
  steel:{name:'Ståltacka',ore:3,wood:1,output:'steelStock',amount:1},
@@ -1382,8 +1168,8 @@ function deliverWardSeal(){
 function deliverProductionQuest(){
  if(S.productionQuestDone>=3){note('Alla runbeställningar är färdiga');return false}
  if(!S.arcaneWorkshopBuilt||S.runeGoods<2||S.forestWolfWins<1){note('Kräver Runverkstad, två runvaror och besegrad Duskwolf');return false}
- reconcileCostBasis();S.runeGoods-=2;S.runeCostBasis.splice(0,2);
- S.productionQuestDone++;S.heroRenown++;S.questRevenue+=230;S.gold+=230;S.totalGold+=230;persist();
+ reconcileCostBasis();const basis=S.runeCostBasis.splice(0,2).reduce((a,b)=>a+b,0);S.runeGoods-=2;
+ S.productionQuestDone++;S.heroRenown++;economyTransaction('production',230,basis,'guild-rune-order');persist();
  note('Gillet mottog runvarorna! +230 guld, +1 anseende');return true;
 }
 const EMPIRE_ORDERS=[
@@ -1393,10 +1179,10 @@ const EMPIRE_ORDERS=[
 function deliverEmpireOrder(id){
  const q=EMPIRE_ORDERS.find(q=>q.id===id);
  if(!q||!S[q.flag]||!q.can()){note('Bygg verksamheten och samla material först');return false}
- q.consume();const reward=renownContractReward(q.reward);S.gold+=reward;S.totalGold+=reward;S[q.count]++;S.marketDeliveries++;refreshMarket();persist();note(q.name+' levererad! +'+reward+' guld');return true;
+ const basis=id==='arcane'?5*S.materialValuation.runes:10*S.materialValuation.wood+8*S.materialValuation.ore;q.consume();const reward=renownContractReward(q.reward);economyTransaction('resources',reward,basis,id);S[q.count]++;S.marketDeliveries++;refreshMarket();persist();note(q.name+' levererad! +'+reward+' guld');return true;
 }
 const NPC_QUESTS=[
-{id:'elric',name:'Elrics första leverans',giver:'merchant',text:'Vi behöver fler färdiga svärd till handelskaravanen.',goal:'Leverera 2 svärd',reward:95,canComplete:()=>S.swords>=2,consume:()=>{S.swords-=2}},
+{id:'elric',name:'Elrics första leverans',giver:'merchant',text:'Vi behöver fler färdiga svärd till handelskaravanen.',goal:'Leverera 2 svärd',reward:95,canComplete:()=>S.swords>=2,consume:()=>{return consumeSwords(2)}},
 {id:'mira',name:'Miras patrull',giver:'guard',text:'Skydda byn genom att besegra en Duskwolf i Whisperwood.',goal:'Besegra en Duskwolf',reward:145,canComplete:()=>S.forestWolfWins>=1,consume:()=>{}},
 {id:'fisher',name:'Fiskarens beställning',giver:'fisher',text:'Värdshuset behöver färsk fisk till kvällsmaten.',goal:'Leverera 3 fiskar',reward:85,canComplete:()=>S.fish>=3,consume:()=>{let n=3;const stocks=fishStocks();for(const f of FISH_SPECIES){const take=Math.min(n,stocks[f.id]||0);stocks[f.id]-=take;n-=take}S.fish-=3}}
 ];
@@ -1407,11 +1193,11 @@ function acceptNpcQuest(id){
 }
 function completeNpcQuest(id){
  const q=NPC_QUESTS.find(q=>q.id===id);if(!q||npcQuestState(id)!=='active'||!q.canComplete())return false;
- q.consume();S.npcQuestCompleted[id]=true;persist();note('Uppdrag slutfört: '+q.name);return true;
+ const cost=q.consume()||0;if(!S.pendingQuestCosts)S.pendingQuestCosts={};S.pendingQuestCosts[id]=cost;S.npcQuestCompleted[id]=true;persist();note('Uppdrag slutfört: '+q.name);return true;
 }
 function claimNpcQuest(id){
  const q=NPC_QUESTS.find(q=>q.id===id);if(!q||npcQuestState(id)!=='completed')return false;
- S.npcQuestClaimed[id]=true;S.heroRenown++;S.gold+=q.reward;S.totalGold+=q.reward;S.merchantRep++;persist();note('Belöning: +'+q.reward+' guld');return true;
+ S.npcQuestClaimed[id]=true;S.heroRenown++;economyTransaction(id==='elric'?'swords':id==='fisher'?'fish':'quest',q.reward,S.pendingQuestCosts?.[id]||0,id);if(S.pendingQuestCosts)delete S.pendingQuestCosts[id];S.merchantRep++;persist();note('Belöning: +'+q.reward+' guld');return true;
 }
 function npcQuestPanel(id){
  const q=NPC_QUESTS.find(q=>q.id===id);if(!q)return '';
@@ -1456,13 +1242,13 @@ const VILLAGE_MILESTONES=[
 function claimVillageMilestone(id){
  const m=VILLAGE_MILESTONES.find(v=>v.id===id);
  if(!m||S.villageMilestones.includes(id)||!m.done()){note('Milstolpen är inte klar');return false}
- S.villageMilestones.push(id);S.heroRenown++;S.gold+=m.reward;S.totalGold+=m.reward;persist();note(m.name+' slutförd! +'+m.reward+' guld');return true;
+ S.villageMilestones.push(id);S.heroRenown++;economyTransaction('quest',m.reward,0,'milestone-'+id);persist();note(m.name+' slutförd! +'+m.reward+' guld');return true;
 }
 function questTitle(){return ['Samla 5 järnmalm','Smid ditt första svärd','Besegra 2 gobliner','Tjäna 250 guld totalt','Utforska vidare'][Math.min(S.quest,4)]}
 function questDone(){return S.quest===0?S.oreGathered>=5:S.quest===1?(S.swordsCrafted>0||S.heroSword):S.quest===2?S.forestWins>=2:S.quest===3?S.totalGold>=250:false}
 function btn(label,act){return '<button type="button" onclick="action(\''+act+'\')">'+label+'</button>'}
 function show(p){
-panel=p;updateActionButton();document.getElementById('modal').style.display='block';
+if(fishingGame&&p!=='fishing'){fishingGame=null;fishingCooldown=.5}panel=p;vx=vy=0;const nub=document.getElementById('nub');if(nub)nub.style.transform='';updateActionButton();document.getElementById('modal').style.display='block';
 let h='';
 if(p==='empire'){
 h='<h2>🏰 Imperiet</h2><p>🪙 '+S.gold+' guld · ⛏ '+S.ore+' malm · 🌲 '+S.wood+' trä · ⚔ '+S.swords+' svärd</p><h3>Produktion</h3>'+
@@ -1523,79 +1309,88 @@ h='<h2>🧑‍💼 Köpmannen Elric</h2><p>”'+npcDialogue('merchant')+'”</p>
 h='<h2>🛡 Vakten Mira</h2><p>”'+npcDialogue('guard')+'”</p><p>Rensade grottor: '+S.dungeonClears+'</p>'+npcQuestPanel('mira')+btn('📜 Visa uppdrag','openquests')+btn('🛡 Utrusta hjälten','openhero');
 }else if(p==='visual'){
 h='<h2>🌤 Visuella inställningar</h2><p>Byt ljussättning för att se miljöerna på dagen eller i skymningen.</p><p>Aktuellt: '+(S.visualTime==='dusk'?'Skymning':'Dag')+'</p>'+btn('Växla dag/skymning','toggletime')+btn('Tillbaka','openhero');
+}else if(p==='fishingintro'){
+ h='<h2>Ditt första kast</h2><p class="game-hint">1. Den ljusa markören rör sig längs mätaren.<br>2. Tryck <strong>Hugg</strong> när den är inne i det markerade gröna området.<br>3. Träffa flera gånger och fyll fångstmätaren. Mittfältet ger en perfekt träff.</p><p>Efter varje hugg finns en kort återhämtning. Du kan avbryta utan att förlora något.</p>'+btn('Jag är redo — kasta','fishstart');
 }else if(p==='fishing'){
-if(!fishingGame){h='<h2>Fisket avslutat</h2>'+btn('Tillbaka','openfishery')}
-else{
- const g=fishingGame,position=Math.round(g.position*100),zone=Math.round(g.zone*100);
- h='<h2>🎣 Fiskeutmaning</h2><p class="game-hint">Grönt = rätt område. Vänta tills den ljusa markören är i grönt och tryck <strong>Hugg!</strong>. Fyll mätaren innan tiden tar slut.</p>'+
- '<p>Fångst: '+g.target.name+' · '+g.target.rarity+'</p>'+
- '<div style="height:28px;background:#806b52;border:2px solid #5e4535;border-radius:8px;position:relative"><div style="position:absolute;left:'+Math.max(0,zone-14)+'%;width:28%;height:100%;background:#86b97d"></div><div style="position:absolute;left:'+position+'%;height:100%;width:5px;background:#fff1cb"></div></div>'+
- '<p><strong>'+g.feedback+'</strong></p><div style="height:12px;background:#85674a;border-radius:7px;overflow:hidden"><div style="height:100%;width:'+g.progress+'%;background:#78ad74"></div></div><p>Fångstframsteg: '+g.progress+'% · Tid kvar: '+Math.max(0,Math.ceil(g.limit-g.elapsed))+' sek</p>'+
- '<div class="fishing-actions">'+btn('🎣 HUGG!','fishtap')+btn('✕ Avbryt','fishcancel')+'</div>';
-}
+ h=fishingGame?'<h2>Fiska · '+fishingGame.target.name+'</h2><p class="game-hint">Tryck <strong>Hugg</strong> när markören är i målområdet.</p><div class="fish-meter" aria-label="Markör och målområde"><div id="fishZone"></div><div id="fishPerfect"></div><div id="fishMarker"></div></div><p class="fish-legend">Målområde · ljust mittfält = perfekt</p><p id="fishFeedback" role="status"></p><div class="fish-progress" role="progressbar" aria-label="Fångst" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="fishProgress"></div></div><p class="fish-summary"><span id="fishPercent">0 %</span><span id="fishTime">14 s</span></p><div class="fishing-actions"><button id="fishStrike" type="button">Hugg!</button><button onclick="cancelFishing()">Avbryt</button></div>':'<h2>Fisket avslutat</h2>'+btn('Tillbaka','openfishery');
+
 }else if(p==='fishery'){
-h='<h2>🎣 Emberfall Fiskeri</h2><p class="game-hint"><strong>Så fiskar du:</strong> Gå fram till strandkanten, tryck Action · Fiska och vänta tills markören är i det gröna fältet. Tryck sedan Hugg! flera gånger med rätt tajming.</p>'+
-'<p><strong>Så fiskar du:</strong> Gå till kanten av en blå damm i Emberfall eller Whisperwood. Tryck på interaktionsknappen för att kasta. I minispelet trycker du Hugg när markören är i det gröna området. Upprepa tills fångstmätaren når 100 %.</p><p>Du måste stå på land nära vattnet.</p>'+'<p>Fisk: '+S.fish+' · Nivå '+S.fisheryLevel+' · Sålda totalt: '+S.fishSold+' · Fångade vid damm: '+S.fishCaughtAtPond+'</p>'+fishInventoryHTML()+
-btn('🎣 Starta fiske vid strandkanten','castfish')+btn('🏭 Fiskeriproduktion +'+S.fisheryLevel,'fish')+btn('🏪 Sälj fångsten (artspecifika priser)','sellfish')+
+h='<h2>🎣 Emberfall Fiskeri</h2><p class="game-hint"><strong>Så fiskar du:</strong> Gå fram till strandkanten, tryck Fiska och vänta tills markören är i det gröna fältet. Tryck sedan Hugg! flera gånger med rätt tajming.</p>'+
+'<p>Fisk: '+S.fish+' · Nivå '+S.fisheryLevel+' · Sålda totalt: '+S.fishSold+' · Fångade vid damm: '+S.fishCaughtAtPond+'</p>'+fishInventoryHTML()+
+recipeButton('Kasta från stranden','castfish',nearPond()&&fishingCooldown<=0)+btn('🏪 Sälj fångsten (artspecifika priser)','sellfish')+
 btn('⬆ Fiskeri nivå '+(S.fisheryLevel+1)+' ('+(65*S.fisheryLevel)+' guld)','upfishery')+
 btn(S.fisheryManager?'✓ Fiskare anställd':'Anställ fiskare (180 guld)','hirefisher');
 }else if(p==='guide'){
-h='<h2>🗺 Välkommen till Emberfall</h2><p>1. Öppna Empire och samla malm och trä.</p><p>2. Smid ett svärd, utrusta hjälten eller sälj det.</p><p>3. Hämta belöningar i Uppdrag.</p><p>4. Utforska grottan vid goblinen öster om byn.</p><p>5. Anställ managers för automatisk produktion.</p>'+btn('Öppna Empire','openempire')+btn('Öppna Uppdrag','openquests');
+h='<h2>🗺 Välkommen till Emberfall</h2><p class="game-hint">Flytta med joysticken. När du är nära något visar Action-knappen exakt vad du kan göra.</p><p><strong>Fiske:</strong> följ stranden till Fiska visas. Fånga fisk, sälj eller laga mat.</p><p><strong>Hus:</strong> Smedjan i nordväst tillverkar utrustning. Handelsboden i sydväst har kök och försäljning. Gruvan ger malm; gillet erbjuder uppdrag.</p><p>1. Öppna Empire och samla malm och trä.</p><p>2. Smid ett svärd, utrusta hjälten eller sälj det.</p><p>3. Hämta belöningar i Uppdrag.</p><p>4. Utforska grottan vid goblinen öster om byn.</p><p>5. Anställ managers för automatisk produktion.</p>'+btn('Öppna Empire','openempire')+btn('Öppna Uppdrag','openquests');
 }else if(p==='production'){
 h='<h2>🏭 Produktion & lager</h2><p>Omvandla råvaror till förädlade varor och sälj när efterfrågan är hög.</p>'+
-productionOverview()+'<div class="inventory-section"><h3>⚙ Produktionsprioritet</h3>'+['balanced','steel','rune'].map(v=>btn((S.productionPriority===v?'✓ ':'')+({balanced:'Balanserad',steel:'Stål först',rune:'Runvaror först'}[v]),'priority-'+v)).join('')+'<p>Stålreserv: '+S.tradeReserveSteel+' · Runreserv: '+S.tradeReserveRune+'</p>'+btn('Stål −','reservesteelminus')+btn('Stål +','reservesteelplus')+btn('Runor −','reserveruneminus')+btn('Runor +','reserveruneplus')+'</div><div class="inventory-section"><h3>📦 Lager '+warehouseUsed()+'/'+S.warehouseCapacity+'</h3><p>Malm: '+S.ore+' · Trä: '+S.wood+' · Runfragment: '+S.runes+'</p><p>Ståltackor: '+S.steelStock+' · Runvaror: '+S.runeGoods+'</p>'+btn('Utöka lager ('+(100*S.warehouseLevel)+' guld)','upwarehouse')+'</div>'+
-'<div class="inventory-section"><h3>⚒ Ståltacka</h3><p>3 malm + 1 trä → 1 tacka</p>'+btn('Tillverka tacka','craftsteel')+btn(S.autoSteel?'Stoppa automatisk ståltillverkning':'Automatisera stål (160 guld)','autosteel')+btn('Sälj tacka ('+marketReward(55)+' guld)','sellsteel')+btn(S.autoTradeSteel?'Stoppa automatisk stålförsäljning':'Automatisk stålförsäljning (120 guld)','autotradesteel')+'</div>'+
-'<div class="inventory-section"><h3>🔮 Runförstärkt vara</h3><p>1 tacka + 2 trä + 2 runfragment → 1 runvara. Kräver Runverkstad.</p>'+btn('Tillverka runvara','craftrune')+btn(S.autoRune?'Stoppa automatisk runproduktion':'Automatisera runvaror (280 guld)','autorune')+btn('Sälj runvara ('+marketReward(165)+' guld)','sellrune')+btn(S.autoTradeRune?'Stoppa automatisk runförsäljning':'Automatisk runförsäljning (200 guld)','autotraderune')+'</div>'+
-'<div class="inventory-section"><h3>🛡 Väktarsigill</h3><p>1 runvara + 3 monsteressenser → 1 Väktarsigill</p><p>Essenser: '+S.monsterEssence+' · Sigill: '+S.wardSeals+'</p>'+btn('Tillverka Väktarsigill','craftward')+'</div><p>Genomförda produktionsförsäljningar: '+S.productionOrdersDone+'</p>';
+businessReportHTML()+productionOverview()+'<div class="inventory-section"><h3>⚙ Produktionsprioritet</h3>'+['balanced','steel','rune'].map(v=>btn((S.productionPriority===v?'✓ ':'')+({balanced:'Balanserad',steel:'Stål först',rune:'Runvaror först'}[v]),'priority-'+v)).join('')+'<p>Stålreserv: '+S.tradeReserveSteel+' · Runreserv: '+S.tradeReserveRune+'</p>'+btn('Stål −','reservesteelminus')+btn('Stål +','reservesteelplus')+btn('Runor −','reserveruneminus')+btn('Runor +','reserveruneplus')+'</div><div class="inventory-section"><h3>📦 Lager '+warehouseUsed()+'/'+S.warehouseCapacity+'</h3><p>Malm: '+S.ore+' · Trä: '+S.wood+' · Runfragment: '+S.runes+'</p><p>Ståltackor: '+S.steelStock+' · Runvaror: '+S.runeGoods+'</p>'+btn('Utöka lager ('+(100*S.warehouseLevel)+' guld)','upwarehouse')+'</div>'+
+'<div class="inventory-section"><h3>⚒ Ståltacka</h3><p>3 malm + 1 trä → 1 tacka</p>'+recipeButton('Tillverka tacka','craftsteel',S.ore>=3&&S.wood>=1&&warehouseSpace()>0)+btn(S.autoSteel?'Stoppa automatisk ståltillverkning':'Automatisera stål (160 guld)','autosteel')+btn('Sälj tacka ('+marketReward(55)+' guld)','sellsteel')+btn(S.autoTradeSteel?'Stoppa automatisk stålförsäljning':'Automatisk stålförsäljning (120 guld)','autotradesteel')+'</div>'+
+'<div class="inventory-section"><h3>🔮 Runförstärkt vara</h3><p>1 tacka + 2 trä + 2 runfragment → 1 runvara. Kräver Runverkstad.</p>'+recipeButton('Tillverka runvara','craftrune',S.arcaneWorkshopBuilt&&S.steelStock>=1&&S.wood>=2&&S.runes>=2)+btn(S.autoRune?'Stoppa automatisk runproduktion':'Automatisera runvaror (280 guld)','autorune')+btn('Sälj runvara ('+marketReward(165)+' guld)','sellrune')+btn(S.autoTradeRune?'Stoppa automatisk runförsäljning':'Automatisk runförsäljning (200 guld)','autotraderune')+'</div>'+
+'<div class="inventory-section"><h3>🛡 Väktarsigill</h3><p>1 runvara + 3 monsteressenser → 1 Väktarsigill</p><p>Essenser: '+S.monsterEssence+' · Sigill: '+S.wardSeals+'</p>'+recipeButton('Tillverka Väktarsigill','craftward',S.arcaneWorkshopBuilt&&S.runeGoods>=1&&S.monsterEssence>=3)+'</div><p>Genomförda produktionsförsäljningar: '+S.productionOrdersDone+'</p>';
 }else if(p==='contracts'){h='<h2>📜 Handelsgillet</h2><p>Leverera '+S.contractTarget+' svärd för '+S.contractReward+' guld och 12 XP.</p><p>Du har '+S.swords+' svärd. Avklarade kontrakt: '+S.contractsDone+'</p>'+btn('Leverera svärd','contract')+'<h3>📈 Marknadsläge</h3><p>Efterfrågan: '+Math.round(marketRate()*100)+'% · Leveranser: '+S.marketDeliveries+'</p><h3>🎣 Fiskekontrakt</h3><p>Leverera 5 fiskar för '+marketReward(110)+' guld. Levererade: '+S.fishContractDone+'</p>'+btn('Leverera 5 fiskar','fishcontract')+'<h3>📦 Resurskontrakt</h3><p>Leverera 10 malm och 8 trä för '+marketReward(160)+' guld. Levererade: '+S.resourceContractDone+'</p>'+btn('Leverera resurser','resourcecontract')+'<h3>🏛 Företagsleveranser</h3>'+EMPIRE_ORDERS.map(q=>'<div class="inventory-section"><strong>'+q.name+'</strong><p>'+q.goal+' · '+q.reward+' guld före handelsbonus</p><p>'+(S[q.flag]?'Verksamheten aktiv':'Kräver upplåst verksamhet')+' · Levererade: '+S[q.count]+'</p>'+btn('Leverera','empireorder-'+q.id)+'</div>').join('');}else if(p==='bag'){
 const items=[
 ['🛡️','Väktarsigill',S.wardSeals,'rare'],['🌌','Monsteressens',S.monsterEssence,'rare'],['⚙️','Ståltackor',S.steelStock,'rare'],['🔮','Runvaror',S.runeGoods,'rare'],['🪙','Guld',S.gold,'common'],['⛏️','Järnmalm',S.ore,'common'],['🪵','Trä',S.wood,'common'],['⚔️','Svärd',S.swords,'common'],
 ['✨','Runfragment',S.runes,'rare'],['🧪','Potions',S.potions,'common'],['🔮','Runstav',S.staffOwned?1:0,'rare'],['🛡️','Rustning',S.heroArmor?1:0,'rare'],['🗡️','Utrustat svärd',S.heroSword?1:0,'rare'],['💎','Reliker',(S.lootItems||[]).length,'rare'],['🪖','Runhjälm',S.helmetOwned?1:0,'rare'],['🥾','Stövlar',S.bootsOwned?1:0,'common']
 ];
-h='<h2>🎒 Inventarium</h2><p>Din ryggsäck · Material, utrustning och förbrukningsvaror</p>'+['all','resources','equipment','goods'].map(c=>btn((S.inventoryCategory===c?'✓ ':'')+({all:'Alla',resources:'Material',equipment:'Utrustning',goods:'Produkter'}[c]),'invcat-'+c)).join('')+'<div class="invgrid">'+items.filter(([emoji,name])=>S.inventoryCategory==='all'||(S.inventoryCategory==='resources'&&['Järnmalm','Trä','Runfragment','Monsteressens'].includes(name))||(S.inventoryCategory==='goods'&&['Ståltackor','Runvaror','Väktarsigill','Svärd','Guld'].includes(name))||(S.inventoryCategory==='equipment'&&['Runstav','Rustning','Utrustat svärd','Reliker','Runhjälm','Stövlar','Potions'].includes(name))).map(([emoji,name,count,rarity])=>'<div class="slot '+(rarity==='rare'?'rarity':'')+'">'+inventoryPixelIcon(name,emoji)+'<small>'+name+'</small><strong>'+count+'</strong></div>').join('')+'</div><div class="inventory-section"><h3>⚒ Utrustning & crafting</h3>'+btn('Utrusta svärd','equip')+btn('Vapen & stridsstil','weapons')+btn('⚒ Uppgradera utrustning','upgrades')+btn('📖 Föremålsguide','itemguide')+btn('💎 Loot & reliker','loot')+btn('Tillverka rustning','armor')+btn('Köp potion · 25 guld','buypotion')+'</div>';
+h='<h2>🎒 Inventarium</h2><p>Din ryggsäck · Material, utrustning och förbrukningsvaror</p>'+['all','resources','equipment','goods'].map(c=>btn((S.inventoryCategory===c?'✓ ':'')+({all:'Alla',resources:'Material',equipment:'Utrustning',goods:'Produkter'}[c]),'invcat-'+c)).join('')+'<div class="invgrid">'+items.filter(([emoji,name])=>S.inventoryCategory==='all'||(S.inventoryCategory==='resources'&&['Järnmalm','Trä','Runfragment','Monsteressens'].includes(name))||(S.inventoryCategory==='goods'&&['Ståltackor','Runvaror','Väktarsigill','Svärd','Guld'].includes(name))||(S.inventoryCategory==='equipment'&&['Runstav','Rustning','Utrustat svärd','Reliker','Runhjälm','Stövlar','Potions'].includes(name))).map(([emoji,name,count,rarity])=>'<div class="slot '+(rarity==='rare'?'rarity':'')+'">'+inventoryPixelIcon(name,emoji)+'<small>'+name+'</small><strong>'+count+'</strong></div>').join('')+'</div><div class="inventory-section"><h3>⚒ Utrustning & crafting</h3>'+btn('Utrusta svärd','equip')+btn('Vapen & stridsstil','weapons')+btn('⚒ Uppgradera utrustning','upgrades')+btn('📖 Föremålsguide','itemguide')+btn('💎 Loot & reliker','loot')+btn('Tillverka rustning','armor')+btn('Köp potion · 25 guld','buypotion')+'</div>'+foodInventoryHTML();
 }else if(p==='cooking'){h=cookingMenu();
 }else if(p==='house'){
 const type=S.houseType||'forge';
 const names={forge:'⚒ Smedjans interiör',mine:'⛏ Gruvkontoret',market:'🏪 Handelsboden',guild:'🛡 Äventyrargillet'};
 h='<h2>'+names[type]+'</h2><div class="inventory-section"><p>'+(type==='forge'?'Glödande ässjor och verktyg väntar på nya beställningar.':type==='mine'?'Gruvans arbetsledare organiserar brytning och transporter.':type==='market'?'Köpmän jämför priser och fyller sina lager.':'Äventyrare samlas runt kartor och planerar expeditioner.')+'</p></div>'+
-(type==='forge'?btn('⚒ Smid svärd','forge')+btn('🏰 Företagsöversikt','openempire'):type==='mine'?btn('⛏ Bryt malm','mine')+btn('🏰 Företagsöversikt','openempire'):type==='market'?btn('📜 Handelskontrakt','opencontracts')+btn('🏪 Sälj svärd','sell'):btn('🧭 Expeditioner','openexpeditions')+btn('🛡 Hjälte','openhero'))+btn('🍲 Kök & matlagning','opencooking')+btn('🏭 Crafting & produktion','openproduction')+btn('🚪 Lämna byggnaden','leavehouse');
+(type==='forge'?'<p>Svärd: malm '+S.ore+'/2 · trä '+S.wood+'/1 → '+S.forge+' svärd</p>'+recipeButton('Smid svärd','forge',S.ore>=2&&S.wood>=1)+btn('🏰 Företagsöversikt','openempire'):type==='mine'?btn('⛏ Bryt malm','mine')+btn('🏰 Företagsöversikt','openempire'):type==='market'?btn('📜 Handelskontrakt','opencontracts')+btn('🏪 Sälj svärd','sell'):btn('🧭 Expeditioner','openexpeditions')+btn('🛡 Hjälte','openhero'))+(type==='market'?btn('🍲 Kök & matlagning','opencooking'):type==='forge'?btn('🏭 Crafting & produktion','openproduction')+btn('🪖 Utrustningsrecept','gearcraft'):'')+btn('🚪 Lämna byggnaden','leavehouse');
 }else{
 h='<h2>⚙ Inställningar</h2>'+btn('Virtuell joystick','joystick')+btn('Dra på kartan','drag')+
 btn('Långsam rörelse','slow')+btn('Normal rörelse','normal')+btn('Snabb rörelse','fast')+
-'<p>Beta Preview 5.2 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
+'<p>Beta Preview 5.3 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
 }
 document.getElementById('content').innerHTML=h;
 document.getElementById('notice').textContent='';
+if(p==='fishing'){const strike=document.getElementById('fishStrike');if(strike){strike.addEventListener('pointerdown',e=>{e.preventDefault();fishingTap()});strike.addEventListener('click',e=>{if(e.detail===0)fishingTap()})}renderFishing()}
 }
-function hide(){panel='';updateActionButton();document.getElementById('modal').style.display='none';S.combat=null}
+function hide(){if(fishingGame){fishingGame=null;fishingCooldown=.5}panel='';updateActionButton();document.getElementById('modal').style.display='none';S.combat=null}
 function pay(n){if(S.gold<n){note('Du behöver '+n+' guld');return false}S.gold-=n;return true}
 const COOKING_RECIPES=[
  {id:'grilledfish',name:'Grillad fisk',needs:'2 fiskar',count:2,heal:8},
  {id:'fishstew',name:'Fiskgryta',needs:'4 fiskar och 2 trä',count:4,wood:2,heal:18}
 ];
+function mealInventory(){
+ if(!S.meals||typeof S.meals!=='object'||Array.isArray(S.meals))S.meals={};
+ if(!S.mealMigration53){S.meals.legacy=(S.meals.legacy||0)+Math.max(0,Math.floor(S.cookedMeals||0));S.mealMigration53=true}
+ S.cookedMeals=Object.values(S.meals).reduce((n,v)=>n+Math.max(0,Number(v)||0),0);return S.meals;
+}
 function cookMeal(id){
  const recipe=COOKING_RECIPES.find(r=>r.id===id);if(!recipe)return false;
+ if(S.scene!=='interior'||S.houseType!=='market'){note('Köket finns i Handelsboden, sydväst i Emberfall.');return false}
  if(S.fish<recipe.count||S.wood<(recipe.wood||0)){note('Saknar ingredienser: '+recipe.needs);return false}
- const stocks=fishStocks();let n=recipe.count;
+ const meals=mealInventory(),stocks=fishStocks();let n=recipe.count;
  for(const fish of FISH_SPECIES){const used=Math.min(n,stocks[fish.id]||0);stocks[fish.id]-=used;n-=used}
- S.fish-=recipe.count;S.wood-=recipe.wood||0;S.cookedMeals++;S.mealsCookedTotal++;
- S.mealIngredientsUsed+=recipe.count;persist();note(recipe.name+' färdig!');return true;
+ S.fish-=recipe.count;S.wood-=recipe.wood||0;meals[id]=(meals[id]||0)+1;S.cookedMeals++;S.mealsCookedTotal++;S.mealIngredientsUsed+=recipe.count;
+ persist();note(recipe.name+' färdig · återställer '+recipe.heal+' HP');return true;
 }
-function eatMeal(){
- if(S.cookedMeals<1){note('Laga mat först');return false}
+function eatMeal(id='legacy'){
+ const meals=mealInventory(),r=COOKING_RECIPES.find(r=>r.id===id),heal=r?.heal||(id==='legacy'?12:0);
+ if(!heal||!(meals[id]>0)){note('Ingen sådan måltid i ryggsäcken');return false}
  const max=20+(S.level-1)*4;if(S.hp>=max){note('Du har redan fullt HP');return false}
- S.cookedMeals--;S.hp=Math.min(max,S.hp+12);persist();note('Måltid: +12 HP');return true;
+ const actual=Math.min(heal,max-S.hp);meals[id]--;S.cookedMeals--;S.hp+=actual;persist();note('Måltid: +'+actual+' HP');return true;
 }
+function foodInventoryHTML(){
+ const meals=mealInventory();
+ return '<div class="inventory-section"><h3>Mat i ryggsäcken</h3>'+[...COOKING_RECIPES,{id:'legacy',name:'Tidigare lagad måltid',heal:12}].filter(r=>meals[r.id]>0).map(r=>'<p>'+r.name+' · '+meals[r.id]+' st</p>'+btn('Ät · +'+r.heal+' HP','eat-'+r.id)).join('')+(S.cookedMeals?'':'<p>Inga måltider ännu. Laga din fångst i Handelsbodens kök.</p>')+'</div>';
+}
+function recipeButton(label,action,ready){return '<button type="button" '+(ready?'':'disabled')+' onclick="window.action(\''+action+'\')">'+label+'</button>'}
 function cookingMenu(){
- return '<h2>🍲 Kök & matlagning</h2><p>Fånga fisk vid dammarna, laga mat och återställ hälsa inför strider.</p>'+
- '<p>Fisk: '+S.fish+' · Trä: '+S.wood+' · Färdiga måltider: '+S.cookedMeals+'</p>'+
- COOKING_RECIPES.map(r=>'<div class="inventory-section"><strong>'+r.name+'</strong><p>'+r.needs+' → 1 måltid</p>'+btn('Laga '+r.name,'cook-'+r.id)+'</div>').join('')+
- btn('🍽 Ät måltid (+12 HP)','eatmeal')+btn('🚪 Tillbaka till huset','openhouse');
+ const inKitchen=S.scene==='interior'&&S.houseType==='market';
+ return '<h2>Kök & matlagning</h2><p class="game-hint">'+(inKitchen?'Välj ett recept. Maten hamnar i ryggsäcken och kan ätas inför nästa strid.':'Köket finns i Handelsboden, sydväst i Emberfall. Gå in och välj Kök.')+'</p>'+COOKING_RECIPES.map(r=>'<div class="inventory-section"><h3>'+r.name+'</h3><p>Fisk '+S.fish+'/'+r.count+(r.wood?' · Trä '+S.wood+'/'+r.wood:'')+'</p><p>Ger 1 '+r.name.toLowerCase()+' · +'+r.heal+' HP</p>'+recipeButton('Laga '+r.name,'cook-'+r.id,inKitchen&&S.fish>=r.count&&S.wood>=(r.wood||0))+'</div>').join('')+foodInventoryHTML()+btn('Till ryggsäcken','openbag');
 }
+
 function action(a){
+if(a==='fishstart'){S.fishingGuideSeen=true;persist();castFishingRod();return}
 if(a==='opencooking'){show('cooking');return}
 if(a==='openhouse'){show('house');return}
 if(a==='eatmeal'){eatMeal();show('cooking');return}
+if(a.startsWith('eat-')){eatMeal(a.slice(4));show(panel==='bag'?'bag':'cooking');return}
 if(a.startsWith('cook-')){cookMeal(a.slice(5));show('cooking');return}
 if(a==='guide'){show('guide');return}
 if(a==='craftward'){craftWardSeal();show('production');return}
@@ -1653,15 +1448,15 @@ if(a==='openquests'){show('quests');return}
 if(a==='opencontracts'){show('contracts');return}
 if(a==='openhero'){show('hero');return}
 if(a==='openexpeditions'){show('expeditions');return}
-if(a==='leavehouse'){S.scene='village';S.x=500;S.y=550;hide();persist();note('Du lämnar byggnaden');return}
-if(a==='fish'){catchFish(FISH_SPECIES[0],S.fisheryLevel);note('+'+S.fisheryLevel+' Sunperch')}
+if(a==='leavehouse'){leaveHouse();return}
+if(a==='fish'){note('Fiskaren producerar automatiskt var femte sekund när den är anställd. Fiska själv vid stranden.');return}
 else if(a==='sellfish'){sellFishStocks()}
 else if(a==='upfishery'){const cost=65*S.fisheryLevel;if(S.gold>=cost){S.gold-=cost;S.fisheryLevel++;note('Fiskeri nivå '+S.fisheryLevel)}else note('Inte tillräckligt med guld')}
 else if(a==='hirefisher'){if(!S.fisheryManager&&S.gold>=180){S.gold-=180;S.fisheryManager=true;note('Fiskare anställd!')}else note('Kräver 180 guld')}
 else if(a==='mine'){S.ore+=S.mine;S.oreGathered+=S.mine;note('+'+S.mine+' malm')}
 else if(a==='wood'){S.wood+=S.woodLevel;note('+'+S.woodLevel+' trä')}
-else if(a==='forge'){if(S.ore<2||S.wood<1)note('Behöver 2 malm och 1 trä');else{S.ore-=2;S.wood--;S.swords+=S.forge;S.swordsCrafted+=S.forge;S.forgeMastery++;if(S.forgeMastery%10===0)S.gold+=20;note('Svärd tillverkat!')}}
-else if(a==='sell'){if(S.swords){S.swords--;const price=35+Math.floor(S.merchantRep/5)*5;S.gold+=price;S.totalGold+=price;note('+'+price+' guld')}else note('Inga svärd')}
+else if(a==='forge'){if(S.ore<2||S.wood<1)note('Behöver 2 malm och 1 trä');else{makeSwords();S.forgeMastery++;if(S.forgeMastery%10===0)economyTransaction('quest',20,0,'forge-mastery');note('Svärd tillverkat!')}}
+else if(a==='sell'){if(S.swords){const basis=consumeSwords(1),price=35+Math.floor(S.merchantRep/5)*5;economyTransaction('swords',price,basis,'sale');note('+'+price+' guld')}else note('Inga svärd')}
 else if(a==='upmine'&&pay(50*S.mine)){S.mine++;note('Gruvan uppgraderad!')}
 else if(a==='upmine10'){const cost=Math.round(50*(10*S.mine+45)*.9);if(pay(cost)){S.mine+=10;note('Gruva +10 nivåer!')}}
 else if(a==='upwood'&&pay(45*S.woodLevel)){S.woodLevel++;note('Skogsbruk uppgraderat!')}
@@ -1669,7 +1464,7 @@ else if(a==='upforge'&&pay(70*S.forge)){S.forge++;note('Smedjan uppgraderad!')}
 else if(a==='manager'){if(S.manager)note('Gruvchef redan anställd');else if(pay(100)){S.manager=true;note('Gruvan automatiserad!')}}
 else if(a==='autoforge'){if(S.autoForge)note('Redan automatiserad');else if(pay(150)){S.autoForge=true;note('Smedjan automatiserad!')}}
 else if(a==='autosell'){if(S.autoSell)note('Redan automatiserad');else if(pay(175)){S.autoSell=true;note('Marknaden automatiserad!')}}
-else if(a==='equip'){if(S.heroSword)note('Svärd redan utrustat');else if(S.swords<1)note('Smid först ett svärd');else{S.swords--;S.heroSword=true;note('Svärd utrustat!')}}
+else if(a==='equip'){if(S.heroSword)note('Svärd redan utrustat');else if(S.swords<1)note('Smid först ett svärd');else{consumeSwords(1);S.heroSword=true;note('Svärd utrustat!')}}
 else if(a==='armor'){if(S.heroArmor)note('Rustning redan utrustad');else if(S.ore<5||S.wood<3)note('Behöver 5 malm och 3 trä');else{S.ore-=5;S.wood-=3;S.heroArmor=true;note('Rustning tillverkad!')}}
 else if(a==='buypotion'){if(pay(25)){S.potions++;note('Potion köpt')}}
 else if(a==='potion'){if(S.potions<1)note('Inga potions');else{S.potions--;S.hp=Math.min(20+(S.level-1)*4,S.hp+12);note('HP återställt')}}
@@ -1691,7 +1486,7 @@ if(c.hp<=0){
 S.forestWins++;S.combatWins++;if(S.scene==='forest'&&c.enemyIndex===3){S.forestWolfDefeated=true;S.forestWolfWins++;S.wood+=6;S.runes+=2;}
 if(S.scene==='dungeon'&&!c.training){S.dungeonKills=Math.min(3,S.dungeonKills+1);if(S.dungeonKills===3)S.dungeonRewardPending=true}
 const loot=enemy.gold+S.level*3;
-S.gold+=loot;S.totalGold+=loot;
+economyTransaction('adventure',loot,0,'combat');
 if(Math.random()<.4)S.runes++;
 awardXP(enemy.xp);
 S.combat=null;show('hero');note(enemy.name+' besegrad! +'+loot+' guld, +'+enemy.xp+' XP');persist();return
@@ -1707,13 +1502,13 @@ else if(a==='fishcontract'){
  if(S.fish<5){note('Du behöver 5 fiskar');return}
  let remaining=5;const stocks=fishStocks();
  for(const f of FISH_SPECIES){const take=Math.min(remaining,stocks[f.id]||0);stocks[f.id]-=take;remaining-=take}
- const reward=marketReward(110);S.fish-=5;S.gold+=reward;S.totalGold+=reward;S.fishContractDone++;S.merchantRep++;S.marketDeliveries++;refreshMarket();note('Fiskekontrakt levererat! +'+reward+' guld');
+ const reward=marketReward(110);S.fish-=5;economyTransaction('fish',reward,0,'contract');S.fishContractDone++;S.merchantRep++;S.marketDeliveries++;refreshMarket();note('Fiskekontrakt levererat! +'+reward+' guld');
 }else if(a==='resourcecontract'){
  if(S.ore<10||S.wood<8){note('Behöver 10 malm och 8 trä');return}
- const reward=marketReward(160);S.ore-=10;S.wood-=8;S.gold+=reward;S.totalGold+=reward;S.resourceContractDone++;S.merchantRep++;S.marketDeliveries++;refreshMarket();note('Resurskontrakt levererat! +'+reward+' guld');
-}else if(a==='contract'){if(S.swords<S.contractTarget){note('Du behöver '+S.contractTarget+' svärd');return}S.swords-=S.contractTarget;S.gold+=renownContractReward(S.contractReward);S.totalGold+=renownContractReward(S.contractReward);S.contractsDone++;S.merchantRep++;S.marketDeliveries++;refreshMarket();awardXP(12);S.contractTarget=Math.min(15,3+S.contractsDone);S.contractReward=100+S.contractsDone*45;note('Kontrakt levererat!')}else if(a==='expedition'){if(S.expeditionEnds){note('Expedition pågår redan');return}S.expeditionEnds=Date.now()+60000;note('Hjälten är ute på expedition!')}
+ const reward=marketReward(160);S.ore-=10;S.wood-=8;economyTransaction('resources',reward,10*S.materialValuation.ore+8*S.materialValuation.wood,'contract');S.resourceContractDone++;S.merchantRep++;S.marketDeliveries++;refreshMarket();note('Resurskontrakt levererat! +'+reward+' guld');
+}else if(a==='contract'){if(S.swords<S.contractTarget){note('Du behöver '+S.contractTarget+' svärd');return}const basis=consumeSwords(S.contractTarget);economyTransaction('swords',renownContractReward(S.contractReward),basis,'contract');S.contractsDone++;S.merchantRep++;S.marketDeliveries++;refreshMarket();awardXP(12);S.contractTarget=Math.min(15,3+S.contractsDone);S.contractReward=100+S.contractsDone*45;note('Kontrakt levererat!')}else if(a==='expedition'){if(S.expeditionEnds){note('Expedition pågår redan');return}S.expeditionEnds=Date.now()+60000;note('Hjälten är ute på expedition!')}
 else if(a==='expeditionupgrade'){if(pay(120)){S.expeditionTier=Math.min(5,S.expeditionTier+1);note('Expeditionsgille uppgraderat!')}}
-else if(a==='claim'){if(!questDone()){note('Uppdraget är inte klart');return}S.quest++;S.gold+=50;S.totalGold+=50;awardXP(10);note('Uppdrag klart! +50 guld, +10 XP')}
+else if(a==='claim'){if(!questDone()){note('Uppdraget är inte klart');return}S.quest++;economyTransaction('quest',50,0,'story');awardXP(10);note('Uppdrag klart! +50 guld, +10 XP')}
 else if(a==='joystick'){mode='joystick';note('Joystick vald')}
 else if(a==='drag'){mode='drag';note('Dra på kartan vald')}
 else if(a==='slow'){speed=120;note('Långsam')}
@@ -1722,8 +1517,26 @@ else if(a==='fast'){speed=250;note('Snabb')}
 if(panel)show(panel);
 persist();
 }
-function interact(){if(panel==='fishing'){fishingTap();return}if(panel)return;if(S.scene==='forest'){if(nearPond()){castFishingRod();return}forestInteract();return}if(S.scene==='interior'){if(S.insideY>660&&Math.abs(S.insideX-500)<140){S.scene='village';S.x=500;S.y=550;note('Du lämnade byggnaden');persist();return}show('house');return}if(S.scene==='dungeon'){dungeonInteract();return}if(nearPond()){castFishingRod();return}if(S.y>760&&Math.abs(S.x-500)<160){S.scene='forest';S.forestX=500;S.forestY=78;S.forestVisits++;note('Du upptäckte Whisperwood Forest!');persist();return}if(Math.hypot(S.x-915,S.y-425)<135){S.scene='dungeon';S.dungeonX=150;S.dungeonY=380;S.dungeonKills=0;S.dungeonChestClaimed=false;S.dungeonRewardPending=false;note('Goblingrottan: besegra tre gobliner och hitta skattkistan!');persist();return}const [ex,ey]=npcLocation('merchant',performance.now()/1000),[gx,gy]=npcLocation('guard',performance.now()/1000);if(Math.hypot(S.x-ex,S.y-ey)<95){show('merchant');return}if(Math.hypot(S.x-gx,S.y-gy)<95){show('guard');return}let b=buildings.find(b=>Math.hypot(S.x-(b.x+b.w/2),S.y-(b.y+b.h/2))<165);if(b){S.houseType=b.n==='Smedja'?'forge':b.n==='Gruva'?'mine':b.n==='Marknad'?'market':'guild';S.scene='interior';S.insideX=500;S.insideY=575;note('Du gick in i '+b.n+'. Tryck A för tjänster, gå söderut till EXIT.');persist()}else if(Math.hypot(S.x-910,S.y-425)<110)show('hero');else note('Gå närmare en byggnad')}
-let joy=document.getElementById('joy'),nub=document.getElementById('nub'),pointer=null;function stick(e){let r=joy.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),m=Math.hypot(dx,dy),f=Math.min(1,m/(r.width*.3));vx=m?dx/m*f:0;vy=m?dy/m*f:0;nub.style.transform='translate('+(vx*r.width*.3)+'px,'+(vy*r.width*.3)+'px)'}joy.addEventListener('pointerdown',e=>{e.preventDefault();pointer=e.pointerId;joy.setPointerCapture(pointer);stick(e)});joy.addEventListener('pointermove',e=>{if(e.pointerId===pointer){e.preventDefault();stick(e)}});function stop(e){if(e.pointerId===pointer){pointer=null;vx=vy=0;nub.style.transform=''}}joy.addEventListener('pointerup',stop);joy.addEventListener('pointercancel',stop);joy.addEventListener('lostpointercapture',()=>{pointer=null;vx=vy=0;nub.style.transform='' });let mapPointer=null;canvas.addEventListener('pointerdown',e=>{if(mode==='drag'){mapPointer=e.pointerId;canvas.setPointerCapture(mapPointer);drag(e)}});canvas.addEventListener('pointermove',e=>{if(e.pointerId===mapPointer)drag(e)});function drag(e){let r=canvas.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),m=Math.hypot(dx,dy);vx=m?dx/m:0;vy=m?dy/m:0}canvas.addEventListener('pointerup',e=>{if(e.pointerId===mapPointer){mapPointer=null;vx=vy=0}});canvas.addEventListener('pointercancel',()=>{mapPointer=null;vx=vy=0});addEventListener('pagehide',()=>{try{localStorage.setItem('runeforge_beta_preview_01',JSON.stringify(S))}catch(e){}});
+function interact(){
+ const target=interactionTarget();if(!target)return;
+ switch(target.kind){
+ case 'fishing':fishingTap();break;
+ case 'fish':castFishingRod();break;
+ case 'npc':show(target.data);break;
+ case 'house':show('house');break;
+ case 'leave':leaveHouse();break;
+ case 'building':S.houseType=({Smedja:'forge',Gruva:'mine',Marknad:'market',Gille:'guild'})[target.data.n];changeZone('interior',500,585,'Välkommen till '+target.data.n+' · '+({forge:'Smid och förbättra utrustning',mine:'Samla malm och utveckla gruvan',market:'Handla och laga mat',guild:'Uppdrag och expeditioner'})[S.houseType]);break;
+ case 'forest':changeZone('forest',500,78,'Whisperwood');break;
+ case 'dungeon':changeZone('dungeon',170,390,'Goblingrottan');break;
+ case 'village':changeZone('village',S.scene==='forest'?500:885,S.scene==='forest'?765:425,'Tillbaka i Emberfall');break;
+ case 'wood':S.wood+=3;S.forestWood+=3;persist();note('+3 trä · till smide eller matlagning');break;
+ case 'forestChest':S.forestChest=true;economyTransaction('adventure',40,0,'forest-chest');S.wood+=10;S.runes++;persist();note('Förråd: +40 guld, +10 trä, +1 runfragment');break;
+ case 'dungeonChest':dungeonInteract();break;
+ }
+ updateActionButton();
+}
+let joy=document.getElementById('joy'),nub=document.getElementById('nub'),pointer=null;function stick(e){let r=joy.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),m=Math.hypot(dx,dy),f=Math.min(1,m/(r.width*.3));vx=m?dx/m*f:0;vy=m?dy/m*f:0;nub.style.transform='translate('+(vx*r.width*.3)+'px,'+(vy*r.width*.3)+'px)'}joy.addEventListener('pointerdown',e=>{e.preventDefault();if(pointer!==null)return;pointer=e.pointerId;joy.setPointerCapture(pointer);stick(e)});joy.addEventListener('pointermove',e=>{if(e.pointerId===pointer){e.preventDefault();stick(e)}});function stop(e){if(e.pointerId===pointer){pointer=null;vx=vy=0;nub.style.transform=''}}joy.addEventListener('pointerup',stop);joy.addEventListener('pointercancel',stop);joy.addEventListener('lostpointercapture',()=>{pointer=null;vx=vy=0;nub.style.transform='' });let mapPointer=null;canvas.addEventListener('pointerdown',e=>{if(mode==='drag'){mapPointer=e.pointerId;canvas.setPointerCapture(mapPointer);drag(e)}});canvas.addEventListener('pointermove',e=>{if(e.pointerId===mapPointer)drag(e)});function drag(e){let r=canvas.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),m=Math.hypot(dx,dy);vx=m?dx/m:0;vy=m?dy/m:0}canvas.addEventListener('pointerup',e=>{if(e.pointerId===mapPointer){mapPointer=null;vx=vy=0}});canvas.addEventListener('pointercancel',()=>{mapPointer=null;vx=vy=0});addEventListener('pagehide',()=>{vx=vy=0;persist()});
+addEventListener('blur',()=>{vx=vy=0;pointer=null;mapPointer=null;nub.style.transform='' });
 
 // iOS Safari: block document scrolling, allow scrolling only inside the open menu.
 function menuScrollTarget(target){
@@ -1747,5 +1560,9 @@ if(window.visualViewport){
  window.visualViewport.addEventListener('resize',syncViewport);
  window.visualViewport.addEventListener('scroll',syncViewport);
 }
+try{const previous=localStorage.getItem('runeforge_beta_preview_01');if(previous&&!localStorage.getItem('runeforge_beta_preview_backup_52'))localStorage.setItem('runeforge_beta_preview_backup_52',previous)}catch(e){}
+mealInventory();swordBasis();reconcileCostBasis();S.saveVersion=Math.max(3,S.saveVersion||0);offline();safePosition();persist();
+if(!S.tutorialSeen){S.tutorialSeen=true;persist();show('guide')}
 window.scrollTo(0,0);document.getElementById('moveStatus').textContent='CONTROLS READY';
 </script></html>
+
