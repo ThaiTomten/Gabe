@@ -1,4 +1,4 @@
-<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Alpha 0.9</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#notice{color:#b7edb8}#close{float:right}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Alpha 0.9 · Animated Adventurer</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('settings')">⚙ Settings</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="action('mine')">⛏ Bryt</button><button onclick="action('forge')">⚒ Smid</button><button onclick="save()">💾 Spara</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
+<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Alpha 1.0</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#notice{color:#b7edb8}#close{float:right}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Alpha 1.0 · Living Empire</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="action('mine')">⛏ Bryt</button><button onclick="action('forge')">⚒ Smid</button><button onclick="save()">💾 Spara</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
 const canvas=document.getElementById('game'),ctx=canvas.getContext('2d');let S={x:500,y:400,gold:100,ore:0,swords:0,mine:1,forge:1,manager:false,hp:20,xp:0},vx=0,vy=0,speed=170,mode='joystick',panel='',last=performance.now(),acc=0;try{Object.assign(S,JSON.parse(localStorage.getItem('runeforge_alpha6')||'{}'))}catch(e){}const buildings=[{x:180,y:170,w:150,h:110,n:'Smedja',t:'empire',c:'#ac6544'},{x:690,y:170,w:150,h:110,n:'Gruva',t:'empire',c:'#74848a'},{x:170,y:600,w:150,h:110,n:'Marknad',t:'empire',c:'#b18c44'},{x:690,y:600,w:150,h:110,n:'Gille',t:'hero',c:'#7870a3'}];let ww=1,hh=1;let walkTime=0,walkMoving=false,faceX=0,faceY=1;function resize(){ww=canvas.clientWidth;hh=canvas.clientHeight;let d=Math.min(window.devicePixelRatio||1,2);canvas.width=ww*d;canvas.height=hh*d;ctx.setTransform(d,0,0,d,0,0)}addEventListener('resize',resize);resize();function solid(x,y){return x<20||y<20||x>980||y>850||buildings.some(b=>x>b.x-14&&x<b.x+b.w+14&&y>b.y-14&&y<b.y+b.h+14)}function draw(){
 const t=performance.now()/1000,sc=Math.max(.6,Math.min(ww/550,hh/470));
 ctx.clearRect(0,0,ww,hh);ctx.fillStyle='#182a29';ctx.fillRect(0,0,ww,hh);
@@ -87,7 +87,118 @@ hero(S.x,S.y);
 text('YOU',S.x,S.y-44,14,'#d9f8e3');
 ctx.restore();
 document.getElementById('stats').textContent='🪙 '+Math.floor(S.gold)+' · ⛏ '+Math.floor(S.ore)+' · ⚔ '+S.swords;
-}function tick(t){let dt=Math.min((t-last)/1000,.05);last=t;if(!panel){walkMoving=Math.hypot(vx,vy)>.08;if(walkMoving){walkTime+=dt*Math.max(.6,Math.hypot(vx,vy));faceX=vx;faceY=vy}let nx=S.x+vx*speed*dt,ny=S.y+vy*speed*dt;if(!solid(nx,S.y))S.x=nx;if(!solid(S.x,ny))S.y=ny}if(panel)walkMoving=false;if(S.manager){acc+=dt;if(acc>=2){S.gold+=S.mine;acc=0}}draw();requestAnimationFrame(tick)}requestAnimationFrame(tick);function note(x){document.getElementById('msg').textContent=x;document.getElementById('notice').textContent=x}function save(){try{localStorage.setItem('runeforge_alpha6',JSON.stringify(S));note('Sparat!')}catch(e){note('Sparning blockerad i denna visning')}}function show(p){panel=p;document.getElementById('modal').style.display='block';let h=p==='empire'?'<h2>🏰 Empire</h2><p>Gruva nivå '+S.mine+' · Smedja nivå '+S.forge+'</p><button onclick="action(\'mine\')">Bryt malm</button><button onclick="action(\'forge\')">Smid svärd (2 malm)</button><button onclick="action(\'sell\')">Sälj svärd (+35 guld)</button><button onclick="action(\'upmine\')">Uppgradera gruva (50)</button><button onclick="action(\'upforge\')">Uppgradera smedja (70)</button><button onclick="action(\'manager\')">Manager (100)</button>':p==='hero'?'<h2>🛡 Hjälte</h2><p>HP '+S.hp+' · XP '+S.xp+'</p><button onclick="action(\'fight\')">⚔ Slåss mot goblin</button>':'<h2>⚙ Inställningar</h2><button onclick="mode=\'joystick\';note(\'Joystick vald\')">Joystick</button><button onclick="mode=\'drag\';note(\'Dra på kartan vald\')">Dra på kartan</button><button onclick="speed=120">Långsam</button><button onclick="speed=170">Normal</button><button onclick="speed=250">Snabb</button>';document.getElementById('content').innerHTML=h;document.getElementById('notice').textContent=''}function hide(){panel='';document.getElementById('modal').style.display='none'}function action(a){if(a==='mine'){S.ore+=S.mine;note('+'+S.mine+' malm')}if(a==='forge'){if(S.ore>=2){S.ore-=2;S.swords+=S.forge;note('Svärd tillverkat!')}else note('Behöver 2 malm')}if(a==='sell'){if(S.swords){S.swords--;S.gold+=35;note('+35 guld')}else note('Inga svärd')}if(['upmine','upforge','manager'].includes(a)){let cost=a==='upmine'?50:a==='upforge'?70:100;if(S.gold<cost)note('För lite guld');else if(a==='manager'&&S.manager)note('Redan anställd');else{S.gold-=cost;if(a==='upmine')S.mine++;if(a==='upforge')S.forge++;if(a==='manager')S.manager=true;note('Uppgraderat!')}}if(a==='fight'){S.gold+=20;S.xp+=5;S.hp=Math.max(1,S.hp-3);if(S.xp>=20){S.xp=0;S.hp=20}note('Goblin besegrad! +20 guld')}if(panel)show(panel)}function interact(){let b=buildings.find(b=>Math.hypot(S.x-(b.x+b.w/2),S.y-(b.y+b.h/2))<165);if(b)show(b.t);else if(Math.hypot(S.x-910,S.y-425)<110)show('hero');else note('Gå närmare en byggnad')}
+}
+const defaults={wood:0,ingots:0,runes:0,potions:1,level:1,heroSword:false,heroArmor:false,heroShield:false,quest:0,forestWins:0,combat:null,autoForge:false,autoSell:false,woodLevel:1,lastSaved:Date.now(),totalGold:0};
+for(const k in defaults)if(S[k]===undefined)S[k]=defaults[k];
+if(S.manager&&S.gold<0)S.gold=0;
+let autosaveClock=0,productionClock=0;
+function persist(){S.lastSaved=Date.now();try{localStorage.setItem('runeforge_alpha6',JSON.stringify(S))}catch(e){}}
+function offline(){
+let elapsed=Math.max(0,Math.min(8*3600,(Date.now()-Number(S.lastSaved||Date.now()))/1000));
+if(elapsed<5)return;
+const cycles=Math.floor(elapsed/5);
+if(S.manager)S.ore+=cycles*S.mine;
+if(S.autoForge){let crafts=Math.min(cycles,Math.floor(S.ore/2),Math.floor(S.wood));S.ore-=crafts*2;S.wood-=crafts;S.swords+=crafts*S.forge}
+if(S.autoSell){let sold=Math.min(S.swords,cycles);S.swords-=sold;S.gold+=sold*35;S.totalGold+=sold*35}
+S.lastSaved=Date.now();persist();
+document.getElementById('msg').textContent='Välkommen tillbaka! '+Math.floor(elapsed/60)+' min offline-produktion';
+}
+offline();
+function tick(t){
+const dt=Math.min((t-last)/1000,.05);last=t;
+if(!panel){walkMoving=Math.hypot(vx,vy)>.08;if(walkMoving){walkTime+=dt*Math.max(.6,Math.hypot(vx,vy));faceX=vx;faceY=vy}let nx=S.x+vx*speed*dt,ny=S.y+vy*speed*dt;if(!solid(nx,S.y))S.x=nx;if(!solid(S.x,ny))S.y=ny}
+if(panel)walkMoving=false;
+productionClock+=dt;autosaveClock+=dt;
+if(productionClock>=5){productionClock-=5;
+if(S.manager)S.ore+=S.mine;
+if(S.autoForge&&S.ore>=2&&S.wood>=1){S.ore-=2;S.wood--;S.swords+=S.forge}
+if(S.autoSell&&S.swords>0){S.swords--;S.gold+=35;S.totalGold+=35}
+}
+if(autosaveClock>=12){autosaveClock=0;persist()}
+draw();requestAnimationFrame(t)
+}
+requestAnimationFrame(tick);
+function note(x){document.getElementById('msg').textContent=x;document.getElementById('notice').textContent=x}
+function save(){persist();note('Sparat!')}
+function levelThreshold(){return S.level*20}
+function awardXP(x){S.xp+=x;while(S.xp>=levelThreshold()){S.xp-=levelThreshold();S.level++;S.hp=20+(S.level-1)*4;note('Level up! Nivå '+S.level)}}
+function questTitle(){return ['Samla 5 järnmalm','Smid ditt första svärd','Besegra 2 gobliner','Tjäna 250 guld totalt','Utforska vidare'][Math.min(S.quest,4)]}
+function questDone(){return S.quest===0?S.ore>=5:S.quest===1?(S.swords>0||S.heroSword):S.quest===2?S.forestWins>=2:S.quest===3?S.totalGold>=250:false}
+function btn(label,act){return '<button onclick="action(\''+act+'\')">'+label+'</button>'}
+function show(p){
+panel=p;document.getElementById('modal').style.display='block';
+let h='';
+if(p==='empire'){
+h='<h2>🏰 Imperiet</h2><p>🪙 '+S.gold+' guld · ⛏ '+S.ore+' malm · 🌲 '+S.wood+' trä · ⚔ '+S.swords+' svärd</p><h3>Produktion</h3>'+
+btn('⛏ Bryt +'+S.mine+' malm','mine')+btn('🌲 Hugg +'+S.woodLevel+' trä','wood')+
+btn('⚒ Smid svärd (2 malm + 1 trä)','forge')+btn('🏪 Sälj svärd (+35 guld)','sell')+
+'<h3>Investeringar</h3>'+btn('Gruva nivå '+S.mine+' · '+(50*S.mine)+' guld','upmine')+
+btn('Skogsbruk nivå '+S.woodLevel+' · '+(45*S.woodLevel)+' guld','upwood')+
+btn('Smedja nivå '+S.forge+' · '+(70*S.forge)+' guld','upforge')+
+'<h3>Automation (var 5:e sekund)</h3>'+btn(S.manager?'✓ Gruvchef aktiv':'Anställ gruvchef · 100 guld','manager')+
+btn(S.autoForge?'✓ Automatisk smedja':'Automatisera smedja · 150 guld','autoforge')+
+btn(S.autoSell?'✓ Automatisk försäljning':'Automatisera försäljning · 175 guld','autosell');
+}else if(p==='hero'){
+h='<h2>🛡 Äventyrare</h2><p>Nivå '+S.level+' · HP '+S.hp+'/'+(20+(S.level-1)*4)+' · XP '+S.xp+'/'+levelThreshold()+'</p>'+
+'<p>⚔ Svärd: '+(S.heroSword?'Utrustat':'Saknas')+' · 🛡 Rustning: '+(S.heroArmor?'Utrustad':'Saknas')+'</p>'+
+btn(S.heroSword?'✓ Svärd utrustat':'Utrusta ett smitt svärd','equip')+
+btn(S.heroArmor?'✓ Rustning utrustad':'Tillverka rustning (5 malm + 3 trä)','armor')+
+btn('🧪 Drick potion ('+S.potions+')','potion')+btn('⚔ Gå in i goblingrottan','startfight');
+}else if(p==='combat'){
+let c=S.combat;
+if(!c){show('hero');return}
+h='<h2>⚔ Goblingrottan</h2><p>Goblin HP: '+Math.max(0,c.hp)+' / '+c.max+' · Din HP: '+S.hp+'</p>'+
+'<p>'+c.message+'</p>'+btn('⚔ Attack','attack')+btn('🛡 Defend','defend')+btn('🧪 Potion ('+S.potions+')','potion');
+}else if(p==='quests'){
+h='<h2>📜 Uppdrag</h2><h3>'+questTitle()+'</h3><p>'+ (questDone()?'Uppdraget är klart! Hämta belöningen.':'Fortsätt spela för att slutföra uppdraget.')+'</p>'+btn('Hämta belöning (+50 guld, +10 XP)','claim')+
+'<p>Färdiga uppdrag: '+S.quest+'</p>';
+}else if(p==='bag'){
+h='<h2>🎒 Inventarium</h2><p>🪙 Guld: '+S.gold+'</p><p>⛏ Malm: '+S.ore+' · 🌲 Trä: '+S.wood+'</p><p>⚔ Svärd: '+S.swords+' · ✨ Runfragment: '+S.runes+'</p><p>🧪 Potions: '+S.potions+'</p>'+btn('Köp potion · 25 guld','buypotion');
+}else{
+h='<h2>⚙ Inställningar</h2>'+btn('Virtuell joystick','joystick')+btn('Dra på kartan','drag')+
+btn('Långsam rörelse','slow')+btn('Normal rörelse','normal')+btn('Snabb rörelse','fast')+
+'<p>Alpha 1.0 · Rörelse och Safari-scrolllås behållna.</p>';
+}
+document.getElementById('content').innerHTML=h;
+document.getElementById('notice').textContent='';
+}
+function hide(){panel='';document.getElementById('modal').style.display='none';S.combat=null}
+function pay(n){if(S.gold<n){note('Du behöver '+n+' guld');return false}S.gold-=n;return true}
+function action(a){
+if(a==='mine'){S.ore+=S.mine;note('+'+S.mine+' malm')}
+else if(a==='wood'){S.wood+=S.woodLevel;note('+'+S.woodLevel+' trä')}
+else if(a==='forge'){if(S.ore<2||S.wood<1)note('Behöver 2 malm och 1 trä');else{S.ore-=2;S.wood--;S.swords+=S.forge;note('Svärd tillverkat!')}}
+else if(a==='sell'){if(S.swords){S.swords--;S.gold+=35;S.totalGold+=35;note('+35 guld')}else note('Inga svärd')}
+else if(a==='upmine'&&pay(50*S.mine)){S.mine++;note('Gruvan uppgraderad!')}
+else if(a==='upwood'&&pay(45*S.woodLevel)){S.woodLevel++;note('Skogsbruk uppgraderat!')}
+else if(a==='upforge'&&pay(70*S.forge)){S.forge++;note('Smedjan uppgraderad!')}
+else if(a==='manager'){if(S.manager)note('Gruvchef redan anställd');else if(pay(100)){S.manager=true;note('Gruvan automatiserad!')}}
+else if(a==='autoforge'){if(S.autoForge)note('Redan automatiserad');else if(pay(150)){S.autoForge=true;note('Smedjan automatiserad!')}}
+else if(a==='autosell'){if(S.autoSell)note('Redan automatiserad');else if(pay(175)){S.autoSell=true;note('Marknaden automatiserad!')}}
+else if(a==='equip'){if(S.heroSword)note('Svärd redan utrustat');else if(S.swords<1)note('Smid först ett svärd');else{S.swords--;S.heroSword=true;note('Svärd utrustat!')}}
+else if(a==='armor'){if(S.heroArmor)note('Rustning redan utrustad');else if(S.ore<5||S.wood<3)note('Behöver 5 malm och 3 trä');else{S.ore-=5;S.wood-=3;S.heroArmor=true;note('Rustning tillverkad!')}}
+else if(a==='buypotion'){if(pay(25)){S.potions++;note('Potion köpt')}}
+else if(a==='potion'){if(S.potions<1)note('Inga potions');else{S.potions--;S.hp=Math.min(20+(S.level-1)*4,S.hp+12);note('HP återställt')}}
+else if(a==='startfight'){S.combat={hp:16+S.forestWins*2,max:16+S.forestWins*2,guard:false,message:'En goblin blockerar vägen!'};show('combat');return}
+else if(a==='attack'||a==='defend'){
+if(!S.combat)return;
+const c=S.combat;
+if(a==='attack'){const damage=4+S.level+(S.heroSword?5:0)+Math.floor(Math.random()*4);c.hp-=damage;c.message='Du gör '+damage+' skada.'}
+else{c.guard=true;c.message='Du förbereder ett försvar.'}
+if(c.hp<=0){S.forestWins++;const loot=15+S.level*5;S.gold+=loot;S.totalGold+=loot;S.runes+=Math.random()<.35?1:0;awardXP(8);S.combat=null;show('hero');note('Goblin besegrad! +'+loot+' guld, +8 XP');persist();return}
+const hit=Math.max(1,4+Math.floor(Math.random()*4)-(S.heroArmor?2:0)-(c.guard?4:0));c.guard=false;S.hp=Math.max(0,S.hp-hit);c.message+=' Goblin gör '+hit+' skada.';
+if(S.hp<=0){S.hp=Math.max(5,Math.floor((20+(S.level-1)*4)/2));S.combat=null;show('hero');note('Du flydde och återhämtade dig i byn');persist();return}
+}
+else if(a==='claim'){if(!questDone()){note('Uppdraget är inte klart');return}S.quest++;S.gold+=50;S.totalGold+=50;awardXP(10);note('Uppdrag klart! +50 guld, +10 XP')}
+else if(a==='joystick'){mode='joystick';note('Joystick vald')}
+else if(a==='drag'){mode='drag';note('Dra på kartan vald')}
+else if(a==='slow'){speed=120;note('Långsam')}
+else if(a==='normal'){speed=170;note('Normal')}
+else if(a==='fast'){speed=250;note('Snabb')}
+if(panel)show(panel);
+persist();
+}
+function interact(){let b=buildings.find(b=>Math.hypot(S.x-(b.x+b.w/2),S.y-(b.y+b.h/2))<165);if(b)show(b.t);else if(Math.hypot(S.x-910,S.y-425)<110)show('hero');else note('Gå närmare en byggnad')}
 let joy=document.getElementById('joy'),nub=document.getElementById('nub'),pointer=null;function stick(e){let r=joy.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),m=Math.hypot(dx,dy),f=Math.min(1,m/(r.width*.3));vx=m?dx/m*f:0;vy=m?dy/m*f:0;nub.style.transform='translate('+(vx*r.width*.3)+'px,'+(vy*r.width*.3)+'px)'}joy.addEventListener('pointerdown',e=>{e.preventDefault();pointer=e.pointerId;joy.setPointerCapture(pointer);stick(e)});joy.addEventListener('pointermove',e=>{if(e.pointerId===pointer){e.preventDefault();stick(e)}});function stop(e){if(e.pointerId===pointer){pointer=null;vx=vy=0;nub.style.transform=''}}joy.addEventListener('pointerup',stop);joy.addEventListener('pointercancel',stop);joy.addEventListener('lostpointercapture',()=>{pointer=null;vx=vy=0;nub.style.transform='' });let mapPointer=null;canvas.addEventListener('pointerdown',e=>{if(mode==='drag'){mapPointer=e.pointerId;canvas.setPointerCapture(mapPointer);drag(e)}});canvas.addEventListener('pointermove',e=>{if(e.pointerId===mapPointer)drag(e)});function drag(e){let r=canvas.getBoundingClientRect(),dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),m=Math.hypot(dx,dy);vx=m?dx/m:0;vy=m?dy/m:0}canvas.addEventListener('pointerup',e=>{if(e.pointerId===mapPointer){mapPointer=null;vx=vy=0}});canvas.addEventListener('pointercancel',()=>{mapPointer=null;vx=vy=0});addEventListener('pagehide',()=>{try{localStorage.setItem('runeforge_alpha6',JSON.stringify(S))}catch(e){}});
 
 // iOS Safari: block document scrolling, allow scrolling only inside the open menu.
