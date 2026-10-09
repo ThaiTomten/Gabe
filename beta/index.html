@@ -1178,7 +1178,7 @@ function sellProduction(type){
  const price=type==='steel'?55:165;
  const key=type==='steel'?'steelStock':'runeGoods';
  if((S[key]||0)<1){note('Lagret är tomt');return false}
- S[key]--;const reward=marketReward(price);S.gold+=reward;S.totalGold+=reward;S.productionOrdersDone++;S.productionRevenueTotal+=reward;refreshMarket();persist();note('Såld vara: +'+reward+' guld');return true;
+ reconcileCostBasis();const reward=marketReward(price);recordProductSale(type,reward);S[key]--;S.gold+=reward;S.totalGold+=reward;S.productionOrdersDone++;refreshMarket();persist();note('Såld vara: +'+reward+' guld');return true;
 }
 function deliverProductionQuest(){
  if(S.productionQuestDone>=3){note('Alla runbeställningar är färdiga');return false}
