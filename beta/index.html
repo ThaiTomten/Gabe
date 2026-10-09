@@ -1,4 +1,4 @@
-<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 2.7</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
+<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 2.8</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
 header{background:#78533c;color:#fff0d0;border-bottom:4px solid #b98a51;text-shadow:1px 2px #553e31}
 #bottom{background:#78573e;border-top:4px solid #b98a51}
 button{background:#b28a5a;color:#fff7e7;border:2px solid #e2b879;box-shadow:inset 0 2px #f5d39b,0 3px #5b4134;font-weight:700}
@@ -11,7 +11,7 @@ button:active{transform:translateY(2px);box-shadow:inset 0 1px #f5d39b}
 .slot,.inventory-section,.character-card,.gearcell,.bestiary-entry{background:#d8b887;color:#4b3528;border:2px solid #9b714e;box-shadow:inset 0 2px #f1d4a7}
 .slot small{color:#684b36}.rarity{border-color:#8760a9}#notice{color:#386f46}
 #msg{background:#6c503bdc;color:#fff4d7;border:2px solid #c49c65}
- .loot-uncommon{border-color:#71a76c!important}.loot-rare{border-color:#629bc8!important}.loot-epic{border-color:#aa72c7!important;box-shadow:inset 0 2px #f1d4a7,0 0 9px #b784c477!important}.slot svg{flex-shrink:0}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Beta Preview 2.7 · Guided Adventure</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="fieldAttack()">⚔ Attack</button><button onclick="fieldDodge()">💨 Dodge</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
+ .loot-uncommon{border-color:#71a76c!important}.loot-rare{border-color:#629bc8!important}.loot-epic{border-color:#aa72c7!important;box-shadow:inset 0 2px #f1d4a7,0 0 9px #b784c477!important}.slot svg{flex-shrink:0}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Beta Preview 2.8 · Guided Adventure</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="fieldAttack()">⚔ Attack</button><button onclick="fieldDodge()">💨 Dodge</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
 window.addEventListener('error',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='JS ERROR: '+String(e.message).slice(0,90);});
 window.addEventListener('unhandledrejection',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='PROMISE ERROR: '+String(e.reason).slice(0,70);});
 document.getElementById('moveStatus').textContent='JS STARTED';
@@ -61,12 +61,28 @@ function heroPortraitSVG(){
 function pixelTree(x,y,variant=0){
  const p=(a,b,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(a,b,w,h)};
  ctx.save();ctx.translate(Math.round(x),Math.round(y));
- p(-4,-14,8,24,'#72563e');p(-6,5,12,5,'#594733');
- const c=variant%2?'#4b8153':'#588c55',hi=variant%2?'#7eac66':'#8ebd72';
- p(-16,-39,32,20,c);p(-22,-29,44,15,c);p(-19,-47,38,13,c);
- p(-10,-53,23,9,hi);p(-17,-34,14,5,hi);p(4,-27,12,5,hi);
- p(-15,-21,7,4,'#345e42');p(10,-37,8,4,'#345e42');
+ ctx.fillStyle='#274f3966';ctx.beginPath();ctx.ellipse(1,8,25,9,0,0,Math.PI*2);ctx.fill();
+ const trunk=variant%3===0?'#76513a':'#805f42';
+ p(-5,-18,10,29,trunk);p(-2,-15,3,23,'#a17a52');p(-7,4,15,6,'#61432f');
+ const dark=['#376d4c','#3b7453','#487b4d'][variant%3];
+ const mid=['#528d58','#619b65','#659653'][variant%3];
+ const light=['#85b56e','#90bd7b','#a2bf73'][variant%3];
+ for(const [xx,yy,w,h] of [[-19,-46,38,15],[-25,-36,50,19],[-21,-54,42,17],[-13,-62,27,12],[-22,-23,44,12]])p(xx,yy,w,h,dark);
+ for(const [xx,yy,w,h] of [[-17,-51,31,11],[-21,-38,39,13],[-11,-59,25,11],[-18,-28,28,8]])p(xx,yy,w,h,mid);
+ p(-14,-56,19,5,light);p(-20,-41,16,5,light);p(4,-47,12,4,light);p(-9,-33,13,4,light);
+ p(14,-28,6,4,'#2f6042');p(-22,-31,7,4,'#2f6042');
+ if(variant%3===2){p(10,-44,4,4,'#d4a76c');p(-9,-37,4,4,'#e6c478')}
  ctx.restore();
+}
+function pixelWater(x,y,w,h,time=0){
+ const p=(a,b,ww,hh,c)=>{ctx.fillStyle=c;ctx.fillRect(a,b,ww,hh)};
+ p(x-6,y-6,w+12,h+12,'#527a61');p(x-3,y-3,w+6,h+6,'#d1c18d');
+ p(x,y,w,h,'#3f8897');
+ for(let yy=y+7;yy<y+h-4;yy+=17)for(let xx=x+7;xx<x+w-7;xx+=24){
+  const shift=Math.floor(Math.sin(time*1.5+xx*.09+yy*.08)*5);
+  p(xx+shift,yy,11,3,'#7bc6c6');p(xx+shift+3,yy+4,7,2,'#5ba7b4');
+ }
+ p(x+5,y+5,w-10,3,'#9ad6ce55');p(x+5,y+h-9,w-10,3,'#2b697b');
 }
 function pixelFlower(x,y,kind=0){
  const p=(a,b,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(a,b,w,h)};
@@ -191,6 +207,7 @@ for(let k=0;k<5;k++){const x=80+k*205+cloudShift,y=115+(k%3)*235;oval(x,y,115,31
 for(let y=0;y<870;y+=28)for(let x=0;x<1000;x+=28){let n=rng(x*2+y*7);box(x,y,28,28,n>.72?'#7aa967':n<.18?'#5e8c50':'#709e5b');if(n>.82){box(x+7,y+10,4,3,'#9bb96c');box(x+19,y+21,3,4,'#e8c57b')}if(n<.09)box(x+17,y+8,4,2,'#326544')}
 // Hand-authored prop distribution with no random flicker.
 for(const [x,y,v] of [[72,135,0],[110,730,1],[876,126,0],[920,730,1],[80,300,1],[900,305,0],[350,120,1],[650,720,0]])pixelTree(x,y,v);
+pixelWater(62,560,100,92,t);pixelWater(820,565,116,86,t);
 for(const [x,y,v] of [[335,300,0],[360,505,1],[620,560,2],[590,120,0],[800,515,1],[170,540,2],[380,790,0],[730,80,1]])pixelFlower(x,y,v);
 pathBorder(429,0,142,870);pathBorder(0,350,1000,133);
 for(let i=0;i<180;i++){let x=rng(i+12)*995,y=rng(i+135)*865;if((x>427&&x<572)||(y>347&&y<483))continue;box(x,y,4,3,i%3?'#79a368':'#d7be78')}
@@ -221,13 +238,13 @@ const roof=idx===1?'#657d91':idx===3?'#846e9c':idx===2?'#c08c47':'#b86151';
 poly([[x-24,y+11],[x+19,y-44],[x+w-19,y-44],[x+w+24,y+11]],'#312f39');
 poly([[x-19,y+6],[x+21,y-43],[x+w-21,y-43],[x+w+19,y+6]],roof);
 poly([[x+21,y-43],[x+w-21,y-43],[x+w-36,y-25],[x+36,y-25]],'#d08e62');
-for(let k=20;k<w-10;k+=29){box(x+k,y-17,20,5,'#d9a27b');box(x+k-7,y-3,17,5,'#683f3d')}
+for(let k=20;k<w-10;k+=22){box(x+k,y-17,16,5,'#e4b68d');box(x+k-7,y-3,13,5,'#683f3d');box(x+k-2,y-30,9,3,'#f3d3a6')}
 box(x+w*.5-22,y+h-51,44,56,'#48382f');box(x+w*.5-17,y+h-46,34,46,'#70523a');box(x+w*.5+9,y+h-24,4,5,'#efc36c');
 for(const px of [x+18,x+w-45]){box(px-4,y+29,35,38,'#5c463d');box(px,y+25,27,32,'#2d5662');box(px+4,y+29,19,24,'#f3c66d');box(px+13,y+25,3,32,'#644936')}
-if(idx===0){box(x+w-16,y-68,24,33,'#7b6156');box(x+w-12,y-74,16,8,'#4e4747');for(let j=0;j<3;j++){oval(x+w-4+Math.sin(t+j)*5,y-89-j*15,9+j*3,7+j*2,'#9daba3')}}
-if(idx===1){poly([[x+w/2,y-72],[x+w/2-17,y-47],[x+w/2+17,y-47]],'#b9ced6');box(x+w/2-4,y-64,8,18,'#75b8ce')}
-if(idx===2){box(x+13,y+h-8,w-26,13,'#e0b45f');for(let j=0;j<5;j++)box(x+19+j*22,y+h-9,13,5,j%2?'#bd674c':'#e5c37c')}
-if(idx===3){box(x+w/2-5,y-68,10,27,'#dfc17b');box(x+w/2-20,y-57,40,9,'#dfc17b')}
+if(idx===0){box(x+12,y+h-35,26,9,'#9d6652');box(x+16,y+h-39,18,6,'#edac64');box(x+w-16,y-68,24,33,'#7b6156');box(x+w-12,y-74,16,8,'#4e4747');for(let j=0;j<3;j++){oval(x+w-4+Math.sin(t+j)*5,y-89-j*15,9+j*3,7+j*2,'#9daba3')}}
+if(idx===1){box(x+12,y+h-36,30,12,'#7b8d8d');box(x+17,y+h-40,20,7,'#b4bfc1');poly([[x+w/2,y-72],[x+w/2-17,y-47],[x+w/2+17,y-47]],'#b9ced6');box(x+w/2-4,y-64,8,18,'#75b8ce')}
+if(idx===2){box(x+12,y+52,28,14,'#d5b676');box(x+18,y+47,16,7,'#f0d59b');box(x+13,y+h-8,w-26,13,'#e0b45f');for(let j=0;j<5;j++)box(x+19+j*22,y+h-9,13,5,j%2?'#bd674c':'#e5c37c')}
+if(idx===3){box(x+12,y+45,23,20,'#5e638d');box(x+17,y+49,13,12,'#b6b9d9');box(x+w/2-5,y-68,10,27,'#dfc17b');box(x+w/2-20,y-57,40,9,'#dfc17b')}
 const lvl=idx===0?S.forge:idx===1?S.mine:idx===2?1+Math.floor(S.merchantRep/3):1+Math.floor(S.level/3);
 if(lvl>=2){box(x-12,y+16,12,h-10,'#9d8066');box(x+w,y+16,12,h-10,'#9d8066');box(x+4,y+h-11,w-8,9,'#d7bc80')}
 if(lvl>=5){box(x+w/2-5,y-64,10,18,'#f2cf7d');poly([[x+w/2,y-84],[x+w/2-14,y-63],[x+w/2+14,y-63]],'#e2a85e')}
@@ -276,7 +293,7 @@ ctx.restore();
 const vignette=ctx.createRadialGradient(ww/2,hh/2,Math.min(ww,hh)*.28,ww/2,hh/2,Math.max(ww,hh)*.77);vignette.addColorStop(0,'#00000000');vignette.addColorStop(1,'#0c1d2045');ctx.fillStyle=vignette;ctx.fillRect(0,0,ww,hh);
 document.getElementById('stats').textContent='🪙 '+Math.floor(S.gold)+' · ⛏ '+Math.floor(S.ore)+' · ⚔ '+S.swords;
 }
-const defaults={wood:0,ingots:0,runes:0,potions:1,level:1,heroSword:false,heroArmor:false,heroShield:false,quest:0,forestWins:0,combat:null,autoForge:false,autoSell:false,woodLevel:1,lastSaved:Date.now(),totalGold:0,scene:'village',dungeonX:150,dungeonY:380,dungeonKills:0,contractsDone:0,contractTarget:3,contractReward:100,expeditionEnds:0,expeditionTier:1,expeditionsDone:0,forgeMastery:0,merchantRep:0,saveVersion:2,oreGathered:0,swordsCrafted:0,tutorialSeen:false,insideX:500,insideY:575,forestX:500,forestY:78,forestWood:0,forestVisits:0,forestChest:false,forestWolfWins:0,forestWolfDefeated:false,heroStyle:0,weaponType:'sword',staffOwned:false,staffMastery:0,lootItems:[],equippedCharm:null,lootKills:0,armorTier:0,weaponTier:0,helmetOwned:false,bootsOwned:false,visualTime:'day',dungeonClears:0,dungeonChestClaimed:false,dungeonRewardPending:false,merchantDialogueSeen:false,guardDialogueSeen:false,combatWins:0};
+const defaults={wood:0,ingots:0,runes:0,potions:1,level:1,heroSword:false,heroArmor:false,heroShield:false,quest:0,forestWins:0,combat:null,autoForge:false,autoSell:false,woodLevel:1,lastSaved:Date.now(),totalGold:0,scene:'village',dungeonX:150,dungeonY:380,dungeonKills:0,contractsDone:0,contractTarget:3,contractReward:100,expeditionEnds:0,expeditionTier:1,expeditionsDone:0,forgeMastery:0,merchantRep:0,saveVersion:2,oreGathered:0,swordsCrafted:0,tutorialSeen:false,insideX:500,insideY:575,forestX:500,forestY:78,forestWood:0,forestVisits:0,forestChest:false,forestWolfWins:0,forestWolfDefeated:false,heroStyle:0,weaponType:'sword',staffOwned:false,staffMastery:0,lootItems:[],equippedCharm:null,lootKills:0,armorTier:0,weaponTier:0,helmetOwned:false,bootsOwned:false,visualTime:'day',fish:0,fisheryLevel:1,fisheryManager:false,fishSold:0,dungeonClears:0,dungeonChestClaimed:false,dungeonRewardPending:false,merchantDialogueSeen:false,guardDialogueSeen:false,combatWins:0};
 for(const k in defaults)if(S[k]===undefined)S[k]=defaults[k];
 if(S.manager&&S.gold<0)S.gold=0;
 let autosaveClock=0,productionClock=0;let movementErrorShown=false;let dungeonTime=0;
@@ -512,7 +529,7 @@ if(panel)walkMoving=false;
 autoZoneTransition(dt);updateFieldCombat(dt);
 productionClock+=dt;autosaveClock+=dt;
 if(productionClock>=5){productionClock-=5;
-if(S.manager)S.ore+=S.mine;
+if(S.manager)S.ore+=S.mine;if(S.fisheryManager)S.fish+=S.fisheryLevel;
 if(S.autoForge&&S.ore>=2&&S.wood>=1){S.ore-=2;S.wood--;S.swords+=S.forge}
 if(S.autoSell&&S.swords>0){S.swords--;S.gold+=35;S.totalGold+=35}
 }
@@ -543,6 +560,7 @@ const label=(str,x,y)=>{ctx.textAlign='center';ctx.font='bold 18px system-ui';ct
 tileField(1000,870,34,'forest');
 for(let y=0;y<870;y+=34)for(let x=0;x<1000;x+=34){let n=Math.sin(x*17+y*13)*43.7;n=n-Math.floor(n);rect(x,y,33,33,n>.5?'#679868':'#538354')}
 for(const [x,y,v] of [[110,150,0],[210,240,1],[820,170,0],[860,450,1],[135,730,0],[790,720,1],[330,160,1],[685,100,0]])pixelTree(x,y,v);
+pixelWater(75,510,130,105,performance.now()/1000);pixelWater(795,570,125,115,performance.now()/1000);
 for(const [x,y,v] of [[400,250,0],[590,410,1],[390,620,2],[605,760,0],[130,390,1]])pixelFlower(x,y,v);
 pathBorder(435,0,130,870);
 for(let i=0;i<90;i++){let x=(i*173+63)%960,y=(i*269+77)%830;if(x>395&&x<610)continue;rect(x-4,y-5,9,23,'#5d4735');ctx.beginPath();ctx.arc(x,y-23,20+i%3*5,0,Math.PI*2);ctx.fillStyle=i%3?'#244c3a':'#2e6145';ctx.fill();rect(x-9,y-40,12,6,'#467c51')}
@@ -644,7 +662,7 @@ btn(S.autoForge?'✓ Automatisk smedja':'Automatisera smedja · 150 guld','autof
 btn(S.autoSell?'✓ Automatisk försäljning':'Automatisera försäljning · 175 guld','autosell');
 }else if(p==='hero'){
 h='<h2>🛡 Äventyrare</h2><div class="inventory-section"><p>Nivå '+S.level+' · HP '+S.hp+'/'+(20+(S.level-1)*4)+' · XP '+S.xp+'/'+levelThreshold()+'</p>'+healthBar(S.hp,20+(S.level-1)*4,'#79b57c')+'<div class="gearrow"><div class="gearcell">🪖<p>'+(S.helmetOwned?'Runhjälm':'Tomt')+'</p></div><div class="gearcell">🛡<p>'+(S.heroArmor?'Rustning':'Tomt')+'</p></div><div class="gearcell">⚔️<p>'+(S.heroSword?'Svärd':'Tomt')+'</p></div><div class="gearcell">🥾<p>'+(S.bootsOwned?'Vandringsstövlar':'Tomt')+'</p></div></div></div>'+
-'<div class="character-card"><strong>'+HERO_STYLES[S.heroStyle||0].name+'</strong><div class="character-portrait">'+heroPortraitSVG()+'</div><small>'+HERO_STYLES[S.heroStyle||0].desc+'</small></div>'+btn('🎨 Anpassa utseende','appearance')+btn('🌤 Ljus & grafik','visual')+btn('📖 Bestiarium','bestiary')+btn('⚔ Vapen & stridsstil','weapons')+btn('⚒ Förbättra utrustning','upgrades')+btn('🪖 Hjälm & stövlar','gearcraft')+btn('👤 Karaktärsöversikt','character')+'<p>⚔ Svärd: '+(S.heroSword?'Utrustat':'Saknas')+' · 🛡 Rustning: '+(S.heroArmor?'Utrustad':'Saknas')+'</p>'+
+'<div class="character-card"><strong>'+HERO_STYLES[S.heroStyle||0].name+'</strong><div class="character-portrait">'+heroPortraitSVG()+'</div><small>'+HERO_STYLES[S.heroStyle||0].desc+'</small></div>'+btn('🎨 Anpassa utseende','appearance')+btn('🌤 Ljus & grafik','visual')+btn('🎣 Fiskeri','openfishery')+btn('📖 Bestiarium','bestiary')+btn('⚔ Vapen & stridsstil','weapons')+btn('⚒ Förbättra utrustning','upgrades')+btn('🪖 Hjälm & stövlar','gearcraft')+btn('👤 Karaktärsöversikt','character')+'<p>⚔ Svärd: '+(S.heroSword?'Utrustat':'Saknas')+' · 🛡 Rustning: '+(S.heroArmor?'Utrustad':'Saknas')+'</p>'+
 btn(S.heroSword?'✓ Svärd utrustat':'Utrusta ett smitt svärd','equip')+
 btn(S.heroArmor?'✓ Rustning utrustad':'Tillverka rustning (5 malm + 3 trä)','armor')+
 btn('🧪 Drick potion ('+S.potions+')','potion')+btn('⚔ Träningsstrid','startfight')+btn('🧭 Expeditionsgille','expeditions')+'<p>Gå till goblinen öster om byn och tryck A för att utforska grottan.</p>';
@@ -691,6 +709,12 @@ h='<h2>🧑‍💼 Köpmannen Elric</h2><p>"Emberfall behöver utrustning. Tillv
 h='<h2>🛡 Vakten Mira</h2><p>"Goblinerna har intagit den gamla grottan öster om byn. Ta med ett svärd och återvänd med deras skatter!"</p><p>Rensade grottor: '+S.dungeonClears+'</p>'+btn('📜 Visa uppdrag','openquests')+btn('🛡 Utrusta hjälten','openhero');
 }else if(p==='visual'){
 h='<h2>🌤 Visuella inställningar</h2><p>Byt ljussättning för att se miljöerna på dagen eller i skymningen.</p><p>Aktuellt: '+(S.visualTime==='dusk'?'Skymning':'Dag')+'</p>'+btn('Växla dag/skymning','toggletime')+btn('Tillbaka','openhero');
+}else if(p==='fishery'){
+h='<h2>🎣 Emberfall Fiskeri</h2><p>Fiska vid byns dammar. Sälj fångsten och anställ en fiskare som arbetar var femte sekund.</p>'+
+'<p>Fisk: '+S.fish+' · Nivå '+S.fisheryLevel+' · Sålda totalt: '+S.fishSold+'</p>'+
+btn('🎣 Fiska +'+S.fisheryLevel,'fish')+btn('🏪 Sälj fisk (12 guld/st)','sellfish')+
+btn('⬆ Fiskeri nivå '+(S.fisheryLevel+1)+' ('+(65*S.fisheryLevel)+' guld)','upfishery')+
+btn(S.fisheryManager?'✓ Fiskare anställd':'Anställ fiskare (180 guld)','hirefisher');
 }else if(p==='guide'){
 h='<h2>🗺 Välkommen till Emberfall</h2><p>1. Öppna Empire och samla malm och trä.</p><p>2. Smid ett svärd, utrusta hjälten eller sälj det.</p><p>3. Hämta belöningar i Uppdrag.</p><p>4. Utforska grottan vid goblinen öster om byn.</p><p>5. Anställ managers för automatisk produktion.</p>'+btn('Öppna Empire','openempire')+btn('Öppna Uppdrag','openquests');
 }else if(p==='contracts'){h='<h2>📜 Handelsgillet</h2><p>Leverera '+S.contractTarget+' svärd för '+S.contractReward+' guld och 12 XP.</p><p>Du har '+S.swords+' svärd. Avklarade kontrakt: '+S.contractsDone+'</p>'+btn('Leverera svärd','contract');}else if(p==='bag'){
@@ -707,7 +731,7 @@ h='<h2>'+names[type]+'</h2><div class="inventory-section"><p>'+(type==='forge'?'
 }else{
 h='<h2>⚙ Inställningar</h2>'+btn('Virtuell joystick','joystick')+btn('Dra på kartan','drag')+
 btn('Långsam rörelse','slow')+btn('Normal rörelse','normal')+btn('Snabb rörelse','fast')+
-'<p>Beta Preview 2.7 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
+'<p>Beta Preview 2.8 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
 }
 document.getElementById('content').innerHTML=h;
 document.getElementById('notice').textContent='';
@@ -719,6 +743,7 @@ if(a==='guide'){show('guide');return}
 if(a==='toggletime'){S.visualTime=S.visualTime==='day'?'dusk':'day';persist();note('Ljusläge: '+(S.visualTime==='day'?'Dag':'Skymning'));return}
 if(a==='appearance'){show('appearance');return}
 if(a==='visual'){show('visual');return}
+if(a==='openfishery'){show('fishery');return}
 if(a==='weapons'){show('weapons');return}
 if(a==='upgrades'){show('upgrades');return}
 if(a==='gearcraft'){show('gearcraft');return}
@@ -741,7 +766,11 @@ if(a==='opencontracts'){show('contracts');return}
 if(a==='openhero'){show('hero');return}
 if(a==='openexpeditions'){show('expeditions');return}
 if(a==='leavehouse'){S.scene='village';S.x=500;S.y=550;hide();persist();note('Du lämnar byggnaden');return}
-if(a==='mine'){S.ore+=S.mine;S.oreGathered+=S.mine;note('+'+S.mine+' malm')}
+if(a==='fish'){S.fish+=S.fisheryLevel;note('+'+S.fisheryLevel+' fisk')}
+else if(a==='sellfish'){if(S.fish>0){const n=S.fish;S.fish=0;S.gold+=n*12;S.totalGold+=n*12;S.fishSold+=n;note('Sålde '+n+' fisk för '+n*12+' guld')}else note('Ingen fisk att sälja')}
+else if(a==='upfishery'){const cost=65*S.fisheryLevel;if(S.gold>=cost){S.gold-=cost;S.fisheryLevel++;note('Fiskeri nivå '+S.fisheryLevel)}else note('Inte tillräckligt med guld')}
+else if(a==='hirefisher'){if(!S.fisheryManager&&S.gold>=180){S.gold-=180;S.fisheryManager=true;note('Fiskare anställd!')}else note('Kräver 180 guld')}
+else if(a==='mine'){S.ore+=S.mine;S.oreGathered+=S.mine;note('+'+S.mine+' malm')}
 else if(a==='wood'){S.wood+=S.woodLevel;note('+'+S.woodLevel+' trä')}
 else if(a==='forge'){if(S.ore<2||S.wood<1)note('Behöver 2 malm och 1 trä');else{S.ore-=2;S.wood--;S.swords+=S.forge;S.swordsCrafted+=S.forge;S.forgeMastery++;if(S.forgeMastery%10===0)S.gold+=20;note('Svärd tillverkat!')}}
 else if(a==='sell'){if(S.swords){S.swords--;const price=35+Math.floor(S.merchantRep/5)*5;S.gold+=price;S.totalGold+=price;note('+'+price+' guld')}else note('Inga svärd')}
