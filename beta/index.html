@@ -193,22 +193,23 @@ function villageSchedule(time){
  const phase=((time%600)+600)%600/600;
  return phase<.25?'morning':phase<.68?'work':'evening';
 }
-function npcLocation(role,time){
+function npcSchedule(role,time){
  const cycle=((time%600)+600)%600/600;
- const locations={
- merchant:[[350,545],[380,565],[340,615]],
- guard:[[620,565],[618,565],[700,510]],
- smith:[[280,365],[350,312],[410,540]],
- miner:[[610,370],[651,326],[590,500]],
- fisher:[[145,560],[150,600],[360,520]]
+ const index=Math.min(3,Math.floor(cycle*4));
+ const labels=['Morgon','Arbete','Rast','Kväll'];
+ const places={
+ merchant:[[350,545],[380,565],[410,530],[340,615]],
+ guard:[[620,565],[618,565],[720,430],[700,510]],
+ smith:[[280,365],[350,312],[430,490],[410,540]],
+ miner:[[610,370],[651,326],[600,470],[590,500]],
+ fisher:[[145,560],[150,600],[225,545],[360,520]]
  };
- const points=locations[role]||locations.merchant;
- const phase=cycle*3,index=Math.floor(phase),fraction=phase-index;
- const from=points[index],to=points[(index+1)%3];
- // Smoothstep interpolation: NPCs visibly walk between their scheduled stops.
- const u=fraction*fraction*(3-2*fraction);
- return [from[0]+(to[0]-from[0])*u,from[1]+(to[1]-from[1])*u];
+ const points=places[role]||places.merchant;
+ const fraction=cycle*4-index,u=fraction*fraction*(3-2*fraction);
+ const from=points[index],to=points[(index+1)%4];
+ return {x:from[0]+(to[0]-from[0])*u,y:from[1]+(to[1]-from[1])*u,activity:labels[index]};
 }
+function npcLocation(role,time){const n=npcSchedule(role,time);return [n.x,n.y]}
 function drawFisheryDock(time){
  const p=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(x,y,w,h)};
  p(157,578,44,12,'#654b38');p(160,573,38,7,'#b98d59');
@@ -302,9 +303,9 @@ for(let i=0;i<4;i++){const x=357+i*12,y=615;box(x,y,10,7,'#a3a1a0');box(x+2,y-3,
 const [ex,ey]=npcLocation('merchant',t),[gx,gy]=npcLocation('guard',t);
 spriteActor('merchant',ex,ey,{moving:true,walk:t*.24});
 spriteActor('guard',gx,gy,{moving:true,walk:t*.15});
-text('Elric',ex,ey-58,15);text('Mira',gx,gy-58,15);
+text('Elric · '+npcSchedule('merchant',t).activity,ex,ey-58,14);text('Mira · '+npcSchedule('guard',t).activity,gx,gy-58,14);
 drawFisheryDock(t);
-if(S.fisheryManager){const [fx,fy]=npcLocation('fisher',t);worker(fx,fy,'#497b8b',4);text('Fisher',fx,fy-43,13)}
+if(S.fisheryManager){const [fx,fy]=npcLocation('fisher',t);worker(fx,fy,'#497b8b',4);text('Fisher · '+npcSchedule('fisher',t).activity,fx,fy-43,12)}
 spriteActor('scout',915,440,{moving:true,walk:t*.4});
 text('Goblin',915,369,17);
 function hero(x,y){
