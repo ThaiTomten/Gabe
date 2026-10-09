@@ -194,15 +194,20 @@ function villageSchedule(time){
  return phase<.25?'morning':phase<.68?'work':'evening';
 }
 function npcLocation(role,time){
- const phase=villageSchedule(time);
+ const cycle=((time%600)+600)%600/600;
  const locations={
- merchant:{morning:[350,545],work:[380,565],evening:[340,615]},
- guard:{morning:[620,565],work:[618,565],evening:[700,510]},
- smith:{morning:[280,365],work:[350,312],evening:[410,540]},
- miner:{morning:[610,370],work:[651,326],evening:[590,500]},
- fisher:{morning:[145,560],work:[150,600],evening:[360,520]}
+ merchant:[[350,545],[380,565],[340,615]],
+ guard:[[620,565],[618,565],[700,510]],
+ smith:[[280,365],[350,312],[410,540]],
+ miner:[[610,370],[651,326],[590,500]],
+ fisher:[[145,560],[150,600],[360,520]]
  };
- return (locations[role]||locations.merchant)[phase];
+ const points=locations[role]||locations.merchant;
+ const phase=cycle*3,index=Math.floor(phase),fraction=phase-index;
+ const from=points[index],to=points[(index+1)%3];
+ // Smoothstep interpolation: NPCs visibly walk between their scheduled stops.
+ const u=fraction*fraction*(3-2*fraction);
+ return [from[0]+(to[0]-from[0])*u,from[1]+(to[1]-from[1])*u];
 }
 function drawFisheryDock(time){
  const p=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(x,y,w,h)};
@@ -663,7 +668,7 @@ function sellFishStocks(){
  S.fish=0;S.gold+=total;S.totalGold+=total;S.fishSold+=count;S.fishSalesGold+=total;persist();note('Sålde '+count+' fisk för '+total+' guld');return true;
 }
 let fishingCooldown=0;
-let fishingGame=null;
+let fishingGame=null,fishingUiClock=0;
 function castFishingRod(){
  if((panel&&panel!=='fishery')||!nearPond()){note('Gå närmare en damm för att fiska');return false}
  if(fishingGame){note('Avsluta fisket först');return false}
@@ -685,7 +690,7 @@ function fishingTap(){
 function cancelFishing(){fishingGame=null;fishingCooldown=.5;show('fishery')}
 function updateFishing(dt){
  if(!fishingGame)return;
- fishingGame.elapsed+=dt;fishingGame.position=.5+.44*Math.sin(fishingGame.elapsed*3.2);
+ fishingGame.elapsed+=dt;fishingUiClock+=dt;if(fishingUiClock>.14&&panel==='fishing'){fishingUiClock=0;show('fishing')}fishingGame.position=.5+.44*Math.sin(fishingGame.elapsed*3.2);
  fishingGame.zone=.5+.3*Math.sin(fishingGame.elapsed*1.1+1.2);
  if(fishingGame.elapsed>=fishingGame.limit){S.fishMisses++;S.fishBites++;fishingGame=null;fishingCooldown=1.2;note('Fisken kom undan');persist();show('fishery')}
 }
