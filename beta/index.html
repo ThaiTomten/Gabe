@@ -84,6 +84,21 @@ function pixelWater(x,y,w,h,time=0){
  }
  p(x+5,y+5,w-10,3,'#9ad6ce55');p(x+5,y+h-9,w-10,3,'#2b697b');
 }
+function pixelRoofDetails(x,y,w,roofColor,level){
+ const p=(a,b,ww,hh,c)=>{ctx.fillStyle=c;ctx.fillRect(a,b,ww,hh)};
+ for(let row=0;row<3;row++)for(let col=0;col<Math.floor(w/18);col++){
+  const xx=x+8+col*18+row*4,yy=y-34+row*13;
+  p(xx,yy,14,4,row%2?'#e9bb8d':'#d9a47e');
+  p(xx+3,yy+4,8,2,'#865a4c');
+ }
+ if(level>=3){p(x+w/2-18,y-48,36,22,'#725347');p(x+w/2-13,y-44,26,15,'#d9b77e');p(x+w/2-4,y-42,8,12,'#9ac6c1')}
+ if(level>=6){p(x+13,y-53,9,20,'#b99d76');p(x+15,y-58,5,7,'#f1d49b')}
+}
+function pixelMeadowPatch(x,y,variant){
+ const p=(a,b,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(a,b,w,h)};
+ const colors=['#9bc279','#7fb36e','#b4c77a'];
+ for(let i=0;i<5;i++){const xx=x+(i*17+variant*5)%48,yy=y+(i*11)%25;p(xx,yy,9,3,colors[(i+variant)%3]);p(xx+3,yy-3,3,3,'#5c8d54')}
+}
 function pixelFlower(x,y,kind=0){
  const p=(a,b,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(a,b,w,h)};
  ctx.save();ctx.translate(Math.round(x),Math.round(y));
@@ -248,6 +263,7 @@ for(let y=0;y<870;y+=28)for(let x=0;x<1000;x+=28){let n=rng(x*2+y*7);box(x,y,28,
 for(const [x,y,v] of [[72,135,0],[110,730,1],[876,126,0],[920,730,1],[80,300,1],[900,305,0],[350,120,1],[650,720,0]])pixelTree(x,y,v);
 pixelWater(62,560,100,92,t);pixelWater(820,565,116,86,t);
 for(const [x,y,v] of [[335,300,0],[360,505,1],[620,560,2],[590,120,0],[800,515,1],[170,540,2],[380,790,0],[730,80,1]])pixelFlower(x,y,v);
+for(const [x,y,v] of [[55,210,0],[780,220,1],[200,785,2],[750,765,0]])pixelMeadowPatch(x,y,v);
 pathBorder(429,0,142,870);pathBorder(0,350,1000,133);
 for(let i=0;i<180;i++){let x=rng(i+12)*995,y=rng(i+135)*865;if((x>427&&x<572)||(y>347&&y<483))continue;box(x,y,4,3,i%3?'#79a368':'#d7be78')}
 for(let y=3;y<870;y+=24)for(let x=432;x<570;x+=36){box(x+(y%3)*5,y,31,19,(x+y)%5?'#d9bd8d':'#e3c99e');box(x+5,y+3,20,2,'#d6c5a0')}
@@ -288,7 +304,7 @@ const lvl=idx===0?S.forge:idx===1?S.mine:idx===2?1+Math.floor(S.merchantRep/3):1
 if(lvl>=2){box(x-12,y+16,12,h-10,'#9d8066');box(x+w,y+16,12,h-10,'#9d8066');box(x+4,y+h-11,w-8,9,'#d7bc80')}
 if(lvl>=5){box(x+w/2-5,y-64,10,18,'#f2cf7d');poly([[x+w/2,y-84],[x+w/2-14,y-63],[x+w/2+14,y-63]],'#e2a85e')}
 // Upper roof highlight, chimney glow, and roof tiles for visual depth.
-for(let q=0;q<6;q++){const tx=x+q*(w/6);box(tx+6,y-33+(q%2)*3,Math.max(9,w/9),4,'#ffffff1e')}
+pixelRoofDetails(x,y,w,roof,lvl);
 if(idx===0){const flicker=5+Math.sin(t*8)*3;oval(x+w-4,y-75,10+flicker,6+flicker/2,'#ffbd4c55')}
 if(lvl>=10){box(x-23,y-16,12,38,'#d4b66e');box(x+w+11,y-16,12,38,'#d4b66e');box(x-26,y-23,18,8,'#e8d395');box(x+w+8,y-23,18,8,'#e8d395')}
 text(b.n+' Lv.'+lvl,x+w/2,y-78,20);text('▼',x+w/2,y+h+32,16,'#ffe6a4');
