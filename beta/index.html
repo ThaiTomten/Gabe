@@ -653,7 +653,7 @@ const FISH_SPECIES=[
 function marketRate(){return Math.max(.8,Math.min(1.6,Number(S.marketDemand)||1))}
 function refreshMarket(){
  S.marketCycle=(S.marketCycle||0)+1;
- S.marketDemand=[.9,1,1.15,1.3,1.05][S.marketCycle%5];
+ S.marketDemand=[1,1.15,1.3,.9,1.05][S.marketCycle%5];
 }
 function marketReward(base){return Math.round(base*marketRate())}
 function fishStocks(){if(!S.fishSpecies||typeof S.fishSpecies!=='object'||Array.isArray(S.fishSpecies))S.fishSpecies={};return S.fishSpecies}
