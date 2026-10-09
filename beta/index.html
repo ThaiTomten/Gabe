@@ -1,4 +1,4 @@
-<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 5.7 · Speltest</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
+<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 5.8 · Speltest</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
 header{background:#78533c;color:#fff0d0;border-bottom:4px solid #b98a51;text-shadow:1px 2px #553e31}
 #bottom{background:#78573e;border-top:4px solid #b98a51}
 button{background:#b28a5a;color:#fff7e7;border:2px solid #e2b879;box-shadow:inset 0 2px #f5d39b,0 3px #5b4134;font-weight:700}
@@ -23,7 +23,22 @@ body{display:flex;flex-direction:column;padding-top:env(safe-area-inset-top);pad
 #attackButton:disabled,#dodgeButton:disabled{opacity:.75;background:#715741;color:#f5e6cd;box-shadow:none}
 #map[data-combat="true"] #msg{top:58px}
 #msg{transition:opacity .2s;line-height:1.35}
-</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="interactionHint"></div><div id="msg">Beta Preview 5.7 · Speltest · Emberfall · Original Art</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()" id="actionButton" aria-label="Utför handling">✦ Action</button><button id="attackButton" type="button"><span>⚔ Attack</span><small id="attackState">Redo</small></button><button id="dodgeButton" type="button"><span>↗ Undvik</span><small id="dodgeState">Redo</small></button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
+/* 5.8: consistent, legible parchment menus and explicit recipe states. */
+#modal{line-height:1.5;color:#403125}#modal h2{font-size:20px;padding-right:34px;line-height:1.3}
+#modal button{background:#385e53;color:#fff6df;border-color:#28453e;box-shadow:inset 0 1px #698479;min-height:46px;line-height:1.25}
+#modal button:disabled{opacity:1;background:#d9c49f;color:#574b39;border-color:#ac946b;box-shadow:none}
+#modal .game-hint{background:#f5e3bf;color:#403125;border-left-color:#537363;margin:12px 0}
+#modal .fish-legend{color:#4a4334}.fishing-actions{background:#e8c99b}
+#notice{position:sticky;top:0;z-index:2;margin:0 38px 10px 0;padding:10px 12px;background:#294f45;color:#fff4d7;border:1px solid #bfc99e;border-radius:7px;line-height:1.4}
+#notice:empty{display:none}#close{z-index:3}
+.recipe-card58{background:#f4dfb9;border:1px solid #ac875b;border-radius:10px;padding:12px;margin:12px 0}
+.recipe-title58{display:flex;align-items:center;gap:9px}.recipe-title58 h3{margin:0!important;font-size:17px}.recipe-title58 span{font-size:24px}
+.recipe-output58{font-weight:700;margin:8px 0}.recipe-needs58{list-style:none;margin:8px 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.recipe-needs58 li{padding:4px 8px;border-radius:6px;background:#e4cc9f;font-size:13px}.recipe-needs58 .missing58{background:#efd0b4;color:#702f20}
+.recipe-state58{font-size:13px;margin:8px 0;color:#4a4435}.recipe-card58>button{width:100%;margin:4px 0!important}
+.house-grid58{display:grid;gap:10px}.house-grid58 button{text-align:left;margin:0!important;padding:12px!important}.house-grid58 small{display:block;font-size:12px;font-weight:400;margin-top:5px;color:#f1e2c6}
+.guide-step58{border-left:4px solid #557c62;background:#f5e4c2;padding:12px;margin:10px 0}.guide-step58 p{margin:6px 0}
+</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="interactionHint"></div><div id="msg">Beta Preview 5.8 · Speltest · Emberfall · Original Art</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Företag</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Ryggsäck</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()" id="actionButton" aria-label="Utför handling">✦ Action</button><button id="attackButton" type="button"><span>⚔ Attack</span><small id="attackState">Redo</small></button><button id="dodgeButton" type="button"><span>↗ Undvik</span><small id="dodgeState">Redo</small></button><button onclick="show('guide')">? Guide</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><p id="notice" role="status" aria-live="polite"></p><div id="content"></div></div><script>
 const PLAYTEST55=!!(window.location&&/(?:[?&])speltest=1(?:&|$)/.test(window.location.search||''));
 const SAVE_KEY=PLAYTEST55?'runeforge_playtest_55':'runeforge_beta_preview_01';
 const BACKUP_KEY=PLAYTEST55?'runeforge_playtest_55_backup':'runeforge_beta_preview_backup_52';
@@ -552,7 +567,7 @@ function recordDungeonDefeat57(kind){
  if(S.dungeonKills===3)S.dungeonRewardPending=true;
 }
 function activeFieldEnemy(e,i){return e.hp>0&&!(e.scene==='forest'&&S.forestWolfDefeated)&&!(e.scene==='dungeon'&&S.dungeonDefeated57.includes(e.kind))}
-function currentPosition(){return S.scene==='forest'?{x:S.forestX,y:S.forestY}:S.scene==='dungeon'?{x:S.dungeonX,y:S.dungeonY}:{x:S.x,y:S.y}}
+function currentPosition(){return S.scene==='forest'?{x:S.forestX,y:S.forestY}:S.scene==='dungeon'?{x:S.dungeonX,y:S.dungeonY}:S.scene==='interior'?{x:S.insideX,y:S.insideY}:{x:S.x,y:S.y}}
 const magicProjectiles=[];
 const FIELD_ATTACK57=Object.freeze({radius:90,windup:.65,recovery:.9});
 const combatLabels57=[];
@@ -831,7 +846,7 @@ if(productionClock>=5){productionClock-=5;businessCycle()}
 
 if(S.expeditionEnds&&Date.now()>=S.expeditionEnds){finishExpedition();persist()}if(autosaveClock>=12){autosaveClock=0;persist()}
 if(S.scene==='dungeon')drawDungeon();else if(S.scene==='interior')drawInterior();else if(S.scene==='forest')drawForest();else draw();updateHUD56();if(S.scene==='forest'||S.scene==='dungeon')drawCombatEffects(S.scene);
-drawInteractionTarget();
+drawInteractionTarget();drawHouseStations58();drawGuide58();
 if(S.visualTime==='dusk'&&(S.scene==='village'||S.scene==='forest')){ctx.fillStyle='#28375a40';ctx.fillRect(0,0,ww,hh)}drawCombatHUD57();
 
 }catch(err){if(!movementErrorShown){movementErrorShown=true;note('Spelfel: '+err.message);}console.error(err)}
@@ -915,7 +930,10 @@ function interactionTarget(){
  const add=(x,y,range,label,kind,data)=>{const distance=Math.hypot(p.x-x,p.y-y);if(distance<=range)targets.push({x,y,label,kind,data,distance})};
  if(S.scene==='interior'){
   add(500,748,105,'Lämna','leave');
-  return targets[0]||{label:({forge:'Smid',mine:'Bryt malm',market:'Handla',guild:'Använd gillet'}[S.houseType]||'Använd'),kind:'house'};
+  if(targets.length)return targets[0];
+  for(const station of houseStations58())add(station.x,station.y,82,station.actionLabel,'station',station);
+  targets.sort((a,b)=>a.distance-b.distance);
+  return targets[0]||{label:'Visa huset',kind:'house'};
  }
  if(nearPond())for(const [x,y,w,h] of fishingPonds(S.scene)){
   const px=Math.max(x,Math.min(p.x,x+w)),py=Math.max(y,Math.min(p.y,y+h));add(px,py,68,'Fiska','fish');
@@ -935,6 +953,26 @@ function interactionTarget(){
  }
  targets.sort((a,b)=>a.distance-b.distance);return targets[0]||null;
 }
+const HOUSE_STATIONS58={
+ forge:[{id:'anvil',name:'Smide',actionLabel:'Smid',panel:'crafting',x:365,y:435,detail:'Svärd, rustning och ståltackor'},{id:'smith',name:'Smeden',actionLabel:'Förbättra',panel:'upgrades',x:680,y:565,detail:'Förbättra vapen och rustning'}],
+ market:[{id:'kitchen',name:'Kök',actionLabel:'Laga mat',panel:'cooking',x:665,y:380,detail:'Laga fångsten och fyll ryggsäcken'},{id:'counter',name:'Handel',actionLabel:'Handla',panel:'trading',x:680,y:565,detail:'Sälj varor och lämna kontrakt'}],
+ mine:[{id:'desk',name:'Brytning',actionLabel:'Bryt malm',panel:'mining',x:445,y:370,detail:'Samla malm till smide och produktion'},{id:'foreman',name:'Arbetsledaren',actionLabel:'Företag',panel:'empire',x:680,y:565,detail:'Utveckla gruvan och anställ personal'}],
+ guild:[{id:'board',name:'Uppdrag',actionLabel:'Uppdrag',panel:'quests',x:500,y:390,detail:'Lämna resurser och hämta belöningar'},{id:'expedition',name:'Expeditioner',actionLabel:'Expeditioner',panel:'expeditions',x:680,y:565,detail:'Skicka hjälpare efter malm och runor'}]
+};
+function houseStations58(type=S.houseType){return HOUSE_STATIONS58[type]||HOUSE_STATIONS58.forge}
+function stationDestination58(type,id){const st=houseStations58(type).find(s=>s.id===id);return {scene:'interior',house:type,x:st.x,y:st.y,label:st.name}}
+function drawHouseStations58(){
+ if(panel||S.scene!=='interior')return;
+ const p=currentPosition(),sc=Math.max(.6,Math.min(ww/550,hh/470)),target=interactionTarget();
+ ctx.save();ctx.font='bold 12px system-ui';ctx.textAlign='center';
+ for(const st of houseStations58()){
+  const x=ww/2+(st.x-p.x)*sc,y=hh/2+(st.y-p.y)*sc,selected=target?.data===st;
+  if(y<5||y>hh-40||x<-30||x>ww+30)continue;
+  const name=(selected?'◆ ':'')+st.name,w=ctx.measureText(name).width+16,lx=Math.max(w/2+5,Math.min(ww-w/2-5,x)),top=Math.max(6,y-72);
+  ctx.fillStyle=selected?'#f5dfaa':'#243a32ee';ctx.fillRect(lx-w/2,top,w,23);ctx.fillStyle=selected?'#403125':'#fff0cb';ctx.fillText(name,lx,top+16);
+ }
+ ctx.restore();
+}
 function contextualActionLabel(){return interactionTarget()?.label||'Action'}
 function updateActionButton(){
  const cast=document.getElementById('castFishButton');if(cast)cast.disabled=!nearPond()||fishingCooldown>0;
@@ -944,7 +982,8 @@ function updateActionButton(){
  b.disabled=!target;b.setAttribute('aria-label',target?label:'Gå närmare en person, dörr eller strand');
  const hint=document.getElementById('interactionHint');
  const combat=['forest','dungeon'].includes(S.scene),warning=fieldEnemies.some((e,i)=>e.scene===S.scene&&activeFieldEnemy(e,i)&&e.windup>0);
- const message=panel?'':warning?'! Slag på väg · lämna ringen eller tryck Undvik':target?label+(target.kind==='fish'?' · stå kvar på stranden':''):combat?'Rikta dig mot fienden · Attack slår · Undvik flyttar dig':'Närma dig en person, dörr eller resurs';
+ const guide=guideStep58(),guideHint=guide?(guide.done?'✓ '+guide.text:'Mål: '+guide.text):'';
+ const message=panel?'':warning?'! Slag på väg · lämna ringen eller tryck Undvik':target&&target.kind!=='house'?label+(target.kind==='fish'?' · stå kvar på stranden':''):guideHint?guideHint:target?.kind==='house'?'Gå till en arbetsplats eller tryck Visa huset':combat?'Rikta dig mot fienden · Attack slår · Undvik flyttar dig':'Närma dig en person, dörr eller resurs';
  if(hint&&hint.textContent!==message)hint.textContent=message;
 }
 function leaveHouse(){
@@ -953,7 +992,7 @@ function leaveHouse(){
  hide();changeZone('village',b?b.x+b.w/2:500,b?b.y+b.h+50:550,'Tillbaka utanför '+(b?.n||'huset'));
 }
 function drawInteractionTarget(){
- if(panel)return;const t=interactionTarget();if(!t||!Number.isFinite(t.x))return;
+ if(panel)return;const t=interactionTarget();if(!t||t.kind==='station'||!Number.isFinite(t.x))return;
  const p=currentPosition(),sc=Math.max(.6,Math.min(ww/550,hh/470));
  ctx.save();ctx.translate(ww/2-p.x*sc,hh/2-p.y*sc);ctx.scale(sc,sc);
  ctx.strokeStyle='#f8dc94';ctx.lineWidth=3;ctx.beginPath();ctx.ellipse(t.x,t.y,19,9,0,0,Math.PI*2);ctx.stroke();ctx.restore();
@@ -1145,7 +1184,7 @@ function inventoryPixelIcon(name,emoji){
  let rects='';for(let y=0;y<rows.length;y++)for(let x=0;x<rows[y].length;x++){const color=ITEM_COLORS[rows[y][x]];if(color)rects+='<rect x="'+x+'" y="'+y+'" width="1" height="1" fill="'+color+'"/>'}
  return '<svg viewBox="0 0 8 8" width="38" height="38" style="image-rendering:pixelated" aria-hidden="true">'+rects+'</svg>';
 }
-function changeInventoryCategory(category){if(!['all','resources','equipment','goods'].includes(category))return false;S.inventoryCategory=category;persist();show('bag');return true}
+function changeInventoryCategory(category){if(!['all','resources','equipment','goods','food'].includes(category))return false;S.inventoryCategory=category;persist();show('bag');return true}
 function changeTradeReserve(type,delta){
  const key=type==='steel'?'tradeReserveSteel':type==='rune'?'tradeReserveRune':null;
  if(!key)return false;S[key]=Math.max(0,Math.min(50,(S[key]||0)+delta));persist();show('production');return true;
@@ -1379,20 +1418,25 @@ function playtestTravel55(place){
  else if(place==='fishing')changeZone('village',110,540,'Speltest: stanna vid stranden och tryck Fiska.');
  else if(place==='kitchen'){
   S.houseType='market';S.hp=Math.min(S.hp,12);S.fish=Math.max(S.fish,8);S.fishSpecies={sunperch:S.fish};S.wood=Math.max(S.wood,10);
-  changeZone('interior',500,585,'Speltest: tryck Handla och öppna matlagningen.');
+  changeZone('interior',665,415,'Speltest: tryck Laga mat vid köket. Recepten visar vad som behövs.');
+ }else if(place==='smithing'){
+  S.houseType='forge';S.ore=Math.max(S.ore,10);S.wood=Math.max(S.wood,10);changeZone('interior',365,465,'Speltest: tryck Smid vid städet.');
  }else return false;
  persist();return true;
 }
 function show(p){
+const samePanel=panel===p,retainedNotice=samePanel?document.getElementById('notice').textContent:'',scroll=samePanel?(document.getElementById('modal').scrollTop||0):0;
 if(fishingGame&&p!=='fishing'){fishingGame=null;fishingCooldown=.5}panel=p;updateCombatUI57();vx=vy=0;const nub=document.getElementById('nub');if(nub)nub.style.transform='';updateActionButton();document.getElementById('modal').style.display='block';
 let h='';
 if(p==='playtest'&&PLAYTEST55){
- h='<h2>Speltest 5.7</h2><p>Testa tydligare strider, träffar och undanmanövrer. Detta läge har en egen testsparning.</p>'+
+ h='<h2>Speltest 5.8</h2><p>Testa arbetsplatser, recept och vägledning. Strider, fiske och byn finns kvar att prova. Detta läge har en egen testsparning.</p>'+
  '<button onclick="playtestTravel55(\'village\')">Byn · hus och NPC:er</button>'+
  '<button onclick="playtestTravel55(\'forest\')">Skogen · hjälten och Duskwolf</button>'+
  '<button onclick="playtestTravel55(\'dungeon\')">Grottan · tre monstertyper</button>'+
  '<button onclick="playtestTravel55(\'fishing\')">Stranden · prova fisket</button>'+
  '<button onclick="playtestTravel55(\'kitchen\')">Köket · prova matlagning</button>'+
+ '<button onclick="playtestTravel55(\'smithing\')">Smedjan · prova recept</button>'+
+ '<button onclick="show(\'guide\')">Guide · välj ett mål att följa</button>'+
  '<p>Återvänd till testplatserna via ⚙ → Speltest. Använd joysticken för att gå, Action för att använda saker och Attack för att slåss.</p>'+
  '<p>I strid: vänta på ! Slag om, lämna ringen och prova Undvik. Öppna ryggsäcken mitt i uppladdningen: striden ska stå still tills du stänger menyn. I grottan kan du besegra fienderna i valfri ordning.</p>';
 }else if(p==='empire'){
@@ -1464,9 +1508,11 @@ h='<h2>🎣 Emberfall Fiskeri</h2><p class="game-hint"><strong>Så fiskar du:</s
 '<p>Fisk: '+S.fish+' · Nivå '+S.fisheryLevel+' · Sålda totalt: '+S.fishSold+' · Fångade vid damm: '+S.fishCaughtAtPond+'</p>'+fishInventoryHTML()+
 recipeButton('Kasta från stranden','castfish',nearPond()&&fishingCooldown<=0)+btn('🏪 Sälj fångsten (artspecifika priser)','sellfish')+
 btn('⬆ Fiskeri nivå '+(S.fisheryLevel+1)+' ('+(65*S.fisheryLevel)+' guld)','upfishery')+
-btn(S.fisheryManager?'✓ Fiskare anställd':'Anställ fiskare (180 guld)','hirefisher');
-}else if(p==='guide'){
-h='<h2>🗺 Välkommen till Emberfall</h2><p class="game-hint">Flytta med joysticken. När du är nära något visar Action-knappen exakt vad du kan göra.</p><p><strong>Fiske:</strong> följ stranden till Fiska visas. Fånga fisk, sälj eller laga mat.</p><p><strong>Hus:</strong> Smedjan i nordväst tillverkar utrustning. Handelsboden i sydväst har kök och försäljning. Gruvan ger malm; gillet erbjuder uppdrag.</p><p>1. Öppna Empire och samla malm och trä.</p><p>2. Smid ett svärd, utrusta hjälten eller sälj det.</p><p>3. Hämta belöningar i Uppdrag.</p><p>4. Utforska grottan vid goblinen öster om byn.</p><p>5. Anställ managers för automatisk produktion.</p>'+btn('Öppna Empire','openempire')+btn('Öppna Uppdrag','openquests');
+btn(S.fisheryManager?'✓ Fiskare anställd':'Anställ fiskare (180 guld)','hirefisher')+btn('Visa vägen till första måltiden','guideto-meal');
+}else if(p==='guide'){h=guideMenu58();
+}else if(p==='crafting'){h=craftingMenu58();
+}else if(p==='trading'){h=tradingMenu58();
+}else if(p==='mining'){h=miningMenu58();
 }else if(p==='production'){
 h='<h2>🏭 Produktion & lager</h2><p>Omvandla råvaror till förädlade varor och sälj när efterfrågan är hög.</p>'+
 businessReportHTML()+productionOverview()+'<div class="inventory-section"><h3>⚙ Produktionsprioritet</h3>'+['balanced','steel','rune'].map(v=>btn((S.productionPriority===v?'✓ ':'')+({balanced:'Balanserad',steel:'Stål först',rune:'Runvaror först'}[v]),'priority-'+v)).join('')+'<p>Stålreserv: '+S.tradeReserveSteel+' · Runreserv: '+S.tradeReserveRune+'</p>'+btn('Stål −','reservesteelminus')+btn('Stål +','reservesteelplus')+btn('Runor −','reserveruneminus')+btn('Runor +','reserveruneplus')+'</div><div class="inventory-section"><h3>📦 Lager '+warehouseUsed()+'/'+S.warehouseCapacity+'</h3><p>Malm: '+S.ore+' · Trä: '+S.wood+' · Runfragment: '+S.runes+'</p><p>Ståltackor: '+S.steelStock+' · Runvaror: '+S.runeGoods+'</p>'+btn('Utöka lager ('+(100*S.warehouseLevel)+' guld)','upwarehouse')+'</div>'+
@@ -1478,20 +1524,16 @@ const items=[
 ['🛡️','Väktarsigill',S.wardSeals,'rare'],['🌌','Monsteressens',S.monsterEssence,'rare'],['⚙️','Ståltackor',S.steelStock,'rare'],['🔮','Runvaror',S.runeGoods,'rare'],['🪙','Guld',S.gold,'common'],['⛏️','Järnmalm',S.ore,'common'],['🪵','Trä',S.wood,'common'],['⚔️','Svärd',S.swords,'common'],
 ['✨','Runfragment',S.runes,'rare'],['🧪','Potions',S.potions,'common'],['🔮','Runstav',S.staffOwned?1:0,'rare'],['🛡️','Rustning',S.heroArmor?1:0,'rare'],['🗡️','Utrustat svärd',S.heroSword?1:0,'rare'],['💎','Reliker',(S.lootItems||[]).length,'rare'],['🪖','Runhjälm',S.helmetOwned?1:0,'rare'],['🥾','Stövlar',S.bootsOwned?1:0,'common']
 ];
-h='<h2>🎒 Inventarium</h2><p>Din ryggsäck · Material, utrustning och förbrukningsvaror</p>'+['all','resources','equipment','goods'].map(c=>btn((S.inventoryCategory===c?'✓ ':'')+({all:'Alla',resources:'Material',equipment:'Utrustning',goods:'Produkter'}[c]),'invcat-'+c)).join('')+'<div class="invgrid">'+items.filter(([emoji,name])=>S.inventoryCategory==='all'||(S.inventoryCategory==='resources'&&['Järnmalm','Trä','Runfragment','Monsteressens'].includes(name))||(S.inventoryCategory==='goods'&&['Ståltackor','Runvaror','Väktarsigill','Svärd','Guld'].includes(name))||(S.inventoryCategory==='equipment'&&['Runstav','Rustning','Utrustat svärd','Reliker','Runhjälm','Stövlar','Potions'].includes(name))).map(([emoji,name,count,rarity])=>'<div class="slot '+(rarity==='rare'?'rarity':'')+'">'+inventoryPixelIcon(name,emoji)+'<small>'+name+'</small><strong>'+count+'</strong></div>').join('')+'</div><div class="inventory-section"><h3>⚒ Utrustning & crafting</h3>'+btn('Utrusta svärd','equip')+btn('Vapen & stridsstil','weapons')+btn('⚒ Uppgradera utrustning','upgrades')+btn('📖 Föremålsguide','itemguide')+btn('💎 Loot & reliker','loot')+btn('Tillverka rustning','armor')+btn('Köp potion · 25 guld','buypotion')+'</div>'+foodInventoryHTML();
+h='<h2>🎒 Inventarium</h2><p>Din ryggsäck · Material, utrustning och förbrukningsvaror</p>'+['all','resources','equipment','goods','food'].map(c=>btn((S.inventoryCategory===c?'✓ ':'')+({all:'Alla',resources:'Material',equipment:'Utrustning',goods:'Produkter',food:'Mat & fisk'}[c]),'invcat-'+c)).join('')+'<div class="invgrid">'+items.filter(([emoji,name])=>S.inventoryCategory==='all'||(S.inventoryCategory==='resources'&&['Järnmalm','Trä','Runfragment','Monsteressens'].includes(name))||(S.inventoryCategory==='goods'&&['Ståltackor','Runvaror','Väktarsigill','Svärd','Guld'].includes(name))||(S.inventoryCategory==='equipment'&&['Runstav','Rustning','Utrustat svärd','Reliker','Runhjälm','Stövlar','Potions'].includes(name))).map(([emoji,name,count,rarity])=>'<div class="slot '+(rarity==='rare'?'rarity':'')+'">'+inventoryPixelIcon(name,emoji)+'<small>'+name+'</small><strong>'+count+'</strong></div>').join('')+'</div>'+(S.inventoryCategory==='food'?'':'<div class="inventory-section"><h3>⚒ Utrustning & crafting</h3>'+btn('Utrusta svärd','equip')+btn('Vapen & stridsstil','weapons')+btn('⚒ Uppgradera utrustning','upgrades')+btn('📖 Föremålsguide','itemguide')+btn('💎 Loot & reliker','loot')+btn('Tillverka rustning','armor')+btn('Köp potion · 25 guld','buypotion')+'</div>')+((S.inventoryCategory==='all'||S.inventoryCategory==='food')?'<h3>Fisk & mat</h3>'+fishInventoryHTML()+foodInventoryHTML()+btn('Visa vägen till köket','guideto-meal'):'');
 }else if(p==='cooking'){h=cookingMenu();
-}else if(p==='house'){
-const type=S.houseType||'forge';
-const names={forge:'⚒ Smedjans interiör',mine:'⛏ Gruvkontoret',market:'🏪 Handelsboden',guild:'🛡 Äventyrargillet'};
-h='<h2>'+names[type]+'</h2><div class="inventory-section"><p>'+(type==='forge'?'Glödande ässjor och verktyg väntar på nya beställningar.':type==='mine'?'Gruvans arbetsledare organiserar brytning och transporter.':type==='market'?'Köpmän jämför priser och fyller sina lager.':'Äventyrare samlas runt kartor och planerar expeditioner.')+'</p></div>'+
-(type==='forge'?'<p>Svärd: malm '+S.ore+'/2 · trä '+S.wood+'/1 → '+S.forge+' svärd</p>'+recipeButton('Smid svärd','forge',S.ore>=2&&S.wood>=1)+btn('🏰 Företagsöversikt','openempire'):type==='mine'?btn('⛏ Bryt malm','mine')+btn('🏰 Företagsöversikt','openempire'):type==='market'?btn('📜 Handelskontrakt','opencontracts')+btn('🏪 Sälj svärd','sell'):btn('🧭 Expeditioner','openexpeditions')+btn('🛡 Hjälte','openhero'))+(type==='market'?btn('🍲 Kök & matlagning','opencooking'):type==='forge'?btn('🏭 Crafting & produktion','openproduction')+btn('🪖 Utrustningsrecept','gearcraft'):'')+btn('🚪 Lämna byggnaden','leavehouse');
+}else if(p==='house'){h=houseMenu58();
 }else{
 h='<h2>⚙ Inställningar</h2>'+btn('Virtuell joystick','joystick')+btn('Dra på kartan','drag')+
 btn('Långsam rörelse','slow')+btn('Normal rörelse','normal')+btn('Snabb rörelse','fast')+
-'<p>Beta Preview 5.7 · Speltest · Separat sparning.</p>'+(PLAYTEST55?'<button onclick="show(\'playtest\')">Speltest · välj testplats</button>':'')+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
+'<p>Beta Preview 5.8 · Speltest · Separat sparning.</p>'+(PLAYTEST55?'<button onclick="show(\'playtest\')">Speltest · välj testplats</button>':'')+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
 }
 document.getElementById('content').innerHTML=h;
-document.getElementById('notice').textContent='';
+document.getElementById('notice').textContent=retainedNotice;document.getElementById('modal').scrollTop=scroll;
 if(p==='fishing'){const strike=document.getElementById('fishStrike');if(strike){strike.addEventListener('pointerdown',e=>{e.preventDefault();fishingTap()});strike.addEventListener('click',e=>{if(e.detail===0)fishingTap()})}renderFishing()}
 }
 function hide(){if(fishingGame){fishingGame=null;fishingCooldown=.5}panel='';updateActionButton();updateCombatUI57();document.getElementById('modal').style.display='none';S.combat=null}
@@ -1521,18 +1563,96 @@ function eatMeal(id='legacy'){
  const actual=Math.min(heal,max-S.hp);meals[id]--;S.cookedMeals--;S.hp+=actual;persist();note('Måltid: +'+actual+' HP');return true;
 }
 function foodInventoryHTML(){
- const meals=mealInventory();
- return '<div class="inventory-section"><h3>Mat i ryggsäcken</h3>'+[...COOKING_RECIPES,{id:'legacy',name:'Tidigare lagad måltid',heal:12}].filter(r=>meals[r.id]>0).map(r=>'<p>'+r.name+' · '+meals[r.id]+' st</p>'+btn('Ät · +'+r.heal+' HP','eat-'+r.id)).join('')+(S.cookedMeals?'':'<p>Inga måltider ännu. Laga din fångst i Handelsbodens kök.</p>')+'</div>';
+ const meals=mealInventory(),missingHP=Math.max(0,20+(S.level-1)*4-S.hp);
+ return '<div class="inventory-section"><h3>Mat i ryggsäcken</h3>'+[...COOKING_RECIPES,{id:'legacy',name:'Tidigare lagad måltid',heal:12}].filter(r=>meals[r.id]>0).map(r=>'<p><strong>'+r.name+'</strong> · '+meals[r.id]+' st</p>'+recipeButton(missingHP?'Ät · återställ '+Math.min(r.heal,missingHP)+' HP':'Fullt HP · spara maten','eat-'+r.id,missingHP>0)).join('')+(S.cookedMeals?'':'<p>Ingen lagad mat ännu. Köket finns i Handelsboden.</p>')+'</div>';
 }
 function recipeButton(label,action,ready){return '<button type="button" '+(action==='castfish'?'id="castFishButton" ':'')+(ready?'':'disabled')+' onclick="window.action(\''+action+'\')">'+label+'</button>'}
+const MATERIAL_NAMES58={ore:'Malm',wood:'Trä',runes:'Runfragment',fish:'Fisk',steelStock:'Ståltacka',monsterEssence:'Monsteressens'};
+function recipeNeeds58(needs){
+ return Object.entries(needs).filter(([,count])=>count>0).map(([key,count])=>({key,name:MATERIAL_NAMES58[key]||key,need:count,have:Math.max(0,Number(S[key])||0),missing:Math.max(0,count-(Number(S[key])||0))}));
+}
+function recipeCard58(r){
+ const needs=recipeNeeds58(r.needs),missing=needs.filter(n=>n.missing>0),reason=r.blocked||(missing.length?'Saknas: '+missing.map(n=>n.missing+' '+n.name.toLowerCase()).join(', '):'Redo att tillverka');
+ return '<section class="recipe-card58"><div class="recipe-title58"><span aria-hidden="true">'+r.icon+'</span><h3>'+r.name+'</h3></div><p class="recipe-output58">'+r.output+'</p><ul class="recipe-needs58">'+needs.map(n=>'<li class="'+(n.missing?'missing58':'')+'">'+(n.missing?'− ':'✓ ')+n.name+' '+n.have+' / '+n.need+'</li>').join('')+'</ul><p class="recipe-state58">'+reason+'</p>'+recipeButton(r.button,r.action,!r.blocked&&!missing.length)+(r.detail?'<p class="recipe-state58">'+r.detail+'</p>':'')+'</section>';
+}
+function craftingMenu58(){
+ const recipes=[
+  {name:'Svärd',icon:'⚒',needs:{ore:2,wood:1},output:S.forge+' svärd till ryggsäcken',button:'Smid '+S.forge+' svärd',action:'forge',detail:'Utrusta ett svärd till hjälten eller sälj för '+(35+Math.floor(S.merchantRep/5)*5)+' guld per styck.'},
+  {name:'Rustning',icon:'🛡',needs:{ore:5,wood:3},output:'1 rustning · utrustas direkt',button:S.heroArmor?'Redan utrustad':'Tillverka rustning',action:'armor',blocked:S.heroArmor?'Du har redan rustning. Förbättra den hos smeden.':'',detail:'Minskar skadan från monster.'},
+  {name:'Ståltacka',icon:'⚙',needs:{ore:PRODUCTION_RECIPES.steel.ore,wood:PRODUCTION_RECIPES.steel.wood},output:'1 ståltacka till lagret',button:'Tillverka ståltacka',action:'craftsteel',blocked:warehouseSpace()<1?'Lagret är fullt. Utöka det i Produktion & lager.':'',detail:'Används till runvaror eller säljs via produktionen.'}
+ ];
+ return '<h2>Smide & recept</h2><p class="game-hint">Varje tryck tillverkar mängden som visas. Material dras från ryggsäcken.</p>'+recipes.map(recipeCard58).join('')+'<h3>Fortsätt med utrustningen</h3>'+recipeButton(S.heroSword?'Svärd utrustat':'Utrusta 1 svärd','equip',!S.heroSword&&S.swords>0)+btn('Hjälm & stövlar','gearcraft')+btn('Runstav','weapons')+btn('Förbättra utrustning','upgrades')+btn('Produktion & lager','openproduction')+btn('Guide: smid och utrusta','guideto-sword');
+}
 function cookingMenu(){
  const inKitchen=S.scene==='interior'&&S.houseType==='market';
- return '<h2>Kök & matlagning</h2><p class="game-hint">'+(inKitchen?'Välj ett recept. Maten hamnar i ryggsäcken och kan ätas inför nästa strid.':'Köket finns i Handelsboden, sydväst i Emberfall. Gå in och välj Kök.')+'</p>'+COOKING_RECIPES.map(r=>'<div class="inventory-section"><h3>'+r.name+'</h3><p>Fisk '+S.fish+'/'+r.count+(r.wood?' · Trä '+S.wood+'/'+r.wood:'')+'</p><p>Ger 1 '+r.name.toLowerCase()+' · +'+r.heal+' HP</p>'+recipeButton('Laga '+r.name,'cook-'+r.id,inKitchen&&S.fish>=r.count&&S.wood>=(r.wood||0))+'</div>').join('')+foodInventoryHTML()+btn('Till ryggsäcken','openbag');
+ return '<h2>Kök & matlagning</h2><p class="game-hint">'+(inKitchen?'Välj ett recept. Maten sparas i ryggsäcken. Ät den när du behöver återställa HP.':'Besök Handelsbodens kök i sydvästra Emberfall för att laga maten.')+'</p>'+COOKING_RECIPES.map(r=>recipeCard58({name:r.name,icon:r.id==='fishstew'?'🍲':'🐟',needs:{fish:r.count,wood:r.wood||0},output:'1 måltid · upp till '+r.heal+' HP',button:'Laga '+r.name.toLowerCase(),action:'cook-'+r.id,blocked:inKitchen?'':'Kräver Handelsbodens kök.'})).join('')+foodInventoryHTML()+btn('Visa vägen till första måltiden','guideto-meal')+btn('Till ryggsäcken','openbag');
+}
+function houseMenu58(){
+ const type=S.houseType||'forge',names={forge:'Smedjan',market:'Handelsboden',mine:'Gruvkontoret',guild:'Äventyrargillet'};
+ return '<h2>'+names[type]+'</h2><p class="game-hint">Gå fram till en märkt arbetsplats och använd Action, eller välj här.</p><div class="house-grid58">'+houseStations58(type).map(st=>'<button onclick="show(\''+st.panel+'\')">'+st.name+'<small>'+st.detail+'</small></button>').join('')+'</div>'+btn('Företagsöversikt','openempire')+btn('Lämna byggnaden','leavehouse');
+}
+function miningMenu58(){
+ return '<h2>Brytning</h2><p class="game-hint">Malm används till svärd, rustning och ståltackor.</p><div class="inventory-section"><h3>Malm i ryggsäcken: '+S.ore+'</h3><p>Varje brytning ger '+S.mine+' malm.</p>'+btn('Bryt +'+S.mine+' malm','mine')+'</div>'+btn('Visa vägen till svärdet','guideto-sword')+btn('Utveckla gruvan & automation','openempire');
+}
+function tradingMenu58(){
+ const price=35+Math.floor(S.merchantRep/5)*5,fishValue=FISH_SPECIES.reduce((sum,f)=>sum+(fishStocks()[f.id]||0)*f.value,0);
+ return '<h2>Handel</h2><p class="game-hint">Försäljning ger guld direkt. Kontrakt kräver flera varor och kan ge extra belöningar.</p><div class="recipe-card58"><h3>Svärd · '+S.swords+' i ryggsäcken</h3><p>'+price+' guld per svärd</p>'+recipeButton('Sälj 1 svärd · +'+price+' guld','sell',S.swords>0)+'</div><div class="recipe-card58"><h3>Fisk · '+S.fish+' st</h3><p>Hela fångsten är värd '+fishValue+' guld. Spara fisk om du vill laga mat.</p>'+recipeButton('Sälj all fisk · +'+fishValue+' guld','sellfish',S.fish>0)+'</div>'+btn('Handelskontrakt','opencontracts')+btn('Till köket','opencooking')+btn('Första försäljningen · vägledning','guideto-sale');
+}
+const GUIDE_GOALS58={meal:'Första måltiden',sword:'Utrusta ett svärd',sale:'Första svärdsaffären'};
+function guideStep58(id=S.guideGoal58){
+ if(!GUIDE_GOALS58[id])return null;
+ if(id==='meal'){
+  if(S.mealsCookedTotal>0)return {done:true,text:'Måltiden är lagad. Maten finns i ryggsäcken.',action:'openbag'};
+  if(S.fish<2)return {text:'Fånga 2 fiskar vid stranden ('+S.fish+'/2).',target:{scene:'village',x:110,y:540,label:'Fiska'}};
+  return {text:'Laga grillad fisk i Handelsbodens kök.',target:stationDestination58('market','kitchen')};
+ }
+ if(id==='sword'&&S.heroSword)return {done:true,text:'Svärdet är utrustat. Du är redo för äventyr.',action:'openhero'};
+ if(id==='sale'&&(S.businessBooks53?.forge?.revenue||0)>0)return {done:true,text:'Första svärdsaffären är klar. Se resultatet i Produktion.',action:'openproduction'};
+ if(S.swords>0)return id==='sword'?{text:'Öppna ryggsäcken och utrusta 1 svärd.',action:'openbag'}:{text:'Sälj 1 svärd i Handelsboden.',target:stationDestination58('market','counter')};
+ if(S.ore<2)return {text:'Bryt malm på gruvkontoret ('+S.ore+'/2).',target:stationDestination58('mine','desk')};
+ if(S.wood<1)return {text:'Samla trä från det markerade trädet i Whisperwood.',target:{scene:'forest',x:280,y:460,label:'Samla trä'}};
+ return {text:'Smid svärd vid städet i Smedjan.',target:stationDestination58('forge','anvil')};
+}
+function guideWaypoint58(){
+ const goal=guideStep58();if(!goal||goal.done||!goal.target)return null;
+ const t=goal.target;
+ if(S.scene===t.scene&&(S.scene!=='interior'||S.houseType===t.house))return t;
+ if(S.scene==='interior')return {x:500,y:748,label:'Lämna huset'};
+ if(S.scene==='forest')return {x:500,y:40,label:'Till Emberfall'};
+ if(S.scene==='dungeon')return {x:88,y:395,label:'Till Emberfall'};
+ if(t.scene==='interior'){
+  const b=buildings.find(b=>b.n===({market:'Marknad',forge:'Smedja',mine:'Gruva',guild:'Gille'})[t.house]);
+  return {x:b.x+b.w/2,y:b.y+b.h+25,label:t.house==='market'?'Handelsboden':b.n};
+ }
+ return t.scene==='forest'?{x:500,y:826,label:'Till Whisperwood'}:t;
+}
+function startGuide58(id){
+ if(!GUIDE_GOALS58[id])return false;
+ S.guideGoal58=id;persist();hide();updateActionButton();note(GUIDE_GOALS58[id]+' · följ målmarkeringen.');return true;
+}
+function guideMenu58(){
+ const current=guideStep58();
+ return '<h2>Guide · välj nästa steg</h2><p>Gå med joysticken. Action byter namn när du når en strand, dörr eller arbetsplats.</p>'+(current?'<div class="guide-step58"><strong>'+GUIDE_GOALS58[S.guideGoal58]+'</strong><p>'+(current.done?'✓ ':'')+current.text+'</p>'+(current.action?btn('Öppna nästa meny',current.action):'<button onclick="hide()">Fortsätt följa målet</button>')+btn('Avsluta vägledningen','guidestop')+'</div>':'')+'<div class="house-grid58">'+Object.entries(GUIDE_GOALS58).map(([id,name])=>'<button onclick="startGuide58(\''+id+'\')">'+name+'<small>'+({meal:'Fiska → laga mat → återställ HP',sword:'Malm och trä → smide → utrustning',sale:'Resurser → produktion → försäljning'})[id]+'</small></button>').join('')+'</div><p class="game-hint">Målmarkeringen visar nästa plats. Gå längs vägarna och runt hus och vatten. Du kan byta eller avsluta målet när du vill.</p>'+btn('Öppna alla recept','opencrafting')+btn('Fiskehjälp','openfishery')+btn('Uppdrag & belöningar','openquests')+'<button onclick="unstuck()">Fastnat? Flytta till säker plats</button>';
+}
+function drawGuide58(){
+ if(panel)return;const t=guideWaypoint58();if(!t)return;
+ const p=currentPosition();
+ if(fieldEnemies.some((e,i)=>e.scene===S.scene&&activeFieldEnemy(e,i)&&Math.hypot(e.x-p.x,e.y-p.y)<220))return;
+ const sc=Math.max(.6,Math.min(ww/550,hh/470)),dx=(t.x-p.x)*sc,dy=(t.y-p.y)*sc;
+ if(Math.hypot(t.x-p.x,t.y-p.y)<70)return;
+ const paddingY=Math.min(72,hh*.3),x=Math.max(24,Math.min(ww-24,ww/2+dx)),y=Math.max(paddingY,Math.min(Math.max(paddingY,hh-66),hh/2+dy));
+ ctx.save();ctx.translate(x,y);ctx.fillStyle='#243a32';ctx.strokeStyle='#f3d99c';ctx.lineWidth=2;ctx.beginPath();ctx.arc(0,0,13,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.rotate(Math.atan2(dy,dx));ctx.fillStyle='#f3d99c';ctx.beginPath();ctx.moveTo(7,0);ctx.lineTo(-4,-5);ctx.lineTo(-2,0);ctx.lineTo(-4,5);ctx.closePath();ctx.fill();ctx.restore();
+ ctx.save();ctx.font='bold 12px system-ui';ctx.textAlign='center';const w=ctx.measureText(t.label).width+16,lx=Math.max(w/2+4,Math.min(ww-w/2-4,x));ctx.fillStyle='#243a32ef';ctx.fillRect(lx-w/2,y+17,w,22);ctx.fillStyle='#fff0cb';ctx.fillText(t.label,lx,y+32);ctx.restore();
 }
 
 function action(a){
 if(a==='fishstart'){S.fishingGuideSeen=true;persist();castFishingRod();return}
 if(a==='opencooking'){show('cooking');return}
+if(a==='opencrafting'){show('crafting');return}
+if(a==='opentrading'){show('trading');return}
+if(a==='openmining'){show('mining');return}
+if(a.startsWith('guideto-')){startGuide58(a.slice(8));return}
+if(a==='guidestop'){S.guideGoal58=null;persist();show('guide');return}
 if(a==='openhouse'){show('house');return}
 if(a==='eatmeal'){eatMeal();show('cooking');return}
 if(a.startsWith('eat-')){eatMeal(a.slice(4));show(panel==='bag'?'bag':'cooking');return}
@@ -1552,7 +1672,7 @@ if(a==='autotraderune'){toggleAutoTrade('rune');show('production');return}
 if(a==='upwarehouse'){upgradeWarehouse();show('production');return}
 if(a==='autosteel'){automateProduction('steel');show('production');return}
 if(a==='autorune'){automateProduction('rune');show('production');return}
-if(a==='craftsteel'){craftProduction('steel');show('production');return}
+if(a==='craftsteel'){craftProduction('steel');show(panel==='crafting'?'crafting':'production');return}
 if(a==='craftrune'){craftProduction('rune');show('production');return}
 if(a==='sellsteel'){sellProduction('steel');show('production');return}
 if(a==='sellrune'){sellProduction('rune');show('production');return}
@@ -1600,7 +1720,7 @@ else if(a==='upfishery'){const cost=65*S.fisheryLevel;if(S.gold>=cost){S.gold-=c
 else if(a==='hirefisher'){if(!S.fisheryManager&&S.gold>=180){S.gold-=180;S.fisheryManager=true;note('Fiskare anställd!')}else note('Kräver 180 guld')}
 else if(a==='mine'){S.ore+=S.mine;S.oreGathered+=S.mine;note('+'+S.mine+' malm')}
 else if(a==='wood'){S.wood+=S.woodLevel;note('+'+S.woodLevel+' trä')}
-else if(a==='forge'){if(S.ore<2||S.wood<1)note('Behöver 2 malm och 1 trä');else{makeSwords();S.forgeMastery++;if(S.forgeMastery%10===0)economyTransaction('quest',20,0,'forge-mastery');note('Svärd tillverkat!')}}
+else if(a==='forge'){if(S.ore<2||S.wood<1)note('Behöver 2 malm och 1 trä');else{makeSwords();S.forgeMastery++;if(S.forgeMastery%10===0)economyTransaction('quest',20,0,'forge-mastery');note(S.forge+' svärd till ryggsäcken · utrusta ett eller sälj i Handelsboden.')}}
 else if(a==='sell'){if(S.swords){const basis=consumeSwords(1),price=35+Math.floor(S.merchantRep/5)*5;economyTransaction('swords',price,basis,'sale');note('+'+price+' guld')}else note('Inga svärd')}
 else if(a==='upmine'&&pay(50*S.mine)){S.mine++;note('Gruvan uppgraderad!')}
 else if(a==='upmine10'){const cost=Math.round(50*(10*S.mine+45)*.9);if(pay(cost)){S.mine+=10;note('Gruva +10 nivåer!')}}
@@ -1669,6 +1789,7 @@ function interact(){
  case 'fish':castFishingRod();break;
  case 'npc':show(target.data);break;
  case 'house':show('house');break;
+ case 'station':show(target.data.panel);break;
  case 'leave':leaveHouse();break;
  case 'building':S.houseType=({Smedja:'forge',Gruva:'mine',Marknad:'market',Gille:'guild'})[target.data.n];changeZone('interior',500,585,'Välkommen till '+target.data.n+' · '+({forge:'Smid och förbättra utrustning',mine:'Samla malm och utveckla gruvan',market:'Handla och laga mat',guild:'Uppdrag och expeditioner'})[S.houseType]);break;
  case 'forest':changeZone('forest',500,78,'Whisperwood');break;
