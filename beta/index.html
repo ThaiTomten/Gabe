@@ -419,6 +419,7 @@ if(lvl>=10){box(x-23,y-16,12,38,'#d4b66e');box(x+w+11,y-16,12,38,'#d4b66e');box(
 pixelSign(x+w/2,y-96,['forge','mine','market','guild'][idx]);text(b.n+' Lv.'+lvl,x+w/2,y-121,17);text('▼',x+w/2,y+h+32,16,'#ffe6a4');
 }
 buildings.forEach(house);
+if(S.renownHallBuilt){ctx.fillStyle='#7e6b9b';ctx.fillRect(690,130,125,78);ctx.fillStyle='#d9bf8e';ctx.fillRect(699,142,107,60);ctx.fillStyle='#b0b8c5';ctx.fillRect(720,117,65,27);ctx.fillStyle='#674d39';ctx.fillRect(742,166,25,42);text('Hjältarnas hall',754,103,15)}
 for(const [x,y] of [[412,350],[586,350],[412,486],[586,486]])pixelLantern(x,y,S.visualTime);
 // Visible doorways and interaction markers.
 for(const b of buildings){const x=b.x+b.w/2,y=b.y+b.h+12;oval(x,y,28,9,'#d7bc8670');box(x-16,y-6,32,5,'#cdb181');}
@@ -696,7 +697,7 @@ if(panel)walkMoving=false;
 autoZoneTransition(dt);updateFieldCombat(dt);
 fishingCooldown=Math.max(0,fishingCooldown-dt);updateFishing(dt);productionClock+=dt;autosaveClock+=dt;
 if(productionClock>=5){productionClock-=5;
-if(S.manager)S.ore+=S.mine;if(S.fisheryManager)catchFish(FISH_SPECIES[0],S.fisheryLevel);
+if(S.renownHallBuilt){S.gold+=15;S.totalGold+=15}if(S.manager)S.ore+=S.mine;if(S.fisheryManager)catchFish(FISH_SPECIES[0],S.fisheryLevel);
 if(S.autoForge&&S.ore>=2&&S.wood>=1){S.ore-=2;S.wood--;S.swords+=S.forge}
 if(S.autoSell&&S.swords>0){S.swords--;S.gold+=35;S.totalGold+=35}
 }
@@ -958,11 +959,19 @@ function npcQuestPanel(id){
 const RENOWN_REWARDS=[
  {id:'merchant-license',level:2,name:'Handelslicens',description:'Kontraktsbelöningar +10 %'},
  {id:'forge-permit',level:4,name:'Smidesprivilegium',description:'Smidesuppgraderingar kostar 1 malm mindre'},
- {id:'hero-title',level:6,name:'Emberfalls beskyddare',description:'Hjälten får +2 attack'}
+ {id:'hero-title',level:6,name:'Emberfalls beskyddare',description:'Hjälten får +2 attack'},
+ {id:'guild-hall',level:8,name:'Hjältarnas hall',description:'Lås upp en ny byggnad och daglig handelsbonus'}
 ];
 function renownUnlocked(id){const r=RENOWN_REWARDS.find(v=>v.id===id);return !!r&&S.heroRenown>=r.level}
 function renownBonus(){return renownUnlocked('hero-title')?2:0}
 function renownContractReward(base){return Math.round(base*(renownUnlocked('merchant-license')?1.1:1))}
+function buildRenownHall(){
+ if(!renownUnlocked('guild-hall')){note('Kräver anseende 8');return false}
+ if(S.renownHallBuilt){note('Hallen är redan byggd');return false}
+ if(S.gold<400||S.wood<20||S.ore<15){note('Kräver 400 guld, 20 trä och 15 malm');return false}
+ S.gold-=400;S.wood-=20;S.ore-=15;S.renownHallBuilt=true;persist();note('Hjältarnas hall är färdig!');return true;
+}
+
 const VILLAGE_MILESTONES=[
 {id:'founder',name:'Grundläggare',desc:'Samla minst 20 malm och 15 trä totalt.',done:()=>S.oreGathered>=20&&S.wood>=15,reward:120},
 {id:'trader',name:'Handelsmästare',desc:'Slutför minst 3 handelsleveranser.',done:()=>S.marketDeliveries>=3,reward:180},
@@ -1079,6 +1088,7 @@ function hide(){panel='';document.getElementById('modal').style.display='none';S
 function pay(n){if(S.gold<n){note('Du behöver '+n+' guld');return false}S.gold-=n;return true}
 function action(a){
 if(a==='guide'){show('guide');return}
+if(a==='buildhall'){buildRenownHall();show('quests');return}
 if(a.startsWith('npcaccept-')){acceptNpcQuest(a.slice(10));show('quests');return}
 if(a.startsWith('npccomplete-')){completeNpcQuest(a.slice(12));show('quests');return}
 if(a.startsWith('npcclaim-')){claimNpcQuest(a.slice(9));show('quests');return}
