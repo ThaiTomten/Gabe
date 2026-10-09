@@ -237,6 +237,34 @@ function poseOverlay(kind,p,frame,moving){
  for(let x=0;x<row.length;x++)if(row[x]!=='.')p(x-4,-30-(moving?frame%2:0),1,2,ink);
 }
 // Original layered equipment and creature accents, built at native pixel resolution.
+function originalPixelHighlights(kind,p,frame,moving){
+ const phase=moving?frame%3:0;
+ if(kind==='hero'){
+  p(-6,-29,12,3,'#594b43');p(-4,-25,8,2,'#e8c59a');
+  p(-7,-10,3,7,'#e4bd88');p(4,-10,3,7,'#e4bd88');
+  if(S.heroArmor){p(-6,-13,12,4,'#d0d8d7');p(-3,-9,6,4,'#e9ce92')}
+  if(S.helmetOwned)p(-8,-35,16,4,'#b8c7c9');
+  if(moving){p(-8,5+phase,4,3,'#665447');p(4,5+(2-phase),4,3,'#665447')}
+ }else if(kind==='merchant'){
+  p(-10,-16,20,3,'#d8b678');p(-6,-12,12,5,'#9a734c');
+  p(9,-5+phase,5,9,'#c5a070');
+ }else if(kind==='guard'){
+  p(-11,-17,22,5,'#b6c7cb');p(-6,-12,12,8,'#6e8a9b');
+  p(-2,-10,4,5,'#f2d99e');
+ }else if(kind==='scout'){
+  p(-11,-28,7,6,'#8dad70');p(4,-28,7,6,'#8dad70');
+  p(-7,-11,14,5,'#6f935f');
+ }else if(kind==='brute'){
+  p(-15,-20,7,9,'#b49269');p(8,-20,7,9,'#b49269');
+  p(-10,-11,20,5,'#8b6b50');
+ }else if(kind==='shaman'){
+  p(-9,-33,18,6,'#a080c5');p(-6,-25,12,5,'#d5b6ef');
+  p(12,-37+phase,4,5,'#e9d1ff');
+ }else if(kind==='wolf'){
+  p(-18,-18,36,5,'#8ba59b');p(-15,-9,30,4,'#607c73');
+  p(-19,-6+phase,8,5,'#9aada2');
+ }
+}
 function spriteAnimationAccents(kind,p,frame,moving){
  const pulse=moving?frame%3:0;
  if(kind==='hero'){
@@ -363,6 +391,7 @@ function spriteActor(kind,x,y,opts={}){
  drawActorEquipment(kind,p,opts,frame);
  facialPixels(kind,p,frame,back);
  spriteAnimationAccents(kind,p,frame,moving);
+ originalPixelHighlights(kind,p,frame,moving);
  // Pixel atlas overlay gives stable frame-authored texture on top of equipment layers.
  if(!back&&kind!=='hero')atlasStamp(kind,p,frame);
  if(opts.action)drawActionPose(kind,p,opts.action,opts.actionProgress||0);
