@@ -1,4 +1,4 @@
-<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 0.5</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#notice{color:#b7edb8}#close{float:right}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Beta Preview 0.5 · Guided Adventure</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="action('mine')">⛏ Bryt</button><button onclick="action('forge')">⚒ Smid</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
+<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 0.6</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#notice{color:#b7edb8}#close{float:right}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Beta Preview 0.6 · Guided Adventure</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="action('mine')">⛏ Bryt</button><button onclick="action('forge')">⚒ Smid</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
 window.addEventListener('error',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='JS ERROR: '+String(e.message).slice(0,90);});
 window.addEventListener('unhandledrejection',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='PROMISE ERROR: '+String(e.reason).slice(0,70);});
 document.getElementById('moveStatus').textContent='JS STARTED';
@@ -24,6 +24,10 @@ const text=(v,x,y,z=17,c='#ffe8b4')=>{ctx.font='900 '+z+'px system-ui';ctx.textA
 const rng=n=>{let z=Math.sin(n*127.1+78.23)*43758.5453;return z-Math.floor(z)};
 const lit=(x,y,r,c)=>{const g=ctx.createRadialGradient(x,y,2,x,y,r);g.addColorStop(0,c);g.addColorStop(1,'#ffba4300');ctx.fillStyle=g;ctx.fillRect(x-r,y-r,r*2,r*2)};
 box(0,0,1000,870,'#4c7650');
+// Layered lighting: subtle ambient tint and moving cloud shadows.
+const cloudShift=Math.sin(t*.15)*36;
+for(let k=0;k<5;k++){const x=80+k*205+cloudShift,y=115+(k%3)*235;oval(x,y,115,31,'#243b3520')}
+
 for(let y=0;y<870;y+=28)for(let x=0;x<1000;x+=28){let n=rng(x*2+y*7);box(x,y,28,28,n>.72?'#547e53':n<.18?'#496f4b':'#4d7850');if(n>.82){box(x+7,y+10,4,3,'#9bb96c');box(x+19,y+21,3,4,'#e8c57b')}if(n<.09)box(x+17,y+8,4,2,'#326544')}
 box(429,0,142,870,'#a28e69');box(0,350,1000,133,'#a28e69');
 for(let i=0;i<180;i++){let x=rng(i+12)*995,y=rng(i+135)*865;if((x>427&&x<572)||(y>347&&y<483))continue;box(x,y,4,3,i%3?'#79a368':'#d7be78')}
@@ -33,6 +37,15 @@ function pine(x,y,size){oval(x+5,y+6,size*.65,size*.25,'#294c38');box(x-5,y-size
 for(let i=0;i<105;i++){let x=25+rng(i*3+1)*950,y=55+rng(i*7+2)*770;if((x>118&&x<865&&y>105&&y<755)||(x>400&&x<600)||(y>325&&y<500))continue;pine(x,y,18+rng(i+6)*17)}
 function flowers(x,y){for(let i=0;i<9;i++){let fx=x+rng(i+x)*72,fy=y+rng(i+y)*64;box(fx,fy,4,4,i%3===0?'#f7c879':i%3===1?'#f6a6ae':'#e3d4fa');box(fx+1,fy+5,2,3,'#397347')}}
 flowers(335,95);flowers(575,520);flowers(330,675);
+// Decorative world props and ground texture, fixed positions for stable performance.
+for(const [x,y] of [[345,240],[605,235],[365,750],[625,740],[125,535],[865,545]]){
+oval(x,y+5,23,7,'#344d3e');box(x-15,y-9,30,17,'#705747');box(x-10,y-15,20,8,'#a88766');
+box(x-11,y-10,5,5,'#d4b18c');box(x+6,y-10,5,5,'#d4b18c');
+}
+for(const [x,y] of [[350,110],[640,130],[95,270],[905,750]]){
+oval(x,y+5,17,6,'#355442');box(x-10,y-7,20,13,'#677577');box(x-4,y-14,11,9,'#a0aaa0');
+}
+
 oval(78,803,91,57,'#314f4c');oval(78,799,82,49,'#43889c');oval(78,799,69,37,'#5babb6');for(let i=0;i<7;i++){let x=28+i*19;box(x,786+i%3*10,13,3,'#b0d6c3')}
 function house(b,idx){
 const x=b.x,y=b.y,w=b.w,h=b.h;
@@ -55,6 +68,9 @@ if(idx===3){box(x+w/2-5,y-68,10,27,'#dfc17b');box(x+w/2-20,y-57,40,9,'#dfc17b')}
 const lvl=idx===0?S.forge:idx===1?S.mine:idx===2?1+Math.floor(S.merchantRep/3):1+Math.floor(S.level/3);
 if(lvl>=2){box(x-12,y+16,12,h-10,'#9d8066');box(x+w,y+16,12,h-10,'#9d8066');box(x+4,y+h-11,w-8,9,'#d7bc80')}
 if(lvl>=5){box(x+w/2-5,y-64,10,18,'#f2cf7d');poly([[x+w/2,y-84],[x+w/2-14,y-63],[x+w/2+14,y-63]],'#e2a85e')}
+// Upper roof highlight, chimney glow, and roof tiles for visual depth.
+for(let q=0;q<6;q++){const tx=x+q*(w/6);box(tx+6,y-33+(q%2)*3,Math.max(9,w/9),4,'#ffffff1e')}
+if(idx===0){const flicker=5+Math.sin(t*8)*3;oval(x+w-4,y-75,10+flicker,6+flicker/2,'#ffbd4c55')}
 if(lvl>=10){box(x-23,y-16,12,38,'#d4b66e');box(x+w+11,y-16,12,38,'#d4b66e');box(x-26,y-23,18,8,'#e8d395');box(x+w+8,y-23,18,8,'#e8d395')}
 text(b.n+' Lv.'+lvl,x+w/2,y-78,20);
 }
@@ -112,9 +128,15 @@ if(side){box(19,-16,4,33,'#e2c58b');box(17,13,9,6,'#b9cbd0')}
 else{box(21,-8,5,25,'#dfc183');poly([[17,15],[29,15],[23,26]],'#c0d2d7')}
 ctx.restore();
 }
+// Directional world interaction halo and player ground shadow.
+oval(S.x,S.y+20,25,9,'#192f2b75');
 hero(S.x,S.y);
+if(S.heroSword){box(S.x+25,S.y-5,4,29,'#c7dce1');box(S.x+20,S.y+18,14,5,'#dfc57a')}
+if(S.heroArmor){box(S.x-15,S.y-19,5,20,'#e4c680');box(S.x+10,S.y-19,5,20,'#e4c680')}
 text('YOU',S.x,S.y-44,14,'#d9f8e3');
 ctx.restore();
+// Screen-space cinematic vignette, without blocking touch controls.
+const vignette=ctx.createRadialGradient(ww/2,hh/2,Math.min(ww,hh)*.28,ww/2,hh/2,Math.max(ww,hh)*.77);vignette.addColorStop(0,'#00000000');vignette.addColorStop(1,'#0c1d2045');ctx.fillStyle=vignette;ctx.fillRect(0,0,ww,hh);
 document.getElementById('stats').textContent='🪙 '+Math.floor(S.gold)+' · ⛏ '+Math.floor(S.ore)+' · ⚔ '+S.swords;
 }
 const defaults={wood:0,ingots:0,runes:0,potions:1,level:1,heroSword:false,heroArmor:false,heroShield:false,quest:0,forestWins:0,combat:null,autoForge:false,autoSell:false,woodLevel:1,lastSaved:Date.now(),totalGold:0,scene:'village',dungeonX:150,dungeonY:380,dungeonKills:0,contractsDone:0,contractTarget:3,contractReward:100,expeditionEnds:0,expeditionTier:1,expeditionsDone:0,forgeMastery:0,merchantRep:0,saveVersion:2,oreGathered:0,swordsCrafted:0,tutorialSeen:false,dungeonClears:0,dungeonChestClaimed:false,dungeonRewardPending:false,merchantDialogueSeen:false,guardDialogueSeen:false,combatWins:0};
@@ -239,7 +261,7 @@ h='<h2>🎒 Inventarium</h2><p>🪙 Guld: '+S.gold+'</p><p>⛏ Malm: '+S.ore+' �
 }else{
 h='<h2>⚙ Inställningar</h2>'+btn('Virtuell joystick','joystick')+btn('Dra på kartan','drag')+
 btn('Långsam rörelse','slow')+btn('Normal rörelse','normal')+btn('Snabb rörelse','fast')+
-'<p>Beta Preview 0.5 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
+'<p>Beta Preview 0.6 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
 }
 document.getElementById('content').innerHTML=h;
 document.getElementById('notice').textContent='';
