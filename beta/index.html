@@ -394,13 +394,13 @@ function monsterSpriteSheet(kind,x,y,opts={}){
 }
 // Original 24x32 character frames, shared across four facing directions.
 const CHARACTER_FRAME_CACHE={};
-function characterFrame(kind,dir,phase){
- const key=kind+':'+dir+':'+phase+':'+(kind==='hero'?S.heroStyle:0);
+function characterFrame(kind,dir,phase,action='walk'){
+ const key=kind+':'+dir+':'+phase+':'+action+':'+(kind==='hero'?S.heroStyle:0);
  if(CHARACTER_FRAME_CACHE[key])return CHARACTER_FRAME_CACHE[key];
  const c=kind==='hero'?{coat:'#537d9d',trim:'#e1c57d',hair:'#5d4435',skin:'#eac29a'}:kind==='merchant'?{coat:'#a07b50',trim:'#e4c487',hair:'#725039',skin:'#e7bc91'}:{coat:'#647f8e',trim:'#d6c59a',hair:'#55606a',skin:'#d8b48e'};
  const px=Array.from({length:32},()=>Array(24).fill(null));
  const fill=(x,y,w,h,col)=>{for(let j=Math.max(0,y);j<Math.min(32,y+h);j++)for(let i=Math.max(0,x);i<Math.min(24,x+w);i++)px[j][i]=col};
- const step=[0,1,2,1,0,-1][phase%6];
+ const step=action==='walk'?[0,1,2,1,0,-1][phase%6]:0;
  const back=dir==='up',side=dir==='left'||dir==='right';
  fill(7,21+step,4,8,'#554b43');fill(13,21-step,4,8,'#554b43');
  fill(6,12,12,12,c.coat);fill(5,13+step,3,10,c.skin);fill(16,13-step,3,10,c.skin);
@@ -409,6 +409,10 @@ function characterFrame(kind,dir,phase){
  else if(side){fill(dir==='left'?8:14,9,2,2,'#37474a')}
  else{fill(9,9,2,2,'#37474a');fill(14,9,2,2,'#37474a');fill(11,13,3,1,'#a96f65')}
  fill(8,16,8,3,c.trim);fill(10,20,4,3,'#6b584a');
+ if(action==='attack'){const reach=phase%4;fill(dir==='left'?2:17,9-reach*2,4+reach,6,c.trim);fill(dir==='up'?8:14,5+reach*3,4,5,'#f1ddab')}
+ if(action==='hurt'){fill(6+phase,10,12,4,'#f4aa98');fill(7+phase,17,10,3,'#b65d5a')}
+ if(action==='idle'){fill(7,12+(phase%2),10,2,c.trim)}
+ if(action==='work'){fill(16,10+phase,5,5,'#f2c66c')}
  if(kind==='guard'){fill(6,13,12,4,'#b9c8ca');fill(7,1,10,4,'#b0c1c9')}
  if(kind==='merchant'){fill(6,1,12,3,'#d2b07b');fill(5,17,3,7,'#bb8a58')}
  CHARACTER_FRAME_CACHE[key]=px;return px;
@@ -423,7 +427,7 @@ function characterAnimationState(opts={}){
 function characterSpriteSheet(kind,x,y,opts={}){
  if(!['hero','merchant','guard'].includes(kind))return false;
  const dir=opts.dir||'down',anim=characterAnimationState(opts),phase=anim.action==='walk'?anim.frame:anim.action==='idle'?0:anim.frame;
- const pixels=characterFrame(kind,dir,phase);
+ const pixels=characterFrame(kind,dir,phase,anim.action);
  ctx.save();ctx.translate(Math.round(x),Math.round(y));if(dir==='left')ctx.scale(-1,1);
  ctx.scale(2.65,2.65);ctx.imageSmoothingEnabled=false;
  for(let j=0;j<32;j++)for(let i=0;i<24;i++){const c=pixels[j][i];if(c){ctx.fillStyle=c;ctx.fillRect(i-12,j-29,1,1)}}
