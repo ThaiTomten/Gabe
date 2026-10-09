@@ -1105,7 +1105,7 @@ function tradeCycle(){
  let earned=0;
  for(const [flag,key,reserve,price] of [['autoTradeSteel','steelStock','tradeReserveSteel',55],['autoTradeRune','runeGoods','tradeReserveRune',165]]){
   if(!S[flag]||(S[key]||0)<=(S[reserve]||0))continue;
-  reconcileCostBasis();S[key]--;const reward=marketReward(price);recordProductSale(type,reward);S.gold+=reward;S.totalGold+=reward;S.productionOrdersDone++;earned+=reward;
+  reconcileCostBasis();const reward=marketReward(price);recordProductSale(type,reward);S[key]--;S.gold+=reward;S.totalGold+=reward;S.productionOrdersDone++;earned+=reward;
  }
  if(earned){S.tradeRevenue+=earned;refreshMarket();persist()}
  return earned;
