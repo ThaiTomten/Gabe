@@ -614,7 +614,7 @@ function nearPond(){
  return false;
 }
 function castFishingRod(){
- if(panel||!nearPond()){note('Gå närmare en damm för att fiska');return false}
+ if((panel&&panel!=='fishery')||!nearPond()){note('Gå närmare en damm för att fiska');return false}
  const caught=Math.random()<.8;
  if(caught){S.fish+=S.fisheryLevel;S.fishCaughtAtPond++;note('Napp! +'+S.fisheryLevel+' fisk')}
  else note('Fisken kom undan! Försök igen.');
@@ -641,8 +641,7 @@ else if(type==='market'){for(let i=0;i<4;i++){rect(260+i*135,330,105,65,'#76543a
 else{rect(290,300,420,130,'#594d42');rect(310,315,380,95,'#d3b787');rect(360,335,280,50,'#809e88')}
 interiorDecor(type,performance.now()/1000);
 spriteActor('hero',S.insideX,S.insideY,{moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword&&S.weaponType!=='staff',staff:S.staffOwned&&S.weaponType==='staff'});
-// Former placeholder character removed; same sprite used outdoors and indoors.
-/*rect(S.insideX-12,S.insideY-11,24,34,'#37648c');rect(S.insideX-11,S.insideY-30,22,21,'#e7be91');rect(S.insideX-14,S.insideY-36,28,9,'#6e4932');*/
+
 ctx.restore();
 }
 function drawDungeon(){
