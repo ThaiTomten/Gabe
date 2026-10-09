@@ -1,4 +1,4 @@
-<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 0.3</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#notice{color:#b7edb8}#close{float:right}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Beta Preview 0.3 · Guided Adventure</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="action('mine')">⛏ Bryt</button><button onclick="action('forge')">⚒ Smid</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
+<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 0.4</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#notice{color:#b7edb8}#close{float:right}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Beta Preview 0.4 · Guided Adventure</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="action('mine')">⛏ Bryt</button><button onclick="action('forge')">⚒ Smid</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
 window.addEventListener('error',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='JS ERROR: '+String(e.message).slice(0,90);});
 window.addEventListener('unhandledrejection',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='PROMISE ERROR: '+String(e.reason).slice(0,70);});
 document.getElementById('moveStatus').textContent='JS STARTED';
@@ -102,7 +102,7 @@ text('YOU',S.x,S.y-44,14,'#d9f8e3');
 ctx.restore();
 document.getElementById('stats').textContent='🪙 '+Math.floor(S.gold)+' · ⛏ '+Math.floor(S.ore)+' · ⚔ '+S.swords;
 }
-const defaults={wood:0,ingots:0,runes:0,potions:1,level:1,heroSword:false,heroArmor:false,heroShield:false,quest:0,forestWins:0,combat:null,autoForge:false,autoSell:false,woodLevel:1,lastSaved:Date.now(),totalGold:0,scene:'village',dungeonX:150,dungeonY:380,dungeonKills:0,contractsDone:0,contractTarget:3,contractReward:100,expeditionEnds:0,expeditionTier:1,expeditionsDone:0,forgeMastery:0,merchantRep:0,saveVersion:2,oreGathered:0,swordsCrafted:0,tutorialSeen:false,dungeonClears:0,dungeonChestClaimed:false,dungeonRewardPending:false,merchantDialogueSeen:false,guardDialogueSeen:false};
+const defaults={wood:0,ingots:0,runes:0,potions:1,level:1,heroSword:false,heroArmor:false,heroShield:false,quest:0,forestWins:0,combat:null,autoForge:false,autoSell:false,woodLevel:1,lastSaved:Date.now(),totalGold:0,scene:'village',dungeonX:150,dungeonY:380,dungeonKills:0,contractsDone:0,contractTarget:3,contractReward:100,expeditionEnds:0,expeditionTier:1,expeditionsDone:0,forgeMastery:0,merchantRep:0,saveVersion:2,oreGathered:0,swordsCrafted:0,tutorialSeen:false,dungeonClears:0,dungeonChestClaimed:false,dungeonRewardPending:false,merchantDialogueSeen:false,guardDialogueSeen:false,combatWins:0};
 for(const k in defaults)if(S[k]===undefined)S[k]=defaults[k];
 if(S.manager&&S.gold<0)S.gold=0;
 let autosaveClock=0,productionClock=0;let movementErrorShown=false;let dungeonTime=0;
@@ -154,16 +154,30 @@ for(let y=0;y<870;y+=40){R(0,y,35,37,'#55616b');R(965,y,35,37,'#55616b')}
 for(const [x,y] of [[150,180],[480,480],[770,240],[860,670]]){R(x-12,y-4,24,10,'#50392e');R(x-7,y-23,14,22,'#aa5b32');R(x-4,y-19,8,16,'#ffcc70');const g=ctx.createRadialGradient(x,y-12,3,x,y-12,68);g.addColorStop(0,'#ffbd5270');g.addColorStop(1,'#ffbd5200');ctx.fillStyle=g;ctx.fillRect(x-68,y-80,136,136)}
 if(S.dungeonKills===3&&!S.dungeonChestClaimed){R(822,730,68,45,'#543826');R(829,720,54,26,'#c79a4a');R(851,721,9,45,'#f4d279');txt('CHEST',856,707,16)}
 R(60,355,80,85,'#466b72');R(71,365,58,65,'#78abb0');txt('EXIT',100,342,17);
-for(const [i,x,y] of [[0,440,260],[1,740,470],[2,530,680]]){if(S.dungeonKills>i)continue;R(x-16,y-8,32,33,'#6b9256');R(x-14,y-23,28,20,'#8db66c');R(x-18,y-15,7,9,'#9ac47d');R(x+11,y-15,7,9,'#9ac47d');R(x-8,y-13,5,5,'#f2e9bc');R(x+5,y-13,5,5,'#f2e9bc');txt('Goblin '+(i+1),x,y-34,15)}
+for(const [i,x,y] of [[0,440,260],[1,740,470],[2,530,680]]){if(S.dungeonKills>i)continue;R(x-16,y-8,32,33,ENEMIES[i].color);R(x-14,y-23,28,20,ENEMIES[i].color);R(x-18,y-15,7,9,'#9ac47d');R(x+11,y-15,7,9,'#9ac47d');R(x-8,y-13,5,5,'#f2e9bc');R(x+5,y-13,5,5,'#f2e9bc');txt(ENEMIES[i].name,x,y-34,15)}
 const x=S.dungeonX,y=S.dungeonY,bob=walkMoving?Math.abs(Math.sin(walkTime*11))*3:0;
 R(x-15,y+17,30,7,'#111b24');R(x-11,y-8+bob,22,29,'#386d91');R(x-11,y-30+bob,22,23,'#e4bc93');R(x-14,y-36+bob,28,9,'#65452e');R(x-9,y+18+bob,8,10,'#4c424a');R(x+2,y+18+bob,8,10,'#4c424a');txt('YOU',x,y-45,14);
 ctx.restore();
+}
+const ENEMIES=[
+{name:'Goblin Scout',hp:18,attack:4,defense:0,gold:16,xp:8,color:'#86ac63'},
+{name:'Goblin Brute',hp:29,attack:7,defense:1,gold:30,xp:12,color:'#a87955'},
+{name:'Rune Shaman',hp:24,attack:9,defense:0,gold:45,xp:18,color:'#8a6ab2'}
+];
+function newCombat(index,training=false){
+ const enemy=ENEMIES[index]||ENEMIES[0];
+ S.combat={hp:enemy.hp,max:enemy.hp,guard:false,message:enemy.name+' utmanar dig!',enemyIndex:index,training,turn:0,skillReady:true};
+ show('combat');
+}
+function healthBar(current,max,color){
+ const p=Math.max(0,Math.min(100,Math.round(current/max*100)));
+ return '<div style="height:12px;border:1px solid #9a8d70;border-radius:8px;background:#302d32;overflow:hidden"><div style="height:100%;width:'+p+'%;background:'+color+'"></div></div>';
 }
 function dungeonInteract(){
 if(S.dungeonKills===3&&!S.dungeonChestClaimed&&Math.hypot(S.dungeonX-856,S.dungeonY-760)<120){S.dungeonChestClaimed=true;S.dungeonRewardPending=false;S.dungeonClears++;S.gold+=75;S.totalGold+=75;S.runes+=3;S.ore+=5;awardXP(20);persist();note('Skattkista! +75 guld, +3 runfragment, +5 malm, +20 XP');return}
 if(S.dungeonX<170&&Math.abs(S.dungeonY-395)<105){S.scene='village';S.x=895;S.y=510;note('Tillbaka i Emberfall');persist();return}
 const enemies=[[440,260],[740,470],[530,680]];
-for(let i=0;i<3;i++){if(S.dungeonKills>i)continue;let [x,y]=enemies[i];if(Math.hypot(S.dungeonX-x,S.dungeonY-y)<115){S.combat={hp:18+i*9,max:18+i*9,guard:false,message:'Goblin '+(i+1)+' anfaller!'};show('combat');return}}
+for(let i=0;i<3;i++){if(S.dungeonKills>i)continue;let [x,y]=enemies[i];if(Math.hypot(S.dungeonX-x,S.dungeonY-y)<115){newCombat(i);return}}
 note('Utforska grottan, hitta gobliner eller återvänd till EXIT');
 }
 function levelThreshold(){return S.level*20}
@@ -194,11 +208,11 @@ btn('🧪 Drick potion ('+S.potions+')','potion')+btn('⚔ Träningsstrid','star
 }else if(p==='combat'){
 let c=S.combat;
 if(!c){show('hero');return}
-h='<h2>⚔ Goblingrottan</h2><p>Goblin HP: '+Math.max(0,c.hp)+' / '+c.max+' · Din HP: '+S.hp+'</p>'+
-'<p>'+c.message+'</p>'+btn('⚔ Attack','attack')+btn('🛡 Defend','defend')+btn('🧪 Potion ('+S.potions+')','potion')+btn('🏃 Fly från striden','flee');
+h='<h2>⚔ '+ENEMIES[c.enemyIndex||0].name+'</h2><p>Fiende: '+Math.max(0,c.hp)+' / '+c.max+'</p>'+healthBar(c.hp,c.max,'#bf655d')+'<p>Din HP: '+S.hp+' / '+(20+(S.level-1)*4)+'</p>'+healthBar(S.hp,20+(S.level-1)*4,'#79b57c')+
+'<p>'+c.message+'</p>'+btn('⚔ Attack','attack')+btn('✨ Rune Strike','runestrike')+btn('🛡 Defend','defend')+btn('🧪 Potion ('+S.potions+')','potion')+btn('🏃 Fly från striden','flee');
 }else if(p==='quests'){
 h='<h2>📜 Uppdrag</h2><h3>'+questTitle()+'</h3><p>Framsteg: '+questProgress()+'</p><p>'+ (questDone()?'Uppdraget är klart! Hämta belöningen.':'Fortsätt spela för att slutföra uppdraget.')+'</p>'+btn('Hämta belöning (+50 guld, +10 XP)','claim')+
-'<p>Färdiga uppdrag: '+S.quest+'</p><p>Gobliner besegrade: '+S.forestWins+' · Grottor rensade: '+S.dungeonClears+' · Handelskontrakt: '+S.contractsDone+'</p>';
+'<p>Färdiga uppdrag: '+S.quest+' · Strider vunna: '+S.combatWins+'</p><p>Gobliner besegrade: '+S.forestWins+' · Grottor rensade: '+S.dungeonClears+' · Handelskontrakt: '+S.contractsDone+'</p>';
 }else if(p==='expeditions'){h='<h2>🧭 Expeditionsgille</h2><p>Skicka en hjälte på ett automatiskt äventyr. Samla malm och runfragment även när spelet är stängt.</p><p>Uppdrag: '+(S.expeditionEnds?'Pågår – '+Math.max(0,Math.ceil((S.expeditionEnds-Date.now())/1000))+' sek kvar':'Redo')+'</p>'+btn('Starta expedition (60 sek)','expedition')+btn('Uppgradera expeditioner (120 guld)','expeditionupgrade');}else if(p==='merchant'){
 h='<h2>🧑‍💼 Köpmannen Elric</h2><p>"Emberfall behöver utrustning. Tillverka svärd, leverera dem och se vår handelsstad växa!"</p><p>Handelsrykte: '+S.merchantRep+'</p>'+btn('📜 Visa handelskontrakt','opencontracts')+btn('🏰 Öppna företag','openempire');
 }else if(p==='guard'){
@@ -210,7 +224,7 @@ h='<h2>🎒 Inventarium</h2><p>🪙 Guld: '+S.gold+'</p><p>⛏ Malm: '+S.ore+' �
 }else{
 h='<h2>⚙ Inställningar</h2>'+btn('Virtuell joystick','joystick')+btn('Dra på kartan','drag')+
 btn('Långsam rörelse','slow')+btn('Normal rörelse','normal')+btn('Snabb rörelse','fast')+
-'<p>Beta Preview 0.3 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
+'<p>Beta Preview 0.4 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
 }
 document.getElementById('content').innerHTML=h;
 document.getElementById('notice').textContent='';
@@ -238,15 +252,35 @@ else if(a==='equip'){if(S.heroSword)note('Svärd redan utrustat');else if(S.swor
 else if(a==='armor'){if(S.heroArmor)note('Rustning redan utrustad');else if(S.ore<5||S.wood<3)note('Behöver 5 malm och 3 trä');else{S.ore-=5;S.wood-=3;S.heroArmor=true;note('Rustning tillverkad!')}}
 else if(a==='buypotion'){if(pay(25)){S.potions++;note('Potion köpt')}}
 else if(a==='potion'){if(S.potions<1)note('Inga potions');else{S.potions--;S.hp=Math.min(20+(S.level-1)*4,S.hp+12);note('HP återställt')}}
-else if(a==='startfight'){S.combat={hp:16+S.forestWins*2,max:16+S.forestWins*2,guard:false,message:'En goblin blockerar vägen!'};show('combat');return}
-else if(a==='flee'){S.combat=null;show('hero');note('Du flydde från striden');return}else if(a==='attack'||a==='defend'){
+else if(a==='startfight'){newCombat(0,true);return}
+else if(a==='flee'){S.combat=null;show('hero');note('Du flydde från striden');persist();return}
+else if(a==='attack'||a==='defend'||a==='runestrike'){
 if(!S.combat)return;
-const c=S.combat;
-if(a==='attack'){const damage=4+S.level+(S.heroSword?5:0)+Math.floor(Math.random()*4);c.hp-=damage;c.message='Du gör '+damage+' skada.'}
-else{c.guard=true;c.message='Du förbereder ett försvar.'}
-if(c.hp<=0){S.forestWins++;if(S.scene==='dungeon')S.dungeonKills=Math.min(3,S.dungeonKills+1);if(S.dungeonKills===3)S.dungeonRewardPending=true;const loot=15+S.level*5;S.gold+=loot;S.totalGold+=loot;S.runes+=Math.random()<.35?1:0;awardXP(8);S.combat=null;show('hero');note('Goblin besegrad! +'+loot+' guld, +8 XP');persist();return}
-const hit=Math.max(1,4+Math.floor(Math.random()*4)-(S.heroArmor?2:0)-(c.guard?4:0));c.guard=false;S.hp=Math.max(0,S.hp-hit);c.message+=' Goblin gör '+hit+' skada.';
-if(S.hp<=0){S.hp=Math.max(5,Math.floor((20+(S.level-1)*4)/2));S.combat=null;show('hero');note('Du flydde och återhämtade dig i byn');persist();return}
+const c=S.combat,enemy=ENEMIES[c.enemyIndex||0];
+c.turn++;
+if(a==='attack'){
+const damage=Math.max(1,4+S.level+(S.heroSword?5:0)+Math.floor(Math.random()*4)-enemy.defense);
+c.hp-=damage;c.message='Du gör '+damage+' skada.';
+}else if(a==='runestrike'){
+if(!c.skillReady){note('Rune Strike behöver vila en runda');return}
+const damage=8+S.level*2+(S.heroSword?4:0);
+c.hp-=damage;c.skillReady=false;c.message='Rune Strike! '+damage+' magisk skada.';
+}else{c.guard=true;c.message='Du blockerar nästa attack.'}
+if(c.hp<=0){
+S.forestWins++;S.combatWins++;
+if(S.scene==='dungeon'&&!c.training){S.dungeonKills=Math.min(3,S.dungeonKills+1);if(S.dungeonKills===3)S.dungeonRewardPending=true}
+const loot=enemy.gold+S.level*3;
+S.gold+=loot;S.totalGold+=loot;
+if(Math.random()<.4)S.runes++;
+awardXP(enemy.xp);
+S.combat=null;show('hero');note(enemy.name+' besegrad! +'+loot+' guld, +'+enemy.xp+' XP');persist();return
+}
+const hit=Math.max(1,enemy.attack+Math.floor(Math.random()*3)-(S.heroArmor?2:0)-(c.guard?5:0));
+c.guard=false;S.hp=Math.max(0,S.hp-hit);c.message+=' '+enemy.name+' gör '+hit+' skada.';
+if(a==='defend')c.skillReady=true;
+if(S.hp<=0){
+S.hp=Math.max(5,Math.floor((20+(S.level-1)*4)/2));S.combat=null;show('hero');note('Du besegrades men återhämtade dig i Emberfall');persist();return
+}
 }
 else if(a==='contract'){if(S.swords<S.contractTarget){note('Du behöver '+S.contractTarget+' svärd');return}S.swords-=S.contractTarget;S.gold+=S.contractReward;S.totalGold+=S.contractReward;S.contractsDone++;S.merchantRep++;awardXP(12);S.contractTarget=Math.min(15,3+S.contractsDone);S.contractReward=100+S.contractsDone*45;note('Kontrakt levererat!')}else if(a==='expedition'){if(S.expeditionEnds){note('Expedition pågår redan');return}S.expeditionEnds=Date.now()+60000;note('Hjälten är ute på expedition!')}
 else if(a==='expeditionupgrade'){if(pay(120)){S.expeditionTier=Math.min(5,S.expeditionTier+1);note('Expeditionsgille uppgraderat!')}}
