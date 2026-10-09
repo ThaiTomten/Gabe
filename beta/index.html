@@ -227,7 +227,7 @@ function changeZone(scene,spawnX,spawnY,message){
  S.scene=scene;
  if(scene==='village'){S.x=spawnX;S.y=spawnY}
  else if(scene==='forest'){S.forestX=spawnX;S.forestY=spawnY;S.forestVisits++}
- else if(scene==='dungeon'){S.dungeonX=spawnX;S.dungeonY=spawnY;S.dungeonKills=0;S.dungeonChestClaimed=false;S.dungeonRewardPending=false}
+ else if(scene==='dungeon'){S.dungeonX=spawnX;S.dungeonY=spawnY;S.dungeonKills=0;S.dungeonChestClaimed=false;S.dungeonRewardPending=false;for(let i=1;i<4;i++){fieldEnemies[i].hp=fieldEnemies[i].max;fieldEnemies[i].x=[0,440,740,530][i];fieldEnemies[i].y=[0,260,470,680][i]}}
  else if(scene==='interior'){S.insideX=spawnX;S.insideY=spawnY}
  transitionLock=.85;persist();note(message);
 }
@@ -355,7 +355,7 @@ for(const [x,y] of [[240,300],[755,270],[200,650],[800,650]]){rect(x-15,y-12,30,
 rect(425,0,150,75,'#506f61');rect(442,0,116,55,'#9cbba2');label('↑ EMBERFALL',500,105);
 if(!S.forestChest){rect(770,160,65,45,'#725034');rect(777,150,51,22,'#c39a56');rect(798,154,9,46,'#f1d37b');label('SUPPLIES',802,135)}
 for(const [x,y] of [[280,460],[700,520],[750,380]]){rect(x-8,y-20,16,27,'#a17b4f');rect(x-21,y-28,42,19,'#5d9a5a');label('WOOD',x,y-42)}
-if(!S.forestWolfDefeated){const wx=fieldEnemies[0].x,wy=fieldEnemies[0].y;spriteActor('wolf',wx,wy,{moving:true,walk:performance.now()/1000});label('Duskwolf',wx,wy-76)}
+if(!S.forestWolfDefeated){const wx=fieldEnemies[0].x,wy=fieldEnemies[0].y;spriteActor('wolf',wx,wy,{moving:true,walk:performance.now()/1000});rect(wx-25,wy-83,50,6,'#513e3b');rect(wx-25,wy-83,50*fieldEnemies[0].hp/fieldEnemies[0].max,6,'#c46d5e');label('Duskwolf',wx,wy-92)}
 spriteActor('hero',S.forestX,S.forestY,{moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword});
 ctx.restore();
 }
@@ -401,7 +401,7 @@ for(let y=0;y<870;y+=40){R(0,y,35,37,'#55616b');R(965,y,35,37,'#55616b')}
 for(const [x,y] of [[150,180],[480,480],[770,240],[860,670]]){R(x-12,y-4,24,10,'#50392e');R(x-7,y-23,14,22,'#aa5b32');R(x-4,y-19,8,16,'#ffcc70');const g=ctx.createRadialGradient(x,y-12,3,x,y-12,68);g.addColorStop(0,'#ffbd5270');g.addColorStop(1,'#ffbd5200');ctx.fillStyle=g;ctx.fillRect(x-68,y-80,136,136)}
 if(S.dungeonKills===3&&!S.dungeonChestClaimed){R(822,730,68,45,'#543826');R(829,720,54,26,'#c79a4a');R(851,721,9,45,'#f4d279');txt('CHEST',856,707,16)}
 R(60,355,80,85,'#466b72');R(71,365,58,65,'#78abb0');txt('← EXIT',100,342,17);
-for(const [i] of [[0],[1],[2]]){if(S.dungeonKills>i)continue;const enemy=fieldEnemies[i+1],x=enemy.x,y=enemy.y;spriteActor(i===0?'scout':i===1?'brute':'shaman',x,y,{moving:true,walk:performance.now()/1600+i});txt(ENEMIES[i].name,x,y-34,15)}
+for(const [i] of [[0],[1],[2]]){if(S.dungeonKills>i)continue;const enemy=fieldEnemies[i+1],x=enemy.x,y=enemy.y;spriteActor(i===0?'scout':i===1?'brute':'shaman',x,y,{moving:true,walk:performance.now()/1600+i});R(x-24,y-91,48,5,'#402e35');R(x-24,y-91,48*enemy.hp/enemy.max,5,'#c85e57');if(enemy.attackClock>.85){R(x-31,y-5,62,3,'#ffb15b88')}txt(ENEMIES[i].name,x,y-100,15)}
 const x=S.dungeonX,y=S.dungeonY,bob=walkMoving?Math.abs(Math.sin(walkTime*11))*3:0;
 spriteActor('hero',x,y,{moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword});txt('YOU',x,y-45,14);
 ctx.restore();
