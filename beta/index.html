@@ -1020,15 +1020,12 @@ function interiorDecor(type,time){
  const resident=type==='market'?'merchant':type==='guild'?'guard':type==='mine'?'brute':'merchant';
  spriteActor(resident,680+Math.sin(time*.7)*17,605,{moving:true,walk:time*.25,dir:'left'});
 }
-const FISHING_PONDS={
- village:[[62,560,100,92],[820,565,116,86]],
- forest:[[75,510,130,105],[795,570,125,115]]
-};
+function fishingPonds(scene){return scene==='village'?[[62,560,100,92],[820,565,116,86]]:scene==='forest'?[[75,510,130,105],[795,570,125,115]]:[]}
 function waterCollision(scene,x,y,radius=12){
- return (FISHING_PONDS[scene]||[]).some(([px,py,w,h])=>x+radius>px+4&&x-radius<px+w-4&&y+radius>py+4&&y-radius<py+h-4);
+ return fishingPonds(scene).some(([px,py,w,h])=>x+radius>px+4&&x-radius<px+w-4&&y+radius>py+4&&y-radius<py+h-4);
 }
 function shoreFishingSpot(scene,x,y){
- const ponds=FISHING_PONDS[scene]||[];
+ const ponds=fishingPonds(scene);
  return ponds.some(([px,py,w,h])=>{
   const closestX=Math.max(px,Math.min(x,px+w)),closestY=Math.max(py,Math.min(y,py+h));
   const d=Math.hypot(x-closestX,y-closestY);
@@ -1037,7 +1034,7 @@ function shoreFishingSpot(scene,x,y){
 }
 function safeWaterPosition(scene,x,y){
  if(!waterCollision(scene,x,y))return [x,y];
- const ponds=FISHING_PONDS[scene]||[];
+ const ponds=fishingPonds(scene);
  for(const [px,py,w,h] of ponds){
   if(x>=px-20&&x<=px+w+20&&y>=py-20&&y<=py+h+20){
    const choices=[[px-15,y],[px+w+15,y],[x,py-15],[x,py+h+15]].filter(p=>!waterCollision(scene,p[0],p[1]));
