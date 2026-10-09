@@ -1,4 +1,4 @@
-<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 1.2</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Beta Preview 1.2 · Guided Adventure</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="action('mine')">⛏ Bryt</button><button onclick="action('forge')">⚒ Smid</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
+<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 1.3</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="msg">Beta Preview 1.3 · Guided Adventure</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Empire</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Bag</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()">A · Prata</button><button onclick="action('mine')">⛏ Bryt</button><button onclick="action('forge')">⚒ Smid</button><button onclick="unstuck()">🛟 Hjälp</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><div id="content"></div><p id="notice"></p></div><script>
 window.addEventListener('error',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='JS ERROR: '+String(e.message).slice(0,90);});
 window.addEventListener('unhandledrejection',function(e){var el=document.getElementById('moveStatus');if(el)el.textContent='PROMISE ERROR: '+String(e.reason).slice(0,70);});
 document.getElementById('moveStatus').textContent='JS STARTED';
@@ -151,7 +151,7 @@ if(lvl>=5){box(x+w/2-5,y-64,10,18,'#f2cf7d');poly([[x+w/2,y-84],[x+w/2-14,y-63],
 for(let q=0;q<6;q++){const tx=x+q*(w/6);box(tx+6,y-33+(q%2)*3,Math.max(9,w/9),4,'#ffffff1e')}
 if(idx===0){const flicker=5+Math.sin(t*8)*3;oval(x+w-4,y-75,10+flicker,6+flicker/2,'#ffbd4c55')}
 if(lvl>=10){box(x-23,y-16,12,38,'#d4b66e');box(x+w+11,y-16,12,38,'#d4b66e');box(x-26,y-23,18,8,'#e8d395');box(x+w+8,y-23,18,8,'#e8d395')}
-text(b.n+' Lv.'+lvl,x+w/2,y-78,20);
+text(b.n+' Lv.'+lvl,x+w/2,y-78,20);text('▼',x+w/2,y+h+32,16,'#ffe6a4');
 }
 buildings.forEach(house);
 // Visible doorways and interaction markers.
@@ -185,7 +185,7 @@ hero(S.x,S.y);
 if(S.heroSword){box(S.x+25,S.y-5,4,29,'#c7dce1');box(S.x+20,S.y+18,14,5,'#dfc57a')}
 if(S.heroArmor){box(S.x-15,S.y-19,5,20,'#e4c680');box(S.x+10,S.y-19,5,20,'#e4c680')}
 text('YOU',S.x,S.y-44,14,'#d9f8e3');
-text('↓ Whisperwood Forest',500,817,18,'#fff0b3');
+text('↓ Whisperwood Forest',500,817,18,'#fff0b3');text('→ Goblingrottan',922,465,15,'#ffe3a5');
 ctx.restore();
 // Screen-space cinematic vignette, without blocking touch controls.
 const vignette=ctx.createRadialGradient(ww/2,hh/2,Math.min(ww,hh)*.28,ww/2,hh/2,Math.max(ww,hh)*.77);vignette.addColorStop(0,'#00000000');vignette.addColorStop(1,'#0c1d2045');ctx.fillStyle=vignette;ctx.fillRect(0,0,ww,hh);
@@ -208,11 +208,46 @@ S.lastSaved=Date.now();finishExpedition();persist();
 document.getElementById('msg').textContent='Välkommen tillbaka! '+Math.floor(elapsed/60)+' min offline-produktion';
 }
 offline();if(safePosition())persist();
+// Walk-through portals: directional edge crossing, no interaction button required.
+let transitionLock=0;
+function changeZone(scene,spawnX,spawnY,message){
+ S.scene=scene;
+ if(scene==='village'){S.x=spawnX;S.y=spawnY}
+ else if(scene==='forest'){S.forestX=spawnX;S.forestY=spawnY;S.forestVisits++}
+ else if(scene==='dungeon'){S.dungeonX=spawnX;S.dungeonY=spawnY;S.dungeonKills=0;S.dungeonChestClaimed=false;S.dungeonRewardPending=false}
+ else if(scene==='interior'){S.insideX=spawnX;S.insideY=spawnY}
+ transitionLock=.85;persist();note(message);
+}
+function autoZoneTransition(dt){
+ transitionLock=Math.max(0,transitionLock-dt);
+ if(transitionLock>0||panel)return;
+ if(S.scene==='village'){
+  if(S.y>=826&&S.x>=422&&S.x<=578&&vy>0){changeZone('forest',500,685,'Whisperwood Forest');return}
+  if(S.x>=952&&S.y>=360&&S.y<=485&&vx>0){changeZone('dungeon',170,390,'Goblingrottan');return}
+  for(const b of buildings){
+   const doorX=b.x+b.w/2,doorY=b.y+b.h;
+   if(Math.abs(S.x-doorX)<34&&S.y>=doorY+5&&S.y<=doorY+29&&vy<-.15){
+    S.houseType=b.n==='Smedja'?'forge':b.n==='Gruva'?'mine':b.n==='Marknad'?'market':'guild';
+    changeZone('interior',500,585,'Du gick in i '+b.n);return
+   }
+  }
+ }else if(S.scene==='forest'){
+  if(S.forestY>=803&&Math.abs(S.forestX-500)<105&&vy>0)changeZone('village',500,735,'Tillbaka i Emberfall');
+ }else if(S.scene==='dungeon'){
+  if(S.dungeonX<=88&&Math.abs(S.dungeonY-395)<105&&vx<0)changeZone('village',885,425,'Tillbaka i Emberfall');
+ }else if(S.scene==='interior'){
+  if(S.insideY>=743&&Math.abs(S.insideX-500)<125&&vy>0){
+   const b=buildings.find(v=>(S.houseType==='forge'&&v.n==='Smedja')||(S.houseType==='mine'&&v.n==='Gruva')||(S.houseType==='market'&&v.n==='Marknad')||(S.houseType==='guild'&&v.n==='Gille'));
+   changeZone('village',b?b.x+b.w/2:500,b?b.y+b.h+50:550,'Du lämnade byggnaden');
+  }
+ }
+}
 function tick(t){
 try{
 const dt=Math.min((t-last)/1000,.05);last=t;
 if(!panel){walkMoving=Math.hypot(vx,vy)>.08;if(walkMoving){walkTime+=dt*Math.max(.6,Math.hypot(vx,vy));faceX=vx;faceY=vy}if(S.scene==='forest'){S.forestX=Math.max(30,Math.min(970,S.forestX+vx*speed*dt));S.forestY=Math.max(30,Math.min(840,S.forestY+vy*speed*dt));}else if(S.scene==='interior'){S.insideX=Math.max(110,Math.min(880,S.insideX+vx*speed*dt));S.insideY=Math.max(120,Math.min(765,S.insideY+vy*speed*dt));}else if(S.scene==='dungeon'){S.dungeonX=Math.max(35,Math.min(965,S.dungeonX+vx*speed*dt));S.dungeonY=Math.max(60,Math.min(810,S.dungeonY+vy*speed*dt));}else{let nx=S.x+vx*speed*dt,ny=S.y+vy*speed*dt;if(solid(S.x,S.y)){safePosition();nx=S.x+vx*speed*dt;ny=S.y+vy*speed*dt}if(!solid(nx,S.y))S.x=nx;if(!solid(S.x,ny))S.y=ny}}
 if(panel)walkMoving=false;
+autoZoneTransition(dt);
 productionClock+=dt;autosaveClock+=dt;
 if(productionClock>=5){productionClock-=5;
 if(S.manager)S.ore+=S.mine;
@@ -241,7 +276,7 @@ for(let y=0;y<870;y+=34)for(let x=0;x<1000;x+=34){let n=Math.sin(x*17+y*13)*43.7
 rect(435,0,130,870,'#7b7558');
 for(let i=0;i<90;i++){let x=(i*173+63)%960,y=(i*269+77)%830;if(x>395&&x<610)continue;rect(x-4,y-5,9,23,'#5d4735');ctx.beginPath();ctx.arc(x,y-23,20+i%3*5,0,Math.PI*2);ctx.fillStyle=i%3?'#244c3a':'#2e6145';ctx.fill();rect(x-9,y-40,12,6,'#467c51')}
 for(const [x,y] of [[240,300],[755,270],[200,650],[800,650]]){rect(x-15,y-12,30,22,'#8e795f');rect(x-9,y-18,19,9,'#b7a68b')}
-rect(425,750,150,80,'#506f61');rect(442,765,116,55,'#9cbba2');label('EXIT',500,745);
+rect(425,750,150,80,'#506f61');rect(442,765,116,55,'#9cbba2');label('EXIT ↓',500,745);
 if(!S.forestChest){rect(770,160,65,45,'#725034');rect(777,150,51,22,'#c39a56');rect(798,154,9,46,'#f1d37b');label('SUPPLIES',802,135)}
 for(const [x,y] of [[280,460],[700,520],[750,380]]){rect(x-8,y-20,16,27,'#a17b4f');rect(x-21,y-28,42,19,'#5d9a5a');label('WOOD',x,y-42)}
 if(!S.forestWolfDefeated){const wx=635+Math.sin(performance.now()/900)*22,wy=320+Math.cos(performance.now()/1100)*14;spriteActor('wolf',wx,wy,{moving:true,walk:performance.now()/1000});label('Duskwolf',wx,wy-76)}
@@ -264,7 +299,7 @@ const title=(str,x,y)=>{ctx.textAlign='center';ctx.font='bold 22px system-ui';ct
 rect(0,0,1000,870,'#4b3831');rect(80,70,840,730,'#b39a75');
 for(let y=90;y<790;y+=48)for(let x=100;x<900;x+=48){rect(x,y,43,43,(x+y)%3?'#8b735c':'#987e64');rect(x+3,y+4,35,3,'#b59b7c')}
 rect(85,75,830,25,'#634638');rect(85,75,25,720,'#634638');rect(890,75,25,720,'#634638');
-rect(420,748,160,48,'#624538');rect(437,751,126,40,'#c6a16c');title('EXIT',500,732);
+rect(420,748,160,48,'#624538');rect(437,751,126,40,'#c6a16c');title('EXIT ↓',500,732);
 const type=S.houseType||'forge';
 const props={forge:['⚒ SMEDJA','#c4744b'],mine:['⛏ GRUVA','#71838d'],market:['🏪 MARKNAD','#b99952'],guild:['🛡 GILLE','#7c72a0']};
 const [name,color]=props[type];
@@ -289,7 +324,7 @@ for(let x=0;x<1000;x+=40){R(x,0,37,35,'#55616b');R(x,835,37,35,'#55616b')}
 for(let y=0;y<870;y+=40){R(0,y,35,37,'#55616b');R(965,y,35,37,'#55616b')}
 for(const [x,y] of [[150,180],[480,480],[770,240],[860,670]]){R(x-12,y-4,24,10,'#50392e');R(x-7,y-23,14,22,'#aa5b32');R(x-4,y-19,8,16,'#ffcc70');const g=ctx.createRadialGradient(x,y-12,3,x,y-12,68);g.addColorStop(0,'#ffbd5270');g.addColorStop(1,'#ffbd5200');ctx.fillStyle=g;ctx.fillRect(x-68,y-80,136,136)}
 if(S.dungeonKills===3&&!S.dungeonChestClaimed){R(822,730,68,45,'#543826');R(829,720,54,26,'#c79a4a');R(851,721,9,45,'#f4d279');txt('CHEST',856,707,16)}
-R(60,355,80,85,'#466b72');R(71,365,58,65,'#78abb0');txt('EXIT',100,342,17);
+R(60,355,80,85,'#466b72');R(71,365,58,65,'#78abb0');txt('← EXIT',100,342,17);
 for(const [i,x,y] of [[0,440,260],[1,740,470],[2,530,680]]){if(S.dungeonKills>i)continue;spriteActor(i===0?'scout':i===1?'brute':'shaman',x,y,{moving:true,walk:performance.now()/1600+i});txt(ENEMIES[i].name,x,y-34,15)}
 const x=S.dungeonX,y=S.dungeonY,bob=walkMoving?Math.abs(Math.sin(walkTime*11))*3:0;
 spriteActor('hero',x,y,{moving:walkMoving,walk:walkTime,dir:Math.abs(faceX)>Math.abs(faceY)?(faceX<0?'left':'right'):(faceY<0?'up':'down'),armor:S.heroArmor,sword:S.heroSword});txt('YOU',x,y-45,14);
@@ -376,7 +411,7 @@ h='<h2>'+names[type]+'</h2><div class="inventory-section"><p>'+(type==='forge'?'
 }else{
 h='<h2>⚙ Inställningar</h2>'+btn('Virtuell joystick','joystick')+btn('Dra på kartan','drag')+
 btn('Långsam rörelse','slow')+btn('Normal rörelse','normal')+btn('Snabb rörelse','fast')+
-'<p>Beta Preview 1.2 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
+'<p>Beta Preview 1.3 · Separat sparning.</p>'+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
 }
 document.getElementById('content').innerHTML=h;
 document.getElementById('notice').textContent='';
