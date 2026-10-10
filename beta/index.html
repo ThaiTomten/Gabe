@@ -1,4 +1,4 @@
-<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 5.8 · Speltest</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
+<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 5.9 · Speltest</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
 header{background:#78533c;color:#fff0d0;border-bottom:4px solid #b98a51;text-shadow:1px 2px #553e31}
 #bottom{background:#78573e;border-top:4px solid #b98a51}
 button{background:#b28a5a;color:#fff7e7;border:2px solid #e2b879;box-shadow:inset 0 2px #f5d39b,0 3px #5b4134;font-weight:700}
@@ -38,7 +38,14 @@ body{display:flex;flex-direction:column;padding-top:env(safe-area-inset-top);pad
 .recipe-state58{font-size:13px;margin:8px 0;color:#4a4435}.recipe-card58>button{width:100%;margin:4px 0!important}
 .house-grid58{display:grid;gap:10px}.house-grid58 button{text-align:left;margin:0!important;padding:12px!important}.house-grid58 small{display:block;font-size:12px;font-weight:400;margin-top:5px;color:#f1e2c6}
 .guide-step58{border-left:4px solid #557c62;background:#f5e4c2;padding:12px;margin:10px 0}.guide-step58 p{margin:6px 0}
-</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="interactionHint"></div><div id="msg">Beta Preview 5.8 · Speltest · Emberfall · Original Art</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Företag</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Ryggsäck</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()" id="actionButton" aria-label="Utför handling">✦ Action</button><button id="attackButton" type="button"><span>⚔ Attack</span><small id="attackState">Redo</small></button><button id="dodgeButton" type="button"><span>↗ Undvik</span><small id="dodgeState">Redo</small></button><button onclick="show('guide')">? Guide</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><p id="notice" role="status" aria-live="polite"></p><div id="content"></div></div><script>
+
+/* 5.9: compact operations desk, stable live counters and explicit ownership. */
+.business-tabs59{display:flex;gap:6px;margin:12px 0;flex-wrap:wrap}.business-tabs59 button{flex:1;min-width:80px;margin:0!important;padding:10px 6px!important;font-size:13px}
+#modal .business-tabs59 button[aria-pressed="true"]{background:#765136;border-color:#4b3424;box-shadow:inset 0 -3px #f1cc85}
+.business-summary59{padding:12px;background:#f6e6c6;border:1px solid #b29366;border-radius:9px;margin:10px 0}.business-summary59 p{margin:4px 0}.business-summary59 strong{font-size:19px}
+.business-card59{background:#f4dfb9;border:1px solid #ad8a5e;border-radius:10px;padding:13px;margin:12px 0}.business-card59 h3{font-size:17px;margin:0 0 8px}.business-card59 p{margin:7px 0}.business-card59 button{width:100%;margin:4px 0!important}
+.business-status59{border-left:3px solid #6e794b;padding-left:9px;font-size:13px}.business-card59 small,.business-summary59 small{display:block;color:#554632;line-height:1.5}.business-reserve59{display:flex;gap:8px}.business-reserve59 button{width:50%}.business-report59{width:100%;border-collapse:collapse;font-size:13px}.business-report59 th,.business-report59 td{padding:9px 4px;border-bottom:1px solid #bc9a6d;text-align:right;overflow-wrap:anywhere}.business-report59 th:first-child,.business-report59 td:first-child{text-align:left}.business-report59 caption{text-align:left;font-weight:700;padding:8px 0}
+</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="interactionHint"></div><div id="msg">Beta Preview 5.9 · Speltest · Emberfall · Original Art</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Företag</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Ryggsäck</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()" id="actionButton" aria-label="Utför handling">✦ Action</button><button id="attackButton" type="button"><span>⚔ Attack</span><small id="attackState">Redo</small></button><button id="dodgeButton" type="button"><span>↗ Undvik</span><small id="dodgeState">Redo</small></button><button onclick="show('guide')">? Guide</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><p id="notice" role="status" aria-live="polite"></p><div id="content"></div></div><script>
 const PLAYTEST55=!!(window.location&&/(?:[?&])speltest=1(?:&|$)/.test(window.location.search||''));
 const SAVE_KEY=PLAYTEST55?'runeforge_playtest_55':'runeforge_beta_preview_01';
 const BACKUP_KEY=PLAYTEST55?'runeforge_playtest_55_backup':'runeforge_beta_preview_backup_52';
@@ -515,21 +522,38 @@ function draw(){
 
 const defaults={wood:0,ingots:0,runes:0,potions:1,level:1,heroSword:false,heroArmor:false,heroShield:false,quest:0,forestWins:0,combat:null,autoForge:false,autoSell:false,woodLevel:1,lastSaved:Date.now(),totalGold:0,scene:'village',dungeonX:150,dungeonY:380,dungeonKills:0,contractsDone:0,contractTarget:3,contractReward:100,expeditionEnds:0,expeditionTier:1,expeditionsDone:0,forgeMastery:0,merchantRep:0,saveVersion:2,oreGathered:0,swordsCrafted:0,tutorialSeen:false,insideX:500,insideY:575,forestX:500,forestY:78,forestWood:0,forestVisits:0,forestChest:false,forestWolfWins:0,forestWolfDefeated:false,heroStyle:0,weaponType:'sword',staffOwned:false,staffMastery:0,lootItems:[],equippedCharm:null,lootKills:0,armorTier:0,weaponTier:0,helmetOwned:false,bootsOwned:false,visualTime:'day',fish:0,fisheryLevel:1,fisheryManager:false,fishSold:0,fishCaughtAtPond:0,fisheryContracts:0,fishSpecies:{},fishBites:0,fishMisses:0,fishSalesGold:0,fishContractDone:0,resourceContractDone:0,marketCycle:0,marketDemand:1,marketDeliveries:0,villageMilestones:[],npcQuestAccepted:{},npcQuestCompleted:{},npcQuestClaimed:{},heroRenown:0,renownRewards:[],renownHallBuilt:false,arcaneWorkshopBuilt:false,caravanOfficeBuilt:false,arcaneOrdersDone:0,caravanOrdersDone:0,steelStock:0,runeGoods:0,productionOrdersDone:0,autoSteel:false,autoRune:false,warehouseCapacity:40,warehouseLevel:1,autoTradeSteel:false,autoTradeRune:false,tradeReserveSteel:2,tradeReserveRune:1,tradeRevenue:0,tradeCosts:0,productionPriority:'balanced',inventoryCategory:'all',productionCostTotal:0,productionRevenueTotal:0,materialValuation:{ore:6,wood:4,runes:18},steelCostBasis:[],runeCostBasis:[],productionRealizedCost:0,productionGrossProfit:0,productionQuestDone:0,questRevenue:0,questExpenses:0,economyLedger:[],economyTransactionId:0,monsterEssence:0,wardSeals:0,wardDeliveries:0,wardCostBasis:[],dungeonClears:0,dungeonChestClaimed:false,dungeonRewardPending:false,merchantDialogueSeen:false,guardDialogueSeen:false,combatWins:0,cookedMeals:0,mealIngredientsUsed:0,mealsCookedTotal:0};
 for(const k in defaults)if(S[k]===undefined)S[k]=defaults[k];
+// Purchased automation and its running state are independent. Old active systems remain owned.
+const AUTOMATION59={
+ autoSteel:{cost:160,name:'Ståltillverkning',action:'autosteel'},
+ autoRune:{cost:280,name:'Runtillverkning',action:'autorune',workshop:true},
+ autoTradeSteel:{cost:120,name:'Stålförsäljning',action:'autotradesteel'},
+ autoTradeRune:{cost:200,name:'Runförsäljning',action:'autotraderune'}
+};
+if(!S.automationOwned59||typeof S.automationOwned59!=='object'||Array.isArray(S.automationOwned59))S.automationOwned59={};
+for(const flag of Object.keys(AUTOMATION59))if(S[flag])S.automationOwned59[flag]=true;
+let businessCycleRunning59=false,lastCycle59=null,businessBindings59=[],productionTab59='flow';
 if(S.manager&&S.gold<0)S.gold=0;
 let autosaveClock=0,productionClock=Math.max(0,Math.min(4.999,Number(S.productionRemainder)||0));let movementErrorShown=false;let dungeonTime=0;
 let batchSimulation=false;
-function persist(){if(batchSimulation)return;S.productionRemainder=productionClock;S.lastSaved=Date.now();try{localStorage.setItem(SAVE_KEY,JSON.stringify(S))}catch(e){}}
+function persist(){if(batchSimulation||businessCycleRunning59)return;S.productionRemainder=productionClock;S.lastSaved=Date.now();try{localStorage.setItem(SAVE_KEY,JSON.stringify(S))}catch(e){}}
 function finishExpedition(){if(!S.expeditionEnds||Date.now()<S.expeditionEnds)return false;S.expeditionEnds=0;S.expeditionsDone++;const reward=12+S.expeditionTier*8;S.ore+=reward;S.runes+=S.expeditionTier>1?2:1;S.totalGold+=0;note('Expedition klar! +'+reward+' malm, +runfragment');return true}
 function businessCycle(){
- if(S.renownHallBuilt)economyTransaction('passive',15,0,'hall');
- if(S.caravanOfficeBuilt)economyTransaction('passive',22,0,'caravan');
- if(S.arcaneWorkshopBuilt)S.runes++;
- if(S.manager)S.ore+=S.mine;
- if(S.fisheryManager)catchFish(FISH_SPECIES[0],S.fisheryLevel);
- if(S.productionPriority==='rune'){if(S.autoRune)craftProduction('rune');if(S.autoSteel)craftProduction('steel')}
- else{if(S.autoSteel)craftProduction('steel');if(S.autoRune)craftProduction('rune')}
- tradeCycle();if(S.autoForge)makeSwords();
- if(S.autoSell&&S.swords>0)economyTransaction('swords',35,consumeSwords(1),'auto-sale');
+ businessCycleRunning59=true;lastCycle59={steel:null,rune:null,sales:0};
+ try{
+  if(S.renownHallBuilt)economyTransaction('passive',15,0,'hall');
+  if(S.caravanOfficeBuilt)economyTransaction('passive',22,0,'caravan');
+  if(S.arcaneWorkshopBuilt)S.runes++;
+  if(S.manager)S.ore+=S.mine;
+  if(S.fisheryManager)catchFish(FISH_SPECIES[0],S.fisheryLevel);
+  for(const type of (S.productionPriority==='rune'?['rune','steel']:['steel','rune'])){
+   if(!S[type==='steel'?'autoSteel':'autoRune'])continue;
+   const reason=productionBlock59(type);lastCycle59[type]=reason||'Tillverkade 1 '+(type==='steel'?'ståltacka':'runvara');
+   craftProduction(type);
+  }
+  lastCycle59.sales=tradeCycle();if(S.autoForge)makeSwords();
+  if(S.autoSell&&S.swords>0)economyTransaction('swords',35,consumeSwords(1),'auto-sale');
+ }finally{businessCycleRunning59=false}
+ if(!batchSimulation){persist();refreshBusinessUI59()}
 }
 function offline(){
  const elapsed=Math.max(0,Math.min(8*3600,(Date.now()-Number(S.lastSaved||Date.now()))/1000)),total=elapsed+productionClock,cycles=Math.floor(total/5);
@@ -854,7 +878,7 @@ requestAnimationFrame(tick)
 }
 requestAnimationFrame(tick);
 
-function note(x){if(batchSimulation)return;noteTime57=6;document.getElementById('msg').style.opacity='1';document.getElementById('msg').textContent=x;document.getElementById('notice').textContent=x}
+function note(x){if(batchSimulation||businessCycleRunning59)return;noteTime57=6;document.getElementById('msg').style.opacity='1';document.getElementById('msg').textContent=x;document.getElementById('notice').textContent=x}
 function save(){persist();note('Sparat!')}
 
 function drawForest(){
@@ -1162,14 +1186,18 @@ function upgradeWarehouse(){
  if(S.gold<cost){note('Kräver '+cost+' guld');return false}
  S.gold-=cost;S.warehouseLevel++;S.warehouseCapacity+=20;persist();note('Lager utökat till '+S.warehouseCapacity);return true;
 }
-function automateProduction(type){
- const flag=type==='steel'?'autoSteel':'autoRune';
- if(type==='rune'&&!S.arcaneWorkshopBuilt){note('Kräver Runverkstad');return false}
- const cost=type==='steel'?160:280;
- if(!S[flag]&&S.gold<cost){note('Kräver '+cost+' guld');return false}
- if(!S[flag]){S.gold-=cost;S.tradeCosts+=cost;}
- S[flag]=!S[flag];persist();note('Automation '+(S[flag]?'på':'av'));return true;
+function toggleAutomation59(flag){
+ const item=AUTOMATION59[flag];if(!item)return false;
+ if(S[flag]){S[flag]=false;persist();note(item.name+' pausad. Återstart är gratis.');return true}
+ if(item.workshop&&!S.arcaneWorkshopBuilt){note('Kräver Runverkstad');return false}
+ if(!S.automationOwned59[flag]){
+  if(S.gold<item.cost){note('Kräver '+item.cost+' guld');return false}
+  S.gold-=item.cost;S.tradeCosts+=item.cost;S.automationOwned59[flag]=true;
+ }
+ S[flag]=true;persist();note(item.name+' på. Kör var 5:e sekund.');return true;
 }
+function automateProduction(type){return ['steel','rune'].includes(type)?toggleAutomation59(type==='steel'?'autoSteel':'autoRune'):false}
+
 const INVENTORY_ICONS={
  'Ståltackor':['..AAAA..','.ABBBBA.','ABCCCCBA','ABCCCCBA','ABCCCCBA','.ABBBBA.','..AAAA..','........'],
  'Runvaror':['...PP...','..PBBP..','.PBBBBP.','PBBWWBBP','.PBBBBP.','..PBBP..','...PP...','........'],
@@ -1193,13 +1221,7 @@ function setProductionPriority(priority){
  if(!['balanced','steel','rune'].includes(priority))return false;
  S.productionPriority=priority;persist();show('production');return true;
 }
-function toggleAutoTrade(type){
- const flag=type==='steel'?'autoTradeSteel':'autoTradeRune';
- const cost=type==='steel'?120:200;
- if(!S[flag]&&S.gold<cost){note('Kräver '+cost+' guld');return false}
- if(!S[flag]){S.gold-=cost;S.tradeCosts+=cost;}
- S[flag]=!S[flag];persist();note('Automatisk försäljning '+(S[flag]?'på':'av'));return true;
-}
+function toggleAutoTrade(type){return ['steel','rune'].includes(type)?toggleAutomation59(type==='steel'?'autoTradeSteel':'autoTradeRune'):false}
 // One centralized transaction path for production sales and contract deliveries.
 function economyTransaction(category,amount,cost=0,meta=''){
  if(!Number.isFinite(amount)||!Number.isFinite(cost)||amount<0||cost<0)throw new Error('Ogiltig transaktion');
@@ -1234,14 +1256,88 @@ function tradeCycle(){
  if(earned){S.tradeRevenue+=earned;refreshMarket();persist()}
  return earned;
 }
-function productionOverview(){
- const capacity=Math.max(1,S.warehouseCapacity),used=warehouseUsed(),pct=Math.min(100,Math.round(100*used/capacity));
- return '<div class="inventory-section"><h3>📊 Produktion & äldre totalsummor</h3><p>Lager: '+used+' / '+capacity+' ('+pct+'%)</p>'+
- '<div style="height:14px;background:#947650;border-radius:7px;overflow:hidden"><div style="height:100%;width:'+pct+'%;background:'+(pct>85?'#b96859':'#79a977')+'"></div></div>'+
- '<p>Stål: '+(S.autoSteel?'Automatiskt':'Manuellt')+' · Runor: '+(S.autoRune?'Automatiskt':'Manuellt')+'</p>'+
- '<p>Försäljning: '+(S.autoTradeSteel?'Stål aktivt':'Stål av')+' / '+(S.autoTradeRune?'Runor aktivt':'Runor av')+'</p>'+
- '<p>Transaktioner i journalen: '+(S.economyTransactionId||0)+' · Uppdragsintäkter: '+(S.questRevenue||0)+' guld</p><p>Automatisk omsättning: '+S.tradeRevenue+' guld · Startinvesteringar: '+S.tradeCosts+' guld</p><p>Produktionsintäkter: '+S.productionRevenueTotal+' guld · Beräknade materialkostnader: '+S.productionCostTotal+' guld</p><p>Bruttovinst: '+industryFinancialReport().gross+' guld · Osålt lagervärde: '+industryFinancialReport().inventory+' guld · Kostnad sålda varor: '+industryFinancialReport().cogs+' guld · Netto: '+industryFinancialReport().net+' guld</p><p>Gillesuppdrag: '+S.questRevenue+' guld intäkter · '+S.questExpenses+' guld varukostnad (delvis inkluderade ovan)</p><small>Materialkostnader är schablonvärden, inte bokförda inköpspriser. Lagerförändringar och andra företag ingår inte.</small></div>';
+// Live bindings change text and availability, never replace a focused button.
+function escapeHTML59(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function liveText59(read,tag='p',className=''){
+ const id='business59-'+businessBindings59.length;businessBindings59.push({id,read});
+ return '<'+tag+' id="'+id+'" class="'+className+'">'+escapeHTML59(read())+'</'+tag+'>';
 }
+function liveButton59(read,act,enabled=()=>true){
+ const id='business59-'+businessBindings59.length;businessBindings59.push({id,read,enabled});
+ return '<button type="button" id="'+id+'" '+(enabled()?'':'disabled')+' onclick="action(\''+act+'\')">'+escapeHTML59(read())+'</button>';
+}
+function refreshBusinessUI59(){
+ if(!['production','empire'].includes(panel))return;
+ for(const b of businessBindings59){const el=document.getElementById(b.id);if(!el)continue;const text=String(b.read());if(el.textContent!==text)el.textContent=text;if(b.enabled)el.disabled=!b.enabled()}
+}
+function productionBlock59(type){
+ const r=PRODUCTION_RECIPES[type];if(!r)return 'Okänt recept';
+ if(type==='rune'&&!S.arcaneWorkshopBuilt)return 'Bygg Runverkstaden först';
+ if(type==='steel'&&warehouseSpace()<1)return 'Lagret är fullt';
+ const missing=recipeNeeds58(Object.fromEntries(['ore','wood','runes','steelStock'].map(k=>[k,r[k]||0]))).filter(n=>n.missing);
+ return missing.length?'Saknas: '+missing.map(n=>n.missing+' '+n.name.toLowerCase()).join(', '):'';
+}
+function automationLabel59(flag){const a=AUTOMATION59[flag];return S[flag]?'Pausa '+a.name.toLowerCase():S.automationOwned59[flag]?'Återstarta gratis':'Köp '+a.name.toLowerCase()+' · '+a.cost+' guld'}
+function automationReady59(flag){const a=AUTOMATION59[flag];return !!S[flag]||(!a.workshop||S.arcaneWorkshopBuilt)&&((!!S.automationOwned59[flag])||S.gold>=a.cost)}
+function automationStatus59(flag){
+ const a=AUTOMATION59[flag];
+ if(!S[flag])return S.automationOwned59[flag]?'Pausad · ägd':a.workshop&&!S.arcaneWorkshopBuilt?'Låst · kräver Runverkstad':'Ej köpt · engångskostnad '+a.cost+' guld';
+ if(flag==='autoSteel'||flag==='autoRune'){
+  const type=flag==='autoSteel'?'steel':'rune';
+  return 'På · '+(lastCycle59&&lastCycle59[type]!==null?'senaste varvet: '+lastCycle59[type]:'material just nu: '+(productionBlock59(type)||'redo'));
+ }
+ const steel=flag==='autoTradeSteel',stock=steel?S.steelStock:S.runeGoods,reserve=steel?S.tradeReserveSteel:S.tradeReserveRune;
+ return stock>reserve?'På · '+(stock-reserve)+' över reserven, säljer högst 1 per varv':'På · behåller '+stock+' av '+reserve+' i reserv';
+}
+function automationControl59(flag){return liveText59(()=>automationStatus59(flag),'p','business-status59')+liveButton59(()=>automationLabel59(flag),AUTOMATION59[flag].action,()=>automationReady59(flag))}
+function enterpriseTotals59(){
+ const books=Object.values(S.businessBooks53||{});return {revenue:books.reduce((n,b)=>n+b.revenue,0),cost:books.reduce((n,b)=>n+b.cost,0),assets:inventoryAssetValue()};
+}
+function businessHome59(){
+ return '<h2>Företag i Emberfall</h2>'+liveText59(()=>S.gold+' guld · '+S.ore+' malm · '+S.wood+' trä · '+S.swords+' svärd','p','game-hint')+
+ '<section class="business-card59"><h3>Från fynd till företag</h3><p>Samla råvaror, tillverka varor och sälj. Använd guldet till utrustning, större produktion och anställda.</p>'+btn('Produktion & lager','openproduction')+btn('Guide: första svärdsaffären','guideto-sale')+'</section>'+
+ '<section class="business-card59"><h3>Gruva, skog & smedja</h3>'+liveButton59(()=>'Bryt '+S.mine+' malm','mine')+liveButton59(()=>'Hugg '+S.woodLevel+' trä','wood')+liveButton59(()=>'Smid '+S.forge+' svärd · 2 malm + 1 trä','forge',()=>S.ore>=2&&S.wood>=1)+liveButton59(()=>'Sälj 1 svärd · '+(35+Math.floor(S.merchantRep/5)*5)+' guld','sell',()=>S.swords>0)+'<small>Behåll ett svärd till hjälten. Trä samlar du själv här eller ute i Whisperwood.</small></section>'+
+ '<section class="business-card59"><h3>Anställda · var 5:e sekund</h3>'+liveText59(()=>S.manager?'Gruvchef: +'+S.mine+' malm per varv.':'Gruvchef: samlar malm åt dig.')+liveButton59(()=>S.manager?'Gruvchef anställd':'Anställ gruvchef · 100 guld','manager',()=>!S.manager&&S.gold>=100)+liveText59(()=>S.autoForge?'Smed: '+(S.ore>=2&&S.wood>=1?'redo att smida '+S.forge+' svärd':'väntar på 2 malm och 1 trä'):'Smed: tillverkar svärd av ditt material.')+liveButton59(()=>S.autoForge?'Smed anställd':'Anställ smed · 150 guld','autoforge',()=>!S.autoForge&&S.gold>=150)+liveText59(()=>S.autoSell?'Handlare: säljer högst 1 svärd för 35 guld per varv.':'Handlare: säljer svärd automatiskt.')+liveButton59(()=>S.autoSell?'Handlare anställd':'Anställ handlare · 175 guld','autosell',()=>!S.autoSell&&S.gold>=175)+'</section>'+
+ '<section class="business-card59"><h3>Utöka produktionen</h3><p>Uppgraderingen visar mängden du får vid nästa nivå.</p>'+liveButton59(()=>'Gruva: '+S.mine+' → '+(S.mine+1)+' malm · '+50*S.mine+' guld','upmine',()=>S.gold>=50*S.mine)+liveButton59(()=>'Gruva: +10 nivåer · '+Math.round(50*(10*S.mine+45)*.9)+' guld','upmine10',()=>S.gold>=Math.round(50*(10*S.mine+45)*.9))+liveButton59(()=>'Skog: '+S.woodLevel+' → '+(S.woodLevel+1)+' trä · '+45*S.woodLevel+' guld','upwood',()=>S.gold>=45*S.woodLevel)+liveButton59(()=>'Smedja: '+S.forge+' → '+(S.forge+1)+' svärd · '+70*S.forge+' guld','upforge',()=>S.gold>=70*S.forge)+'<small>Smedjans materialåtgång är fortfarande 2 malm och 1 trä per omgång.</small></section>';
+}
+function productionCard59(type){
+ const steel=type==='steel',r=PRODUCTION_RECIPES[type],key=r.output;
+ return '<section class="business-card59"><h3>'+(steel?'1. Ståltacka':'2. Runvara')+'</h3><p>'+(steel?'3 malm + 1 trä → 1 ståltacka':'1 ståltacka + 2 trä + 2 runfragment → 1 runvara')+'</p>'+liveText59(()=>steel?'Du har '+S.ore+' malm och '+S.wood+' trä.':'Du har '+S.steelStock+' tackor, '+S.wood+' trä och '+S.runes+' runfragment.')+liveText59(()=>productionBlock59(type)||'✓ Redo att tillverka','p','business-status59')+liveButton59(()=>'Tillverka 1 '+(steel?'ståltacka':'runvara'),'craft'+type,()=>!productionBlock59(type))+
+ liveText59(()=>S[key]+' i lager · pris just nu '+marketReward(steel?55:165)+' guld')+liveButton59(()=>'Sälj 1 · '+marketReward(steel?55:165)+' guld','sell'+type,()=>S[key]>0)+(steel?'<small>Behåll stål för att förädla det till runvaror.</small>':'<small>Runfragment kommer från äventyr, expeditioner och Runverkstaden. Att förädla en tacka kräver ingen extra lagerplats.</small>'+(!S.arcaneWorkshopBuilt?btn('Lås upp Runverkstaden · anseende 12','openquests'):''))+'</section>';
+}
+function productionMenu59(){
+ let h='<h2>Produktion & lager</h2>'+liveText59(()=>S.gold+' guld · efterfrågan '+Math.round(marketRate()*100)+'%')+'<nav class="business-tabs59" aria-label="Produktionsvyer">'+[['flow','Tillverka'],['auto','Automation'],['books','Ekonomi']].map(([id,label])=>'<button type="button" aria-pressed="'+(productionTab59===id)+'" onclick="action(\'productiontab-'+id+'\')">'+label+'</button>').join('')+'</nav>';
+ if(productionTab59==='books')return h+financialMenu59()+btn('Till företagen','openempire');
+ h+=productionOverview();
+ if(productionTab59==='flow'){
+  h+='<p class="game-hint">Malm & trä → stål → runvaror. Lägg till monsteressens från äventyr för att skapa Väktarsigill till gillet.</p>'+productionCard59('steel')+productionCard59('rune')+
+  '<section class="business-card59"><h3>3. Väktarsigill</h3><p>1 runvara + 3 monsteressenser → 1 sigill</p>'+liveText59(()=>S.runeGoods+' runvaror · '+S.monsterEssence+' monsteressenser · '+S.wardSeals+' sigill')+liveText59(()=>!S.arcaneWorkshopBuilt?'Kräver Runverkstad':S.runeGoods<1||S.monsterEssence<3?'Saknas: '+[S.runeGoods<1?'1 runvara':'',S.monsterEssence<3?(3-S.monsterEssence)+' monsteressenser':''].filter(Boolean).join(', '):'✓ Redo att tillverka','p','business-status59')+liveButton59(()=>'Tillverka 1 Väktarsigill','craftward',()=>S.arcaneWorkshopBuilt&&S.runeGoods>=1&&S.monsterEssence>=3)+btn('Gå till gillets leveranser','openquests')+'</section>';
+ }else{
+  h+='<p class="game-hint">Köp varje automation en gång. Pausa och återstarta gratis. Ett varv körs var 5:e sekund, även med menyn öppen.</p>'+
+  '<section class="business-card59"><h3>Ordning i produktionen</h3><p>Gruvan och Runverkstaden ger råvaror först. Därefter sker förädling, försäljning och svärdssmide. Trä samlar du själv.</p>'+btn((S.productionPriority!=='rune'?'✓ ':'')+'Stål → runvaror','priority-steel')+btn((S.productionPriority==='rune'?'✓ ':'')+'Runvaror → stål','priority-rune')+'<small>Runvaror först ger förädlingen första valet av ditt trä.</small></section>';
+  for(const type of ['steel','rune']){
+   const steel=type==='steel',flag=steel?'autoSteel':'autoRune',sale=steel?'autoTradeSteel':'autoTradeRune',reserve=steel?'tradeReserveSteel':'tradeReserveRune';
+   h+='<section class="business-card59"><h3>'+(steel?'Stål':'Runvaror')+' · produktion</h3><p>'+(steel?'3 malm + 1 trä → 1 tacka':'1 tacka + 2 trä + 2 runfragment → 1 runvara')+'</p>'+automationControl59(flag)+'</section>'+
+   '<section class="business-card59"><h3>'+(steel?'Stål':'Runvaror')+' · försäljning</h3>'+automationControl59(sale)+liveText59(()=>'Behåll '+S[reserve]+' i reserv för recept och uppdrag.')+'<div class="business-reserve59">'+liveButton59(()=>'− Reserv','reserve'+type+'minus',()=>S[reserve]>0)+liveButton59(()=>'+ Reserv','reserve'+type+'plus',()=>S[reserve]<50)+'</div><small>Automatiken säljer bara över reserven. Manuella försäljningar kan använda hela lagret.</small></section>';
+  }
+  h+=liveText59(()=>lastCycle59?'Senaste varvet: '+lastCycle59.sales+' guld från automatisk stål- och runförsäljning.':'Nästa varv visar resultatet här.','p','game-hint');
+ }
+ h+='<section class="business-card59"><h3>Lagerutbyggnad</h3>'+liveText59(()=>warehouseSpace()+' platser lediga')+liveButton59(()=>'Köp 20 platser · '+100*S.warehouseLevel+' guld','upwarehouse',()=>S.gold>=100*S.warehouseLevel)+'</section>'+btn('Till företagen · samla råvaror','openempire');return h;
+}
+function financialMenu59(){
+ const names={manufacturing:'Förädlade varor',forge:'Svärd',fishery:'Fiskeri',guild:'Uppdrag',resources:'Råvaror',services:'Verksamheter',adventure:'Äventyr'};
+ let h='<section class="business-summary59"><strong>Genomförda affärer</strong><small>Sedan ekonomijournalen infördes i 5.3. Beloppen nedan räknar varje affär en gång.</small>'+liveText59(()=>{const b=enterpriseTotals59();return 'Intäkter '+Math.round(b.revenue)+' − varukostnad '+Math.round(b.cost)+' = bruttovinst '+Math.round(b.revenue-b.cost)+' guld.'})+'</section>';
+ h+='<table class="business-report59"><caption>Resultat per verksamhet · guld</caption><thead><tr><th scope="col">Verksamhet</th><th scope="col">Intäkt</th><th scope="col">Varu-<br>kostnad</th><th scope="col">Brutto-<br>vinst</th></tr></thead><tbody>';
+ for(const [key,name] of Object.entries(names))h+='<tr><th scope="row">'+name+'</th>'+['revenue','cost','profit'].map(field=>liveText59(()=>{const b=(S.businessBooks53||{})[key]||{revenue:0,cost:0};return Math.round(field==='profit'?b.revenue-b.cost:b[field])},'td')).join('')+'</tr>';
+ h+='</tbody></table><section class="business-card59"><h3>Osålda produkter</h3>'+liveText59(()=>Math.round(inventoryAssetValue())+' guld bundet materialvärde')+'<small>Svärd, stål, runvaror och sigill. Råvaror, fisk och utrustning ingår inte. Osålt värde räknas inte som intäkt eller vinst. Materialvärden är schabloner, inte betalningar från din guldkassa.</small></section>'+
+ '<section class="business-card59"><h3>Automationens inköp</h3>'+liveText59(()=>S.tradeCosts+' guld betalat för stål- och runautomation')+'<small>Redovisas separat från varukostnaden. Andra byggnader, anställda och uppgraderingar ingår inte i denna summa. Den äldre inköpshistoriken bevaras.</small></section>'+
+ '<section class="business-card59"><h3>Senaste affärerna</h3>'+liveText59(()=>(S.economyLedger||[]).slice(-5).reverse().map(e=>(names[e.business]||'Affär')+': +'+e.revenue+' guld, varukostnad '+Math.round(e.cost)).join(' • ')||'Inga affärer ännu. Tillverka och sälj din första vara.')+'</section>';return h;
+}
+
+function productionOverview(){
+ return '<section class="business-summary59">'+liveText59(()=>warehouseUsed()+' / '+S.warehouseCapacity+' lagerplatser','strong')+liveText59(()=>S.steelStock+' ståltackor · '+S.runeGoods+' runvaror · '+S.wardSeals+' sigill')+'<small>Lagret rymmer förädlade varor. Råvaror och svärd ligger i ryggsäcken.</small></section>';
+}
+
 function productionUnitCost(type){
  const v=S.materialValuation||{ore:6,wood:4,runes:18};
  return type==='steel'?3*v.ore+v.wood:type==='rune'?2*v.wood+2*v.runes+3*v.ore+v.wood:0;
@@ -1260,7 +1356,7 @@ function inventoryAssetValue(){
  return S.steelCostBasis.reduce((a,b)=>a+b,0)+S.runeCostBasis.reduce((a,b)=>a+b,0)+(S.wardCostBasis||[]).reduce((a,b)=>a+b,0)+swordBasis().reduce((a,b)=>a+b,0);
 }
 function enterpriseReports(){return {businesses:JSON.parse(JSON.stringify(S.businessBooks53||{})),assets:inventoryAssetValue()}}
-function businessReportHTML(){const names={manufacturing:'Förädlade varor',forge:'Svärd',fishery:'Fiskeri',guild:'Uppdragsbelöningar',resources:'Råvaror',services:'Verksamhetsintäkter',adventure:'Äventyr'};return '<div class="inventory-section"><h3>Intäkter per verksamhet · sedan 5.3</h3>'+Object.entries(S.businessBooks53||{}).map(([key,b])=>'<p><strong>'+(names[key]||key)+'</strong><br>Intäkt '+Math.round(b.revenue)+' · varukostnad '+Math.round(b.cost)+' · bruttovinst '+Math.round(b.revenue-b.cost)+'</p>').join('')+'<p>Varje försäljning ingår i en verksamhet. Äldre historik nedan är inte omräknad. Materialvärden är schabloner; investeringar redovisas separat.</p></div>'}
+
 function industryFinancialReport(){
  const revenue=S.productionRevenueTotal||0,cogs=S.productionRealizedCost||0;
  return {revenue,cogs,gross:revenue-cogs,inventory:inventoryAssetValue(),investments:S.tradeCosts||0,net:revenue-cogs-(S.tradeCosts||0)};
@@ -1293,9 +1389,7 @@ const PRODUCTION_RECIPES={
 };
 function craftProduction(type){
  const r=PRODUCTION_RECIPES[type];if(!r)return false;
- if(type==='rune'&&!S.arcaneWorkshopBuilt){note('Bygg Runverkstaden först');return false}
- if(type==='steel'&&warehouseSpace()<1){note('Lagret är fullt');return false}
- for(const key of ['ore','wood','runes','steelStock'])if((S[key]||0)<(r[key]||0)){note('Saknar material för '+r.name);return false}
+ const blocked=productionBlock59(type);if(blocked){note(blocked);return false}
  reconcileCostBasis();const basis=productionBasis(type);
  for(const key of ['ore','wood','runes','steelStock'])S[key]-=r[key]||0;
  if(type==='rune')S.steelCostBasis.shift();
@@ -1427,9 +1521,10 @@ function playtestTravel55(place){
 function show(p){
 const samePanel=panel===p,retainedNotice=samePanel?document.getElementById('notice').textContent:'',scroll=samePanel?(document.getElementById('modal').scrollTop||0):0;
 if(fishingGame&&p!=='fishing'){fishingGame=null;fishingCooldown=.5}panel=p;updateCombatUI57();vx=vy=0;const nub=document.getElementById('nub');if(nub)nub.style.transform='';updateActionButton();document.getElementById('modal').style.display='block';
-let h='';
+businessBindings59=[];let h='';
 if(p==='playtest'&&PLAYTEST55){
- h='<h2>Speltest 5.8</h2><p>Testa arbetsplatser, recept och vägledning. Strider, fiske och byn finns kvar att prova. Detta läge har en egen testsparning.</p>'+
+ h='<h2>Speltest 5.9</h2><p>Testa produktion, automation och ekonomi. Arbetsplatser, strider och fiske finns också kvar. Detta läge har en egen testsparning.</p>'+
+ btn('Företaget · prova produktion','testproduction59')+
  '<button onclick="playtestTravel55(\'village\')">Byn · hus och NPC:er</button>'+
  '<button onclick="playtestTravel55(\'forest\')">Skogen · hjälten och Duskwolf</button>'+
  '<button onclick="playtestTravel55(\'dungeon\')">Grottan · tre monstertyper</button>'+
@@ -1440,15 +1535,7 @@ if(p==='playtest'&&PLAYTEST55){
  '<p>Återvänd till testplatserna via ⚙ → Speltest. Använd joysticken för att gå, Action för att använda saker och Attack för att slåss.</p>'+
  '<p>I strid: vänta på ! Slag om, lämna ringen och prova Undvik. Öppna ryggsäcken mitt i uppladdningen: striden ska stå still tills du stänger menyn. I grottan kan du besegra fienderna i valfri ordning.</p>';
 }else if(p==='empire'){
-h='<h2>🏰 Imperiet</h2><p>🪙 '+S.gold+' guld · ⛏ '+S.ore+' malm · 🌲 '+S.wood+' trä · ⚔ '+S.swords+' svärd</p><h3>Produktion</h3>'+
-btn('⛏ Bryt +'+S.mine+' malm','mine')+btn('🌲 Hugg +'+S.woodLevel+' trä','wood')+
-btn('⚒ Smid svärd (2 malm + 1 trä)','forge')+btn('🏪 Sälj svärd (+'+(35+Math.floor(S.merchantRep/5)*5)+' guld)','sell')+
-'<h3>Investeringar</h3>'+btn('Gruva nivå '+S.mine+' · '+(50*S.mine)+' guld','upmine')+btn('Gruva +10 nivåer (rabatt)','upmine10')+
-btn('Skogsbruk nivå '+S.woodLevel+' · '+(45*S.woodLevel)+' guld','upwood')+
-btn('Smedja nivå '+S.forge+' · '+(70*S.forge)+' guld','upforge')+
-'<h3>🏗 Synliga byggnadsnivåer</h3><p>Byggnader förändras vid nivå 2, 5 och 10. Anställda syns i byn när automation är aktiv.</p><h3>Milestones</h3><p>Smidesmästerskap '+S.forgeMastery+' · Bonusnivåer: '+Math.floor(S.forgeMastery/10)+'</p><p>Handelsrykte '+S.merchantRep+' · Varje 5 kontrakt ger bättre priser.</p><h3>Automation (var 5:e sekund)</h3>'+btn(S.manager?'✓ Gruvchef aktiv':'Anställ gruvchef · 100 guld','manager')+
-btn(S.autoForge?'✓ Automatisk smedja':'Automatisera smedja · 150 guld','autoforge')+
-btn(S.autoSell?'✓ Automatisk försäljning':'Automatisera försäljning · 175 guld','autosell');
+h=businessHome59();
 }else if(p==='hero'){
 h='<h2>🛡 Äventyrare</h2><div class="inventory-section"><p>Nivå '+S.level+' · HP '+S.hp+'/'+(20+(S.level-1)*4)+' · XP '+S.xp+'/'+levelThreshold()+'</p>'+healthBar(S.hp,20+(S.level-1)*4,'#79b57c')+'<div class="gearrow"><div class="gearcell">🪖<p>'+(S.helmetOwned?'Runhjälm':'Tomt')+'</p></div><div class="gearcell">🛡<p>'+(S.heroArmor?'Rustning':'Tomt')+'</p></div><div class="gearcell">⚔️<p>'+(S.heroSword?'Svärd':'Tomt')+'</p></div><div class="gearcell">🥾<p>'+(S.bootsOwned?'Vandringsstövlar':'Tomt')+'</p></div></div></div>'+
 '<div class="character-card"><strong>'+HERO_STYLES[S.heroStyle||0].name+'</strong><div class="character-portrait">'+heroPortraitSVG()+'</div><small>'+HERO_STYLES[S.heroStyle||0].desc+'</small></div>'+btn('🎨 Anpassa utseende','appearance')+btn('🌤 Ljus & grafik','visual')+btn('🎣 Fiskeri','openfishery')+btn('📖 Bestiarium','bestiary')+btn('⚔ Vapen & stridsstil','weapons')+btn('⚒ Förbättra utrustning','upgrades')+btn('🪖 Hjälm & stövlar','gearcraft')+btn('👤 Karaktärsöversikt','character')+'<p>⚔ Svärd: '+(S.heroSword?'Utrustat':'Saknas')+' · 🛡 Rustning: '+(S.heroArmor?'Utrustad':'Saknas')+'</p>'+
@@ -1514,11 +1601,7 @@ btn(S.fisheryManager?'✓ Fiskare anställd':'Anställ fiskare (180 guld)','hire
 }else if(p==='trading'){h=tradingMenu58();
 }else if(p==='mining'){h=miningMenu58();
 }else if(p==='production'){
-h='<h2>🏭 Produktion & lager</h2><p>Omvandla råvaror till förädlade varor och sälj när efterfrågan är hög.</p>'+
-businessReportHTML()+productionOverview()+'<div class="inventory-section"><h3>⚙ Produktionsprioritet</h3>'+['balanced','steel','rune'].map(v=>btn((S.productionPriority===v?'✓ ':'')+({balanced:'Balanserad',steel:'Stål först',rune:'Runvaror först'}[v]),'priority-'+v)).join('')+'<p>Stålreserv: '+S.tradeReserveSteel+' · Runreserv: '+S.tradeReserveRune+'</p>'+btn('Stål −','reservesteelminus')+btn('Stål +','reservesteelplus')+btn('Runor −','reserveruneminus')+btn('Runor +','reserveruneplus')+'</div><div class="inventory-section"><h3>📦 Lager '+warehouseUsed()+'/'+S.warehouseCapacity+'</h3><p>Malm: '+S.ore+' · Trä: '+S.wood+' · Runfragment: '+S.runes+'</p><p>Ståltackor: '+S.steelStock+' · Runvaror: '+S.runeGoods+'</p>'+btn('Utöka lager ('+(100*S.warehouseLevel)+' guld)','upwarehouse')+'</div>'+
-'<div class="inventory-section"><h3>⚒ Ståltacka</h3><p>3 malm + 1 trä → 1 tacka</p>'+recipeButton('Tillverka tacka','craftsteel',S.ore>=3&&S.wood>=1&&warehouseSpace()>0)+btn(S.autoSteel?'Stoppa automatisk ståltillverkning':'Automatisera stål (160 guld)','autosteel')+btn('Sälj tacka ('+marketReward(55)+' guld)','sellsteel')+btn(S.autoTradeSteel?'Stoppa automatisk stålförsäljning':'Automatisk stålförsäljning (120 guld)','autotradesteel')+'</div>'+
-'<div class="inventory-section"><h3>🔮 Runförstärkt vara</h3><p>1 tacka + 2 trä + 2 runfragment → 1 runvara. Kräver Runverkstad.</p>'+recipeButton('Tillverka runvara','craftrune',S.arcaneWorkshopBuilt&&S.steelStock>=1&&S.wood>=2&&S.runes>=2)+btn(S.autoRune?'Stoppa automatisk runproduktion':'Automatisera runvaror (280 guld)','autorune')+btn('Sälj runvara ('+marketReward(165)+' guld)','sellrune')+btn(S.autoTradeRune?'Stoppa automatisk runförsäljning':'Automatisk runförsäljning (200 guld)','autotraderune')+'</div>'+
-'<div class="inventory-section"><h3>🛡 Väktarsigill</h3><p>1 runvara + 3 monsteressenser → 1 Väktarsigill</p><p>Essenser: '+S.monsterEssence+' · Sigill: '+S.wardSeals+'</p>'+recipeButton('Tillverka Väktarsigill','craftward',S.arcaneWorkshopBuilt&&S.runeGoods>=1&&S.monsterEssence>=3)+'</div><p>Genomförda produktionsförsäljningar: '+S.productionOrdersDone+'</p>';
+h=productionMenu59();
 }else if(p==='contracts'){h='<h2>📜 Handelsgillet</h2><p>Leverera '+S.contractTarget+' svärd för '+S.contractReward+' guld och 12 XP.</p><p>Du har '+S.swords+' svärd. Avklarade kontrakt: '+S.contractsDone+'</p>'+btn('Leverera svärd','contract')+'<h3>📈 Marknadsläge</h3><p>Efterfrågan: '+Math.round(marketRate()*100)+'% · Leveranser: '+S.marketDeliveries+'</p><h3>🎣 Fiskekontrakt</h3><p>Leverera 5 fiskar för '+marketReward(110)+' guld. Levererade: '+S.fishContractDone+'</p>'+btn('Leverera 5 fiskar','fishcontract')+'<h3>📦 Resurskontrakt</h3><p>Leverera 10 malm och 8 trä för '+marketReward(160)+' guld. Levererade: '+S.resourceContractDone+'</p>'+btn('Leverera resurser','resourcecontract')+'<h3>🏛 Företagsleveranser</h3>'+EMPIRE_ORDERS.map(q=>'<div class="inventory-section"><strong>'+q.name+'</strong><p>'+q.goal+' · '+q.reward+' guld före handelsbonus</p><p>'+(S[q.flag]?'Verksamheten aktiv':'Kräver upplåst verksamhet')+' · Levererade: '+S[q.count]+'</p>'+btn('Leverera','empireorder-'+q.id)+'</div>').join('');}else if(p==='bag'){
 const items=[
 ['🛡️','Väktarsigill',S.wardSeals,'rare'],['🌌','Monsteressens',S.monsterEssence,'rare'],['⚙️','Ståltackor',S.steelStock,'rare'],['🔮','Runvaror',S.runeGoods,'rare'],['🪙','Guld',S.gold,'common'],['⛏️','Järnmalm',S.ore,'common'],['🪵','Trä',S.wood,'common'],['⚔️','Svärd',S.swords,'common'],
@@ -1530,7 +1613,7 @@ h='<h2>🎒 Inventarium</h2><p>Din ryggsäck · Material, utrustning och förbru
 }else{
 h='<h2>⚙ Inställningar</h2>'+btn('Virtuell joystick','joystick')+btn('Dra på kartan','drag')+
 btn('Långsam rörelse','slow')+btn('Normal rörelse','normal')+btn('Snabb rörelse','fast')+
-'<p>Beta Preview 5.8 · Speltest · Separat sparning.</p>'+(PLAYTEST55?'<button onclick="show(\'playtest\')">Speltest · välj testplats</button>':'')+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
+'<p>Beta Preview 5.9 · Speltest · Separat sparning.</p>'+(PLAYTEST55?'<button onclick="show(\'playtest\')">Speltest · välj testplats</button>':'')+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
 }
 document.getElementById('content').innerHTML=h;
 document.getElementById('notice').textContent=retainedNotice;document.getElementById('modal').scrollTop=scroll;
@@ -1646,6 +1729,10 @@ function drawGuide58(){
 }
 
 function action(a){
+if(a.startsWith('productiontab-')){const tab=a.slice(14);if(['flow','auto','books'].includes(tab)){productionTab59=tab;show('production');document.getElementById('modal').scrollTop=0}return}
+if(a==='openempire'){show('empire');return}
+if(a==='testproduction59'){if(!PLAYTEST55)return;S.gold=Math.max(S.gold,500);S.ore=Math.max(S.ore,18);S.wood=Math.max(S.wood,12);persist();productionTab59='flow';show('production');return}
+
 if(a==='fishstart'){S.fishingGuideSeen=true;persist();castFishingRod();return}
 if(a==='opencooking'){show('cooking');return}
 if(a==='opencrafting'){show('crafting');return}
