@@ -1856,13 +1856,19 @@ function guideMenu58(){
  const current=guideStep58();
  return '<h2>Guide · välj nästa steg</h2><p>Gå med joysticken. Action byter namn när du når en strand, dörr eller arbetsplats.</p>'+(current?'<div class="guide-step58"><strong>'+GUIDE_GOALS58[S.guideGoal58]+'</strong><p>'+(current.done?'✓ ':'')+current.text+'</p>'+(current.action?btn('Öppna nästa meny',current.action):'<button onclick="hide()">Fortsätt följa målet</button>')+btn('Avsluta vägledningen','guidestop')+'</div>':'')+'<div class="house-grid58">'+Object.entries(GUIDE_GOALS58).filter(([id])=>!id.startsWith('quest-')).map(([id,name])=>'<button onclick="startGuide58(\''+id+'\')">'+name+'<small>'+({meal:'Fiska → laga mat → återställ HP',sword:'Malm och trä → smide → utrustning',sale:'Resurser → produktion → försäljning'})[id]+'</small></button>').join('')+'</div><p class="game-hint">Målmarkeringen visar nästa plats. Gå längs vägarna och runt hus och vatten. Du kan byta eller avsluta målet när du vill.</p>'+btn('Öppna alla recept','opencrafting')+btn('Fiskehjälp','openfishery')+btn('Uppdrag & belöningar','openquests')+'<button onclick="unstuck()">Fastnat? Flytta till säker plats</button>';
 }
+let guideBounds510={key:'',bottom:96};
+function guideBottomInset510(){
+ const hint=document.getElementById('interactionHint'),key=ww+'|'+hh+'|'+(hint?.textContent||'');
+ if(key!==guideBounds510.key){guideBounds510={key,bottom:Math.max(94,(hint?.getBoundingClientRect().height||36)+58)}}
+ return guideBounds510.bottom;
+}
 function drawGuide58(){
  if(panel)return;const t=guideWaypoint58();if(!t)return;
  const p=currentPosition();
  if(fieldEnemies.some((e,i)=>e.scene===S.scene&&activeFieldEnemy(e,i)&&Math.hypot(e.x-p.x,e.y-p.y)<220))return;
  const sc=Math.max(.6,Math.min(ww/550,hh/470)),dx=(t.x-p.x)*sc,dy=(t.y-p.y)*sc;
  if(Math.hypot(t.x-p.x,t.y-p.y)<70)return;
- const paddingY=Math.min(72,hh*.3),x=Math.max(24,Math.min(ww-24,ww/2+dx)),y=Math.max(paddingY,Math.min(Math.max(paddingY,hh-66),hh/2+dy));
+ const paddingY=Math.min(72,hh*.3),x=Math.max(24,Math.min(ww-24,ww/2+dx)),y=Math.max(paddingY,Math.min(Math.max(paddingY,hh-guideBottomInset510()),hh/2+dy));
  ctx.save();ctx.translate(x,y);ctx.fillStyle='#243a32';ctx.strokeStyle='#f3d99c';ctx.lineWidth=2;ctx.beginPath();ctx.arc(0,0,13,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.rotate(Math.atan2(dy,dx));ctx.fillStyle='#f3d99c';ctx.beginPath();ctx.moveTo(7,0);ctx.lineTo(-4,-5);ctx.lineTo(-2,0);ctx.lineTo(-4,5);ctx.closePath();ctx.fill();ctx.restore();
  ctx.save();ctx.font='bold 12px system-ui';ctx.textAlign='center';const w=ctx.measureText(t.label).width+16,lx=Math.max(w/2+4,Math.min(ww-w/2-4,x));ctx.fillStyle='#243a32ef';ctx.fillRect(lx-w/2,y+17,w,22);ctx.fillStyle='#fff0cb';ctx.fillText(t.label,lx,y+32);ctx.restore();
 }
