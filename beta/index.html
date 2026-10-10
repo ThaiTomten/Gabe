@@ -1,4 +1,4 @@
-<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 5.9 · Speltest</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
+<!doctype html><html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>Runeforge Empire Beta Preview 5.10 · Speltest</title><style>*{box-sizing:border-box}html{height:100%;width:100%;overflow:hidden;overscroll-behavior:none;touch-action:none}body{position:fixed;left:0;top:0;width:100%;height:var(--game-height,100dvh);overscroll-behavior:none;margin:0;background:#162c30;color:#ffe9b2;font:14px system-ui;overflow:hidden;touch-action:none}header{height:56px;padding:9px;background:#21363a;display:flex;justify-content:space-between;align-items:center}#map{height:calc(var(--game-height,100dvh) - 265px);min-height:0;background:#56834e;position:relative}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}#map{box-shadow:inset 0 0 45px #111b1b77}header{border-bottom:2px solid #b99c67}#bottom{border-top:2px solid #8e7656}button:active{filter:brightness(1.3)}#msg{position:absolute;top:8px;left:8px;background:#1b302dcc;padding:8px;border-radius:8px}#bottom{height:209px;background:#20363c;padding:8px}.tabs{display:flex;gap:5px}.tabs button{flex:1;min-width:0;padding:8px 2px;font-size:11px}button{background:#47676a;border:1px solid #b99c67;border-radius:9px;color:#fff2d6;padding:10px;font:inherit}.pad{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}#joy{height:112px;width:112px;border-radius:50%;border:3px solid #9eb2a3;background:#344d56;position:relative;touch-action:none}#nub{width:42px;height:42px;border-radius:50%;background:#e8c888;position:absolute;left:32px;top:32px;pointer-events:none}.actions{display:grid;grid-template-columns:repeat(2,75px);gap:6px}#modal{display:none;position:fixed;z-index:5;inset:65px 12px 215px;background:#1d3234f5;border:2px solid #bfa06c;border-radius:12px;padding:14px;overflow:auto;touch-action:pan-y;overscroll-behavior:contain}#modal button{margin:4px}#modal{background:linear-gradient(160deg,#243b3a 0%,#152627 100%);border:2px solid #c9a86b;box-shadow:0 10px 50px #000a;color:#f7e9c9}#modal h2{color:#f5d69b;letter-spacing:.5px;border-bottom:1px solid #8e7853;padding-bottom:9px}#modal h3{color:#d7c49d}#modal button{background:linear-gradient(#526d6a,#314d50);box-shadow:0 3px 0 #172c31;padding:11px;margin:5px 3px} .invgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}.slot{min-height:72px;background:linear-gradient(145deg,#36484a,#233538);border:2px solid #8e7853;border-radius:9px;padding:7px 2px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:inset 0 2px 9px #101b2066}.slot .symbol{font-size:25px}.slot small{font-size:10px;color:#d5c7a7}.rarity{border-color:#a77bd6}.inventory-section{background:#172b2dbb;border:1px solid #62756b;border-radius:12px;padding:12px;margin:10px 0}.gearrow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gearcell{border:1px solid #927f5b;background:#334746;padding:10px 3px;border-radius:9px;text-align:center;font-size:12px}.househint{position:absolute;top:48px;right:8px;background:#1a302acc;color:#ffe2a4;border:1px solid #bda06b;border-radius:8px;padding:6px 9px;font-size:11px;pointer-events:none}#notice{color:#b7edb8}.character-card{padding:12px;background:linear-gradient(140deg,#354b51,#1d3037);border:1px solid #a68d62;border-radius:12px;margin:10px 0}.character-portrait{height:96px;display:flex;align-items:center;justify-content:center;font-size:52px;background:radial-gradient(ellipse,#506b70,#24383c);border-radius:10px;margin:8px 0}.combat-log{padding:10px;background:#152a30;border-left:3px solid #d5ad68;border-radius:5px;margin:12px 0}.bestiary-entry{padding:11px;border:1px solid #746b5a;border-radius:9px;margin:8px 0;background:#25383c}#close{float:right}/* Warm, readable farming-RPG inspired visual language; original art and colors. */
 header{background:#78533c;color:#fff0d0;border-bottom:4px solid #b98a51;text-shadow:1px 2px #553e31}
 #bottom{background:#78573e;border-top:4px solid #b98a51}
 button{background:#b28a5a;color:#fff7e7;border:2px solid #e2b879;box-shadow:inset 0 2px #f5d39b,0 3px #5b4134;font-weight:700}
@@ -45,7 +45,11 @@ body{display:flex;flex-direction:column;padding-top:env(safe-area-inset-top);pad
 .business-summary59{padding:12px;background:#f6e6c6;border:1px solid #b29366;border-radius:9px;margin:10px 0}.business-summary59 p{margin:4px 0}.business-summary59 strong{font-size:19px}
 .business-card59{background:#f4dfb9;border:1px solid #ad8a5e;border-radius:10px;padding:13px;margin:12px 0}.business-card59 h3{font-size:17px;margin:0 0 8px}.business-card59 p{margin:7px 0}.business-card59 button{width:100%;margin:4px 0!important}
 .business-status59{border-left:3px solid #6e794b;padding-left:9px;font-size:13px}.business-card59 small,.business-summary59 small{display:block;color:#554632;line-height:1.5}.business-reserve59{display:flex;gap:8px}.business-reserve59 button{width:50%}.business-report59{width:100%;border-collapse:collapse;font-size:13px}.business-report59 th,.business-report59 td{padding:9px 4px;border-bottom:1px solid #bc9a6d;text-align:right;overflow-wrap:anywhere}.business-report59 th:first-child,.business-report59 td:first-child{text-align:left}.business-report59 caption{text-align:left;font-weight:700;padding:8px 0}
-</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="interactionHint"></div><div id="msg">Beta Preview 5.9 · Speltest · Emberfall · Original Art</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Företag</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Ryggsäck</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()" id="actionButton" aria-label="Utför handling">✦ Action</button><button id="attackButton" type="button"><span>⚔ Attack</span><small id="attackState">Redo</small></button><button id="dodgeButton" type="button"><span>↗ Undvik</span><small id="dodgeState">Redo</small></button><button onclick="show('guide')">? Guide</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><p id="notice" role="status" aria-live="polite"></p><div id="content"></div></div><script>
+
+/* 5.10: a journal with compact progress, delivery costs and permanent unlocks. */
+.quest-journal510{max-width:760px;margin:0 auto}.quest-card510{background:#f4dfb9;border:1px solid #ad8a5e;border-radius:10px;padding:13px;margin:12px 0}.quest-card510 h3{margin:3px 0 8px;font-size:17px}.quest-card510 p{margin:7px 0}.quest-card510 button{width:100%;margin:4px 0!important}.quest-card510 small{display:block;color:#554632;line-height:1.5}.quest-eyebrow510{font-size:12px;font-weight:750;color:#615033;letter-spacing:.3px}.quest-progress510{border-left:3px solid #6e794b;padding:6px 9px;background:#e7d1aa}.quest-reward510{font-weight:700;color:#3d533d}.renown-track510{list-style:none;padding:0;margin:12px 0;border-left:3px solid #687b59}.renown-track510 li{padding:9px 12px;border-bottom:1px solid #bb9e74}.renown-track510 small{display:block;margin-top:3px;color:#4e4434}
+@media(min-width:800px){.quest-grid510{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.quest-grid510 .quest-card510{margin:0}}
+</style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="interactionHint"></div><div id="msg">Beta Preview 5.10 · Speltest · Emberfall · Original Art</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Företag</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Ryggsäck</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()" id="actionButton" aria-label="Utför handling">✦ Action</button><button id="attackButton" type="button"><span>⚔ Attack</span><small id="attackState">Redo</small></button><button id="dodgeButton" type="button"><span>↗ Undvik</span><small id="dodgeState">Redo</small></button><button onclick="show('guide')">? Guide</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><p id="notice" role="status" aria-live="polite"></p><div id="content"></div></div><script>
 const PLAYTEST55=!!(window.location&&/(?:[?&])speltest=1(?:&|$)/.test(window.location.search||''));
 const SAVE_KEY=PLAYTEST55?'runeforge_playtest_55':'runeforge_beta_preview_01';
 const BACKUP_KEY=PLAYTEST55?'runeforge_playtest_55_backup':'runeforge_beta_preview_backup_52';
@@ -531,7 +535,7 @@ const AUTOMATION59={
 };
 if(!S.automationOwned59||typeof S.automationOwned59!=='object'||Array.isArray(S.automationOwned59))S.automationOwned59={};
 for(const flag of Object.keys(AUTOMATION59))if(S[flag])S.automationOwned59[flag]=true;
-let businessCycleRunning59=false,lastCycle59=null,businessBindings59=[],productionTab59='flow',lastBusiness59=performance.now();
+let businessCycleRunning59=false,lastCycle59=null,businessBindings59=[],productionTab59='flow',questTab510='board',lastBusiness59=performance.now();
 if(S.manager&&S.gold<0)S.gold=0;
 let autosaveClock=0,productionClock=Math.max(0,Math.min(4.999,Number(S.productionRemainder)||0));let movementErrorShown=false;let dungeonTime=0;
 let batchSimulation=false;
@@ -1045,7 +1049,18 @@ function refreshMarket(){
  S.marketDemand=[1,1.15,1.3,.9,1.05][S.marketCycle%5];
 }
 function marketReward(base){return renownContractReward(Math.round(base*marketRate()))}
-function fishStocks(){if(!S.fishSpecies||typeof S.fishSpecies!=='object'||Array.isArray(S.fishSpecies))S.fishSpecies={};return S.fishSpecies}
+function fishStocks(){
+ if(!S.fishSpecies||typeof S.fishSpecies!=='object'||Array.isArray(S.fishSpecies))S.fishSpecies={};
+ for(const f of FISH_SPECIES){const n=Number(S.fishSpecies[f.id]);S.fishSpecies[f.id]=Number.isFinite(n)?Math.max(0,Math.floor(n)):0}
+ return S.fishSpecies;
+}
+function consumeFish510(count){
+ if(!Number.isInteger(count)||count<=0||!(S.fish>=count))return false;
+ const stocks=fishStocks();let remaining=count;
+ for(const f of FISH_SPECIES){const used=Math.min(remaining,stocks[f.id]);stocks[f.id]-=used;remaining-=used}
+ // Legacy catches may have only a total count; remaining consumption comes from that total.
+ S.fish-=count;return true;
+}
 function chooseFish(roll=Math.random(),scene=S.scene){
  const species=scene==='forest'?[...FISH_SPECIES.slice(0,1),...FISH_SPECIES.slice(1)]:FISH_SPECIES;
  let n=Math.min(.999999,Math.max(0,roll))*100;
@@ -1163,7 +1178,7 @@ note('Utforska grottan, hitta gobliner eller återvänd till EXIT');
 }
 function levelThreshold(){return S.level*20}
 function awardXP(x){S.xp+=x;while(S.xp>=levelThreshold()){S.xp-=levelThreshold();S.level++;S.hp=20+(S.level-1)*4;note('Level up! Nivå '+S.level)}}
-function questProgress(){return S.quest===0?Math.min(5,S.oreGathered)+'/5 malm':S.quest===1?Math.min(1,S.swordsCrafted)+'/1 svärd':S.quest===2?Math.min(2,S.forestWins)+'/2 gobliner':S.quest===3?Math.min(250,S.totalGold)+'/250 guld':'Klart'}
+function questProgress(){return S.quest===0?Math.min(5,S.oreGathered)+'/5 malm':S.quest===1?Math.min(1,Math.max(S.swordsCrafted,S.heroSword?1:0))+'/1 svärd':S.quest===2?Math.min(2,S.forestWins)+'/2 gobliner':S.quest===3?Math.min(250,S.totalGold)+'/250 guld':'Klart'}
 function npcDialogue(role){
  if(role==='merchant'){
   if(S.heroRenown>=5)return 'Hela Emberfall känner ditt namn. Handelskaravanerna söker dina varor!';
@@ -1274,7 +1289,7 @@ function liveButton59(read,act,enabled=()=>true){
  return '<button type="button" id="'+id+'" '+(enabled()?'':'disabled')+' onclick="action(\''+act+'\')">'+escapeHTML59(read())+'</button>';
 }
 function refreshBusinessUI59(){
- if(!['production','empire'].includes(panel))return;
+ if(!['production','empire','quests','merchant','guard'].includes(panel))return;
  for(const b of businessBindings59){const el=document.getElementById(b.id);if(!el)continue;const text=String(b.read());if(el.textContent!==text)el.textContent=text;if(b.enabled)el.disabled=!b.enabled()}
 }
 function productionBlock59(type){
@@ -1302,7 +1317,7 @@ function enterpriseTotals59(){
 }
 function businessHome59(){
  return '<h2>Företag i Emberfall</h2>'+liveText59(()=>S.gold+' guld · '+S.ore+' malm · '+S.wood+' trä · '+S.swords+' svärd','p','game-hint')+
- '<section class="business-card59"><h3>Från fynd till företag</h3><p>Samla råvaror, tillverka varor och sälj. Använd guldet till utrustning, större produktion och anställda.</p>'+btn('Produktion & lager','openproduction')+btn('Guide: första svärdsaffären','guideto-sale')+'</section>'+
+ '<section class="business-card59"><h3>Från fynd till företag</h3><p>Samla råvaror, tillverka varor och sälj. Använd guldet till utrustning, större produktion och anställda.</p>'+btn('Produktion & lager','openproduction')+btn('Byggprojekt & anseende','openrenown')+btn('Guide: första svärdsaffären','guideto-sale')+'</section>'+
  '<section class="business-card59"><h3>Gruva, skog & smedja</h3>'+liveButton59(()=>'Bryt '+S.mine+' malm','mine')+liveButton59(()=>'Hugg '+S.woodLevel+' trä','wood')+liveButton59(()=>'Smid '+S.forge+' svärd · 2 malm + 1 trä','forge',()=>S.ore>=2&&S.wood>=1)+liveButton59(()=>'Sälj 1 svärd · '+(35+Math.floor(S.merchantRep/5)*5)+' guld','sell',()=>S.swords>0)+'<small>Behåll ett svärd till hjälten. Trä samlar du själv här eller ute i Whisperwood.</small></section>'+
  '<section class="business-card59"><h3>Anställda · var 5:e sekund</h3>'+liveText59(()=>S.manager?'Gruvchef: +'+S.mine+' malm per varv.':'Gruvchef: samlar malm åt dig.')+liveButton59(()=>S.manager?'Gruvchef anställd':'Anställ gruvchef · 100 guld','manager',()=>!S.manager&&S.gold>=100)+liveText59(()=>S.autoForge?'Smed: '+(S.ore>=2&&S.wood>=1?'redo att smida '+S.forge+' svärd':'väntar på 2 malm och 1 trä'):'Smed: tillverkar svärd av ditt material.')+liveButton59(()=>S.autoForge?'Smed anställd':'Anställ smed · 150 guld','autoforge',()=>!S.autoForge&&S.gold>=150)+liveText59(()=>S.autoSell?'Handlare: säljer högst 1 svärd för 35 guld per varv.':'Handlare: säljer svärd automatiskt.')+liveButton59(()=>S.autoSell?'Handlare anställd':'Anställ handlare · 175 guld','autosell',()=>!S.autoSell&&S.gold>=175)+'</section>'+
  '<section class="business-card59"><h3>Utöka produktionen</h3><p>Uppgraderingen visar mängden du får vid nästa nivå.</p>'+liveButton59(()=>'Gruva: '+S.mine+' → '+(S.mine+1)+' malm · '+50*S.mine+' guld','upmine',()=>S.gold>=50*S.mine)+liveButton59(()=>'Gruva: +10 nivåer · '+Math.round(50*(10*S.mine+45)*.9)+' guld','upmine10',()=>S.gold>=Math.round(50*(10*S.mine+45)*.9))+liveButton59(()=>'Skog: '+S.woodLevel+' → '+(S.woodLevel+1)+' trä · '+45*S.woodLevel+' guld','upwood',()=>S.gold>=45*S.woodLevel)+liveButton59(()=>'Smedja: '+S.forge+' → '+(S.forge+1)+' svärd · '+70*S.forge+' guld','upforge',()=>S.gold>=70*S.forge)+'<small>Smedjans materialåtgång är fortfarande 2 malm och 1 trä per omgång.</small></section>';
@@ -1310,7 +1325,7 @@ function businessHome59(){
 function productionCard59(type){
  const steel=type==='steel',r=PRODUCTION_RECIPES[type],key=r.output;
  return '<section class="business-card59"><h3>'+(steel?'1. Ståltacka':'2. Runvara')+'</h3><p>'+(steel?'3 malm + 1 trä → 1 ståltacka':'1 ståltacka + 2 trä + 2 runfragment → 1 runvara')+'</p>'+liveText59(()=>steel?'Du har '+S.ore+' malm och '+S.wood+' trä.':'Du har '+S.steelStock+' tackor, '+S.wood+' trä och '+S.runes+' runfragment.')+liveText59(()=>productionBlock59(type)||'✓ Redo att tillverka','p','business-status59')+liveButton59(()=>'Tillverka 1 '+(steel?'ståltacka':'runvara'),'craft'+type,()=>!productionBlock59(type))+
- liveText59(()=>S[key]+' i lager · pris just nu '+marketReward(steel?55:165)+' guld')+liveButton59(()=>'Sälj 1 · '+marketReward(steel?55:165)+' guld','sell'+type,()=>S[key]>0)+(steel?'<small>Behåll stål för att förädla det till runvaror.</small>':'<small>Runfragment kommer från äventyr, expeditioner och Runverkstaden. Att förädla en tacka kräver ingen extra lagerplats.</small>'+(!S.arcaneWorkshopBuilt?btn('Lås upp Runverkstaden · anseende 12','openquests'):''))+'</section>';
+ liveText59(()=>S[key]+' i lager · pris just nu '+marketReward(steel?55:165)+' guld')+liveButton59(()=>'Sälj 1 · '+marketReward(steel?55:165)+' guld','sell'+type,()=>S[key]>0)+(steel?'<small>Behåll stål för att förädla det till runvaror.</small>':'<small>Runfragment kommer från äventyr, expeditioner och Runverkstaden. Att förädla en tacka kräver ingen extra lagerplats.</small>'+(!S.arcaneWorkshopBuilt?btn('Lås upp Runverkstaden · anseende 12','openrenown'):''))+'</section>';
 }
 function productionMenu59(){
  let h='<h2>Produktion & lager</h2>'+liveText59(()=>S.gold+' guld · efterfrågan '+Math.round(marketRate()*100)+'%')+'<nav class="business-tabs59" aria-label="Produktionsvyer">'+[['flow','Tillverka'],['auto','Automation'],['books','Ekonomi']].map(([id,label])=>'<button type="button" aria-pressed="'+(productionTab59===id)+'" onclick="action(\'productiontab-'+id+'\')">'+label+'</button>').join('')+'</nav>';
@@ -1318,7 +1333,7 @@ function productionMenu59(){
  h+=productionOverview();
  if(productionTab59==='flow'){
   h+='<p class="game-hint">Malm & trä → stål → runvaror. Lägg till monsteressens från äventyr för att skapa Väktarsigill till gillet.</p>'+productionCard59('steel')+productionCard59('rune')+
-  '<section class="business-card59"><h3>3. Väktarsigill</h3><p>1 runvara + 3 monsteressenser → 1 sigill</p>'+liveText59(()=>S.runeGoods+' runvaror · '+S.monsterEssence+' monsteressenser · '+S.wardSeals+' sigill')+liveText59(()=>!S.arcaneWorkshopBuilt?'Kräver Runverkstad':S.runeGoods<1||S.monsterEssence<3?'Saknas: '+[S.runeGoods<1?'1 runvara':'',S.monsterEssence<3?(3-S.monsterEssence)+' monsteressenser':''].filter(Boolean).join(', '):'✓ Redo att tillverka','p','business-status59')+liveButton59(()=>'Tillverka 1 Väktarsigill','craftward',()=>S.arcaneWorkshopBuilt&&S.runeGoods>=1&&S.monsterEssence>=3)+btn('Gå till gillets leveranser','openquests')+'</section>';
+  '<section class="business-card59"><h3>3. Väktarsigill</h3><p>1 runvara + 3 monsteressenser → 1 sigill</p>'+liveText59(()=>S.runeGoods+' runvaror · '+S.monsterEssence+' monsteressenser · '+S.wardSeals+' sigill')+liveText59(()=>!S.arcaneWorkshopBuilt?'Kräver Runverkstad':S.runeGoods<1||S.monsterEssence<3?'Saknas: '+[S.runeGoods<1?'1 runvara':'',S.monsterEssence<3?(3-S.monsterEssence)+' monsteressenser':''].filter(Boolean).join(', '):'✓ Redo att tillverka','p','business-status59')+liveButton59(()=>'Tillverka 1 Väktarsigill','craftward',()=>S.arcaneWorkshopBuilt&&S.runeGoods>=1&&S.monsterEssence>=3)+btn('Gå till gillets leveranser','opencontracts')+'</section>';
  }else{
   h+='<p class="game-hint">Köp varje automation en gång. Pausa och återstarta gratis. Ett varv körs var 5:e sekund, även med menyn öppen.</p>'+
   '<section class="business-card59"><h3>Ordning i produktionen</h3><p>Gruvan och Runverkstaden ger råvaror först. Därefter sker förädling, försäljning och svärdssmide. Trä samlar du själv.</p>'+btn((S.productionPriority!=='rune'?'✓ ':'')+'Stål → runvaror','priority-steel')+btn((S.productionPriority==='rune'?'✓ ':'')+'Runvaror → stål','priority-rune')+'<small>Runvaror först ger förädlingen första valet av ditt trä.</small></section>';
@@ -1444,7 +1459,7 @@ function deliverEmpireOrder(id){
 const NPC_QUESTS=[
 {id:'elric',name:'Elrics första leverans',giver:'merchant',text:'Vi behöver fler färdiga svärd till handelskaravanen.',goal:'Leverera 2 svärd',reward:95,canComplete:()=>S.swords>=2,consume:()=>{return consumeSwords(2)}},
 {id:'mira',name:'Miras patrull',giver:'guard',text:'Skydda byn genom att besegra en Duskwolf i Whisperwood.',goal:'Besegra en Duskwolf',reward:145,canComplete:()=>S.forestWolfWins>=1,consume:()=>{}},
-{id:'fisher',name:'Fiskarens beställning',giver:'fisher',text:'Värdshuset behöver färsk fisk till kvällsmaten.',goal:'Leverera 3 fiskar',reward:85,canComplete:()=>S.fish>=3,consume:()=>{let n=3;const stocks=fishStocks();for(const f of FISH_SPECIES){const take=Math.min(n,stocks[f.id]||0);stocks[f.id]-=take;n-=take}S.fish-=3}}
+{id:'fisher',name:'Fiskarens beställning',giver:'fisher',text:'Värdshuset behöver färsk fisk till kvällsmaten.',goal:'Leverera 3 fiskar',reward:85,canComplete:()=>S.fish>=3,consume:()=>{consumeFish510(3);return 0}}
 ];
 function npcQuestState(id){return S.npcQuestClaimed[id]?'claimed':S.npcQuestCompleted[id]?'completed':S.npcQuestAccepted[id]?'active':'available'}
 function acceptNpcQuest(id){
@@ -1457,14 +1472,135 @@ function completeNpcQuest(id){
 }
 function claimNpcQuest(id){
  const q=NPC_QUESTS.find(q=>q.id===id);if(!q||npcQuestState(id)!=='completed')return false;
- S.npcQuestClaimed[id]=true;S.heroRenown++;economyTransaction(id==='elric'?'swords':id==='fisher'?'fish':'quest',q.reward,S.pendingQuestCosts?.[id]||0,id);if(S.pendingQuestCosts)delete S.pendingQuestCosts[id];S.merchantRep++;persist();note('Belöning: +'+q.reward+' guld');return true;
+ S.npcQuestClaimed[id]=true;S.heroRenown++;economyTransaction(id==='elric'?'swords':id==='fisher'?'fish':'quest',q.reward,S.pendingQuestCosts?.[id]||0,id);if(S.pendingQuestCosts)delete S.pendingQuestCosts[id];S.merchantRep++;persist();note('Belöning: +'+q.reward+' guld, +1 anseende och +1 handelsrykte');return true;
 }
-function npcQuestPanel(id){
+// Permanent activity milestones extend renown beyond the six one-off village rewards.
+function renownActivity510(){
+ const earned={trade:Math.floor(Math.max(0,Number(S.marketDeliveries)||0)/3),adventure:Math.floor(Math.max(0,Number(S.dungeonClears)||0))},claimed=S.activityRenown510||{};
+ return {earned,trade:Math.max(0,earned.trade-(claimed.trade||0)),adventure:Math.max(0,earned.adventure-(claimed.adventure||0))};
+}
+function claimActivityRenown510(){
+ const r=renownActivity510(),amount=r.trade+r.adventure;if(!amount){note('Inget nytt anseende att hämta');return false}
+ S.activityRenown510={trade:Math.max(S.activityRenown510?.trade||0,r.earned.trade),adventure:Math.max(S.activityRenown510?.adventure||0,r.earned.adventure)};
+ S.heroRenown+=amount;persist();note('Gillet erkänner dina insatser: +'+amount+' anseende');return true;
+}
+function finishNpcQuest510(id){
+ if(npcQuestState(id)==='active'&&!completeNpcQuest(id)){note('Samla det som saknas först');return false}
+ return claimNpcQuest(id);
+}
+function npcProgress510(id){
+ if(id==='elric')return 'Svärd: '+S.swords+' / 2';
+ if(id==='fisher')return 'Fisk: '+S.fish+' / 3';
+ return 'Duskwolf besegrad: '+Math.min(1,S.forestWolfWins)+' / 1';
+}
+function npcQuestCard510(id){
  const q=NPC_QUESTS.find(q=>q.id===id);if(!q)return '';
- const state=npcQuestState(id);
- return '<div class="inventory-section"><h3>📜 '+q.name+'</h3><p>”'+q.text+'”</p><p>Mål: '+q.goal+' · Belöning: '+q.reward+' guld</p>'+
- (state==='available'?btn('Acceptera uppdrag','npcaccept-'+id):state==='active'?btn('Slutför uppdrag','npccomplete-'+id):state==='completed'?btn('Hämta belöning','npcclaim-'+id):'<p>✓ Avklarat</p>')+'</div>';
+ const state=npcQuestState(id),finished=state==='claimed';
+ let h='<section class="quest-card510"><div class="quest-eyebrow510">'+({available:'Nytt uppdrag',active:'Pågående',completed:'Belöning väntar',claimed:'✓ Avklarat'})[state]+'</div><h3>'+q.name+'</h3><p>'+q.text+'</p>';
+ h+=liveText59(()=>state==='completed'||finished?({elric:'✓ 2 svärd inlämnade',fisher:'✓ 3 fiskar inlämnade',mira:'✓ Duskwolf besegrad'})[id]:npcProgress510(id),'p','quest-progress510')+'<p class="quest-reward510">'+q.reward+' guld · +1 anseende · +1 handelsrykte</p>';
+ if(finished)return h+'<small>Belöningen är hämtad. Fler insatser finns under Leveranser.</small></section>';
+ if(state==='available')h+=btn('Acceptera & följ','questfollow-'+id);
+ else if(state==='completed')h+=btn('Hämta '+q.reward+' guld','npcfinish-'+id);
+ else{
+  h+=liveButton59(()=>id==='mira'?'Rapportera · +'+q.reward+' guld':'Leverera '+(id==='elric'?'2 svärd':'3 fiskar')+' · +'+q.reward+' guld','npcfinish-'+id,()=>q.canComplete());
+  h+=btn(S.guideGoal58==='quest-'+id?'✓ Följ markerat mål':'Följ på kartan','questfollow-'+id);
+ }
+ h+='<small>'+(id==='mira'?'Rapportera när Duskwolf är besegrad.':'Varorna lämnar ryggsäcken vid leverans. Belöningen betalas direkt.')+'</small></section>';return h;
 }
+function buildingBlock510(type){
+ const b=ADVANCED_BUILDINGS[type];if(!b)return 'Okänd byggnad';if(S[b.flag])return '✓ Verksamheten är byggd';
+ const level=RENOWN_REWARDS.find(r=>r.id===b.unlock).level;
+ if(S.heroRenown<level)return 'Kräver anseende '+level+' · '+(level-S.heroRenown)+' kvar';
+ const missing=recipeNeeds58({gold:b.gold,ore:b.ore,wood:b.wood}).filter(n=>n.missing);
+ return missing.length?'Saknas: '+missing.map(n=>n.missing+' '+n.name.toLowerCase()).join(', '):'';
+}
+function questHeader510(){
+ const next=RENOWN_REWARDS.find(r=>!renownUnlocked(r.id));
+ return S.heroRenown+' anseende'+(next?' · nästa: '+next.name+' vid '+next.level:' · alla anseendenivåer upplåsta');
+}
+function questJournal510(){
+ let h='<div class="quest-journal510"><h2>Gillets journal</h2>'+liveText59(questHeader510,'p','game-hint')+'<nav class="business-tabs59" aria-label="Uppdragsvyer">'+[['board','Uppdrag'],['deliveries','Leveranser'],['renown','Anseende']].map(([id,name])=>'<button type="button" aria-pressed="'+(questTab510===id)+'" onclick="action(\'questtab-'+id+'\')">'+name+'</button>').join('')+'</nav>';
+ if(questTab510==='renown')return h+renownMenu510()+'</div>';
+ if(questTab510==='deliveries')return h+deliveryMenu510()+'</div>';
+ const guide=guideStep58();
+ if(S.guideGoal58?.startsWith('quest-')&&guide)h+='<div class="guide-step58"><strong>Följer: '+GUIDE_GOALS58[S.guideGoal58]+'</strong><p>'+guide.text+'</p><button onclick="hide()">Tillbaka till kartan</button></div>';
+ h+='<section class="quest-card510"><div class="quest-eyebrow510">Din start i Emberfall · '+Math.min(4,S.quest+1)+' / 4</div><h3>'+questTitle()+'</h3>'+liveText59(()=>questProgress(),'p','quest-progress510');
+ if(S.quest<4)h+=liveText59(()=>questDone()?'✓ Redo att hämta':'Följ målet för nästa steg.')+'<p class="quest-reward510">50 guld · 10 XP</p>'+liveButton59(()=>'Hämta 50 guld + 10 XP','claim',questDone)+btn('Följ nästa steg','questfollow-story');
+ else h+='<p>Alla introduktionsuppdrag är klara. Utveckla byn genom leveranser och grottäventyr.</p>'+btn('Se nästa upplåsning','openrenown');
+ h+='</section><h3>Hjälp invånarna</h3><div class="quest-grid510">'+NPC_QUESTS.map(q=>npcQuestCard510(q.id)).join('')+'</div><h3>Byns milstolpar</h3>';
+ for(const m of VILLAGE_MILESTONES){const claimed=S.villageMilestones.includes(m.id);h+='<section class="quest-card510"><h3>'+m.name+'</h3><p>'+m.desc+'</p>'+liveText59(()=>claimed?'✓ Milstolpen avklarad':milestoneProgress510(m.id),'p','quest-progress510')+'<p class="quest-reward510">'+m.reward+' guld · +1 anseende</p>'+liveButton59(()=>claimed?'✓ Belöningen hämtad':'Hämta '+m.reward+' guld','milestone-'+m.id,()=>!claimed&&m.done())+'</section>'}
+ return h+'</div>';
+}
+function milestoneProgress510(id){
+ if(id==='founder')return 'Malm bruten: '+Math.min(20,S.oreGathered)+' / 20 · trä i ryggsäcken: '+S.wood+' / 15';
+ if(id==='trader')return 'Handelsleveranser: '+Math.min(3,S.marketDeliveries)+' / 3';
+ return 'Duskwolf: '+Math.min(1,S.forestWolfWins)+' / 1 · grottskatt: '+Math.min(1,S.dungeonClears)+' / 1';
+}
+function deliveryCard510(q){
+ return '<section class="quest-card510"><div class="quest-eyebrow510">'+(q.limit?'Begränsad beställning':'Återkommande leverans')+'</div><h3>'+q.name+'</h3>'+liveText59(q.details)+liveText59(q.progress,'p','quest-progress510')+liveText59(()=>q.reward()+' guld'+(q.extra?' · '+q.extra:''),'p','quest-reward510')+liveButton59(()=>q.button||'Leverera · +'+q.reward()+' guld',q.action,q.ready)+'<small>Materialet lämnar lagret vid leverans. Belöningen betalas en gång per leverans.</small></section>';
+}
+function deliveryMenu510(){
+ const cards=[
+ {name:'Svärd till handelsgillet',details:()=>S.contractTarget+' svärd → handelskontrakt',progress:()=>'Svärd: '+S.swords+' / '+S.contractTarget,reward:()=>renownContractReward(S.contractReward),extra:'12 XP',action:'contract',ready:()=>S.swords>=S.contractTarget},
+ {name:'Fisk till värdshuset',details:()=> '5 fiskar → fiskekontrakt',progress:()=>'Fisk: '+S.fish+' / 5',reward:()=>marketReward(110),action:'fishcontract',ready:()=>S.fish>=5},
+ {name:'Råvaror till byggmästaren',details:()=> '10 malm + 8 trä → resurskontrakt',progress:()=>'Malm: '+S.ore+' / 10 · trä: '+S.wood+' / 8',reward:()=>marketReward(160),action:'resourcecontract',ready:()=>S.ore>=10&&S.wood>=8},
+ {name:'Runförstärkning åt gillet',details:()=> '2 runvaror · kräver Runverkstad och besegrad Duskwolf',progress:()=>'Runvaror: '+S.runeGoods+' / 2 · levererat: '+S.productionQuestDone+' / 3'+(S.productionQuestDone>=3?' · avslutad':!S.arcaneWorkshopBuilt?' · bygg Runverkstaden':!S.forestWolfWins?' · besegra Duskwolf':''),reward:()=>230,extra:'+1 anseende',action:'deliverproductionquest',ready:()=>S.productionQuestDone<3&&S.arcaneWorkshopBuilt&&S.runeGoods>=2&&S.forestWolfWins>=1,limit:true},
+ {name:'Väktarsigill till gillet',details:()=> '1 Väktarsigill av runvara och monsteressens',progress:()=>'Väktarsigill: '+S.wardSeals+' / 1',reward:()=>marketReward(260),extra:'+1 anseende',action:'deliverward',ready:()=>S.wardSeals>=1}
+ ];
+ for(const q of EMPIRE_ORDERS)cards.push({name:q.name,details:()=>q.goal,progress:()=>!S[q.flag]?'Bygg '+(q.id==='arcane'?'Runverkstaden':'Karavankontoret')+' först':q.id==='arcane'?'Runfragment: '+S.runes+' / 5':'Trä: '+S.wood+' / 10 · malm: '+S.ore+' / 8',reward:()=>renownContractReward(q.reward),action:'empireorder-'+q.id,ready:()=>S[q.flag]&&q.can()});
+ return '<p class="game-hint">Var tredje handelsleverans ger +1 extra anseende. Svärd, fisk, råvaror, företagslaster och sigill räknas. Runbeställningen ger sitt anseende direkt.</p>'+btn('Se anseende & byggprojekt','openrenown')+cards.map(deliveryCard510).join('')+btn('Tillverka stål, runvaror & sigill','openproduction')+btn('Fiske & fångst','openfishery');
+}
+function renownMenu510(){
+ let h='<section class="quest-card510"><h3>Dina insatser räknas</h3><p>Var tredje handelsleverans ger 1 anseende. Varje öppnad grottskatt ger också 1. Tidigare framsteg räknas.</p>'+liveText59(()=>{const r=renownActivity510();return 'Handel: '+S.marketDeliveries+' leveranser · '+r.trade+' anseende att hämta'})+liveText59(()=>{const r=renownActivity510();return 'Äventyr: '+S.dungeonClears+' grottskatter · '+r.adventure+' anseende att hämta'})+liveButton59(()=>{const r=renownActivity510();return 'Hämta '+(r.trade+r.adventure)+' anseende'},'claimactivity510',()=>{const r=renownActivity510();return r.trade+r.adventure>0})+btn('Visa handelsleveranser','opencontracts')+btn('Följ vägen till grottan','questfollow-dungeon')+'</section><h3>Anseendets möjligheter</h3><ol class="renown-track510">';
+ for(const r of RENOWN_REWARDS)h+='<li><strong>'+r.level+' · '+r.name+'</strong>'+liveText59(()=>(renownUnlocked(r.id)?'✓ Upplåst':'Låst · '+Math.max(0,r.level-S.heroRenown)+' anseende kvar')+' · '+r.description,'small')+'</li>';
+ h+='</ol><h3>Bygg vidare i byn</h3><p>Byggprojekten utökar befintliga hus. Betala byggkostnaden en gång; därefter är verksamheten aktiv.</p>';
+ for(const [type,b] of Object.entries(ADVANCED_BUILDINGS))h+='<section class="quest-card510"><h3>'+b.label+'</h3><p>'+({hall:'Utökar Gillet · +15 guld var 5:e sekund.',caravan:'Utökar Handelsboden · +22 guld var 5:e sekund och karavanlaster.',arcane:'Utökar Smedjan · +1 runfragment var 5:e sekund och låser upp runvaror.'})[type]+'</p><p>'+b.gold+' guld + '+b.ore+' malm + '+b.wood+' trä</p>'+liveText59(()=>buildingBlock510(type)||'✓ Redo att bygga','p','quest-progress510')+liveButton59(()=>S[b.flag]?'✓ Verksamheten är byggd':'Bygg '+b.label,'build'+type,()=>!buildingBlock510(type))+'</section>';
+ return h;
+}
+function startQuestGuide510(id){
+ if(!['story','elric','mira','fisher','dungeon'].includes(id))return false;
+ if(['elric','mira','fisher'].includes(id)&&npcQuestState(id)==='available')acceptNpcQuest(id);
+ return startGuide58('quest-'+id);
+}
+function questSwordStep510(amount){
+ if(S.swords>=amount)return {text:'Lämna in svärden på Gillets uppdragstavla.',target:stationDestination58('guild','board')};
+ if(S.ore<2)return {text:'Bryt malm till svärd ('+S.ore+'/2).',target:stationDestination58('mine','desk')};
+ if(S.wood<1)return {text:'Samla trä till svärden i Whisperwood.',target:{scene:'forest',x:280,y:460,label:'Samla trä'}};
+ return {text:'Smid svärd i Smedjan ('+S.swords+'/'+amount+').',target:stationDestination58('forge','anvil')};
+}
+function questGuideStep510(id){
+ if(id==='dungeon'){
+  if(S.scene==='dungeon'&&S.dungeonKills===3&&!S.dungeonChestClaimed)return {text:'Öppna skattkistan för guld, resurser och anseendeframsteg.',target:{scene:'dungeon',x:856,y:760,label:'Grottskatt'}};
+  if(S.scene==='dungeon'&&S.dungeonChestClaimed)return {done:true,text:'Grottskatten är hämtad. Hämta ditt anseende hos gillet.',action:'openrenown'};
+  const e=fieldEnemies.find((e,i)=>e.scene==='dungeon'&&activeFieldEnemy(e,i))||fieldEnemies[1];
+  return {text:'Besegra grottans tre fiender och öppna skattkistan.',target:{scene:'dungeon',x:e.x,y:e.y,label:'Grottäventyr'}};
+ }
+ if(id==='story'){
+  if(S.quest>=4)return {done:true,text:'Introduktionsuppdragen är klara. Se nästa möjlighet hos gillet.',action:'openrenown'};
+  if(questDone())return {text:'Uppdraget är klart. Hämta 50 guld och 10 XP vid uppdragstavlan.',target:stationDestination58('guild','board')};
+  if(S.quest===0)return {text:'Bryt malm på gruvkontoret ('+Math.min(5,S.oreGathered)+'/5).',target:stationDestination58('mine','desk')};
+  if(S.quest===1)return questSwordStep510(1);
+  if(S.quest===2)return questGuideStep510('dungeon');
+  return S.swords>0?{text:'Sälj svärd i Handelsboden för att nå 250 intjänat guld.',target:stationDestination58('market','counter')}:questSwordStep510(1);
+ }
+ const state=npcQuestState(id);
+ if(state==='claimed')return {done:true,text:'Uppdragets belöning är hämtad. Välj nästa mål i journalen.',action:'openquests'};
+ const q=NPC_QUESTS.find(q=>q.id===id);if(!q)return null;
+ if(state==='completed'||q.canComplete())return {text:'Återvänd till Gillets tavla och hämta belöningen.',target:stationDestination58('guild','board')};
+ if(id==='elric')return questSwordStep510(2);
+ if(id==='fisher')return {text:'Fånga fisk till beställningen ('+S.fish+'/3).',target:{scene:'village',x:110,y:540,label:'Fiska'}};
+ return {text:'Besegra Duskwolf i Whisperwood. Utrusta ett svärd och ta med mat.',target:{scene:'forest',x:fieldEnemies[0].x,y:fieldEnemies[0].y,label:'Duskwolf'}};
+}
+function questPlaytest510(){
+ if(!PLAYTEST55)return false;
+ S.gold=Math.max(1000,S.gold);S.ore=Math.max(30,S.ore);S.wood=Math.max(25,S.wood);S.heroRenown=Math.max(11,S.heroRenown);
+ S.marketDeliveries=Math.max(S.marketDeliveries,3*((S.activityRenown510?.trade||0)+1));
+ const q=swordBasis();while(S.swords<2){q.push(16);S.swords++}
+ S.autoSteel=false;S.autoRune=false;persist();questTab510='board';show('quests');note('Speltest: uppdragsmaterial och ett anseendesteg till Runverkstaden. Automatisk förädling pausad.');return true;
+}
+
+function npcQuestPanel(id){return npcQuestCard510(id)}
+
 const RENOWN_REWARDS=[
  {id:'merchant-license',level:2,name:'Handelslicens',description:'Kontraktsbelöningar +10 %'},
  {id:'forge-permit',level:4,name:'Smidesprivilegium',description:'Smidesuppgraderingar kostar 1 malm mindre'},
@@ -1477,25 +1613,19 @@ function renownUnlocked(id){const r=RENOWN_REWARDS.find(v=>v.id===id);return !!r
 function renownBonus(){return renownUnlocked('hero-title')?2:0}
 function renownContractReward(base){return Math.round(base*(renownUnlocked('merchant-license')?1.1:1))}
 const ADVANCED_BUILDINGS={
+ hall:{flag:'renownHallBuilt',unlock:'guild-hall',gold:400,wood:20,ore:15,label:'Hjältarnas hall'},
  caravan:{flag:'caravanOfficeBuilt',unlock:'caravan-office',gold:550,wood:25,ore:12,label:'Karavankontor'},
  arcane:{flag:'arcaneWorkshopBuilt',unlock:'arcane-workshop',gold:750,wood:15,ore:25,label:'Runverkstad'}
 };
 function buildAdvanced(type){
  const b=ADVANCED_BUILDINGS[type];if(!b)return false;
- if(!renownUnlocked(b.unlock)){note('För lågt anseende');return false}
- if(S[b.flag]){note('Byggnaden finns redan');return false}
- if(S.gold<b.gold||S.wood<b.wood||S.ore<b.ore){note('Du saknar resurser');return false}
- S.gold-=b.gold;S.wood-=b.wood;S.ore-=b.ore;S[b.flag]=true;persist();note(b.label+' byggt!');return true;
+ const blocked=buildingBlock510(type);if(blocked){note(blocked);return false}
+ S.gold-=b.gold;S.wood-=b.wood;S.ore-=b.ore;S[b.flag]=true;persist();note(b.label+' byggd! Verksamheten är nu aktiv.');return true;
 }
-function buildRenownHall(){
- if(!renownUnlocked('guild-hall')){note('Kräver anseende 8');return false}
- if(S.renownHallBuilt){note('Hallen är redan byggd');return false}
- if(S.gold<400||S.wood<20||S.ore<15){note('Kräver 400 guld, 20 trä och 15 malm');return false}
- S.gold-=400;S.wood-=20;S.ore-=15;S.renownHallBuilt=true;persist();note('Hjältarnas hall är färdig!');return true;
-}
+function buildRenownHall(){return buildAdvanced('hall')}
 
 const VILLAGE_MILESTONES=[
-{id:'founder',name:'Grundläggare',desc:'Samla minst 20 malm och 15 trä totalt.',done:()=>S.oreGathered>=20&&S.wood>=15,reward:120},
+{id:'founder',name:'Grundläggare',desc:'Bryt sammanlagt 20 malm och ha 15 trä i ryggsäcken.',done:()=>S.oreGathered>=20&&S.wood>=15,reward:120},
 {id:'trader',name:'Handelsmästare',desc:'Slutför minst 3 handelsleveranser.',done:()=>S.marketDeliveries>=3,reward:180},
 {id:'explorer',name:'Skogens väktare',desc:'Besegra Duskwolf och rensa goblingrottan.',done:()=>S.forestWolfWins>=1&&S.dungeonClears>=1,reward:250}
 ];
@@ -1504,7 +1634,7 @@ function claimVillageMilestone(id){
  if(!m||S.villageMilestones.includes(id)||!m.done()){note('Milstolpen är inte klar');return false}
  S.villageMilestones.push(id);S.heroRenown++;economyTransaction('quest',m.reward,0,'milestone-'+id);persist();note(m.name+' slutförd! +'+m.reward+' guld');return true;
 }
-function questTitle(){return ['Samla 5 järnmalm','Smid ditt första svärd','Besegra 2 gobliner','Tjäna 250 guld totalt','Utforska vidare'][Math.min(S.quest,4)]}
+function questTitle(){return ['Bryt 5 järnmalm','Smid ditt första svärd','Besegra 2 gobliner','Tjäna 250 guld totalt','Utforska vidare'][Math.min(S.quest,4)]}
 function questDone(){return S.quest===0?S.oreGathered>=5:S.quest===1?(S.swordsCrafted>0||S.heroSword):S.quest===2?S.forestWins>=2:S.quest===3?S.totalGold>=250:false}
 function btn(label,act){return '<button type="button" onclick="action(\''+act+'\')">'+label+'</button>'}
 function playtestTravel55(place){
@@ -1526,11 +1656,13 @@ function playtestTravel55(place){
  persist();return true;
 }
 function show(p){
+if(p==='contracts'){questTab510='deliveries';p='quests'}
 const samePanel=panel===p,retainedNotice=samePanel?document.getElementById('notice').textContent:'',scroll=samePanel?(document.getElementById('modal').scrollTop||0):0;
 if(fishingGame&&p!=='fishing'){fishingGame=null;fishingCooldown=.5}panel=p;updateCombatUI57();vx=vy=0;const nub=document.getElementById('nub');if(nub)nub.style.transform='';updateActionButton();document.getElementById('modal').style.display='block';
 businessBindings59=[];let h='';
 if(p==='playtest'&&PLAYTEST55){
- h='<h2>Speltest 5.9</h2><p>Testa produktion, automation och ekonomi. Arbetsplatser, strider och fiske finns också kvar. Detta läge har en egen testsparning.</p>'+
+ h='<h2>Speltest 5.10</h2><p>Testa uppdrag, anseende och byggprojekt. Produktion, arbetsplatser, strider och fiske finns också kvar. Detta läge har en egen testsparning.</p>'+
+ btn('Gillet · uppdrag & upplåsning','testquests510')+
  btn('Företaget · prova produktion','testproduction59')+
  '<button onclick="playtestTravel55(\'village\')">Byn · hus och NPC:er</button>'+
  '<button onclick="playtestTravel55(\'forest\')">Skogen · hjälten och Duskwolf</button>'+
@@ -1584,8 +1716,7 @@ if(!c){show('hero');return}
 h='<h2>⚔ '+ENEMIES[c.enemyIndex||0].name+'</h2><p>Fiende: '+Math.max(0,c.hp)+' / '+c.max+'</p>'+healthBar(c.hp,c.max,'#bf655d')+'<p>Din HP: '+S.hp+' / '+(20+(S.level-1)*4)+'</p>'+healthBar(S.hp,20+(S.level-1)*4,'#79b57c')+
 '<div class="combat-log">'+c.message+'</div>'+btn('⚔ Attack','attack')+btn('✨ Rune Strike','runestrike')+btn('🛡 Defend','defend')+btn('🧪 Potion ('+S.potions+')','potion')+btn('🏃 Fly från striden','flee');
 }else if(p==='quests'){
-h='<h2>📜 Uppdrag</h2><h3>'+questTitle()+'</h3><p>Framsteg: '+questProgress()+'</p><p>'+ (questDone()?'Uppdraget är klart! Hämta belöningen.':'Fortsätt spela för att slutföra uppdraget.')+'</p>'+btn('Hämta belöning (+50 guld, +10 XP)','claim')+
-'<h3>🗣 NPC-uppdrag</h3><p>Fiskaren: ”'+npcDialogue('fisher')+'”</p>'+NPC_QUESTS.map(q=>npcQuestPanel(q.id)).join('')+'<h3>🔮 Runförstärkning åt gillet</h3><p>Besegra Duskwolf, bygg Runverkstaden och leverera 2 runvaror. Belöning: 230 guld och +1 anseende. Upprepas högst tre gånger ('+S.productionQuestDone+'/3).</p>'+btn('Leverera runvaror','deliverproductionquest')+'<h3>🛡 Väktarsigill till gillet</h3><p>1. Samla monsteressens: '+S.monsterEssence+'/3 · 2. Tillverka runvara: '+S.runeGoods+'/1 · 3. Tillverka sigill: '+S.wardSeals+'/1</p><p>Leveranser: '+S.wardDeliveries+' · Belöning: '+marketReward(260)+' guld och +1 anseende.</p>'+btn('Leverera Väktarsigill','deliverward')+'<h3>🏘 Byns milstolpar</h3>'+VILLAGE_MILESTONES.map(m=>'<div class="inventory-section"><strong>'+m.name+'</strong><p>'+m.desc+'</p><p>Belöning: '+m.reward+' guld · '+(S.villageMilestones.includes(m.id)?'✓ Klar':m.done()?'Redo att hämtas':'Pågår')+'</p>'+btn('Hämta belöning','milestone-'+m.id)+'</div>').join('')+'<p>Hjältens anseende: '+S.heroRenown+' · Färdiga uppdrag: '+S.quest+' · Strider vunna: '+S.combatWins+'</p><p>Skogen besökt: '+S.forestVisits+' · Duskwolves besegrade: '+S.forestWolfWins+' · Trä samlat: '+S.forestWood+'</p><p>Gobliner besegrade: '+S.forestWins+' · Grottor rensade: '+S.dungeonClears+' · Handelskontrakt: '+S.contractsDone+'</p>';
+h=questJournal510();
 }else if(p==='expeditions'){h='<h2>🧭 Expeditionsgille</h2><p>Skicka en hjälte på ett automatiskt äventyr. Samla malm och runfragment även när spelet är stängt.</p><p>Uppdrag: '+(S.expeditionEnds?'Pågår – '+Math.max(0,Math.ceil((S.expeditionEnds-Date.now())/1000))+' sek kvar':'Redo')+'</p>'+btn('Starta expedition (60 sek)','expedition')+btn('Uppgradera expeditioner (120 guld)','expeditionupgrade');}else if(p==='merchant'){
 h='<h2>🧑‍💼 Köpmannen Elric</h2><p>”'+npcDialogue('merchant')+'”</p><p>Handelsrykte: '+S.merchantRep+'</p>'+npcQuestPanel('elric')+btn('🏭 Produktion & lager','openproduction')+btn('📜 Visa handelskontrakt','opencontracts')+btn('🏰 Öppna företag','openempire');
 }else if(p==='guard'){
@@ -1609,7 +1740,7 @@ btn(S.fisheryManager?'✓ Fiskare anställd':'Anställ fiskare (180 guld)','hire
 }else if(p==='mining'){h=miningMenu58();
 }else if(p==='production'){
 h=productionMenu59();
-}else if(p==='contracts'){h='<h2>📜 Handelsgillet</h2><p>Leverera '+S.contractTarget+' svärd för '+S.contractReward+' guld och 12 XP.</p><p>Du har '+S.swords+' svärd. Avklarade kontrakt: '+S.contractsDone+'</p>'+btn('Leverera svärd','contract')+'<h3>📈 Marknadsläge</h3><p>Efterfrågan: '+Math.round(marketRate()*100)+'% · Leveranser: '+S.marketDeliveries+'</p><h3>🎣 Fiskekontrakt</h3><p>Leverera 5 fiskar för '+marketReward(110)+' guld. Levererade: '+S.fishContractDone+'</p>'+btn('Leverera 5 fiskar','fishcontract')+'<h3>📦 Resurskontrakt</h3><p>Leverera 10 malm och 8 trä för '+marketReward(160)+' guld. Levererade: '+S.resourceContractDone+'</p>'+btn('Leverera resurser','resourcecontract')+'<h3>🏛 Företagsleveranser</h3>'+EMPIRE_ORDERS.map(q=>'<div class="inventory-section"><strong>'+q.name+'</strong><p>'+q.goal+' · '+q.reward+' guld före handelsbonus</p><p>'+(S[q.flag]?'Verksamheten aktiv':'Kräver upplåst verksamhet')+' · Levererade: '+S[q.count]+'</p>'+btn('Leverera','empireorder-'+q.id)+'</div>').join('');}else if(p==='bag'){
+}else if(p==='bag'){
 const items=[
 ['🛡️','Väktarsigill',S.wardSeals,'rare'],['🌌','Monsteressens',S.monsterEssence,'rare'],['⚙️','Ståltackor',S.steelStock,'rare'],['🔮','Runvaror',S.runeGoods,'rare'],['🪙','Guld',S.gold,'common'],['⛏️','Järnmalm',S.ore,'common'],['🪵','Trä',S.wood,'common'],['⚔️','Svärd',S.swords,'common'],
 ['✨','Runfragment',S.runes,'rare'],['🧪','Potions',S.potions,'common'],['🔮','Runstav',S.staffOwned?1:0,'rare'],['🛡️','Rustning',S.heroArmor?1:0,'rare'],['🗡️','Utrustat svärd',S.heroSword?1:0,'rare'],['💎','Reliker',(S.lootItems||[]).length,'rare'],['🪖','Runhjälm',S.helmetOwned?1:0,'rare'],['🥾','Stövlar',S.bootsOwned?1:0,'common']
@@ -1620,7 +1751,7 @@ h='<h2>🎒 Inventarium</h2><p>Din ryggsäck · Material, utrustning och förbru
 }else{
 h='<h2>⚙ Inställningar</h2>'+btn('Virtuell joystick','joystick')+btn('Dra på kartan','drag')+
 btn('Långsam rörelse','slow')+btn('Normal rörelse','normal')+btn('Snabb rörelse','fast')+
-'<p>Beta Preview 5.9 · Speltest · Separat sparning.</p>'+(PLAYTEST55?'<button onclick="show(\'playtest\')">Speltest · välj testplats</button>':'')+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
+'<p>Beta Preview 5.10 · Speltest · Separat sparning.</p>'+(PLAYTEST55?'<button onclick="show(\'playtest\')">Speltest · välj testplats</button>':'')+btn('Visa spelguide','guide')+'<button onclick="unstuck()">🛟 Flytta till säker plats (behåll framsteg)</button>';
 }
 document.getElementById('content').innerHTML=h;
 document.getElementById('notice').textContent=retainedNotice;document.getElementById('modal').scrollTop=scroll;
@@ -1641,9 +1772,8 @@ function cookMeal(id){
  const recipe=COOKING_RECIPES.find(r=>r.id===id);if(!recipe)return false;
  if(S.scene!=='interior'||S.houseType!=='market'){note('Köket finns i Handelsboden, sydväst i Emberfall.');return false}
  if(S.fish<recipe.count||S.wood<(recipe.wood||0)){note('Saknar ingredienser: '+recipe.needs);return false}
- const meals=mealInventory(),stocks=fishStocks();let n=recipe.count;
- for(const fish of FISH_SPECIES){const used=Math.min(n,stocks[fish.id]||0);stocks[fish.id]-=used;n-=used}
- S.fish-=recipe.count;S.wood-=recipe.wood||0;meals[id]=(meals[id]||0)+1;S.cookedMeals++;S.mealsCookedTotal++;S.mealIngredientsUsed+=recipe.count;
+ const meals=mealInventory();consumeFish510(recipe.count);
+ S.wood-=recipe.wood||0;meals[id]=(meals[id]||0)+1;S.cookedMeals++;S.mealsCookedTotal++;S.mealIngredientsUsed+=recipe.count;
  persist();note(recipe.name+' färdig · återställer '+recipe.heal+' HP');return true;
 }
 function eatMeal(id='legacy'){
@@ -1657,7 +1787,7 @@ function foodInventoryHTML(){
  return '<div class="inventory-section"><h3>Mat i ryggsäcken</h3>'+[...COOKING_RECIPES,{id:'legacy',name:'Tidigare lagad måltid',heal:12}].filter(r=>meals[r.id]>0).map(r=>'<p><strong>'+r.name+'</strong> · '+meals[r.id]+' st</p>'+recipeButton(missingHP?'Ät · återställ '+Math.min(r.heal,missingHP)+' HP':'Fullt HP · spara maten','eat-'+r.id,missingHP>0)).join('')+(S.cookedMeals?'':'<p>Ingen lagad mat ännu. Köket finns i Handelsboden.</p>')+'</div>';
 }
 function recipeButton(label,action,ready){return '<button type="button" '+(action==='castfish'?'id="castFishButton" ':'')+(ready?'':'disabled')+' onclick="window.action(\''+action+'\')">'+label+'</button>'}
-const MATERIAL_NAMES58={ore:'Malm',wood:'Trä',runes:'Runfragment',fish:'Fisk',steelStock:'Ståltacka',monsterEssence:'Monsteressens'};
+const MATERIAL_NAMES58={gold:'Guld',runeGoods:'Runvara',ore:'Malm',wood:'Trä',runes:'Runfragment',fish:'Fisk',steelStock:'Ståltacka',monsterEssence:'Monsteressens'};
 function recipeNeeds58(needs){
  return Object.entries(needs).filter(([,count])=>count>0).map(([key,count])=>({key,name:MATERIAL_NAMES58[key]||key,need:count,have:Math.max(0,Number(S[key])||0),missing:Math.max(0,count-(Number(S[key])||0))}));
 }
@@ -1688,9 +1818,10 @@ function tradingMenu58(){
  const price=35+Math.floor(S.merchantRep/5)*5,fishValue=FISH_SPECIES.reduce((sum,f)=>sum+(fishStocks()[f.id]||0)*f.value,0);
  return '<h2>Handel</h2><p class="game-hint">Försäljning ger guld direkt. Kontrakt kräver flera varor och kan ge extra belöningar.</p><div class="recipe-card58"><h3>Svärd · '+S.swords+' i ryggsäcken</h3><p>'+price+' guld per svärd</p>'+recipeButton('Sälj 1 svärd · +'+price+' guld','sell',S.swords>0)+'</div><div class="recipe-card58"><h3>Fisk · '+S.fish+' st</h3><p>Hela fångsten är värd '+fishValue+' guld. Spara fisk om du vill laga mat.</p>'+recipeButton('Sälj all fisk · +'+fishValue+' guld','sellfish',S.fish>0)+'</div>'+btn('Handelskontrakt','opencontracts')+btn('Till köket','opencooking')+btn('Första försäljningen · vägledning','guideto-sale');
 }
-const GUIDE_GOALS58={meal:'Första måltiden',sword:'Utrusta ett svärd',sale:'Första svärdsaffären'};
+const GUIDE_GOALS58={meal:'Första måltiden',sword:'Utrusta ett svärd',sale:'Första svärdsaffären','quest-story':'Din start i Emberfall','quest-elric':'Elrics första leverans','quest-mira':'Miras patrull','quest-fisher':'Fiskarens beställning','quest-dungeon':'Grottans skatt'};
 function guideStep58(id=S.guideGoal58){
  if(!GUIDE_GOALS58[id])return null;
+ if(id.startsWith('quest-'))return questGuideStep510(id.slice(6));
  if(id==='meal'){
   if(S.mealsCookedTotal>0)return {done:true,text:'Måltiden är lagad. Maten finns i ryggsäcken.',action:'openbag'};
   if(S.fish<2)return {text:'Fånga 2 fiskar vid stranden ('+S.fish+'/2).',target:{scene:'village',x:110,y:540,label:'Fiska'}};
@@ -1714,6 +1845,7 @@ function guideWaypoint58(){
   const b=buildings.find(b=>b.n===({market:'Marknad',forge:'Smedja',mine:'Gruva',guild:'Gille'})[t.house]);
   return {x:b.x+b.w/2,y:b.y+b.h+25,label:t.house==='market'?'Handelsboden':b.n};
  }
+ if(t.scene==='dungeon')return {x:952,y:420,label:'Till grottan'};
  return t.scene==='forest'?{x:500,y:826,label:'Till Whisperwood'}:t;
 }
 function startGuide58(id){
@@ -1722,7 +1854,7 @@ function startGuide58(id){
 }
 function guideMenu58(){
  const current=guideStep58();
- return '<h2>Guide · välj nästa steg</h2><p>Gå med joysticken. Action byter namn när du når en strand, dörr eller arbetsplats.</p>'+(current?'<div class="guide-step58"><strong>'+GUIDE_GOALS58[S.guideGoal58]+'</strong><p>'+(current.done?'✓ ':'')+current.text+'</p>'+(current.action?btn('Öppna nästa meny',current.action):'<button onclick="hide()">Fortsätt följa målet</button>')+btn('Avsluta vägledningen','guidestop')+'</div>':'')+'<div class="house-grid58">'+Object.entries(GUIDE_GOALS58).map(([id,name])=>'<button onclick="startGuide58(\''+id+'\')">'+name+'<small>'+({meal:'Fiska → laga mat → återställ HP',sword:'Malm och trä → smide → utrustning',sale:'Resurser → produktion → försäljning'})[id]+'</small></button>').join('')+'</div><p class="game-hint">Målmarkeringen visar nästa plats. Gå längs vägarna och runt hus och vatten. Du kan byta eller avsluta målet när du vill.</p>'+btn('Öppna alla recept','opencrafting')+btn('Fiskehjälp','openfishery')+btn('Uppdrag & belöningar','openquests')+'<button onclick="unstuck()">Fastnat? Flytta till säker plats</button>';
+ return '<h2>Guide · välj nästa steg</h2><p>Gå med joysticken. Action byter namn när du når en strand, dörr eller arbetsplats.</p>'+(current?'<div class="guide-step58"><strong>'+GUIDE_GOALS58[S.guideGoal58]+'</strong><p>'+(current.done?'✓ ':'')+current.text+'</p>'+(current.action?btn('Öppna nästa meny',current.action):'<button onclick="hide()">Fortsätt följa målet</button>')+btn('Avsluta vägledningen','guidestop')+'</div>':'')+'<div class="house-grid58">'+Object.entries(GUIDE_GOALS58).filter(([id])=>!id.startsWith('quest-')).map(([id,name])=>'<button onclick="startGuide58(\''+id+'\')">'+name+'<small>'+({meal:'Fiska → laga mat → återställ HP',sword:'Malm och trä → smide → utrustning',sale:'Resurser → produktion → försäljning'})[id]+'</small></button>').join('')+'</div><p class="game-hint">Målmarkeringen visar nästa plats. Gå längs vägarna och runt hus och vatten. Du kan byta eller avsluta målet när du vill.</p>'+btn('Öppna alla recept','opencrafting')+btn('Fiskehjälp','openfishery')+btn('Uppdrag & belöningar','openquests')+'<button onclick="unstuck()">Fastnat? Flytta till säker plats</button>';
 }
 function drawGuide58(){
  if(panel)return;const t=guideWaypoint58();if(!t)return;
@@ -1737,6 +1869,12 @@ function drawGuide58(){
 
 function action(a){
 settleBusinessClock59();
+if(a.startsWith('questtab-')){const tab=a.slice(9);if(['board','deliveries','renown'].includes(tab)){questTab510=tab;show('quests');document.getElementById('modal').scrollTop=0}return}
+if(a.startsWith('questfollow-')){startQuestGuide510(a.slice(12));return}
+if(a.startsWith('npcfinish-')){finishNpcQuest510(a.slice(10));show('quests');return}
+if(a==='openrenown'){questTab510='renown';show('quests');document.getElementById('modal').scrollTop=0;return}
+if(a==='claimactivity510'){claimActivityRenown510();questTab510='renown';show('quests');return}
+if(a==='testquests510'){questPlaytest510();return}
 if(a.startsWith('productiontab-')){const tab=a.slice(14);if(['flow','auto','books'].includes(tab)){productionTab59=tab;show('production');document.getElementById('modal').scrollTop=0}return}
 if(a==='openempire'){show('empire');return}
 if(a==='testproduction59'){if(!PLAYTEST55)return;S.gold=Math.max(S.gold,500);S.ore=Math.max(S.ore,18);S.wood=Math.max(S.wood,12);persist();productionTab59='flow';show('production');return}
@@ -1772,7 +1910,7 @@ if(a==='craftrune'){craftProduction('rune');show('production');return}
 if(a==='sellsteel'){sellProduction('steel');show('production');return}
 if(a==='sellrune'){sellProduction('rune');show('production');return}
 if(a==='openproduction'){show('production');return}
-if(a.startsWith('empireorder-')){deliverEmpireOrder(a.slice(12));show('contracts');return}
+if(a.startsWith('empireorder-')){deliverEmpireOrder(a.slice(12));questTab510='deliveries';show('quests');return}
 if(a==='buildhall'){buildRenownHall();show('quests');return}
 if(a==='buildcaravan'){buildAdvanced('caravan');show('quests');return}
 if(a==='buildarcane'){buildAdvanced('arcane');show('quests');return}
@@ -1805,7 +1943,7 @@ if(a==='bestiary'){show('bestiary');return}
 if(a.startsWith('style')){S.heroStyle=Math.max(0,Math.min(2,Number(a.slice(5))||0));persist();show('appearance');return}
 if(a==='openempire'){show('empire');return}
 if(a==='openquests'){show('quests');return}
-if(a==='opencontracts'){show('contracts');return}
+if(a==='opencontracts'){show('contracts');document.getElementById('modal').scrollTop=0;return}
 if(a==='openhero'){show('hero');return}
 if(a==='openexpeditions'){show('expeditions');return}
 if(a==='leavehouse'){leaveHouse();return}
@@ -1860,9 +1998,8 @@ S.hp=Math.max(5,Math.floor((20+(S.level-1)*4)/2));S.combat=null;show('hero');not
 }
 else if(a==='fishcontract'){
  if(S.fish<5){note('Du behöver 5 fiskar');return}
- let remaining=5;const stocks=fishStocks();
- for(const f of FISH_SPECIES){const take=Math.min(remaining,stocks[f.id]||0);stocks[f.id]-=take;remaining-=take}
- const reward=marketReward(110);S.fish-=5;economyTransaction('fish',reward,0,'contract');S.fishContractDone++;S.merchantRep++;S.marketDeliveries++;refreshMarket();note('Fiskekontrakt levererat! +'+reward+' guld');
+ consumeFish510(5);
+ const reward=marketReward(110);economyTransaction('fish',reward,0,'contract');S.fishContractDone++;S.merchantRep++;S.marketDeliveries++;refreshMarket();note('Fiskekontrakt levererat! +'+reward+' guld');
 }else if(a==='resourcecontract'){
  if(S.ore<10||S.wood<8){note('Behöver 10 malm och 8 trä');return}
  const reward=marketReward(160);S.ore-=10;S.wood-=8;economyTransaction('resources',reward,10*S.materialValuation.ore+8*S.materialValuation.wood,'contract');S.resourceContractDone++;S.merchantRep++;S.marketDeliveries++;refreshMarket();note('Resurskontrakt levererat! +'+reward+' guld');
