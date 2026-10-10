@@ -51,7 +51,7 @@ body{display:flex;flex-direction:column;padding-top:env(safe-area-inset-top);pad
 @media(min-width:800px){.quest-grid510{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.quest-grid510 .quest-card510{margin:0}}
 
 /* 5.11: one focused fishing surface; the moving target and fixed strike button stay together. */
-#modal[data-fishing511="true"]{left:50%;right:auto;transform:translateX(-50%);width:calc(100% - 20px);max-width:660px;bottom:calc(10px + env(safe-area-inset-bottom));padding:16px}
+#modal[data-fishing511="true"]{left:50%;right:auto;transform:translateX(-50%);width:calc(100% - 20px);max-width:660px;bottom:auto;max-height:calc(var(--game-height,100dvh) - 78px - env(safe-area-inset-top) - env(safe-area-inset-bottom));padding:16px}
 #modal[data-fishing511="true"] #content{max-width:600px;margin:0 auto}
 #modal[data-fishing511="true"] h2{margin:6px 0 10px;font-size:22px}
 .fish-kicker511{font-size:11px;letter-spacing:.8px;font-weight:800;margin:5px 38px 5px 0;color:#536052}
@@ -81,7 +81,7 @@ body{display:flex;flex-direction:column;padding-top:env(safe-area-inset-top);pad
 .fish-catch511>span{font-size:48px}.fish-catch511 h3{margin:4px 0;font-size:24px}.fish-catch511 p{margin:4px 0}
 .fish-next511{display:grid;gap:8px}.fish-next511 button{width:100%;margin:0!important}
 @media(max-width:390px){#modal[data-fishing511="true"]{padding:12px}.fishing-session511 .fish-meter{height:50px;margin-top:16px}#modal[data-fishing511="true"] h2{font-size:19px}.fish-catch511{padding:12px;gap:10px}}
-@media(max-height:560px){#modal[data-fishing511="true"]{top:8px}.fishing-session511 .fish-meter{height:38px;margin-top:12px}.fishing-session511 .fish-legend{margin:4px 0}.fish-cue511{margin:5px 0;padding:6px;min-height:34px}.fishing-session511 #fishFeedback{margin:5px 0;min-height:20px}.fishing-session511 .fish-summary{margin-top:6px}#modal .fishing-session511 #fishStrike{min-height:48px}.fishing-session511 .fishing-actions{padding:4px 0;margin-top:4px}}
+@media(max-height:560px){#modal[data-fishing511="true"]{top:8px;max-height:calc(var(--game-height,100dvh) - 16px)}.fishing-session511 .fish-meter{height:38px;margin-top:12px}.fishing-session511 .fish-legend{margin:4px 0}.fish-cue511{margin:5px 0;padding:6px;min-height:34px}.fishing-session511 #fishFeedback{margin:5px 0;min-height:20px}.fishing-session511 .fish-summary{margin-top:6px}#modal .fishing-session511 #fishStrike{min-height:48px}.fishing-session511 .fishing-actions{padding:4px 0;margin-top:4px}}
 </style><header><b>⚒ Runeforge Empire</b><span id="stats">🪙 100 · ⛏ 0 · ⚔ 0</span></header><div id="map"><canvas id="game"></canvas><div id="interactionHint"></div><div id="msg">Beta Preview 5.11 · Speltest · Emberfall · Original Art</div><div id="moveStatus" style="position:absolute;right:6px;bottom:6px;background:#10221dcc;color:#fff;font:11px monospace;padding:5px;border-radius:4px;pointer-events:none">LOADING JS...</div></div><div id="bottom"><div class="tabs"><button onclick="show('empire')">🏰 Företag</button><button onclick="show('hero')">🛡 Hjälte</button><button onclick="show('quests')">📜 Uppdrag</button><button onclick="show('bag')">🎒 Ryggsäck</button><button onclick="show('settings')">⚙</button></div><div class="pad"><div id="joy"><div id="nub"></div></div><div class="actions"><button onclick="interact()" id="actionButton" aria-label="Utför handling">✦ Action</button><button id="attackButton" type="button"><span>⚔ Attack</span><small id="attackState">Redo</small></button><button id="dodgeButton" type="button"><span>↗ Undvik</span><small id="dodgeState">Redo</small></button><button onclick="show('guide')">? Guide</button></div></div></div><div id="modal"><button id="close" onclick="hide()">✕</button><p id="notice" role="status" aria-live="polite"></p><div id="content"></div></div><script>
 const PLAYTEST55=!!(window.location&&/(?:[?&])speltest=1(?:&|$)/.test(window.location.search||''));
 const SAVE_KEY=PLAYTEST55?'runeforge_playtest_55':'runeforge_beta_preview_01';
@@ -1176,7 +1176,7 @@ function updateFishing(dt){
  renderFishing();
 }
 function fishingIntro511(){
- return '<h2>'+(S.fishingPractice511?'Redo för ett riktigt kast':'Ditt första kast')+'</h2><p class="fish-detail511">Stå kvar på stranden. Du behöver inget bete.</p><div class="fish-demo511" aria-label="Exempel: den ljusa markören är i målområdet"><span class="demo-zone511"></span><span class="demo-marker511">◆</span></div><ol class="fish-steps511"><li>Följ den <strong>ljusa markören</strong>.</li><li>Tryck <strong>Hugg</strong> mellan målområdets kanter.</li><li>Fyll fångstmätaren med flera träffar.</li></ol>'+recipeButton(S.fishingPractice511?'Öva igen · utan fångst':'Öva först · tre lugna träffar','fishpractice',nearPond())+fishingModeChoices511()+recipeButton('Kasta på riktigt','fishstart',nearPond()&&fishingCooldown<=0)+'<p class="fish-detail511">Övningen stannar vid rätt läge och ger ingen fångst. Du kan avbryta när du vill.</p>';
+ return '<h2>'+(S.fishingPractice511?'Redo för ett riktigt kast':S.fishingGuideSeen?'Fiske vid stranden':'Ditt första kast')+'</h2><p class="fish-detail511">Stå kvar på stranden. Du behöver inget bete.</p><div class="fish-demo511" aria-label="Exempel: den ljusa markören är i målområdet"><span class="demo-zone511"></span><span class="demo-marker511">◆</span></div><ol class="fish-steps511"><li>Följ den <strong>ljusa markören</strong>.</li><li>Tryck <strong>Hugg</strong> mellan målområdets kanter.</li><li>Fyll fångstmätaren med flera träffar.</li></ol>'+recipeButton(S.fishingPractice511?'Öva igen · utan fångst':'Öva först · tre lugna träffar','fishpractice',nearPond())+fishingModeChoices511()+recipeButton('Kasta på riktigt','fishstart',nearPond()&&fishingCooldown<=0)+'<p class="fish-detail511">Övningen stannar vid rätt läge och ger ingen fångst. Du kan avbryta när du vill.</p>';
 }
 function fishingResult511(){
  const f=lastCatch511;if(!f)return '<h2>Fisket avslutat</h2>'+btn('Till fiskeriet','openfishery');
@@ -2088,7 +2088,7 @@ function interact(){
  const target=interactionTarget();if(!target)return;
  switch(target.kind){
  case 'fishing':fishingTap();break;
- case 'fish':castFishingRod();break;
+ case 'fish':show('fishingintro');break;
  case 'npc':show(target.data);break;
  case 'house':show('house');break;
  case 'station':show(target.data.panel);break;
