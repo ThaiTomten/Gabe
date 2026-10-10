@@ -531,7 +531,7 @@ const AUTOMATION59={
 };
 if(!S.automationOwned59||typeof S.automationOwned59!=='object'||Array.isArray(S.automationOwned59))S.automationOwned59={};
 for(const flag of Object.keys(AUTOMATION59))if(S[flag])S.automationOwned59[flag]=true;
-let businessCycleRunning59=false,lastCycle59=null,businessBindings59=[],productionTab59='flow';
+let businessCycleRunning59=false,lastCycle59=null,businessBindings59=[],productionTab59='flow',lastBusiness59=performance.now();
 if(S.manager&&S.gold<0)S.gold=0;
 let autosaveClock=0,productionClock=Math.max(0,Math.min(4.999,Number(S.productionRemainder)||0));let movementErrorShown=false;let dungeonTime=0;
 let batchSimulation=false;
@@ -555,12 +555,20 @@ function businessCycle(){
  }finally{businessCycleRunning59=false}
  if(!batchSimulation){persist();refreshBusinessUI59()}
 }
+// Business time follows elapsed seconds, independently of the movement/animation frame cap.
+function settleBusinessClock59(t=performance.now()){const elapsed=Math.max(0,(t-lastBusiness59)/1000);lastBusiness59=Math.max(lastBusiness59,t);return advanceBusiness59(elapsed)}
+function advanceBusiness59(seconds){
+ const total=productionClock+Math.max(0,Math.min(8*3600,Number(seconds)||0)),cycles=Math.floor(total/5);
+ productionClock=total-cycles*5;if(!cycles)return 0;
+ const previous=batchSimulation;batchSimulation=true;
+ try{for(let i=0;i<cycles;i++)businessCycle()}finally{batchSimulation=previous}
+ if(!batchSimulation){persist();refreshBusinessUI59()}
+ return cycles;
+}
 function offline(){
- const elapsed=Math.max(0,Math.min(8*3600,(Date.now()-Number(S.lastSaved||Date.now()))/1000)),total=elapsed+productionClock,cycles=Math.floor(total/5);
- productionClock=total-cycles*5;
- if(!cycles)return;
- batchSimulation=true;try{for(let i=0;i<cycles;i++)businessCycle()}finally{batchSimulation=false}
- S.lastSaved=Date.now();finishExpedition();persist();note('Välkommen tillbaka! '+Math.floor(elapsed/60)+' min produktion beräknad.');
+ const elapsed=Math.max(0,Math.min(8*3600,(Date.now()-Number(S.lastSaved||Date.now()))/1000));
+ if(!advanceBusiness59(elapsed))return;
+ finishExpedition();persist();note('Välkommen tillbaka! '+Math.floor(elapsed/60)+' min produktion beräknad.');
 }
 
 // Walk-through portals: directional edge crossing, no interaction button required.
@@ -861,12 +869,11 @@ function autoZoneTransition(dt){
 }
 function tick(t){
 try{
-const dt=Math.min((t-last)/1000,.05);last=t;
+const elapsed=Math.max(0,(t-last)/1000),dt=Math.min(elapsed,.05);last=t;
 if(!panel&&!document.hidden){walkMoving=Math.hypot(vx,vy)>.08;if(walkMoving){walkTime+=dt*Math.max(.6,Math.hypot(vx,vy));faceX=vx;faceY=vy}if(S.scene==='forest'){const nx=Math.max(30,Math.min(970,S.forestX+vx*speed*dt)),ny=Math.max(30,Math.min(840,S.forestY+vy*speed*dt));if(!waterCollision('forest',nx,S.forestY))S.forestX=nx;if(!waterCollision('forest',S.forestX,ny))S.forestY=ny;}else if(S.scene==='interior'){moveInside(vx*speed*dt,vy*speed*dt);}else if(S.scene==='dungeon'){S.dungeonX=Math.max(35,Math.min(965,S.dungeonX+vx*speed*dt));S.dungeonY=Math.max(60,Math.min(810,S.dungeonY+vy*speed*dt));}else{let nx=S.x+vx*speed*dt,ny=S.y+vy*speed*dt;if(solid(S.x,S.y)){safePosition();nx=S.x+vx*speed*dt;ny=S.y+vy*speed*dt}if(!solid(nx,S.y)&&!waterCollision('village',nx,S.y))S.x=nx;if(!solid(S.x,ny)&&!waterCollision('village',S.x,ny))S.y=ny}}
 if(panel||document.hidden)walkMoving=false;
 autoZoneTransition(dt);updateFieldCombat(dt);updateActionButton();updateCombatUI57(dt);
-fishingCooldown=Math.max(0,fishingCooldown-dt);updateFishing(dt);productionClock+=dt;autosaveClock+=dt;
-if(productionClock>=5){productionClock-=5;businessCycle()}
+fishingCooldown=Math.max(0,fishingCooldown-dt);updateFishing(dt);settleBusinessClock59(t);autosaveClock+=elapsed;
 
 if(S.expeditionEnds&&Date.now()>=S.expeditionEnds){finishExpedition();persist()}if(autosaveClock>=12){autosaveClock=0;persist()}
 if(S.scene==='dungeon')drawDungeon();else if(S.scene==='interior')drawInterior();else if(S.scene==='forest')drawForest();else draw();updateHUD56();if(S.scene==='forest'||S.scene==='dungeon')drawCombatEffects(S.scene);
@@ -1729,6 +1736,7 @@ function drawGuide58(){
 }
 
 function action(a){
+settleBusinessClock59();
 if(a.startsWith('productiontab-')){const tab=a.slice(14);if(['flow','auto','books'].includes(tab)){productionTab59=tab;show('production');document.getElementById('modal').scrollTop=0}return}
 if(a==='openempire'){show('empire');return}
 if(a==='testproduction59'){if(!PLAYTEST55)return;S.gold=Math.max(S.gold,500);S.ore=Math.max(S.ore,18);S.wood=Math.max(S.wood,12);persist();productionTab59='flow';show('production');return}
@@ -1922,7 +1930,7 @@ if(PLAYTEST55&&!S.playtestSeed55){
  Object.assign(S,{playtestSeed55:true,tutorialSeen:true,scene:'village',x:350,y:540,gold:250,ore:12,wood:20,fish:8,fishSpecies:{sunperch:8},heroSword:true,hp:12,potions:3,fishingGuideSeen:false,lastSaved:Date.now()});
 }
 try{const previous=localStorage.getItem(SAVE_KEY);if(previous&&!localStorage.getItem(BACKUP_KEY))localStorage.setItem(BACKUP_KEY,previous)}catch(e){}
-mealInventory();swordBasis();reconcileCostBasis();S.saveVersion=Math.max(3,S.saveVersion||0);offline();safePosition();persist();
+mealInventory();swordBasis();reconcileCostBasis();S.saveVersion=Math.max(3,S.saveVersion||0);offline();last=lastBusiness59=performance.now();safePosition();persist();
 if(!S.tutorialSeen){S.tutorialSeen=true;persist();show('guide')}
 if(PLAYTEST55)show('playtest');
 updateCombatUI57();window.scrollTo(0,0);document.getElementById('moveStatus').textContent='CONTROLS READY';
